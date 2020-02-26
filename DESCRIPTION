@@ -1,0 +1,13 @@
+Package: medicaldata
+Type: Package
+Title: Provides Access to Medical Datasets
+Version: 0.1.0
+Author: Peter Higgins
+Maintainer: Peter Higgins <higgi13425@yahoo.com>
+Description: Provides access to medical datasets for teaching.
+    Some from the tshs website, 
+    and some from R datasets, including Indometh, esoph,
+    Theoph, lh, infert, and some from.
+License: CC0
+Encoding: UTF-8
+LazyData: true
