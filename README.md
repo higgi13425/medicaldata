@@ -10,6 +10,6 @@ Data package with several medical datasets for teaching Reproducible Medical Res
 
 4. Then load a particular dataset with `data("blood_storage")` - insert the appropriate dataset name inside the quotes.
 
-5. This dataset will appear in your Environment as a `<Promise>`.   
+5. This dataset will appear in your Environment as a `<Promise>`. This is part of `lazyloading`. It tells you the data are there, but it won't load it until you need it.
 
-6. To activate it, either run `View(blood_storage)` or run 'head(blood_storage)`
+6. To activate it, either run `View(blood_storage)` or run `head(blood_storage)`. Then the datafile will appear in your Environment pane and you can use the data.
