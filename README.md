@@ -1,13 +1,12 @@
 # medical_data
-Data package for medical data for teaching medical rstats
+Data package for medical data for teaching medical rstats.    
+install with: `remotes::install_github('higgi13425/medicaldata')`    
 
-install with: `remotes::install_github('higgi13425/medicaldata')`
+then load the package with `library(medicaldata)`    
 
-then load the package with `library(medicaldata)`
+then list the datasets available with `data(package = 'medicaldata')`    
 
-then list the datasets available with `data(package = 'medicaldata')`
-<br>
 then load a dataset with `data("blood_storage")` - insert the appropriate dataset name inside the quotes.
 
-This will appear in your Environment as a <Promise>.
+This will appear in your Environment as a `<Promise>`.    
 To activate it, either run `View(blood_storage)` or run 'head(blood_storage)`
