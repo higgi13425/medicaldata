@@ -1,13 +1,20 @@
 Package: medicaldata
 Type: Package
-Title: Provides Access to Medical Datasets
+Title: Data package for Medical Datasets
 Version: 0.1.0
-Author: Peter Higgins
+Authors@R: c(
+    person("Peter", "Higgins", email="higgi13425@yahoo.com", role = c("aut", "cre"))
+    )
 Maintainer: Peter Higgins <higgi13425@yahoo.com>
 Description: Provides access to medical datasets for teaching.
     Some from the tshs website, 
     and some from R datasets, including Indometh, esoph,
-    Theoph, lh, infert, and some from.
+    Theoph, lh, infert, and some from the tshs website.
+Depends:
+    R (>= 3.1)
 License: CC0
 Encoding: UTF-8
 LazyData: true
+URL: https://github.com/higgi13425/medicaldata
+
+
