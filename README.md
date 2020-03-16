@@ -1,4 +1,4 @@
-# medical_data
+# Medical Data Teaching Package
 
 Data package with several medical datasets for teaching Reproducible Medical Research with R. 
 
