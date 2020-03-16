@@ -10,6 +10,6 @@ Data package with several medical datasets for teaching Reproducible Medical Res
 
 4. Then load a particular dataset with `data("blood_storage")` - insert the appropriate dataset name inside the quotes.
 
-5. This dataset will appear in your Environment as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are there, but R won't load it until you actually need it.
+5. This dataset will appear in your Environment tab as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are there, but R won't load it until you _actually_ need it.
 
 6. To activate and load your data, either run `View(blood_storage)` or run `head(blood_storage)`. Then the datafile will appear in your Environment pane and you can use the data.
