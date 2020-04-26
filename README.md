@@ -24,7 +24,6 @@ Data package with several medical datasets for teaching Reproducible Medical Res
 | esoph           | esoph_code.pdf           | esoph_desc.pdf           |
 | infert          | infert_code.pdf          | insert_desc.pdf          |
 | laryngoscope    | laryngoscope_code.pdf    | laryngoscope_desc.pdf    |
-| lh              | lh_code.pdf              | lh_desc.pdf              |
 | licorice_gargle | licorice_gargle_code.pdf | licorice_gargle_desc.pdf |
 | opt             | opt_code.pdf             | opt_desc.pdf             |
 | smartpill       | smartpill_code.pdf       | smartpill_desc.pdf       |
