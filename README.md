@@ -1,6 +1,6 @@
 # Medical Data Teaching Package
 
-Data package with several medical datasets for teaching Reproducible Medical Research with R. 
+This is a data package with several medical datasets for teaching Reproducible Medical Research with R. 
 
 1. Install with: `remotes::install_github("higgi13425/medicaldata")`    
 
