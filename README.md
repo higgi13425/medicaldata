@@ -26,14 +26,14 @@ where the name of the dataset comes after the double colon.
 |-----------------|--------------------------|--------------------------|
 | Indometh        | indometh_code.pdf        | indometh_desc.pdf        |
 | Theoph          | theoph_code.pdf          | theoph_desc.pdf          |
-| blood_storage   | blood_storage_code.pdf  | blood_storage_desc.pdf   |
-| cytomegalovirus | cytomegalovirus_code.pdf | cytomegalovirus_desc.pdf |
+| blood_storage   | [blood_storage_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/blood_storage_code.pdf)| [blood_storage_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/blood_storage_desc.pdf)   |
+| cytomegalovirus | [cytomegalovirus_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/cytomegalovirus_code.pdf)| [cytomegalovirus_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/cytomegalovirus_desc.pdf)  |
 | esoph           | esoph_code.pdf           | esoph_desc.pdf           |
-| infert          | infert_code.pdf          | insert_desc.pdf          |
-| laryngoscope    | laryngoscope_code.pdf    | laryngoscope_desc.pdf    |
-| licorice_gargle | licorice_gargle_code.pdf | licorice_gargle_desc.pdf |
-| opt             | opt_code.pdf             | opt_desc.pdf             |
-| smartpill       | smartpill_code.pdf       | smartpill_desc.pdf       |
-| supraclavicular | supraclavicular_code.pdf | supraclavicular_desc.pdf |
-| tumorgrowth     | tumorgrowth_code.pdf     | supraclavicular_desc.pdf |
-| covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     | covid_desc.pdf |
+| infert          | |         |
+| laryngoscope    |[laryngoscope_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/laryngoscope_code.pdf)| [laryngoscope_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/laryngoscope_desc.pdf)  |
+| licorice_gargle | [licorice_gargle_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/licorice_gargle_code.pdf)| [licorice_gargle_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/licorice_gargle_desc.pdf) |
+| opt             | [opt_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/opt_code.pdf)| [opt_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/opt_desc.pdf)      |
+| smartpill       | [smartpill_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/smartpill_code.pdf)| [smartpill_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/smartpill_desc.pdf)     |
+| supraclavicular | [supraclavicular_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/supraclavicular_code.pdf)| [supraclavicular_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/supraclavicular_desc.pdf)    |
+| tumorgrowth     | [tumorgrowth_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/tumorgrowth_code.pdf)| [tumorgrowth_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/tumorgrowth_desc.pdf) |
+| covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |  |
