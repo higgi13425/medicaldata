@@ -1,0 +1,686 @@
+---
+title: "Linear Regression"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(broom)
+library(gtsummary)
+library(janitor)
+library(tidyverse)
+library(medicaldata)
+library(gt)
+library(equatiomatic)
+library(car)
+library(alr3)
+library(faraway)
+knitr::opts_chunk$set(echo = TRUE)
+
+supra <- medicaldata::supraclavicular %>% 
+  mutate(gender = factor(gender)) %>% 
+  mutate(gender = fct_recode(gender,
+        "male" = "1", "female" = "0"))  %>% 
+  mutate(group = fct_recode(as.factor(group),
+        "Mixture" = "1", "Sequential" = "2")) %>% 
+  mutate(bmi_cat6 = case_when(bmi < 18.5 ~ "Underweight",
+                    bmi >= 18.5 & bmi <25 ~ "Normal weight",
+                    bmi >= 25 & bmi <30 ~ "Overweight",
+                    bmi >= 30 & bmi <35 ~ "Obesity Class I",
+                    bmi >= 35 & bmi <40 ~ "Obestity Class II",
+                    bmi >= 40 ~ "Extreme Obesity Class III"))
+
+blood <- medicaldata::blood_storage %>% 
+  mutate(aa = factor(AA)) %>% 
+  mutate(aa = fct_recode(aa,
+      "Not AA" = "0", 
+      "African-American" = "1"))  %>% 
+    mutate(fam_hx = factor(FamHx)) %>% 
+  mutate(fam_hx = fct_recode(fam_hx,
+      "No History" = "0", 
+      "Family History of PCa" = "1"))  %>% 
+  mutate(rbc_age = factor(RBC.Age.Group)) %>% 
+  mutate(rbc_age = fct_recode(rbc_age,
+   "Younger" = "1", "Middle" = "2",
+   "Older" = "3")) %>% 
+  mutate(tumor_vol = factor(TVol)) %>% 
+  mutate(tumor_vol= fct_recode(tumor_vol,
+     "Low" = "1", "Medium" = "2",
+      "Extensive" = "3")) %>% 
+  mutate(gleason = factor(bGS)) %>% 
+  mutate(gleason= fct_recode(gleason,
+     "score 0-6" = "1", "score 7" = "2",
+    "score 8-10" = "3")) %>% 
+  mutate(recur = factor(Recurrence)) %>% 
+  mutate(recur= fct_recode(recur,
+     "No Recurrence" = "0", "Tumor Recurred" = "1"))
+
+licorice <- medicaldata::licorice_gargle %>% 
+  mutate(gender = factor(preOp_gender)) %>% 
+  mutate(gender = fct_recode(gender,
+          "Male" = "0", "Female" = "1"))  %>% 
+  mutate(smoking = factor(preOp_smoking)) %>% 
+  mutate(smoking = fct_recode(smoking,
+      "Current" = "1", "Past" = "2",
+          "Never" = "3")) %>% 
+  mutate(mallampati = factor(preOp_mallampati)) %>% 
+  mutate(treat = factor(treat)) %>% 
+  mutate(treat= fct_recode(treat,
+   "Sugar" = "0", "Licorice" = "1")) 
+
+
+laryngo <- medicaldata::laryngoscope
+
+opt <- medicaldata::opt
+```
+
+
+## Data Sets
+First, let's introduce our five data sets for today    
+
+The **supraclavicular data set** contains data on 103 subjects undergoing upper extremity procedures and receiving supraclavicular anesthesia. They were randomly assigned to a combination of ropivacaine and mepivacaine or sequential mepivacaine followed by ropivacaine. The primary outcome is time to onset of 4-nerve sensory block.
+<br>
+<br>
+
+The **licorice gargle data set** contains data on 236 subjects undergoing thoracic surgery  with intubation. They were randomly assigned to a gargle of sugar water vs. licorice before anesthesia. The primary outcome is throat pain at 30 minutest post procedure in the PACU.  <br>
+<br>
+
+The **blood storage data set** contains data on 316 subjects after radical prostatectomy who received blood transfusion within 30 days of their surgery and had available PSA follow-up data. The main exposure of interest was the RBC storage duration time. It is suspected that transfusion of older blood causes immunosuppression and could increase cancer recurrence.
+<br>
+
+The **laryngoscope data set** contains data on 99 obese subjects who required orotracheal intubation for elective surgery. The main exposure of interest was randomization to a standard macintosh laryngoscope vs. the Pentax AWS video larygnoscope. It was hyopthesized that the video scope would allow easier and faster intubation. The primary outcome is time to intubation, success is considered <100 seconds, and multiple attempts could be made. Glottic view (ease) was rated from 0 = easy to 100 = extremely difficult. Other outcomes include blood staining and postop sore throat. Covariates include age, gender, asa status, BMI, Mallampati. The codebook can be found at:
+https://github.com/higgi13425/medicaldata/blob/master/codebooks/laryngoscope_code.pdf
+
+<br>
+
+The **opt data set** contains data on 823 subjects at 4 centers in a RCT of periodontal treatment intervention during pregnancy to reduce the rate of preterm birth and low birth weight. The main exposure of interest was the the periodontal intervention (Group). The primary outcome is gestational age (GA.at.outcome) in days at birth. Secondary outcomes include birthweight (g) and Apgar scores at 1 and 5 minutes. A number of other bacteria dn biomarkers were recorded across multiple visits. Details at https://github.com/higgi13425/medicaldata/blob/master/description_docs/opt_desc.pdf and the codebook can be found at https://github.com/higgi13425/medicaldata/blob/master/codebooks/opt_code.pdf.
+
+<br>
+<br>
+
+## The Regression Model
+Let's work on how to create linear regression models and how to present the results with 3 packages
+
+1. {stat} - the function _lm_
+2. {broom}
+3. {gtsummary}.  
+
+## Building a simple base model with {lm}
+### The simplest base model - a constant equal to the mean of the outcome variable.
+The simplest predictive model is simple imputation - predicting all of the values with the mean value.    <br>
+<br>
+This is also known as the NULL model. <br>
+In the blood dataset, the mean time to recurrence is `r mean(blood$TimeToRecurrence, na.rm = TRUE)`.   <br> 
+<br>
+So let's build a simple null model.<br>
+<br>
+The two main arguments for the _lm()_ function are the **formula** and the **data**.<br>
+<br>
+The **formula** follows the format
+_dependent_variable_ ~ _independent_variables_<br>
+<br>
+Note that the **data** argument is not the first argument, so it does not automatically play well with pipes.<br>
+You can pipe in data if you make the data argument explicit, and set it to <br>
+`data = .`
+
+Let's look at a simple example
+
+
+```{r}
+blood %>% 
+  lm(TimeToRecurrence ~ NULL, data = .) 
+```
+We can also output the results as a nice tibble, with the _tidy()_ function from the {broom} package.
+
+```{r}
+blood %>% 
+  lm(TimeToRecurrence ~ NULL, data = .) %>% 
+  broom::tidy()
+```
+
+This model has only one term, the intercept. It estimates every value of time to recurrence with the mean, 32.91. This is a pretty poor model, but is a place to start.<br>
+<br>
+Let's look at how good this model is, using another function from the {broom} package. We can _glance()_ our model, again output into a nice tibble.
+```{r}
+blood %>% 
+  lm(TimeToRecurrence ~ NULL, data = .) %>% 
+  broom::glance()
+```
+The r.squared and adj.r.squared are both 0, so we are capturing none of the variation in the data with this null model.  The log likelihood is -1502, and the AIC 3009, and BID 3016 (these are both high because this is a crummy model).  <br>
+AIC is Akaike's Information Criterion, and estimates the out-of-sample prediction error and relative quality of a statistical model. A higher number indicates more information lost. Lower numbers for AIC = higher quality models. <br>
+BIC is the Bayesian Information Criterion, which like AIC, penalizes models for the number of parameters to reduce overfitting. BIC also considers the number of observations in the data, which AIC does not. Lower values are better, and BIC is generally always higher than AIC, but absolute values do not matter, only relative values when comparing models on the same dataset for the same outcome. <br>
+<br>
+<br>
+Let's add some predictors: Age, tumor_vol, and gleason, and see if we do better.
+
+```{r}
+blood %>% 
+  lm(TimeToRecurrence ~ Age + tumor_vol + gleason, data = .) %>% 
+  glance()
+```
+We are explaining some (about 5.2%) of the variation with this predictor, and the log likelihood (-1458) got closer to zero, and the AIC (2931) and BIC (2957) went down, showing that this is a better model than the NULL model.
+<br>
+
+### Key Takeaways
+- lm() to build the model
+  - argument: formula
+  - argument: data = .
+- _tidy()_ to see model table
+- _glance()_ to see measures of model accuracy
+
+
+#### Your turn with licorice!
+
+Pipe the licorice data into an lm() function, with a formula argument and the data = . argument. <br>
+Use the outcome of pacu30min_throatPain. Use predictors like preOp_pain, intraOp_surgerySize, treat, gender, and smoking.<br>
+Then pipe the result into the function _tidy()_ to see the model, and (separately) into the function _glance()_ to evaluate the model quality.
+
+```{r dplyr, exercise = TRUE, exercise.lines = 9}
+licorice 
+
+
+```
+
+```{r dplyr-hint-1}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .)
+```
+
+```{r dplyr-hint-2}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .) %>% 
+  tidy()
+```
+
+
+#### Your turn with supra!
+Use the **supraclavicular** dataset to build a model with
+the outcome onset_sensory, with indep_vars including age, bmi, gender, and group.
+Output the regression table with _tidy()_ and the model measures with _glance()_ <br>
+Experiment with removing indep_vars that are not significant, and see what happens to AIC and BIC.
+
+```{r dplyr-supra, exercise = TRUE, exercise.lines = 9}
+supra
+
+
+```
+
+```{r dplyr-supra-hint-1}
+supra %>% 
+  lm(onset_sensory ~ age + bmi + gender + group, data = .)
+```
+
+```{r dplyr-supra-hint-2}
+supra %>% 
+  lm(onset_sensory ~ age + bmi + gender + group, data = .) %>% tidy()
+
+supra %>% 
+  lm(onset_sensory ~ age + bmi + gender + group, data = .) %>% glance()
+```
+
+
+#### Producing manuscript-quality tables with {gtsummary}
+Let's take your model above, and rather than pipe it into _tidy()_ or _glance()_, pipe it into the _tbl_regression()_ function from the {gtsummary} package.
+
+```{r supra-tbl-regression, exercise = TRUE}
+supra %>% 
+  lm(onset_sensory ~ age + bmi + gender + group, data = .) 
+
+```
+
+
+```{r supra-tbl-regression-hint-1}
+supra %>% 
+  lm(onset_sensory ~ age + bmi + gender + group, data = .) %>%  tbl_regression() 
+```
+
+This produces a nice looking table, suitable for Rmarkdown documents, with output to Word or Powerpoint.
+You can even convert this to other formats:
+
+- to a tibble with _as_tibble()_
+- to a gt object with _as_gt()_ then use gt formatting
+- to a flextable object with _as_flextable()_ then add formatting with flextable
+
+### Takeaways
+- start with data - pipe into lm model lm(formula, data = .)
+- model can be piped into _tidy()_ for an estimates table
+- model can be piped into _glance()_ for measures of the model
+- model can be piped into __tbl_regression()_ for a publication-quality table
+
+## Is Your Model Valid?
+Key assumptions of linear regression
+
+1. Homogeneity of variance (homoscedasticity): The error variance should be constant
+2. Linearity: the relationships between the predictors and the outcome variable should be linear
+3. Independence: The errors associated with one observation are not correlated with the errors of any other observation
+4. Normality: the errors should be normally distributed. Technically normality is necessary only for hypothesis tests to be valid.
+
+## Checking Homoscedasticity
+Is the variance of the residuals homogeneous?
+There should be no patter to the residuals plotted vs. the fitted values
+
+Let's start with a simple model and check its validity.
+We will pipe the model into the {broom} package function _augment()_ to add residuals and fitted values to the dataframe.
+```{r}
+blood %>% 
+  lm(TimeToRecurrence ~ Age + tumor_vol + gleason, data = .) %>% augment() ->
+blood_fitted
+
+blood_fitted
+
+```
+We can do a simple _base_ R plot of the fitted values (.fitted) against the residuals (.resid)
+
+```{r}
+plot(blood_fitted$.resid ~ blood_fitted$.fitted)
+abline(h=0, lty =2)
+```
+
+There is a bit of a wider spread of residuals at higher values of Time to Recurrence, which is to be expected. Not a big problem here.
+
+### Plotting with ggplot to check heteroscedasticity
+This can also be done with ggplot.
+See the example below.
+
+```{r}
+blood_fitted %>% 
+ggplot() + 
+  aes(x = .fitted, y = .resid) +
+  geom_point(alpha = 0.4) +
+  geom_hline(yintercept = 0)
+```
+
+
+### Your turn with licorice!
+Using the model blow, check for heteroscedasticity.
+Don't forget to _augment()_ and save the values as licorice_fitted!
+Use the hints if needed.
+
+```{r licorice-model, exercise = TRUE}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .)
+```
+
+```{r licorice-model-hint-1}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .) %>% 
+  augment() ->
+licorice_fitted
+```
+
+```{r licorice-model-hint-2}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .) %>% 
+  augment() ->
+licorice_fitted
+
+plot(licorice_fitted$.resid ~ licorice_fitted$.fitted)
+abline(h=0, lty =2)
+```
+
+### Your turn with layrngoscope data!
+Using the model blow, check for heteroscedasticity.
+Use the **ggplot** approach to plotting.
+Don't forget to augment and save the values as laryngo_fitted!
+
+```{r laryngo-model, exercise = TRUE}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .)
+```
+
+```{r laryngo-model-hint-1}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+```
+
+```{r laryngo-model-hint-2}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+
+laryngo_fitted %>% 
+ggplot() + 
+  aes(x = .fitted, y = .resid) +
+  geom_point(alpha = 0.4) +
+  geom_hline(yintercept = 0)
+```
+
+## Checking Linearity
+There are built in functions in the {car} package to make this easier. Just use your model as the argument for the _residualPlots()_ function.
+
+You are looking for a smooth relationship, and a horizontal fitted line. The Console pane will include tests for curvature.
+```{r}
+model_l <- laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .)
+
+residualPlots(model_l)
+```
+It looks like the gender variable may be worth looking at for non-linearity in the relationship to intubation time.
+
+
+### Your turn with licorice!
+Now try this with a licorice model
+
+```{r licorice-model2, exercise = TRUE, exercise.lines = 7}
+model_lic <- licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .)
+```
+
+```{r licorice-model2-hint}
+model_lic <- licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .)
+
+
+residualPlots(model_lic)
+```
+
+## Checking Independence
+We can simply plot the residuals vs. the row number (or studyid) to look for trends over time or clustering of residuals, to evaluate whether the study sample or procedures changed over time.
+Let's start with the licorice fitted model.
+
+```{r}
+licorice %>% 
+  lm(pacu30min_throatPain ~ preOp_pain + treat + gender + smoking + intraOp_surgerySize, data = .) %>% 
+  augment() ->
+licorice_fitted
+
+licorice_fitted %>% 
+  ggplot() +
+  aes(x = .rownames, y = .resid) +
+  geom_point(alpha = 0.3) +
+  geom_hline(yintercept = 0) +
+  scale_x_discrete(guide = guide_axis(n.dodge = 6))
+```
+
+Something funky went on in two periods of the study, with high residuals for a while.
+
+### Your turn with blood data!
+Check Independence with this blood model
+
+```{r blood-independence, exercise = TRUE}
+blood %>% 
+  lm(TimeToRecurrence ~ Age + tumor_vol + gleason, data = .) %>% augment() ->
+blood_fitted
+
+```
+
+```{r blood-independence-hint}
+blood %>% 
+  lm(TimeToRecurrence ~ Age + tumor_vol + gleason, data = .) %>% augment() ->
+blood_fitted
+
+blood_fitted %>% 
+  ggplot() +
+  aes(x = .rownames, y = .resid) +
+  geom_point(alpha = 0.3) +
+  geom_hline(yintercept = 0) +
+  scale_x_discrete(guide = guide_axis(n.dodge = 6))
+```
+
+### Your turn with laryngoscope data!
+Check Independence with this layngoscope model
+
+```{r laryngo-independence, exercise = TRUE}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+
+```
+
+```{r laryngo-independence-hint}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+
+laryngo_fitted %>% 
+  ggplot() +
+  aes(x = .rownames, y = .resid) +
+  geom_point(alpha = 0.3) +
+  geom_hline(yintercept = 0) +
+  scale_x_discrete(guide = guide_axis(n.dodge = 6))
+```
+
+## Checking Normality of Residuals
+Normality is not required to get unbiased estimates of your regression coefficients. <br>
+It is **not** required that your predictors are normally distributed. <br>
+And if we have a large sample size, normality does not matter, as the Central Limit Theory will cover us. <br>
+But with moderate sample sizes, your residuals need to be normally distributed to get valid p values for t-tests for predictors and the F-test for the entire model.<br>
+
+We can check this with a QQ normality plot of the residuals. Try this with our blood_fitted model.
+The points should be on or near the line throughout.
+
+```{r}
+qqnorm(blood_fitted$.resid)
+qqline(blood_fitted$.resid)
+```
+This is pretty good, but goes off the rails a bit at the lower extreme.
+
+### Your turn with the licorice model!
+add qqnorm and qqline 
+```{r licorice-norm, exercise = TRUE}
+
+```
+
+```{r licorice-norm-hint}
+qqnorm(licorice_fitted$.resid)
+qqline(licorice_fitted$.resid)
+```
+
+## Your turn with the laryngoscope model!
+add qqnorm and qqline 
+```{r layrngo-norm, exercise = TRUE}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+
+```
+
+```{r laryngo-norm-hint}
+laryngo %>% 
+  lm(total_intubation_time ~ age + asa + gender + Randomization + Mallampati, data = .) %>% 
+  augment() ->
+laryngo_fitted
+
+qqnorm(laryngo_fitted$.resid)
+qqline(laryngo_fitted$.resid)
+```
+
+### Two Pitfalls of Linear Regression 
+
+1. Extremely influential observations - individual observations that exert undue influence on the coefficients.
+2. Collinearity: predictors that are highly collinear, i.e., linearly related, can cause problems in estimating the regression coefficients.
+
+#### Checking for Outliers
+In linear regression, an outlier is an observation with large residual. In other words, it is an observation whose dependent-variable value is unusual given its values on the predictor variables. An outlier may indicate a sample peculiarity or may indicate a data entry error or other problem.
+
+#### Observations with High Leverage
+Leverage: An observation with an extreme value on a predictor variable is called a point with high leverage. Leverage is a measure of how far an observation deviates from the mean of that variable. These leverage points can have an effect on the estimate of regression coefficients.
+
+#### Influential Observations
+ An observation is said to be influential if removing the observation substantially changes the estimate of coefficients. Influence can be thought of as the product of leverage and outlierness.
+ 
+#### Displaying Relationships with a Scatterplot Matrix
+You can find potential problem observations by plotting all of your model indep_vars with the dep_var in a scatterplot matrix.
+
+For example, for our blood_fitted model,
+we used three independent variables, Age + tumor_vol + gleason score, to predict the dep_var TimeToRecurrence.
+
+We can make a Scatterplot Matrix with a function from the {car} package.
+We are looking for points in the scatterplots that are Outliers.
+
+```{r, warning=FALSE}
+scatterplotMatrix(~ TimeToRecurrence + Age + tumor_vol + gleason, data = blood)
+```
+Not bad.
+
+#### Try this yourself!
+Use the laryngoscope model, which used total_intubation_time, age, asa, gender, Randomization, and Mallampati variables.
+
+```{r laryngo-scatter, exercise = TRUE, warning=FALSE}
+scatterplotMatrix( data = laryngo)
+```
+
+```{r laryngo-scatter-hint,  warning=FALSE}
+scatterplotMatrix(~ total_intubation_time + age + asa + gender + Randomization + Mallampati,  data = laryngo)
+```
+Ther may be some Outliers in the Age vs total_intubation_time plot.
+
+
+#### Your turn!
+1. Make
+2. Make 
+3. 
+
+```{r final, exercise = TRUE, exercise.lines = 15}
+summ_tbl_supra
+
+
+regress_tbl_supra
+
+
+merged_tbl_blood
+
+```
+
+```{r final-hint}
+summ_tbl_supra <- supra %>% 
+  select(group, gender, bmi, age)
+
+regress_tbl_supra <- lm(onset_motor ~ group + gender + bmi + age +fentanyl, data = supra)
+
+
+merged_tbl_blood <-  tbl_merge(list(summ_tbl_supra, regress_tbl_supra))
+
+```
+
+
+```{r final-solution}
+summ_tbl_supra <- supra %>% 
+  select(group, gender, bmi, age) %>% 
+  tbl_summary() %>% 
+  add_n()
+summ_tbl_supra
+
+
+regress_tbl_supra <- lm(onset_motor ~ group + gender + bmi + age +fentanyl, data = supra) %>% 
+  tbl_regression()
+regress_tbl_supra
+
+merged_tbl_blood <-  tbl_merge(list(summ_tbl_supra, regress_tbl_supra),
+            tab_spanner = c("**Summary Statistics**",
+                  "**Onset Motor Outcome**"))
+merged_tbl_blood
+```
+
+## Do It Yourself - Final Challenge
+Start from scratch with a new dataset, **opt**.
+Build a reasonable model with 3 or more predictors to predict the outcome _GA.at.outcome_. 
+Then
+1. Output a tidy() table of estimates
+2. Output a glance() assessment of the model
+3. Output a publication-ready table with tbl_regression()
+4. Test assumptions including:
+  a. Homogeneity of variance (homoscedasticity)
+  b. Linearity
+  c. Independence
+  d. Normality
+5. Check for outliers and influential points
+5. Check for multicollinearity of indep_vars
+
+## Final Quizzes (Still Under Construction!!)
+
+```{r dplyr-quiz-1, echo=FALSE}
+quiz(caption = "Dplyr Quiz",
+  question("Which function in dplyr counts all the rows?",
+    answer("summarise()"),
+    answer("mutate()"),
+    answer("tally()", correct = TRUE),
+    answer("count()")
+  ),
+  question("Which function in dplyr counts rows by group (then ungroups)?",
+    answer("count()", correct = TRUE),
+    answer("tally()"),
+    answer("filter()"),
+    answer("n()")
+  ),
+    question("Which function in dplyr adds the total number of rows as a variable to your dataframe?",
+    answer("add_count()"),
+    answer("mutate()"),
+    answer("add_tally()", correct = TRUE),
+    answer("transmute()")
+  ),
+  question("Which function in dplyr adds the total number of rows *in each group* as a variable to your dataframe?",
+    answer("add_count()", correct = TRUE),
+    answer("select()"),
+    answer("add_tally()"),
+    answer("relocate()")
+  )
+)
+```
+
+```{r janitor-quiz-1, echo=FALSE}
+quiz(caption = "Janitor Tabyl Quiz",
+  question("Which function in janitor makes tables?",
+    answer("clean_names()"),
+    answer("get_dupes()"),
+    answer("tabyl()", correct = TRUE),
+    answer("remove_empty()")
+  ),
+  question("Which function in janitor adds totals to rows or columns of tabyls?",
+    answer("adorn_totals()", correct = TRUE),
+    answer("adorn_title()"),
+    answer("remove_constant()"),
+    answer("round_half_up()")
+  ),
+    question("Which function in janitor adds percentages to rows in tabyls?",
+    answer("tabyl()"),
+    answer("adorn_percentages('row')", correct = TRUE),
+    answer("adorn_title()"),
+    answer("adorn_pct_formatting()")
+  ),
+  question("Which function in janitor formats percentages to 2 digits?",
+    answer("adorn_pct_formatting(digits=2)", correct = TRUE),
+    answer("adorn_percentages()"),
+    answer("adorn_ns()"),
+    answer("adorn_totals('row')")
+  )
+)
+```
+
+
+```{r gtsummary-quiz-1, echo=FALSE}
+quiz(caption = "gtsummary Quiz",
+  question("Which function in gtsummary makes summary tables?",
+    answer("add_p()"),
+    answer("modify_header()"),
+    answer("tbl_summary()", correct = TRUE),
+    answer("bold_labels()")
+  ),
+  question("Which function in gtsummary makes regression tables?",
+    answer("tbl_regression()", correct = TRUE),
+    answer("add_n()"),
+    answer("as_gt()"),
+    answer("as_flextable()")
+  ),
+    question("Which argument in gtsummary::tbl_summary lets you compare study arms in columns?",
+    answer("italicize_labels()"),
+    answer("by = treatment_arm", correct = TRUE),
+    answer("statistic = list(all_continuous() ~ '{mean} ({sd})'"),
+    answer("bold_p(t = 0.2)")
+  ),
+  question("Which argument in gtsummary::tbl_summary lets you control the formatting of your data?",
+    answer("statistic = list(all_continuous() ~ '{mean} ({sd})',
+                     all_categorical() ~ '{n} / {N} ({p}%)'),", correct = TRUE),
+    answer("by = treatment_arm"),
+    answer("add_stat_label()"),
+    answer(" modify_header(stat_by = '**{level}**, N = {n}'")
+  )
+)
+```
