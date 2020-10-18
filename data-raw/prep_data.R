@@ -1,5 +1,6 @@
 ## code to prepare datasets goes here
 library(tidyverse)
+library(readxl)
 
 # Load datasets, save to raw-data
 data("esoph")
@@ -13,6 +14,11 @@ saveRDS(Theoph, "data-raw/Theoph.Rdata")
 
 data("infert")
 saveRDS(infert, "data-raw/infert.Rdata")
+
+# rheumatoid arthritis and age
+raa <- read_excel("data-raw/RheumArth_Tx_ageComparisons.xlsx")
+saveRDS(raa, "data-raw/raa.Rdata")
+
 
 #covid from CHOP - Amrom E Obstfeld
 ## obstfelda@email.chop.edu
@@ -32,6 +38,7 @@ load('data-raw/OPT_Study_PersonLevel_Data.Rdata')
 load('data-raw/smartpill.Rdata')
 load('data-raw/supraclavicular.Rdata')
 load('data-raw/tumorgrowth.Rdata')
+load('data-raw/raa.Rdata')
 
 # save data to data folder
 usethis::use_data(blood_storage, overwrite = TRUE)
@@ -46,6 +53,7 @@ usethis::use_data(smartpill, overwrite = TRUE)
 usethis::use_data(supraclavicular, overwrite = TRUE)
 usethis::use_data(Theoph, overwrite = TRUE)
 usethis::use_data(tumorgrowth, overwrite = TRUE)
+usethis::use_data(raa, overwrite = TRUE)
 
 usethis::use_data(covid_testing, overwrite = TRUE)
 
