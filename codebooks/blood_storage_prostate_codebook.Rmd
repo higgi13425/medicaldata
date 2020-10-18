@@ -1,0 +1,29 @@
+---
+title: "COVID-19 Testing data codebook"
+author: "Peter Higgins"
+date: "10/18/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(gt)
+```
+
+
+## COVID-19 Testing Dataset Codebook
+
+Source: This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during 2020 at CHOP.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+covid_codebook <- read_csv("/Users/peterhiggins/Documents/RCode/medicaldata/data-raw/covid_testing_code_book.csv") %>% 
+  gt()
+
+covid_codebook
+
+```
+
+

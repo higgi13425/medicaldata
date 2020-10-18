@@ -1,4 +1,5 @@
 ## code to prepare datasets goes here
+library(tidyverse)
 
 # Load datasets, save to raw-data
 data("esoph")
@@ -12,6 +13,14 @@ saveRDS(Theoph, "data-raw/Theoph.Rdata")
 
 data("infert")
 saveRDS(infert, "data-raw/infert.Rdata")
+
+#covid from CHOP - Amrom E Obstfeld
+## obstfelda@email.chop.edu
+covid_testing <- read_csv("data-raw/covid_testing_deid.csv")
+saveRDS(covid_testing, "data-raw/covid_testing.Rdata")
+covid_codebook <- read_csv("data-raw/covid_testing_code_book.csv")
+
+
 
 # Load tshs saved data (saved in .Rdata format)
 
@@ -37,4 +46,6 @@ usethis::use_data(smartpill, overwrite = TRUE)
 usethis::use_data(supraclavicular, overwrite = TRUE)
 usethis::use_data(Theoph, overwrite = TRUE)
 usethis::use_data(tumorgrowth, overwrite = TRUE)
+
+usethis::use_data(covid_testing, overwrite = TRUE)
 

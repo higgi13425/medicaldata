@@ -1,0 +1,19 @@
+variable,position,Variable Label,units,Codes
+subject_id,1,Subject ID,NA,NA
+fake_first_name,2,Pseudo First Name,NA,NA
+fake_last_name,3,Pseudo Last Name,NA,NA
+gender,4,Gender (Anonymized),NA,NA
+pan_day,5,Day after start of pandemic in which specimen was collected (Anonymized),Day,NA
+test_id,6,Test that was performed,NA,NA
+clinic_name,7,Clinic or ward where the specimen was collected,NA,NA
+result,8,Result of the test,NA,NA
+demo_group,9,Type of subject,NA,NA
+age,10,Age of subject at time of specimen collection (Anonymized),Years,NA
+drive_thru_ind,11,Whether the specimen was collected via a drive-thru site,NA,1: Collected at drive-thru site; 0: Not collected at drive-thru site
+ct_result,12,Cycle at which threshold reached during PCR,NA,NA
+orderset,13,Whether and order set was used for test order,NA,1: Collected via orderset; 0: Not collected via orderset
+payor_group,14,Payor associate with order,NA,NA
+patient_class,15,Disposition of subject at time of collection,NA,NA
+col_rec_tat,16,Time elapsed between collect time and receive time,Hours,NA
+rec_ver_tat,17,Time elapsed between receive time and verification time,Hours,NA
+"This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated meta data. The data is anonymized, time-shifted, and permuted.",NA,NA,NA,NA
