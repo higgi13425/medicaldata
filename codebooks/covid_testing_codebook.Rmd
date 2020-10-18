@@ -1,0 +1,36 @@
+---
+title: "COVID-19 Testing data codebook"
+author: "Peter Higgins"
+date: "10/18/2020"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## COVID-19 Testing Dataset Codebook
+
+Source: This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during 2020 at CHOP (Children's Hospital of Pennsylvania.
+
+This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated metadata. The data has been anonymized, time-shifted, and permuted
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+covid_codebook <- read_csv("/Users/peterhiggins/Documents/RCode/medicaldata/data-raw/covid_testing_code_book.csv") %>% 
+  slice(1:17) %>% 
+  flextable() %>% 
+  fontsize(size = 14) %>% 
+  width(width = c(1.5, 0.5, 3.25, 1, 3.25))
+
+covid_codebook
+
+```
+
+
