@@ -3,7 +3,8 @@ title: "COVID-19 Testing data codebook"
 author: "Peter Higgins"
 date: "10/18/2020"
 output:
-  pdf_document: default
+  pdf_document: 
+    latex_engine: xelatex
   html_document: default
 ---
 
@@ -26,8 +27,8 @@ This data set contains data concerning testing for SARS-CoV2 via PCR as well as 
 covid_codebook <- read_csv("/Users/peterhiggins/Documents/RCode/medicaldata/data-raw/covid_testing_code_book.csv") %>% 
   slice(1:17) %>% 
   flextable() %>% 
-  fontsize(size = 14) %>% 
-  width(width = c(1.5, 0.5, 3.25, 1, 3.25))
+  fontsize(size = 12) %>% 
+  width(width = c(1, 0.5, 2.5, 0.5, 2))
 
 covid_codebook
 

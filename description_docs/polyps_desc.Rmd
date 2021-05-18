@@ -2,7 +2,7 @@
 title: "Polyps codebook"
 author: "Peter Higgins"
 date: "5/15/2021"
-output: html_document
+output: pdf_document
 ---
 
 ```{r setup, include=FALSE}
