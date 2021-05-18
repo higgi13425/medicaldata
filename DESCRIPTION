@@ -9,7 +9,7 @@ Maintainer: Peter Higgins <higgi13425@yahoo.com>
 Description: Provides access to medical datasets for teaching.
     Some from the tshs website, 
     and some from R datasets, including Indometh, esoph,
-    Theoph, lh, infert, and some from the tshs website.
+    Theoph, lh, infert, and some data donations.
 Depends:
     R (>= 3.1)
 License: MIT

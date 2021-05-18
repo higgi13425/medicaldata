@@ -26,7 +26,24 @@ covid_testing <- read_csv("data-raw/covid_testing_deid.csv")
 saveRDS(covid_testing, "data-raw/covid_testing.Rdata")
 covid_codebook <- read_csv("data-raw/covid_testing_code_book.csv")
 
+# polyps from HSAUR, merged
+polyps1 <- HSAUR::polyps %>%
+  rename(number12m = number) %>%
+  mutate(participant_id = c(2:17, 19:22))
+polyps3 <- HSAUR::polyps3 %>%
+  mutate(participant_id = 1:22)
+polyps <- left_join(polyps3, polyps1) %>%
+  select(-treat) %>%
+  mutate(participant_id = as.character(participant_id) %>%
+           str_pad(width = 3, side = "left", pad = "0")) %>%
+  relocate(participant_id, sex, age, baseline, treatment, number3m, number12m) %>%
+  mutate(treatment = as.factor(case_when(
+    treatment == "active" ~ "sulindac",
+          TRUE ~ "placebo")))
 
+write.csv(polyps, "data-raw/polyps.csv")
+
+saveRDS(polyps, "data-raw/polyps.Rdata")
 
 # Load tshs saved data (saved in .Rdata format)
 
@@ -56,4 +73,4 @@ usethis::use_data(tumorgrowth, overwrite = TRUE)
 usethis::use_data(raa, overwrite = TRUE)
 
 usethis::use_data(covid_testing, overwrite = TRUE)
-
+usethis::use_data(polyps, overwrite = TRUE)
