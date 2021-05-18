@@ -42,4 +42,4 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 | tumorgrowth     | [tumorgrowth_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)| [tumorgrowth_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf) |
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |  |
 | raa    | [raa_codebook](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Data%20Dictionary.pdf) |[raa_desc](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Dataset%20Introduction.pdf) |
-|polyps|[polyps_codebook](link)|[polyps_desc](link)|
+|polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.html)|
