@@ -45,6 +45,17 @@ write.csv(polyps, "data-raw/polyps.csv")
 
 saveRDS(polyps, "data-raw/polyps.Rdata")
 
+# reconstructed scurvy data
+scurvy <- read_excel("data-raw/tb_trial.xlsx", sheet = "scurvy_lind", n_max = 12) %>%
+  mutate(treatment = factor(treatment)) %>%
+  mutate(fit_for_duty_d6 = factor(fit_for_duty_d6, levels = c("0_no", "1_yes"))) %>%
+  mutate(across(gum_rot_d6:lassitude_d6, ~ factor(.x, ,
+  levels = c("0_none", "1_mild", "2_moderate", "3_severe")))) %>%
+  mutate(study_id = str_pad(study_id, pad = "0", width = 3))
+
+saveRDS(scurvy, "data-raw/polyps.Rdata")
+
+
 # Load tshs saved data (saved in .Rdata format)
 
 load('data-raw/blood_storage.Rdata')
@@ -74,3 +85,4 @@ usethis::use_data(raa, overwrite = TRUE)
 
 usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
+usethis::use_data(scurvy, overwrite = TRUE)
