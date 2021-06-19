@@ -1,6 +1,6 @@
 # Medical Data Teaching Package
 
-This is a data package with several medical datasets for teaching Reproducible Medical Research with R. 
+This is a data package with several medical datasets for teaching Reproducible Medical Research with R. These range from reconstructed versions of James Lind's scurvy dataset and the original Streptomycin for Tuberculosis trial, to cohort data on SARS-CoV2 testing results.
 
 1. Install with: `remotes::install_github("higgi13425/medicaldata")`    
 
@@ -13,16 +13,16 @@ where `covid` is the name of the new object,
 and `covid_testing` is the name of the dataset.<br>
 <br>
 You can also load the data with `data("blood_storage")`, 
-where you insert the appropriate dataset name inside the quotes.
+where you insert the appropriate dataset name inside the quotes, but this gets you into the clunky world of _Promises_.
 
 5. This dataset (loaded with `data()` will appear in your Environment tab as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are accessible, but R won't load it until you _actually_ need it.
 
 6. To activate and _actually_ load your data, either run `View(blood_storage)` or run `head(blood_storage)`. Then the dataframe will appear in your Environment tab and you can use the data. <br>
 You may prefer to directly assign the dataset to an object in your Environment, with <br>
 `blood <- medicaldata::blood_storage` <br>
-where the name of the dataset comes after the double colon, and `blood` is the name of the new object (a dataframe) in your environment.
+where the name of the dataset comes after the double colon, and `blood` is the name of the new object (a dataframe) in your environment. This actually loads your data and assigns it to an object, rather than making a _Promise_ for later.
 
-7. You can click on the links below to view the codebook and/or description doc for each dataset. <br>
+7. You can click on the links below to view the codebook and/or description document for each dataset. <br>
 
 
 ### Datasets
