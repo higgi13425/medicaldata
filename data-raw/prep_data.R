@@ -53,7 +53,23 @@ scurvy <- read_excel("data-raw/tb_trial.xlsx", sheet = "scurvy_lind", n_max = 12
   levels = c("0_none", "1_mild", "2_moderate", "3_severe")))) %>%
   mutate(study_id = str_pad(study_id, pad = "0", width = 3))
 
-saveRDS(scurvy, "data-raw/polyps.Rdata")
+saveRDS(scurvy, "data-raw/scurvy.Rdata")
+
+# reconstructed strep_tb data
+strep_tb <- read_excel("data-raw/tb_trial.xlsx", sheet = "A participants") %>%
+  mutate(patient_id = str_pad(patient_id, pad = "0", width = 4)) %>%
+  mutate(arm = factor(arm, levels = c("A1", "A2"))) %>%
+  mutate(baseline_temp = factor(baseline_temp,
+  levels = c("1_afebrile","2_<99F/<37.2C","3_99-99.9F/37.2-37.75C", "4_100F+/37.7C+"))) %>%
+  mutate(gender = factor(gender)) %>%
+  mutate(baseline_cavitation = factor(baseline_cavitation)) %>%
+  mutate(baseline_esr = factor(baseline_esr, levels = c("1_0-10", "2_11-20", "3_21-50", "4_51+"))) %>%
+  mutate(strep_resistance = factor(strep_resistance, levels = c("1_sens_0-8", "2_mod_8-99", "3_resist_100+"))) %>%
+  mutate(radiologic_6m = factor(radiologic_6m, levels = c("1_death", "2_deteriorated", "3_no-change", "4_improved-moderately", "5_improved-considerably")))
+
+
+
+saveRDS(strep_tb, "data-raw/strep_tb.Rdata")
 
 
 # Load tshs saved data (saved in .Rdata format)
@@ -86,3 +102,4 @@ usethis::use_data(raa, overwrite = TRUE)
 usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
+usethis::use_data(strep_tb, overwrite = TRUE)
