@@ -28,6 +28,8 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 ### Datasets
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
+|strep_tb| | |
+|polyps| | |
 | Indometh        |          |          |
 | Theoph          |          |           |
 | blood_storage   | [blood_storage_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/blood_storage_code.pdf)| [blood_storage_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/blood_storage_desc.pdf)   |
@@ -43,4 +45,4 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
 | raa    | [raa_codebook](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Data%20Dictionary.pdf) |[raa_desc](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Dataset%20Introduction.pdf) |
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
-|strep_tb| | |
+
