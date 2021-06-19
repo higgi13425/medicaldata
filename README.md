@@ -32,8 +32,6 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 |scurvy| | |
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
-| Indometh        |          |          |
-| Theoph          |          |           |
 | blood_storage   | [blood_storage_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/blood_storage_code.pdf)| [blood_storage_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/blood_storage_desc.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
 | esoph           |            |             |
