@@ -7,10 +7,10 @@ data("esoph")
 saveRDS(esoph, "data-raw/esoph.Rdata")
 
 data("Indometh")
-saveRDS(Indometh, "data-raw/Indometh.Rdata")
+saveRDS(indometh, "data-raw/indometh.Rdata")
 
 data("Theoph")
-saveRDS(Theoph, "data-raw/Theoph.Rdata")
+saveRDS(theoph, "data-raw/theoph.Rdata")
 
 data("infert")
 saveRDS(infert, "data-raw/infert.Rdata")
@@ -53,6 +53,8 @@ scurvy <- read_excel("data-raw/tb_trial.xlsx", sheet = "scurvy_lind", n_max = 12
   levels = c("0_none", "1_mild", "2_moderate", "3_severe")))) %>%
   mutate(study_id = str_pad(study_id, pad = "0", width = 3))
 
+write.csv(scurvy, "data-raw/scurvy.csv")
+
 saveRDS(scurvy, "data-raw/scurvy.Rdata")
 
 # reconstructed strep_tb data
@@ -67,7 +69,7 @@ strep_tb <- read_excel("data-raw/tb_trial.xlsx", sheet = "A participants") %>%
   mutate(strep_resistance = factor(strep_resistance, levels = c("1_sens_0-8", "2_mod_8-99", "3_resist_100+"))) %>%
   mutate(radiologic_6m = factor(radiologic_6m, levels = c("1_death", "2_deteriorated", "3_no-change", "4_improved-moderately", "5_improved-considerably")))
 
-
+write.csv(strep_tb, "data-raw/strep_tb.csv")
 
 saveRDS(strep_tb, "data-raw/strep_tb.Rdata")
 
@@ -75,8 +77,8 @@ saveRDS(strep_tb, "data-raw/strep_tb.Rdata")
 # Load tshs saved data (saved in .Rdata format)
 
 load('data-raw/blood_storage.Rdata')
-load('data-raw/Cytomegalovirus.Rdata')
-load('data-raw/Laryngoscope.Rdata')
+load('data-raw/cytomegalovirus.Rdata')
+load('data-raw/laryngoscope.Rdata')
 load('data-raw/licorice_gargle.Rdata')
 load('data-raw/OPT_Study_PersonLevel_Data.Rdata')
 load('data-raw/smartpill.Rdata')
@@ -88,17 +90,16 @@ load('data-raw/raa.Rdata')
 usethis::use_data(blood_storage, overwrite = TRUE)
 usethis::use_data(cytomegalovirus, overwrite = TRUE)
 usethis::use_data(esoph, overwrite = TRUE)
-usethis::use_data(Indometh, overwrite = TRUE)
+usethis::use_data(indometh, overwrite = TRUE)
 usethis::use_data(infert, overwrite = TRUE)
 usethis::use_data(laryngoscope, overwrite = TRUE)
 usethis::use_data(licorice_gargle, overwrite = TRUE)
 usethis::use_data(opt, overwrite = TRUE)
 usethis::use_data(smartpill, overwrite = TRUE)
 usethis::use_data(supraclavicular, overwrite = TRUE)
-usethis::use_data(Theoph, overwrite = TRUE)
+usethis::use_data(theoph, overwrite = TRUE)
 usethis::use_data(tumorgrowth, overwrite = TRUE)
 usethis::use_data(raa, overwrite = TRUE)
-
 usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
