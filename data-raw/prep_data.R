@@ -68,7 +68,8 @@ strep_tb <- read_excel("data-raw/tb_trial.xlsx", sheet = "A participants") %>%
   mutate(baseline_esr = factor(baseline_esr, levels = c("1_0-10", "2_11-20", "3_21-50", "4_51+"))) %>%
   mutate(baseline_condition = factor(baseline_condition, levels = c("1_Good", "2_Fair", "3_Poor"))) %>%
   mutate(strep_resistance = factor(strep_resistance, levels = c("1_sens_0-8", "2_mod_8-99", "3_resist_100+"))) %>%
-  mutate(radiologic_6m = factor(radiologic_6m, levels = c("6_Considerable_improvement", "5_Moderate_improvement", "4_No_change", "3_Moderate_deterioration",  "2_Considerable_deterioration", "1_Death")))
+  mutate(radiologic_6m = factor(radiologic_6m, levels = c("6_Considerable_improvement", "5_Moderate_improvement", "4_No_change", "3_Moderate_deterioration",  "2_Considerable_deterioration", "1_Death"))) %>% mutate(rad_num = parse_number(as.character(radiologic_6m))) %>%
+  mutate(improved = rad_num >4)
 
 write.csv(strep_tb, "data-raw/strep_tb.csv")
 
