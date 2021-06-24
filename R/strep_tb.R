@@ -4,10 +4,10 @@
 #' The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II.
 #' This publication seems a bit primitive today, without standard features like a proper Table 1, and some creative use of graphs to display baseline characteristics of the study sample
 #' More strikingly, there is no ethics committee approval, or consent.
-#' You can read the pdf of the original journal article [here][https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf].
-#' This was the first of a series of 3 trials, in which the initial effectiveness of Streptomycin was established, but rapid resistance developed, and significant side effects occurred at a dose of 2 grams of streptomycin. This type of resistance also occurred with another new anti-tubercular therapy at the time, PAS (Para-Amino-Salicylate). Subsequent trials B and C evaluated different doses and combinations of Streptomycin and PAS, and were published together in 1952 in the BMJ, with the pdf available [here][https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2023677/pdf/brmedj03496-0024.pdf].
-#' Commentary on the conduct of these trials from one of the MD investigators can be found [here][https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592068/].
-#' Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found [here][https://www.sciencedirect.com/science/article/abs/pii/019724569090001I].
+#' You can read the pdf of the original journal article at \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf}{Streptomycin in TB Study}.
+#' This was the first of a series of 3 trials, in which the initial effectiveness of Streptomycin was established, but rapid resistance developed, and significant side effects occurred at a dose of 2 grams of streptomycin. This type of resistance also occurred with another new anti-tubercular therapy at the time, PAS (Para-Amino-Salicylate). Subsequent trials B and C evaluated different doses and combinations of Streptomycin and PAS, and were published together in 1952 in the BMJ, with the pdf available here \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2023677/pdf/brmedj03496-0024.pdf}{1952 Three Streptomycin in TB Studies Summarized}.
+#' Commentary on the conduct of these trials from one of the MD investigators can be found at \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592068/}{MD Clinical Trialist Commentary}.
+#' Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found at \href{https://www.sciencedirect.com/science/article/abs/pii/019724569090001I}{Statistican Commentary}.
 #'
 #' @format A data frame with 107 rows and 10 variables
 #' \describe{
@@ -20,10 +20,10 @@
 #'   \item{baseline_esr}{Erythrocyte Sedimentation Rate in mm per hour, categorized into 4 levels, from 0-51+ mm per hour; type: factor, with levels: 1_0-10, 2_11-20, 3_21-50, 4_51+}
 #'   \item{baseline_cavitation}{dichotomous presence of cavitation on the baseline chest x-ray; type: factor: 0_no, 1_yes}
 #'   \item{strep_resistance}{streptomycin resistance after 6 months of therapy, measured on a 0-100+ scale, categorized into 3 levels - sensitive, moderate, and resistant; type: factor: 1_sens_0-8, 2_mod_8-99, 3_resist_100+}
-#'   \item{radiologic_6m}{Likert score rating of radiologic response on chest x-ray at 6 months; type: factor: 1_death, 2_deteriorated, 3_no-change, 4_improved-moderately, 5_improved-considerably}
+#'   \item{radiologic_6m}{Likert score rating of radiologic response on chest x-ray at 6 months; type: factor: 1_death, 2_deteriorated_severely, 3_deteriorated_mildly, 4_no-change, 5_improved-moderately, 6_improved-considerably}
 #' }
 #'
 #' @source This data set is reconstructed to the best of my ability from the paper in the British Medical Journal from 1948, entitled, Streptomycin Treatment of Pulmonary Tuberculosis, pages 769-782 in the October 30, 1948 edition, authored by the Streptomycin in Tuberculosis Trials Committee.
-#' You can find the pdf [here][https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf].
+#' You can find the pdf at \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf}{Streptomycin in TB}.
 #'
 "strep_tb"

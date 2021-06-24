@@ -7,10 +7,10 @@ data("esoph")
 saveRDS(esoph, "data-raw/esoph.Rdata")
 
 data("Indometh")
-saveRDS(indometh, "data-raw/indometh.Rdata")
+saveRDS(Indometh, "data-raw/indometh.Rdata")
 
 data("Theoph")
-saveRDS(theoph, "data-raw/theoph.Rdata")
+saveRDS(Theoph, "data-raw/theoph.Rdata")
 
 data("infert")
 saveRDS(infert, "data-raw/infert.Rdata")
@@ -60,14 +60,15 @@ saveRDS(scurvy, "data-raw/scurvy.Rdata")
 # reconstructed strep_tb data
 strep_tb <- read_excel("data-raw/tb_trial.xlsx", sheet = "A participants") %>%
   mutate(patient_id = str_pad(patient_id, pad = "0", width = 4)) %>%
-  mutate(arm = factor(arm, levels = c("A1", "A2"))) %>%
+  mutate(arm = factor(arm, levels = c("Streptomycin", "Control"))) %>%
   mutate(baseline_temp = factor(baseline_temp,
-  levels = c("1_afebrile","2_<99F/<37.2C","3_99-99.9F/37.2-37.75C", "4_100F+/37.7C+"))) %>%
+  levels = c("1_98-98.9F","2_99-99.9F","3_100-100.9F", "4_100F+"))) %>%
   mutate(gender = factor(gender)) %>%
   mutate(baseline_cavitation = factor(baseline_cavitation)) %>%
   mutate(baseline_esr = factor(baseline_esr, levels = c("1_0-10", "2_11-20", "3_21-50", "4_51+"))) %>%
+  mutate(baseline_condition = factor(baseline_condition, levels = c("1_Good", "2_Fair", "3_Poor"))) %>%
   mutate(strep_resistance = factor(strep_resistance, levels = c("1_sens_0-8", "2_mod_8-99", "3_resist_100+"))) %>%
-  mutate(radiologic_6m = factor(radiologic_6m, levels = c("1_death", "2_deteriorated", "3_no-change", "4_improved-moderately", "5_improved-considerably")))
+  mutate(radiologic_6m = factor(radiologic_6m, levels = c("6_Considerable_improvement", "5_Moderate_improvement", "4_No_change", "3_Moderate_deterioration",  "2_Considerable_deterioration", "1_Death")))
 
 write.csv(strep_tb, "data-raw/strep_tb.csv")
 
@@ -104,3 +105,4 @@ usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
 usethis::use_data(strep_tb, overwrite = TRUE)
+
