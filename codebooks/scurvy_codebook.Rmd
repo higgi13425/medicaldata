@@ -39,7 +39,7 @@ scurvy_codebook <- tribble(
 ) %>% 
   flextable() %>% 
   fontsize(size = 11) %>% 
-  width(width = c(1.75, 0.5, 1.25, 1, 1.25, 0.5))
+  width(width = c(1.75, 0.5, 1.25, 0.35, 1.25, 0.5))
 
 scurvy_codebook
 
