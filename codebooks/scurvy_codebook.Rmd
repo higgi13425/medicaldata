@@ -30,7 +30,7 @@ scurvy_codebook <- tribble(
   ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
   "study_id", 1, "Participant ID", NA, NA, "character",
   "treatment", 2, "Treatment", NA, "cider, dilute_sulfuric_acid, vinegar, sea_water, citrus, purgative_mixture", "factor",
-  "dosing_regimen_for_scurvy", 3, "Dosing Regimen", NA, "1 quart per day, 25 drops of elixir of vitriol, three times a day, a nutmeg-sized paste of garlic, mustard seed, horseradish, balsam of Peru, and gum myrrh three times a day, half pint daily, two lemons and an orange daily, two spoonfuls, three times daily", "factor",
+  "dosing_regimen_for_scurvy", 3, "Dosing Regimen", NA, "1 quart per day; 25 drops of elixir of vitriol, three times a day; two spoonfuls, three times daily; half pint daily; two lemons and an orange daily; a nutmeg-sized paste of garlic, mustard seed, horseradish, balsam of Peru, and gum myrrh three times a day", "factor",
   "gum_rot_d6", 4, "Gum Rot on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
   "skin_sores_d6", 5, "Skin Sores on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
   "weakness_of_the_knees_d6", 6, "Weakness of the Knees on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
