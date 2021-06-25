@@ -1,0 +1,46 @@
+---
+title: "Scurvy data codebook"
+author: "Peter Higgins"
+date: "6/24/2021"
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+urlcolor: blue
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Scurvy Dataset Codebook
+
+Source: This data set is from a study published in 1757, _A Treatise on the Scurvy_, by James Lind.
+
+The dataset is derived directly from pages 149-153 of this tome, which includes the description of a small, randomized, comparator-controlled 6 day clinical trial of 6 scurvy remedies in 12 seamen with scurvy. The particpant_id variable, and the Likert scales for each outcome measured in this reconstructed dataset, are a bit fanciful (as Likert was not even born in 1757), but match Lind's descriptions. You can read the original study in a scanned volume on Google Books [here](https://www.google.com/books/edition/A_Treatise_on_the_Scurvy/oP1UEXWU7fsC?hl=en&gbpv=1&printsec=frontcover).
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+scurvy_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "study_id", 1, "Participant ID", NA, NA, "character",
+  "treatment", 2, "Treatment", NA, "cider, dilute_sulfuric_acid, vinegar, sea_water, citrus, purgative_mixture", "factor",
+  "dosing_regimen_for_scurvy", 3, "Dosing Regimen", NA, "1 quart per day, 25 drops of elixir of vitriol, three times a day, a nutmeg-sized paste of garlic, mustard seed, horseradish, balsam of Peru, and gum myrrh three times a day, half pint daily, two lemons and an orange daily, two spoonfuls, three times daily", "factor",
+  "gum_rot_d6", 4, "Gum Rot on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
+  "skin_sores_d6", 5, "Skin Sores on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
+  "weakness_of_the_knees_d6", 6, "Weakness of the Knees on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
+  "lassitude_d6", 7, "Lassitude on Day 6", "Likert Scale", "0_none, 1_mild, 2_moderate, 3_severe", "factor",
+  "fit_for_duty_d6", 8, "Fit for Duty on Day 6", "dichotomous", "0_no, 1_yes", "factor",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1.75, 0.5, 1.25, 1, 1.25, 0.5))
+
+scurvy_codebook
+
+```

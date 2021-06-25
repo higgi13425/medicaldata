@@ -22,7 +22,7 @@ Source: This data set is from a study published in 1993 in the New England Journ
  
  F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
  
-This dataset is derived from and improved upon from the {HSAUR} package.
+This dataset is derived from and improved upon from polyps and polyps3 in the {HSAUR} package, which divides up the dataset to different times, neglects the NAs, and does not include participant IDs. Consulting the original paper was quite helpful in reconstructing this dataset.
 
 ### Codebook
 
@@ -40,9 +40,5 @@ polyps_codebook <- tribble(
   flextable() %>% 
   fontsize(size = 11) %>% 
   width(width = c(1, 0.5, 2, 0.5, 1.25, 0.5))
-
 polyps_codebook
-
 ```
-
-
