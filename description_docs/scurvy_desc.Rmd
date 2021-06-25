@@ -1,0 +1,61 @@
+---
+title: "Scurvy Dataset Description Document"
+author: "Peter Higgins"
+date: "6/25/2021"
+output: pdf_document
+url_color: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Scurvy Dataset Introduction and Description
+
+Source: This data set is from a study published in 1757 in _A Treatise on the Scurvy in Three Parts_, by James Lind.
+ 
+  Scurvy was a common affliction of seamen on long voyages, leading to mouth sores, skin lesions, weakness of the knees, and lassitude. Scurvy could be fatal on long voyages. James Lind reported the treatment of 12 seamen with scurvy in 1757, in A Treatise on the Scurvy in Three Parts. This 476 page bloviation can be found scanned to the Google Books website A Treatise on the Scurvy. Pages 149-153 are a rare gem among what can be generously described as 400+ pages of evidence-free blathering, and these 4 pages may represent the first report of a controlled clinical trial. 
+  
+  Lind was the ship's surgeon on board the _HMS Salisbury_, and had a number of scurvy-affected seamen at his disposal. Many remedies had been described and advocated for, with no more than anecdotal evidence. On May 20, 1747, Lind decided to try the 6 therapies on the _Salisbury_ in a comparative study in 12 affected seamen. He selected 12 with roughly similar severity, with notable skin and mouth sores, weakness of the knees, and significant lassitude, making them unfit for duty. They each received the standard shipboard diet of gruel and mutton broth, supplemented with occasional biscuits and puddings. Each treatment was a dietary supplement (including citrus fruits) or a medicinal.
+  
+  This data frame was reconstructed from Lind's account as recorded on these 4 pages, with his estimates of severity translated to a 4 point Likert scale (0-3) for each of the symptoms he described at his chosen endpoint on day 6. A somewhat fanciful study_id variable was added, along with detailed descriptions of the dosing schedule of each treatment. Of note, there is some dispute about whether this was truly the first clinical trial, or whether it actually happened, as there are no contemporaneous corroborating accounts. See link about the [historical debate](https://www.bbvaopenmind.com/en/science/leading-figures/james-lind-and-scurvy-the-first-clinical-trial-in-history/). 
+  
+  Lind reported that the seamen treated with 2 lemons and an orange daily did best, followed by those treated with cider. Those treated with elixir of vitriol only had improvement in mouth sores. One imagines that acidic substances (like dilute sulfuric acid, vinegar, cider, and citrus fruits) might have been rather painful on these mouth sores. Unfortunately, the burial of the 4 valuable pages of data in 476 pages of noise, a publication delay of 10 years, and Lind's half-hearted conclusions (he was focused on acidity), meant that it took until 1795 before the British Navy mandated daily limes for seamen.
+
+#### Abstract
+
+ This data set contains 12 participants with scurvy. In 1757, it was not known that scurvy is a manifestation of vitamin C deficiency. A variety of remedies had been anecdotally reported, but Lind was the first to test different regimens of acidic substances (including citrus fruits) against each other in a randomized, controlled trial. 6 distinct therapies were tested in 12 seamen with symptomatic scurvy, who were selected for similar severity. Six days of therapy were provided, and endpoints were reported in the text at the end of 6 days. These include rotting of the gums, skin sores, weakness of the knees, and lassitude, which are described in terms of severity. These have been translated into Likert scales from 0(none) to 3(severe). A dichotomous endpoint, fitness for duty, was also reported.
+
+#### Study Design
+
+Prospective, Randomized, Comparator-Controlled Clinical Trial
+
+### Subjects & Variables
+
+12 seamen with symptomatic scurvy were assigned to 1 of 6 treatments:
+
+- cider
+- dilute sulfuric acide
+- sea water
+- vinegar
+- citrus
+- purgative mixture
+
+### Variables
+
+- study_id
+- treatment
+- dosing_regimen_for_scurvy
+- gum_rot_d6
+- skin_sores_d6
+- weakness_of_the_knees_d6
+- lassitude_d6
+- fit_for_duty_d6
+
+The endpoints, as described by Lind in the text, were translated to Likert scales (gum rot, skin sores, weakness of the knees, and lassitude) and a dichotomous outcome (fit for duty)
+
+#### Citation(s)
+
+James Lind, _A Treatise on the Scurvy in Three Parts_, pages 149-153, as found on [Google Books](https://www.google.com/books/edition/A_Treatise_on_the_Scurvy/oP1UEXWU7fsC?hl=en&gbpv=1&printsec=frontcover).
+

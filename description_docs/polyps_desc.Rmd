@@ -1,5 +1,5 @@
 ---
-title: "Polyps codebook"
+title: "Polyps Dataset Description Document"
 author: "Peter Higgins"
 date: "5/15/2021"
 output: pdf_document
@@ -10,7 +10,7 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Polyps Dataset Introduction and Codebook
+## Polyps Dataset Introduction and Description
 
 Source: This data set is from a study published in 1993 in the New England Journal of Medicine,
  
@@ -53,14 +53,3 @@ N = 22 subjects (2 dropped out between month 3 and 12)
 
 F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
 
-### Codebook
-
-|Position| Variable| Variable Label| Units| Value Codes| Variable Type|
-|--------|---------|---------------|------| ---------| ---|
-|1|participant_id|Participant ID|NA|NA|character|
-|2|sex|Sex|NA|male, female|factor|
-|3|age|Age|years|NA|numeric|
-|4|baseline|Number of Polyps at Baseline|NA|NA|numeric|
-|5|treatment|Treatment Assigned|NA|sulindac, placebo|factor|
-|6|number3m|Number of Polyps at 3 Months|NA|NA|numeric|
-|7|number12m|Number of Polyps at 12 Months|NA|NA|numeric}
