@@ -49,6 +49,14 @@ The initial sample consisted of 22 people with known FAP.
 N = 22 subjects (2 dropped out between month 3 and 12)
 7 variables
 
+- participant_id
+- sex
+- age
+- baseline (number of polyps)
+- treatment (sulindac or placebo)
+- number3m (number of polyps)
+- number6m (number of polyps)
+
 #### Citation(s)
 
 F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
