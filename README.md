@@ -28,7 +28,7 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 ### Datasets
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
-|strep_tb| | |
+|strep_tb|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)| |
 |scurvy| | |
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
