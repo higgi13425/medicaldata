@@ -52,10 +52,10 @@ N = 22 subjects (2 dropped out between month 3 and 12)
 - participant_id
 - sex
 - age
-- baseline (number of polyps)
+- baseline (number of polyps at baseline visit)
 - treatment (sulindac or placebo)
-- number3m (number of polyps)
-- number6m (number of polyps)
+- number3m (number of polyps at 3 months)
+- number6m (number of polyps at 6 months)
 
 #### Citation(s)
 
