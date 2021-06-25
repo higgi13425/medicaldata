@@ -29,7 +29,7 @@ where the name of the dataset comes after the double colon, and `blood` is the n
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
 |strep_tb|[strep_tb_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/strep_tb_codebook.pdf)| |
-|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)| |
+|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/scurvy_desc.pdf)|
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
 | blood_storage   | [blood_storage_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/blood_storage_code.pdf)| [blood_storage_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/blood_storage_desc.pdf)   |
