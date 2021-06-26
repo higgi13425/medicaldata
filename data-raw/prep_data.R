@@ -19,6 +19,10 @@ saveRDS(infert, "data-raw/infert.Rdata")
 raa <- read_excel("data-raw/RheumArth_Tx_ageComparisons.xlsx")
 saveRDS(raa, "data-raw/raa.Rdata")
 
+# Indomethacin RCT for PEP
+indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta")
+# need to format factors, apply labels
+saveRDS(indo_rct, "data-raw/indo_rct.Rdata")
 
 #covid from CHOP - Amrom E Obstfeld
 ## obstfelda@email.chop.edu
@@ -106,4 +110,4 @@ usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
 usethis::use_data(strep_tb, overwrite = TRUE)
-
+usethis::use_data(indo_rct, overwrite = TRUE)
