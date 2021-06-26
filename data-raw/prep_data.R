@@ -22,7 +22,7 @@ saveRDS(raa, "data-raw/raa.Rdata")
 # Indomethacin RCT for PEP
 indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta") %>% relocate(risk, .after = "mspep") %>%
   mutate(across(.cols = gender:mspep,
-    .fns = ~paste0(., "_", as_factor(., levels="label"))))
+    .fns = ~factor(paste0(., "_", as_factor(., levels="label")))))
 
 saveRDS(indo_rct, "data-raw/indo_rct.Rdata")
 
