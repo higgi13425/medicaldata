@@ -24,7 +24,6 @@ indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta") %>% relocate(risk, .aft
   mutate(across(.cols = gender:mspep,
     .fns = ~paste0(., "_", as_factor(., levels="label"))))
 
-
 saveRDS(indo_rct, "data-raw/indo_rct.Rdata")
 
 #covid from CHOP - Amrom E Obstfeld
