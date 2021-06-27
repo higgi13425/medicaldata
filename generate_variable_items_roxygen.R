@@ -34,6 +34,7 @@ codebook_table(medicaldata::smartpill) -> smart_book
 codebook_table(medicaldata::supraclavicular) -> supra_book
 codebook_table(medicaldata::Theoph) -> theoph_book
 codebook_table(medicaldata::tumorgrowth) -> tumor_book
+codebook_table(medicaldata::indo_rct)
 
 # generate text for esoph with labels
 # numeric and factor
@@ -63,11 +64,11 @@ prostate_book %>% # will error if no factor vars present
   filter(data_type == "factor") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, ordered: {ordered}, levels: {value_labels}}}")
 
-prostate_book %>%
+prostate_book %>% # no output as no character vars
   filter(data_type == "character") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, levels: {n_unique}}")
 
-esoph_book %>%
+prostate_book %>% # no output as no logical vars
   filter(data_type == "logical") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}}}")
 
@@ -85,7 +86,7 @@ cmv_book %>%
   filter(data_type == "character") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, levels: {n_unique}}")
 
-cmv_book %>%
+cmv_book %>% # no output as no logical vars
   filter(data_type == "logical") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}}}")
 
