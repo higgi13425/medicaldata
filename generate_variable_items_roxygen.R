@@ -34,7 +34,7 @@ codebook_table(medicaldata::smartpill) -> smart_book
 codebook_table(medicaldata::supraclavicular) -> supra_book
 codebook_table(medicaldata::Theoph) -> theoph_book
 codebook_table(medicaldata::tumorgrowth) -> tumor_book
-codebook_table(medicaldata::indo_rct)
+codebook_table(medicaldata::indo_rct) -> indo_rct_book
 
 # generate text for esoph with labels
 # numeric and factor
@@ -87,6 +87,24 @@ cmv_book %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, levels: {n_unique}}")
 
 cmv_book %>% # no output as no logical vars
+  filter(data_type == "logical") %>%
+  glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}}}")
+
+# generate text for cmv
+# numeric and character
+indo_rct_book %>%
+  filter(data_type == "numeric") %>%
+  glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, range:{min}-{max}}}")
+
+indo_rct_book %>%
+  filter(data_type == "factor") %>%
+  glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, ordered: {ordered}, levels: {value_labels}}}")
+
+indo_rct_book %>% # no output if no char vars present
+  filter(data_type == "character") %>%
+  glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}, levels: {n_unique}}")
+
+indo_rct_book %>% # no output as no logical vars
   filter(data_type == "logical") %>%
   glue_data("#' \\item{{\\code{{{name}}}}}{{{label}, {data_type}}}")
 
