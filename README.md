@@ -15,7 +15,7 @@ where `covid` is the name of the new object,
 and `covid_testing` is the name of the dataset.<br>
 <br>
 You can also load the data with `data("blood_storage")`, 
-where you insert the appropriate dataset name inside the quotes, but this gets you into the clunky world of _Promises_.
+where you insert the appropriate dataset name inside the quotes, but this gets you into the clunky world of *Promises*.
 
 5. This dataset (loaded with `data()` will appear in your Environment tab as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are accessible, but R won't load it until you _actually_ need it.
 
