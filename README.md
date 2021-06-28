@@ -1,8 +1,8 @@
 # Medical Data Teaching Package
 
-# medicaldata <img src='images/hex-medicaldata.png' align="right" height="140"
+# medicaldata <img src='images/hex-medicaldata.png' align="right" height="240">
 
-This is a data package with several medical datasets for teaching Reproducible Medical Research with R. These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), to cohort data on SARS-CoV2 testing results (2020).
+This is a data package with several medical datasets for teaching Reproducible Medical Research with R. These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020).
 
 1. Install with: `remotes::install_github("higgi13425/medicaldata")`    
 
