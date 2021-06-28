@@ -19,7 +19,7 @@ where you insert the appropriate dataset name inside the quotes, but this gets y
 
 5. This dataset (loaded with `data()` will appear in your Environment tab as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are accessible, but R won't load it until you _actually_ need it.
 
-6. To activate and _actually_ load your data, either run `View(blood_storage)` or run `head(blood_storage)`. Then the dataframe will appear in your Environment tab and you can use the data. <br>
+6. To activate and _actually_ load your data after a *Promise*, either run `View(blood_storage)` or run `head(blood_storage)`. Then the dataframe will appear in your Environment tab and you can use the data. <br>
 You may prefer to directly assign the dataset to an object in your Environment, with <br>
 `blood <- medicaldata::blood_storage` <br>
 where the name of the dataset comes after the double colon, and `blood` is the name of the new object (a dataframe) in your environment. This actually loads your data and assigns it to an object, rather than making a _Promise_ for later.
