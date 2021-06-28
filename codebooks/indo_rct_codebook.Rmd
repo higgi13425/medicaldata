@@ -1,0 +1,64 @@
+---
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+urlcolor: blue
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+## Indomethacin RCT to prevent PEP Dataset Codebook
+
+Source: This data set is provided by B. Joseph Elmunzer, the lead author on this randomized controlled trial. This trial was published in the New England Journal of Medicine in 2012, volume 366, pages 1414-1422. The article is accessible at \href{https://www.nejm.org/doi/full/10.1056/NEJMoa1111103}{_A Randomized Trial of Rectal Indomethacin to Prevent Post-ERCP Pancreatitis_}
+
+This data set is anonymized with invented study ids for each participant.
+
+## Codebook
+
+```{r, echo=FALSE, message=FALSE}
+indo_rct_codebook <- tribble(
+  ~variable, ~position, ~Var_Label, ~units, ~Codes, ~type,
+  "subject", 1, "Participant ID", NA, "1001-4003", "numeric",
+  "age", 2, "Age in Years", NA, "18-90", "numeric",
+  "gender", 3, "Gender", NA, "1_female, 2_male", "factor",
+  "outcome", 4, "Outcome", NA, "1_yes, 2_no", "factor",
+  "group", 5, "Treatment", NA, "1_placebo, 2_indomethacin", "factor",
+  "sod", 6, "Sphincter of Oddi Dysfunction", NA, "1_yes, 2_no", "factor",
+  "pep", 7, "post-ERCP pancreatitis", NA, "1_yes, 2_no", "factor",
+  "recpancreatitis", 8, "Recurrent pancreatitis", NA, "1_yes, 2_no", "factor",
+  "psphinct", 9, "pancreatic sphincterotomy", NA, "1_yes, 2_no", "factor",
+  "precut", 10, "Use of precut to access papilla", NA, "1_yes, 2_no", "factor",
+  "diffcann", 11, "Difficult Cannulation", NA, "1_yes, 2_no", "factor",
+  "pancinj", 12, "pancreatic injection of contrast", NA, "1_yes, 2_no", "factor",
+  "somsod", 13, "Sphincter of Oddi Manometry used for SOD", NA, "1_yes, 2_no", "factor",
+  "pdstent", 14, "pancreatic duct stent placed", NA, "1_yes, 2_no", "factor",
+  "trainee", 15, "trainee participated in procedure", NA, "1_yes, 2_no", "factor",
+  "bilsphinct", 16, "biliary sphincterotomy", NA, "1_yes, 2_no", "factor",
+  "ampullectomy", 17, "ampullectomy performed", NA, "1_yes, 2_no", "factor",
+  "acinarization", 18, "pancreatic acinarization seen", NA, "1_yes, 2_no", "factor",
+  "bilstent", 19, "biliary stent placed", NA, "1_yes, 2_no", "factor",
+  "choledocho", 20, "choledocholithiasis found", NA, "1_yes, 2_no", "factor",
+  "cancer", 21, "cancer of bile ducts or pancreas found", NA, "1_yes, 2_no", "factor",
+  "pbrush", 22, "pancreatic brushings performed", NA, "1_yes, 2_no", "factor",
+  "gibleed", 23, "post-procedure gastrointestinal bleeding occurred", NA, "1_yes, 2_no", "factor",
+  "mspep", 24, "multisystem post-ERCP pancreatitis", NA, "1_yes, 2_no", "factor",
+  "risk", 25, "post hoc risk score", "points", NA, "numeric"
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) 
+#%>% 
+ # width(width = c(1.25, 0.5, 3.25, 0.75, 1.25, 1))
+
+indo_rct_codebook
+
+```
+
+
+
+
