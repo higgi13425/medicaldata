@@ -24,10 +24,10 @@ where you insert the appropriate dataset name inside the quotes, but this gets y
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
 |strep_tb|[strep_tb_codebook](https://higgi13425.github.io/medicaldata/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://higgi13425.github.io/medicaldata/description_docs/strep_tb_desc.pdf)|
-|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/scurvy_desc.pdf)|
-|indo_rct|[indo_rct_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/indo_rct_desc.pdf)|
-|polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
-| covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
+|scurvy|[scurvy_codebook](https://higgi13425.github.io/medicaldata/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://higgi13425.github.io/medicaldata/description_docs/scurvy_desc.pdf)|
+|indo_rct|[indo_rct_codebook](https://higgi13425.github.io/medicaldata/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://higgi13425.github.io/medicaldata/description_docs/indo_rct_desc.pdf)|
+|polyps|[polyps_codebook](https://higgi13425.github.io/medicaldata/codebooks/polyps_codebook.pdf)|[polyps_desc](https://higgi13425.github.io/medicaldata/description_docs/polyps_desc.pdf)|
+| covid_testing    | [covid_codebook](https://higgi13425.github.io/medicaldata/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://higgi13425.github.io/medicaldata/description_docs/covid_desc.pdf)  |
 | blood_storage   | [blood_storage_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)| [blood_storage_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
 | esoph           |            |             |
