@@ -17,25 +17,18 @@ and `covid_testing` is the name of the dataset.<br>
 You can also load the data with `data("blood_storage")`, 
 where you insert the appropriate dataset name inside the quotes, but this gets you into the clunky world of *Promises*.
 
-5. This dataset (loaded with `data()` will appear in your Environment tab as a `<Promise>`. This is part of `lazyloading` in R. It tells you the data are accessible, but R won't load it until you _actually_ need it.
-
-6. To activate and _actually_ load your data after a *Promise*, either run `View(blood_storage)` or run `head(blood_storage)`. Then the dataframe will appear in your Environment tab and you can use the data. <br>
-You may prefer to directly assign the dataset to an object in your Environment, with <br>
-`blood <- medicaldata::blood_storage` <br>
-where the name of the dataset comes after the double colon, and `blood` is the name of the new object (a dataframe) in your environment. This actually loads your data and assigns it to an object, rather than making a _Promise_ for later.
-
-7. You can click on the links below to view the codebook and/or description document for each dataset. <br>
+5. You can click on the links below to view the codebook and/or description document for each dataset. <br>
 
 
 ### Datasets
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
-|strep_tb|[strep_tb_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/strep_tb_desc.pdf)|
+|strep_tb|[strep_tb_codebook](https://higgi13425.github.io/medicaldata/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/strep_tb_desc.pdf)|
 |scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/scurvy_desc.pdf)|
 |indo_rct|[indo_rct_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/indo_rct_desc.pdf)|
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/covid_desc.pdf)  |
-| blood_storage   | [blood_storage_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/blood_storage_code.pdf)| [blood_storage_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/blood_storage_desc.pdf)   |
+| blood_storage   | [blood_storage_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)| [blood_storage_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
 | esoph           |            |             |
 | infert          | |         |

@@ -1,4 +1,4 @@
-#' Indomethacin for Prevention of Post-ERCP Pancreatitis
+#' RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis
 #'
 #' Results of a randomized, placebo-controlled, prospective 2-arm trial of rectal indomethacin (100 mg) vs. placebo prevent post-ERCP pancreatitis in 602 participants, as reported by Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine. \cr
 

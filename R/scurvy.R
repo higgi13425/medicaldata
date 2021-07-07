@@ -1,4 +1,4 @@
-#' Scurvy
+#' Randomized Trial of Six Therapies for Scurvy
 #'
 #' Results of a randomized, 6-arm comparator-controlled trial of 6 interventions to treat scurvy in 12 disabled seamen, as reported by James Lind in 1757. \cr
 #' Scurvy was a common affliction of seamen on long voyages, leading to mouth sores, skin lesions, weakness of the knees, and lassitude. Scurvy could be fatal on long voyages. James Lind reported the treatment of 12 seamen with scurvy in 1757, in *A Treatise on the Scurvy in Three Parts*. This 476 page bloviation can be found scanned to the Google Books website \href{https://www.google.com/books/edition/A_Treatise_on_the_Scurvy/oP1UEXWU7fsC?hl=en&gbpv=1&printsec=frontcover}{A Treatise on the Scurvy}.    Pages 149-153 are a rare gem among what can be generously described as 400+ pages of evidence-free blathering, and these 4 pages may represent the first report of a controlled clinical trial. \cr

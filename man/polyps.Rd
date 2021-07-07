@@ -3,7 +3,7 @@
 \docType{data}
 \name{polyps}
 \alias{polyps}
-\title{Polyps}
+\title{RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis}
 \format{
 A data frame with 22 rows and 7 variables
 \describe{

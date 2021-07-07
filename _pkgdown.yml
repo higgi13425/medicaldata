@@ -1,0 +1,11 @@
+template:
+  params:
+    bootswatch: cerulean
+reference:
+- title: Datasets
+- contents:
+  - strep_tb
+  - scurvy
+  - polyps
+  - indo_rct
+  - covid_testing

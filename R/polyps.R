@@ -1,4 +1,4 @@
-#' Polyps
+#' RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis
 #'
 #' Results of a randomized, placebo-controlled trial of sulindac in the reduction of colonic polyps in Familial Adenomatous Polyposis (FAP). \cr
 #' FAP is an inherited condition caused by mutations in the APC  (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age.  \cr

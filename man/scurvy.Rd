@@ -3,7 +3,7 @@
 \docType{data}
 \name{scurvy}
 \alias{scurvy}
-\title{Scurvy}
+\title{Randomized Trial of Six Therapies for Scurvy}
 \format{
 A data frame with 12 rows and 8 variables
 \describe{

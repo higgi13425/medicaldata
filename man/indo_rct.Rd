@@ -3,7 +3,7 @@
 \docType{data}
 \name{indo_rct}
 \alias{indo_rct}
-\title{Indomethacin for Prevention of Post-ERCP Pancreatitis}
+\title{RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis}
 \format{
 A data frame with 602 rows and 25 variables
 \describe{
