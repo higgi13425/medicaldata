@@ -23,7 +23,7 @@ where you insert the appropriate dataset name inside the quotes, but this gets y
 ### Datasets
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
-|strep_tb|[strep_tb_codebook](https://higgi13425.github.io/medicaldata/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/strep_tb_desc.pdf)|
+|strep_tb|[strep_tb_codebook](https://higgi13425.github.io/medicaldata/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://higgi13425.github.io/medicaldata/description_docs/strep_tb_desc.pdf)|
 |scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/scurvy_desc.pdf)|
 |indo_rct|[indo_rct_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/indo_rct_desc.pdf)|
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/description_docs/polyps_desc.pdf)|
