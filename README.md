@@ -21,7 +21,7 @@ where you insert the appropriate dataset name inside the quotes, but this gets y
 
 
 ### Datasets
-### 
+ 
 | dataset         | codebook                 | description_doc          |
 |-----------------|--------------------------|--------------------------|
 |strep_tb|[strep_tb_codebook](https://higgi13425.github.io/medicaldata/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://higgi13425.github.io/medicaldata/description_docs/strep_tb_desc.pdf)|
