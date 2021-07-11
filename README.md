@@ -13,9 +13,6 @@ This is a data package with several medical datasets for teaching Reproducible M
 `covid <- medicaldata::covid_testing` <br>
 where `covid` is the name of the new object,
 and `covid_testing` is the name of the dataset.<br>
-<br>
-You can also load the data with `data("blood_storage")`, 
-where you insert the appropriate dataset name inside the quotes, but this gets you into the clunky world of *Promises*.
 
 5. You can click on the links below to view the codebook and/or description document for each dataset. <br>
 
