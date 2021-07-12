@@ -1,7 +1,13 @@
+home:
+  title: An R package with medical data for teaching
+  description: medical datasets for teaching R
+
 template:
   params:
     bootswatch: cerulean
+
 url: https://higgi13425.github.io/medicaldata/
+
 reference:
 - title: Datasets
 - contents:
