@@ -1,6 +1,6 @@
 Package: medicaldata
 Type: Package
-Title: Data package for Medical Datasets
+Title: Data Package for Medical Datasets
 Version: 0.1.0
 Authors@R: c(
     person("Peter", "Higgins", email="higgi13425@yahoo.com", role = c("aut", "cre"))
