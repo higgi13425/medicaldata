@@ -1,6 +1,6 @@
 home:
   title: An R Package Of Medical Data For Teaching
-  description: medical datasets for teaching R
+  description: Medical Datasets for Teaching R
 
 template:
   params:
