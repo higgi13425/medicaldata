@@ -1,6 +1,7 @@
 template:
   params:
     bootswatch: cerulean
+url: https://higgi13425.github.io/medicaldata/
 reference:
 - title: Datasets
 - contents:
