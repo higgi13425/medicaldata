@@ -1,0 +1,38 @@
+---
+title: "Esophageal Cancer data codebook"
+author: "Peter Higgins"
+date: "7/10/2021"
+output:
+  
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+### Introduction
+
+This dataset is from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux. This is an original base R dataset.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+esoph_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "agegp", 1, "Age Group", NA, "6 levels of age: 25-34, 35-44, 45-54, 55-64, 65-74, 75+", "ordinal factor",
+  "alcgp", 2, "Age Group", NA, "4 levels of alcohol consumption: 0-39g/day, 40-79, 80-119, 120+", "ordinal factor",
+  "tobgp", 3, "Tobacco Group", NA, "4 levels of tobacco consumption: 0-9g/day, 10-19, 20-29, 30+", "ordinal factor",
+  "ncases", 4, "Number of Cases", NA, NA, "integer",
+  "ncontrols", 5, "Number of Controls", NA, NA, "integer",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.75, 1, 0.5, 2.5, 1))
+esoph_codebook
+```
