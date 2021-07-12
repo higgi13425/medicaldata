@@ -23,13 +23,13 @@ Click on the name of a dataset for more details.
 | Dataset         | Codebook                 | Description document          |
 |:----------------|:-------------------------|:-------------------------|
 |strep_tb|[strep_tb_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.pdf)|
-|scurvy|[scurvy_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://higgi13425.github.io/medicaldata/man/description_docs/scurvy_desc.pdf)|
-|indo_rct|[indo_rct_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://higgi13425.github.io/medicaldata/man/description_docs/indo_rct_desc.pdf)|
-|polyps|[polyps_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/polyps_codebook.pdf)|[polyps_desc](https://higgi13425.github.io/medicaldata/man/description_docs/polyps_desc.pdf)|
-| covid_testing    | [covid_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://higgi13425.github.io/medicaldata/man/description_docs/covid_desc.pdf)  |
+|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.pdf)|
+|indo_rct|[indo_rct_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.pdf)|
+|polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.pdf)|
+| covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.pdf)  |
 | blood_storage   | [blood_storage_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)| [blood_storage_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
-| esoph  |[esoph_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/esoph_codebook.pdf) |  [esoph_desc](https://higgi13425.github.io/medicaldata/man/description_docs/esoph_desc.pdf) |
+| esoph  |[esoph_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_codebook.pdf) |  [esoph_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_desc.pdf) |
 | infert          | |         |
 | laryngoscope    |[laryngoscope_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)| [laryngoscope_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)  |
 | licorice_gargle | [licorice_gargle_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)| [licorice_gargle_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) |
