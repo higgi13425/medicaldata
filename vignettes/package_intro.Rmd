@@ -39,13 +39,12 @@ Currently, the datasets included are:
  
 - Streptomycin in Tuberculosis
 - Scurvy RCT
-- Indomethacin RCT for Post-ERCP
+- Indomethacin RCT to Prevent Post-ERCP Pancreatitis
 - Sulindac RCT for polyps
 - Covid Testing
 - Blood Storage (prostate cancer)
 - Cytomegalovirus in BMT
 - esophageal cancer
-- infertility
 - laryngoscope
 - licorice gargle
 - OPT
