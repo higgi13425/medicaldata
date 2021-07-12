@@ -29,7 +29,7 @@ Click on the name of a dataset for more details.
 | covid_testing    | [covid_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://higgi13425.github.io/medicaldata/man/description_docs/covid_desc.pdf)  |
 | blood_storage   | [blood_storage_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)| [blood_storage_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
-| esoph  | https://higgi13425.github.io/medicaldata/man/codebooks/esoph_codebook.pdf |  https://higgi13425.github.io/medicaldata/man/description_docs/esoph_desc.pdf) |
+| esoph  |[esoph_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/esoph_codebook.pdf) |  [esoph_desc](https://higgi13425.github.io/medicaldata/man/description_docs/esoph_desc.pdf) |
 | infert          | |         |
 | laryngoscope    |[laryngoscope_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)| [laryngoscope_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)  |
 | licorice_gargle | [licorice_gargle_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)| [licorice_gargle_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) |
