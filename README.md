@@ -22,7 +22,7 @@ Click on the name of a dataset for more details.
 
 | Dataset         | Codebook                 | Description document          |
 |:----------------|:-------------------------|:-------------------------|
-|strep_tb|[strep_tb_codebook](https://raw.githubusercontent.com/higgi13425/medicaldata/master/man/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://raw.githubusercontent.com/higgi13425/medicaldata/master/man/description_docs/strep_tb_desc.pdf)|
+|strep_tb|[strep_tb_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.pdf)|
 |scurvy|[scurvy_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://higgi13425.github.io/medicaldata/man/description_docs/scurvy_desc.pdf)|
 |indo_rct|[indo_rct_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://higgi13425.github.io/medicaldata/man/description_docs/indo_rct_desc.pdf)|
 |polyps|[polyps_codebook](https://higgi13425.github.io/medicaldata/man/codebooks/polyps_codebook.pdf)|[polyps_desc](https://higgi13425.github.io/medicaldata/man/description_docs/polyps_desc.pdf)|
