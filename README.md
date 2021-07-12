@@ -14,7 +14,7 @@ This is a data package with several medical datasets for teaching Reproducible M
 where `covid` is the name of the new object,
 and `covid_testing` is the name of the dataset.<br>
 
-5. You can click on the links below to view the codebook and/or description document for each dataset. <br>
+5. You can click on the links below to view the codebook and/or description document for each dataset. This information is also available under the Reference tab above, or within R by using `help(dataset_name)` <br>
 
 
 ### Datasets
