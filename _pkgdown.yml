@@ -1,6 +1,6 @@
 template:
   params:
-    bootswatch: paper
+    bootswatch: cerulean
 reference:
 - title: Datasets
 - contents:
