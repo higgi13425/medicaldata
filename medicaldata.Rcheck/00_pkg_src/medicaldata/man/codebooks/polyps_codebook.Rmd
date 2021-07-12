@@ -1,0 +1,44 @@
+---
+title: "Polyps data codebook"
+author: "Peter Higgins"
+date: "10/18/2020"
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Polyps Dataset Codebook
+
+Source: This data set is from a study published in 1993 in the New England Journal of Medicine,
+ 
+ F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
+ 
+This dataset is derived from and improved upon from polyps and polyps3 in the {HSAUR} package, which divides up the dataset to different times, neglects the NAs, and does not include participant IDs. Consulting the original paper was quite helpful in reconstructing this dataset.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+polyps_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "participant_id", 1, "Participant ID", NA, NA, "character",
+  "sex", 2, "Sex", NA, "male, female", "factor",
+  "age", 3, "Age", "years", NA, "numeric",
+  "baseline", 4, "Number of Polyps at Baseline", NA, NA, "numeric",
+  "treatment", 5, "Treatment Assigned", NA, "sulindac, placebo", "factor",
+  "number3m", 6, "Number of Polyps at 3 Months", NA, NA, "numeric",
+  "number12m", 7, "Number of Polyps at 12 Months", NA, NA, "numeric"
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 2, 0.5, 1.25, 0.5))
+polyps_codebook
+```

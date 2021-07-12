@@ -1,0 +1,63 @@
+---
+title: "Polyps Dataset Description Document"
+author: "Peter Higgins"
+date: "5/15/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Polyps Dataset Introduction and Description
+
+Source: This data set is from a study published in 1993 in the New England Journal of Medicine,
+ 
+F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
+
+This dataset is derived from and improved upon from the {HSAUR} package. 
+
+#### Abstract
+
+ This data set contains 22 participants with Familial Adenomatous Polyposis (FAP). FAP is an inherited condition caused by mutations in the APC  (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age. Early and frequent surveillance colonoscopy and polyp removal is helpful, but this study examined whether there is a beneficial effect of preventive medical therapy with the nonsteroidal pain reliever, sulindac, versus placebo in a RCT vs placebo in 22 participants, with polyp number measured (via colonoscopy) at baseline, 3 months, and 12 months after starting the study drug.The main exposure of interest was sulindac vs. placebo. The baseline number of adenomatous polyps, sex, and age were also collected. The outcomes were the number of adenomatous polyps at 3 and 12 months. The dataset includes 2 subjects who dropped out between 3 and 12 months, so the polyp mumber at 12 months is not available for all 22 subjects. There are no outliers or other data problems. 
+
+#### Background
+
+Classic familial adenomatous polyposis, called FAP or classic FAP, is a genetic condition. It is diagnosed when a person develops more than 100 adenomatous colon polyps. An adenomatous polyp is an area where normal cells that line the inside of a person’s colon form a mass on the inside of the intestinal tract. The average age for polyps to develop in people with FAP is in the mid-teens. Most people with FAP will have multiple colon polyps by age 35. If FAP is not recognized and treated, there is a very high likelihood that a person will develop colorectal cancer.
+
+FAP is passed from generation to generation in a family. Genetic alterations in the APC gene that are present at birth are linked to FAP, AFAP, Gardner syndrome, and Turcot syndrome. This type of change to a gene can also be called a genetic mutation, gene alteration, pathogenic or likely pathogenic germline variant, or a disruptive gene change. APC stands for adenomatous polyposis coli. A genetic alteration which disrupts the function of the APC gene gives a person an increased lifetime risk of developing multiple colorectal polyps (from tens to hundreds), as well as colorectal cancer, and/or other cancers of the digestive tract.
+
+Not all individuals with FAP have a family history of FAP. Up to 1 in 3 people with FAP develop a de novo (meaning "new") germline mutation in APC.  Specific estimates on how many people have FAP vary from 1 in 22,000 up to 1 in 7,000. Approximately 30% of people with FAP do not have any family history of the condition and are the first person in their family to be affected with the condition.
+
+ASCO recommends the following screening for people with FAP. It is important to discuss these options with your health care team, as each individual is different:
+
+Sigmoidoscopy or colonoscopy every 1 to 2 years, starting at age 10 to 12 for people with FAP and a colonoscopy beginning at age 18 to 20 for people with AFAP.
+
+Yearly colonoscopy once polyps are found until a colectomy is planned. There are different types of colon surgery for individuals with FAP and AFAP. People with classic FAP may require a total colectomy, due to a high number of polyps and the high risk of colorectal cancer. A total colectomy is the surgical removal of the entire colon. This is a major surgery and possible side effects may include the need for a colostomy. Talk with your health care team about what to expect during and after surgery.
+
+#### Study Design
+
+Prospective, Randomized, Placebo-Controlled Clinical Trial
+
+#### Subjects & Variables
+
+22 participants were assigned to 1 of 2 treatments, sulindac or placebo. 
+
+The initial sample consisted of 22 people with known FAP. 
+
+N = 22 subjects (2 dropped out between month 3 and 12)
+7 variables
+
+- participant_id
+- sex
+- age
+- baseline (number of polyps at baseline visit)
+- treatment (sulindac or placebo)
+- number3m (number of polyps at 3 months)
+- number6m (number of polyps at 6 months)
+
+#### Citation(s)
+
+F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
+
