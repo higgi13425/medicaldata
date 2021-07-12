@@ -18,7 +18,7 @@ and `covid_testing` is the name of the dataset.<br>
 
 
 ### Datasets
-
+Click on the name of a dataset for more details.
 
 | Dataset         | Codebook                 | Description document          |
 |:----------------|:-------------------------|:-------------------------|
