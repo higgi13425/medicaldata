@@ -13,10 +13,6 @@ data("Theoph")
 saveRDS(Theoph, "data-raw/theoph.Rdata")
 
 
-# rheumatoid arthritis and age
-raa <- read_excel("data-raw/RheumArth_Tx_ageComparisons.xlsx")
-saveRDS(raa, "data-raw/raa.Rdata")
-
 # Indomethacin RCT for PEP
 indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta") %>% relocate(risk, .after = "mspep") %>%
   mutate(across(.cols = gender:mspep,
@@ -90,7 +86,6 @@ load('data-raw/OPT_Study_PersonLevel_Data.Rdata')
 load('data-raw/smartpill.Rdata')
 load('data-raw/supraclavicular.Rdata')
 load('data-raw/tumorgrowth.Rdata')
-load('data-raw/raa.Rdata')
 
 # save data to data folder
 usethis::use_data(blood_storage, overwrite = TRUE)
@@ -104,7 +99,6 @@ usethis::use_data(smartpill, overwrite = TRUE)
 usethis::use_data(supraclavicular, overwrite = TRUE)
 usethis::use_data(theoph, overwrite = TRUE)
 usethis::use_data(tumorgrowth, overwrite = TRUE)
-usethis::use_data(raa, overwrite = TRUE)
 usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)

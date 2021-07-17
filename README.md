@@ -36,7 +36,6 @@ Click on the name of a dataset for more details.
 | smartpill       | [smartpill_codebook](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf)| [smartpill_desc](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf)     |
 | supraclavicular | [supraclavicular_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)| [supraclavicular_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)    |
 | tumorgrowth     | [tumorgrowth_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)| [tumorgrowth_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf) |
-| raa    | [raa_codebook](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Data%20Dictionary.pdf) |[raa_desc](https://www.causeweb.org/tshs/datasets/RheumArth_Tx_AgeComparisons_Dataset%20Introduction.pdf) |
 | Indometh        |          |          |
 | Theoph          |          |           |
 
