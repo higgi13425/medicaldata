@@ -1,0 +1,52 @@
+---
+title: "Esophageal Cancer Dataset Description Document"
+author: "Peter Higgins"
+date: "5/15/2021"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Esophageal Cancer Dataset Introduction and Description
+
+Source: This data set is from a study published in 1993 in the New England Journal of Medicine,
+ 
+F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
+
+This dataset is derived from and improved upon from the {HSAUR} package. 
+
+#### Abstract
+
+
+#### Background
+
+
+
+#### Study Design
+
+Retrospective case-control study of exposures (smoking, alcohol) and outcome (esophageal cancer)
+
+#### Subjects & Variables
+
+22 participants were assigned to 1 of 2 treatments, sulindac or placebo. 
+
+The initial sample consisted of 22 people with known FAP. 
+
+N = 22 subjects (2 dropped out between month 3 and 12)
+7 variables
+
+- participant_id
+- sex
+- age
+- baseline (number of polyps at baseline visit)
+- treatment (sulindac or placebo)
+- number3m (number of polyps at 3 months)
+- number6m (number of polyps at 6 months)
+
+#### Citation(s)
+
+F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
+

@@ -1,0 +1,58 @@
+---
+title: "Esophageal Cancer Dataset Description Document"
+author: "Peter Higgins"
+date: "5/15/2021"
+output:
+  pdf_document: default
+  html_document:
+    df_print: paged
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Esophageal Cancer Dataset Introduction and Description
+
+Source: This data set is from a a statistical textbook, Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press. Originally in base R datasets.
+
+This dataset is derived from papers from authors in France.
+
+#### Abstract
+
+Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. 200 cases and 975 controls were evaluated for alcohol and tobacco consumption. It is not entirely clear which publication was the source of this dataset.
+
+#### 1975 Abstract from AJ Tuyns, et al.
+Mortality from cancer of the oesophagus is known to be high in Brittany and Normandy. A morbidity survey was initiated to confirm this finding. A registry was set up in Rennes for the département of Ille-et-Vilaine. In the course of six years (1968-73) 718 cases were entered, 669 males and 49 females; the annual incidence rate for males is 29-4 per 100,000, one of the highest ever described. Most tumors are in the middle third of the oesophagus (49 per cent); 33 per cent are in the lower third. Most tumors were squamous cell carcinomas; 7 per cent were adenocarcinomas. There is an area of high endemicity in the rural areas of the north of Ille-et-Vilaine with rates reaching 60 per 100,000. The relationship with drinking habits is currently being investigated.
+[link](https://pubmed.ncbi.nlm.nih.gov/1116895/)
+
+#### 1977 Abstract from AJ Tuyns, et al. 
+A retrospective case-control study of 200 male cases of oesophageal cancer and 778 population controls has been carried out in Ille-et-Vilanine (France). The logarithms of the relative risks of developing the disease increase linearly with daily consumption of alcohol and tobacco independently. The combined effect of both fit with a multiplicative model which is proposed. This model could be applicable to other situations. It explains the sex ratio and the urban/rural differences observed in Ille-er-Vilaine. The practical implications for public health purposes are briefly discussed. [link](https://pubmed.ncbi.nlm.nih.gov/861389/)
+
+#### Background
+
+Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux. The majority (93% of the cases) in this study were of the squamous type, and more than 90% of cases occurred in males in this study in Brittany, France. The authors speculate that there may be an interaction between the effects of alcohol and tobacco. 
+
+#### Study Design
+
+Retrospective case-control study of exposures (smoking, alcohol) and outcome (esophageal cancer)
+
+#### Subjects & Variables
+
+200 cases and 975 controls were evaluated for consumption of alcohol and tobacco.
+
+5 variables
+
+- agegp
+- alcgp
+- tpbgp
+- ncases
+- ncontrols
+
+#### Citation
+"Cancer of the oesophagus in Brittany: an incidence study in Ille-et-Vilaine", _Int J Epidmiol_, 1975, Volume 4, pages 55-59.
+by AJ Tuyns, G Masse.
+
+"Esophageal cancer in Ille-et-Vilaine in relation to levels of alcohol and tobacco consumption. Risks are multiplying", _Bulletin of Cancer_, 1977, volume 64, pages 45-60, by AJ Tuyns, G Pequignot, and OM Jensen. 
+

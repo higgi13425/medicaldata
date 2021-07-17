@@ -1,6 +1,6 @@
 Package: medicaldata
 Type: Package
-Title: Data package for Medical Datasets
+Title: Data Package for Medical Datasets
 Version: 0.1.0
 Authors@R: c(
     person("Peter", "Higgins", email="higgi13425@yahoo.com", role = c("aut", "cre"))
@@ -19,4 +19,8 @@ URL: https://github.com/higgi13425/medicaldata
 RoxygenNote: 7.1.1
 Roxygen: list(markdown = TRUE)
 Suggests: 
+    knitr,
+    rmarkdown,
     learnr
+VignetteBuilder: knitr
+BugReports: https://github.com/higgi13425/medicaldata/issues

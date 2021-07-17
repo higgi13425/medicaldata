@@ -1,0 +1,18 @@
+home:
+  title: An R Package Of Medical Data For Teaching
+  description: Medical Datasets for Teaching R
+
+template:
+  params:
+    bootswatch: cerulean
+
+url: https://higgi13425.github.io/medicaldata/
+
+reference:
+- title: Datasets
+- contents:
+  - strep_tb
+  - scurvy
+  - polyps
+  - indo_rct
+  - covid_testing
