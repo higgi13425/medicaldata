@@ -12,8 +12,6 @@ saveRDS(Indometh, "data-raw/indometh.Rdata")
 data("Theoph")
 saveRDS(Theoph, "data-raw/theoph.Rdata")
 
-data("infert")
-saveRDS(infert, "data-raw/infert.Rdata")
 
 # rheumatoid arthritis and age
 raa <- read_excel("data-raw/RheumArth_Tx_ageComparisons.xlsx")
@@ -99,7 +97,6 @@ usethis::use_data(blood_storage, overwrite = TRUE)
 usethis::use_data(cytomegalovirus, overwrite = TRUE)
 usethis::use_data(esoph, overwrite = TRUE)
 usethis::use_data(indometh, overwrite = TRUE)
-usethis::use_data(infert, overwrite = TRUE)
 usethis::use_data(laryngoscope, overwrite = TRUE)
 usethis::use_data(licorice_gargle, overwrite = TRUE)
 usethis::use_data(opt, overwrite = TRUE)
