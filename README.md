@@ -30,7 +30,6 @@ Click on the name of a dataset for more details.
 | blood_storage   | [blood_storage_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)| [blood_storage_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)   |
 | cytomegalovirus | [cytomegalovirus_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)| [cytomegalovirus_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)  |
 | esoph  |[esoph_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_codebook.pdf) |  [esoph_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_desc.pdf) |
-| infert          | |         |
 | laryngoscope    |[laryngoscope_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)| [laryngoscope_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)  |
 | licorice_gargle | [licorice_gargle_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)| [licorice_gargle_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) |
 | opt             | [opt_codebook](https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf)| [opt_desc](https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf)      |
