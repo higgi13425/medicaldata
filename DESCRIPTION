@@ -7,9 +7,8 @@ Authors@R: c(
     )
 Maintainer: Peter Higgins <higgi13425@yahoo.com>
 Description: Provides access to medical datasets for teaching.
-    Some from the tshs website, 
-    and some from R datasets, including Indometh, esoph,
-    Theoph, lh, infert, and some data donations.
+    Featuring several from the TSHS website, 
+    some from R datasets, and some data donations.
 Depends:
     R (>= 3.1)
 License: MIT + file LICENSE
