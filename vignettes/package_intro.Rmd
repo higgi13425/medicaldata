@@ -51,6 +51,5 @@ Currently, the datasets included are:
 - smartpill
 - supraclavicular
 - tumor growth
-- raa
 - indometh PK
 - theoph PK

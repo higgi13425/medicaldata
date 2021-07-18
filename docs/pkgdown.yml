@@ -1,9 +1,9 @@
-pandoc: 2.11.0.2
+pandoc: 2.11.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   package_intro: package_intro.html
-last_built: 2021-07-12T01:17Z
+last_built: 2021-07-18T01:05Z
 urls:
   reference: https://higgi13425.github.io/medicaldata//reference
   article: https://higgi13425.github.io/medicaldata//articles
