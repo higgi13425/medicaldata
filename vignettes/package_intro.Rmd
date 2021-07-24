@@ -37,19 +37,19 @@ Each dataset is documented in three ways:
 
 Currently, the datasets included are:
  
-- Streptomycin in Tuberculosis
-- Scurvy RCT
-- Indomethacin RCT to Prevent Post-ERCP Pancreatitis
-- Sulindac RCT for polyps
-- Covid Testing
-- Blood Storage (prostate cancer)
-- Cytomegalovirus in BMT
-- esophageal cancer
-- laryngoscope
-- licorice gargle
-- OPT
-- smartpill
-- supraclavicular
-- tumor growth
-- indometh PK
-- theoph PK
+- Streptomycin in Tuberculosis (`strep_tb`)
+- Scurvy RCT (`scurvy`)
+- Indomethacin RCT to Prevent Post-ERCP Pancreatitis (`indo_rct`)
+- Sulindac RCT for polyps (`polyps`)
+- Covid Testing (`covid_testing`)
+- Blood Storage (prostate cancer) (`blood_storage`)
+- Cytomegalovirus in BMT (`cytomegalovirus`)
+- Esophageal cancer (`esoph_ca`)
+- Laryngoscope (`laryngoscope`)
+- Licorice gargle (`licorice_gargle`)
+- OPT (`opt`)
+- Smartpill (`smartpill`)
+- Supraclavicular (`supraclavicular`)
+- Tumor growth (`tumor_growth`)
+- Indomethacin Pharmacokinetics (`indometh`)
+- Theophylline Pharmacokinetics (`theoph`)
