@@ -2,8 +2,8 @@ pandoc: 2.11.0.2
 pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
-  Introduction to the medicaldata package: Introduction to the medicaldata package.html
-last_built: 2021-07-24T20:30Z
+  Introduction: Introduction.html
+last_built: 2021-07-24T21:23Z
 urls:
   reference: https://higgi13425.github.io/medicaldata//reference
   article: https://higgi13425.github.io/medicaldata//articles
