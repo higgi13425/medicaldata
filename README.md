@@ -2,7 +2,7 @@
 
 <img src='man/figures/hex-medicaldata.png' align="right" height="240">
 
-This is a data package with several medical datasets for teaching Reproducible Medical Research with R. These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association's TSHS (Teaching Statistics in the Health Sciences) [Resources Portal](https://www.causeweb.org/tshs/category/dataset/), maintained by [Carol Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the University of Massachusetts.
+This is a data package with several medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is [here](https://higgi13425.github.io/medicaldata/). These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association's TSHS (Teaching Statistics in the Health Sciences) [Resources Portal](https://www.causeweb.org/tshs/category/dataset/), maintained by [Carol Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the University of Massachusetts.
 
 1. Install with: `remotes::install_github("higgi13425/medicaldata")`    
 
