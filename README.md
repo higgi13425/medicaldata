@@ -23,7 +23,7 @@ Click on the name of a dataset for more details.
 | Dataset         | Codebook                 | Description document          |
 |:----------------|:-------------------------|:-------------------------|
 |strep_tb|[strep_tb_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.pdf)|[strep_tb_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.pdf)|
-|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.pdf)|[scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.pdf)|
+|scurvy|[scurvy_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.pdf)| [scurvy_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.pdf)|
 |indo_rct|[indo_rct_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.pdf)|[indo_rct_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.pdf)|
 |polyps|[polyps_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.pdf)|[polyps_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.pdf)|
 | covid_testing    | [covid_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.pdf)     |[covid_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.pdf)  |
@@ -36,7 +36,7 @@ Click on the name of a dataset for more details.
 | smartpill       | [smartpill_codebook](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf)| [smartpill_desc](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf)     |
 | supraclavicular | [supraclavicular_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)| [supraclavicular_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)    |
 | tumorgrowth     | [tumorgrowth_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)| [tumorgrowth_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf) |
-| Indometh        |          |          |
+| Indometh        | [indometh_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.pdf)         |   [indometh_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.pdf)       |
 | Theoph          |          |           |
 
 

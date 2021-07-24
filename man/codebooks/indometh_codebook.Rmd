@@ -1,0 +1,40 @@
+---
+title: "Indomethacin data codebook"
+author: "Peter Higgins"
+date: "7/24/2021"
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Indomethacin Dataset Codebook
+
+Source: This data set is from a pharmacokinetic study of intravenous dosing of the anti-inflammatory and pain relieving medication, indomethacin, in 6 subjects, published in 1976 in the Journal of Pharmacokinetics and Biopharmaceutics.
+ 
+ Kwan, Breault, Umbenhauer, McMahon and Duggan (1976) Kinetics of Indomethacin absorption, elimination, and enterohepatic circulation in man. Pharmacokinetics and Biopharmaceutics. 1976 Jun;4(3):255-80.  doi: 10.1007/BF01063617.
+
+This dataset is is one of the core datasets in base R. It can be used for examples of line plots over time, grouped by subject, and non-linear modeling, including general additive models (GAMs).
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+indometh_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "subject", 1, "Subject ID", NA, NA, "character",
+  "time", 2, "Time of plasma sampling", "hours", NA, "double",
+  "conc", 3, "Concentration of Indomethacin in the plasma", "mcg/mL", NA, "double"
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 2, 0.5, 1.25, 0.5))
+indometh_codebook
+```
