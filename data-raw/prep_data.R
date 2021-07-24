@@ -3,14 +3,14 @@ library(tidyverse)
 library(readxl)
 
 # Load datasets, save to raw-data
-data("esoph")
-saveRDS(esoph, "data-raw/esoph.Rdata")
+esoph_ca <- datasets::esoph
+saveRDS(esoph_ca, "data-raw/esoph_ca.Rdata")
 
-data("Indometh")
-saveRDS(Indometh, "data-raw/indometh.Rdata")
+indometh <- datasets::Indometh
+saveRDS(indometh, "data-raw/indometh.Rdata")
 
-data("Theoph")
-saveRDS(Theoph, "data-raw/theoph.Rdata")
+theoph <- datasets::Theoph
+saveRDS(theoph, "data-raw/theoph.Rdata")
 
 
 # Indomethacin RCT for PEP
@@ -90,7 +90,7 @@ load('data-raw/tumorgrowth.Rdata')
 # save data to data folder
 usethis::use_data(blood_storage, overwrite = TRUE)
 usethis::use_data(cytomegalovirus, overwrite = TRUE)
-usethis::use_data(esoph, overwrite = TRUE)
+usethis::use_data(esoph_ca, overwrite = TRUE)
 usethis::use_data(indometh, overwrite = TRUE)
 usethis::use_data(laryngoscope, overwrite = TRUE)
 usethis::use_data(licorice_gargle, overwrite = TRUE)
@@ -104,3 +104,4 @@ usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
 usethis::use_data(strep_tb, overwrite = TRUE)
 usethis::use_data(indo_rct, overwrite = TRUE)
+

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Function reference • medicaldata</title>
+<title>esoph_ca: Esophageal Cancer dataset — esoph_ca • medicaldata</title>
 
 
 <!-- jquery -->
@@ -39,7 +39,9 @@
 
 
 
-<meta property="og:title" content="Function reference" />
+<meta property="og:title" content="esoph_ca: Esophageal Cancer dataset — esoph_ca" />
+<meta property="og:description" content="Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux.
+An original base R dataset." />
 
 
 
@@ -58,7 +60,7 @@
   </head>
 
   <body data-spy="scroll" data-target="#toc">
-    <div class="container template-reference-index">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -120,78 +122,38 @@
       </header>
 
 <div class="row">
-  <div class="contents col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Reference</h1>
+    <h1>esoph_ca: Esophageal Cancer dataset</h1>
+    <small class="dont-index">Source: <a href='https://github.com/higgi13425/medicaldata/blob/master/R/esoph_ca.R'><code>R/esoph_ca.R</code></a></small>
+    <div class="hidden name"><code>esoph_ca.Rd</code></div>
     </div>
 
-    <table class="ref-index">
+    <div class="ref-description">
+    <p>Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux.
+An original base R dataset.</p>
+    </div>
 
-    <colgroup>
-      
-      <col class="alias" />
-      <col class="title" />
-    </colgroup>
+    <pre class="usage"><span class='va'>esoph_ca</span></pre>
 
-    <tbody>
-      <tr>
-        <th colspan="2">
-          <h2 id="section-datasets" class="hasAnchor"><a href="#section-datasets" class="anchor"></a>Datasets</h2>
-          <p class="section-desc"></p>
-        </th>
-      </tr>
-      
-      
-    </tbody><tbody>
-      
-      
-      <tr>
-        
-        <td>
-          <p><code><a href="strep_tb.html">strep_tb</a></code> </p>
-        </td>
-        <td><p>Streptomycin Therapy for Tuberculosis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="scurvy.html">scurvy</a></code> </p>
-        </td>
-        <td><p>Randomized Trial of Six Therapies for Scurvy</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="polyps.html">polyps</a></code> </p>
-        </td>
-        <td><p>RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="indometh.html">indometh</a></code> </p>
-        </td>
-        <td><p>Cohort Study of the Pharmacokinetics of Intravenous Indomethacin</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="indo_rct.html">indo_rct</a></code> </p>
-        </td>
-        <td><p>RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="esoph_ca.html">esoph_ca</a></code> </p>
-        </td>
-        <td><p>esoph_ca: Esophageal Cancer dataset</p></td>
-      </tr><tr>
-        
-        <td>
-          <p><code><a href="covid_testing.html">covid_testing</a></code> </p>
-        </td>
-        <td><p>Deidentified Results of COVID-19 testing at the Children's Hospital of Pennsylvania (CHOP) in 2020</p></td>
-      </tr>
-    </tbody>
-    </table>
+
+    <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
+
+    <p>A data frame with 88 rows and 5 variables</p><dl>
+<dt>agegp</dt><dd><p>6 levels of age: "25-34", "35-44", "45-54", "55-64", "65-74", "75+"; type: ordinal factor</p></dd>
+<dt>alcgp</dt><dd><p>4 levels of alcohol consumption: "0-39g/day", "40-79", "80-119", "120+"; type: ordinal factor</p></dd>
+<dt>tobgp</dt><dd><p>4 levels of tobacco consumption: "0-9g/day", "10-19", '20-29", "30+"; type: ordinal factor</p></dd>
+<dt>ncases</dt><dd><p>Number of cases; type: integer</p></dd>
+<dt>ncontrols</dt><dd><p>Number of controls; type: integer</p></dd>
+
+</dl>
+
+    <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
+
+    <p>Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press.
+Originally in base R datasets.</p>
+
   </div>
-
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
       <h2 data-toc-skip>Contents</h2>

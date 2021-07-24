@@ -1,4 +1,4 @@
-#' esoph: Esophageal Cancer dataset
+#' esoph_ca: Esophageal Cancer dataset
 #'
 #' @description
 #'Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux.
@@ -15,4 +15,5 @@
 #'
 #' @source Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press.
 #' Originally in base R datasets.
-"esoph"
+"esoph_ca"
+

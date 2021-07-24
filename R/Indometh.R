@@ -15,4 +15,5 @@
 #'
 #' @source Kwan, Breault, Umbenhauer, McMahon and Duggan (1976) Kinetics of Indomethacin absorption, elimination, and enterohepatic circulation in man. Pharmacokinetics and Biopharmaceutics. 1976 Jun;4(3):255-80.  doi: 10.1007/BF01063617.
 #'
-"Indometh"
+"indometh"
+
