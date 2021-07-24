@@ -1,8 +1,8 @@
 ---
-title: "Introduction to the {medicaldata} package"
+title: Introduction to the {medicaldata} package
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{package_intro}
+  %\VignetteIndexEntry{Introduction}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -12,7 +12,6 @@ knitr::opts_chunk$set(
   collapse = TRUE,
   comment = "#>"
 )
-
 ```
 
 The {medicaldata} package is purely a data package, for the purpose of collecting well-documented medical datasets in one package for teaching to medical students, residents, fellows, nurses, pharmacists, physician assistants, and anyone else who wants to learn R for use with medical data. 

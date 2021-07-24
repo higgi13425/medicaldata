@@ -1,0 +1,42 @@
+---
+title: "Theophylline Pharmacokinetics data codebook"
+author: "Peter Higgins"
+date: "7/24/2021"
+output:
+  pdf_document: 
+    latex_engine: xelatex
+  html_document: default
+  
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Theophylline Pharmacokinetics Dataset Codebook
+
+Source: This data set is from a pharmacokinetic study of a single oral dose of the anti-asthma medication, theophylline, in 12 subjects, published around 1980 by Robert A. Upton. Blood was drawn at 11 time points over the next 25 hours to determine the plasma concentration of theophylline.
+ 
+This dataset was used for a statistical textbook, without citing the original study, or crediting the original authors for collecting the data.
+
+This dataset is is one of the core datasets package in base R. It can be used for examples of line plots over time, grouped by subject, and non-linear modeling, including general additive models (GAMs).
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+theoph_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "Subject", 1, "Subject ID", NA, NA, "ordinal factor",
+  "Wt", 2, "Subject Weight", "kg", NA, "double",
+  "Dose", 3, "Dose of Theophylline in milligrams per kilogram of body weight", "mg/kg", NA, "double",
+  "Time", 4, "Time after dosing", "hours", NA, "double",
+  "conc", 4, "Concentration of Theophylline in the plasma in micrograms per milliliter", "mcg/mL", NA, "double"
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 3, 1, 0.25, 1))
+theoph_codebook
+```

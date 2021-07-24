@@ -1,0 +1,51 @@
+---
+title: "Theophylline Pharmacokinetics Dataset"
+author: "Peter Higgins"
+date: "7/24/2021"
+output: 
+  pdf_document: default
+urlcolor: blue
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+## Indomethacin Pharmacokinetics Dataset Introduction and Description
+
+Source: This data set is from a pharmacokinetic study of oral dosing of the anti-asthma medication, theophylline, in 12 subjects over 25 hours, published By Dr. Robert A. Upton around 1980. The original publication, if any, is unclear and not cited. These data were used in a package named `nlme`, and reported in Boeckmann, A.J., et al. The original publication on theophylline, if any, is unclear and not cited by the package developers. Dr. Upton did publish several papers on theophylline pharmacokinetics around 1980-1984, and these data could have been from one of these.
+ 
+ Boeckmann, A. J., Sheiner, L. B. and Beal, S. L. (1994), NONMEM Users Guide: Part V, NONMEM Project Group, University of California, San Francisco.
+ 
+ Davidian, M. and Giltinan, D. M. (1995) Nonlinear Models for Repeated Measurement Data, Chapman & Hall (section 5.5, p. 145 and section 6.6, p. 176)
+ 
+ Pinheiro, J. C. and Bates, D. M. (2000) Mixed-effects Models in S and S-PLUS, Springer (Appendix A.29)
+
+This dataset is in the datasets package in base R. It can be used for examples of line plots over time, grouped by subject, and non-linear modeling, including general additive models (GAMs).
+ 
+#### Abstract
+
+ This data set contains data on 12 healthy volunteer subjects who participated in a pharmacokinetic study of oral Theophylline. Theophylline is an anti-asthma medication. It can be administered by the intravenous, oral, or rectal suppository routes. Each subject in this study received a single oral dose of theophylline. Blood samples were taken at frequent intervals over the next 25 hours after dosing, and the quantity of theophylline in the plasma at each time point was measured in micrograms per milliliter. 
+<br>
+
+#### Study Design
+
+Cohort Pharmacokinetic study over 25 hours.
+
+### Subjects & Variables
+
+12 participants were administered oral theophylline, and plasma levels were measured at multiple time points over 25 hours.
+
+### Variables
+
+- Subject 
+- Wt (kg)
+- Dose (mg/kg)
+- Time (hours)
+- Concentration (mcg/mL)
+
+#### Citation(s)
+
+ Kwan, Breault, Umbenhauer, McMahon and Duggan (1976) Kinetics of Indomethacin absorption, elimination, and enterohepatic circulation in man. Pharmacokinetics and Biopharmaceutics. 1976 Jun;4(3):255-80.  doi: 10.1007/BF01063617.
+

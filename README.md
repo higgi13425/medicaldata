@@ -1,3 +1,8 @@
+---
+output:
+  pdf_document: default
+  html_document: default
+---
 # Medical Data Teaching Package
 
 <img src='man/figures/hex-medicaldata.png' align="right" height="240">
@@ -37,7 +42,7 @@ Click on the name of a dataset for more details.
 | supraclavicular | [supraclavicular_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)| [supraclavicular_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)    |
 | tumorgrowth     | [tumorgrowth_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)| [tumorgrowth_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf) |
 | indometh        | [indometh_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.pdf)         |   [indometh_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.pdf)       |
-| theoph          |          |           |
+| theoph          | [theoph_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.pdf)         |   [ theoph_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.pdf)  |
 
 
 
