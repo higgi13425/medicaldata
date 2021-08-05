@@ -18,5 +18,4 @@
 #' @source  Boeckmann, A. J., Sheiner, L. B. and Beal, S. L. (1994), NONMEM Users Guide: Part V, NONMEM Project Group, University of California, San Francisco.
 #' Note that the original data collector, Robert A. Upton, is not credited, nor is the original work cited.
 #'
-"theoph"
-
+#'
