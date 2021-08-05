@@ -32,11 +32,11 @@ N = 64 subjects,  26 variables\cr
 \format{
 A data frame with 64 rows and 26 variables
 \describe{
-\item{\code{Cancer diagnosis}}{type: character, levels: 13}
 \item{\code{ID}}{Patient ID, numeric, range:  1-64}
 \item{\code{age}}{Recipient age at transplant, numeric, range: 29-67}
 \item{\code{sex}}{Recipient sex, numeric, range:  0 (male) - 1(female)}
 \item{\code{race}}{Recipient race, numeric, range:  0 (white) - 1 (african-american)}
+#' \item{\code{diagnosis}}{type: character, levels: 13}
 \item{\code{diagnosis.type}}{Category of cancer diagnosis, numeric, range:  0 (myeloid) - 1 (lymphoid)}
 \item{\code{time.to.transplant}}{Time from cancer diagnosis to transplant (months), numeric, range:  1.84-173.8}
 \item{\code{prior.radiation}}{Prior radiation therapy, numeric, range:  0 (no) - 1 (yes)}

@@ -18,9 +18,6 @@ indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta") %>% relocate(risk, .aft
   mutate(across(.cols = gender:mspep,
     .fns = ~factor(paste0(., "_", as_factor(., levels="label")))))
 
-indo_rct2 <- haven::read_dta("~/Downloads/IndoRCT(subclasses1).dta") %>% mutate(across(.cols = c(gender:pbmal, site, train, outcome, status:rx),
-      .fns = ~paste0(., "_", as_factor(., levels="label"))))
-
 saveRDS(indo_rct, "data-raw/indo_rct.Rdata")
 
 #covid from CHOP - Amrom E Obstfeld
@@ -88,7 +85,6 @@ load('data-raw/licorice_gargle.Rdata')
 load('data-raw/OPT_Study_PersonLevel_Data.Rdata')
 load('data-raw/smartpill.Rdata')
 load('data-raw/supraclavicular.Rdata')
-load('data-raw/tumorgrowth.Rdata')
 
 # save data to data folder
 usethis::use_data(blood_storage, overwrite = TRUE)
@@ -101,7 +97,6 @@ usethis::use_data(opt, overwrite = TRUE)
 usethis::use_data(smartpill, overwrite = TRUE)
 usethis::use_data(supraclavicular, overwrite = TRUE)
 usethis::use_data(theoph, overwrite = TRUE)
-usethis::use_data(tumorgrowth, overwrite = TRUE)
 usethis::use_data(covid_testing, overwrite = TRUE)
 usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
