@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis — polyps • medicaldata</title>
+<title>esoph_ca: Esophageal Cancer dataset — esoph_ca • medicaldata</title>
 
 
 <!-- jquery -->
@@ -39,10 +39,9 @@
 
 
 
-<meta property="og:title" content="RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis — polyps" />
-<meta property="og:description" content="Results of a randomized, placebo-controlled trial of sulindac in the reduction of colonic polyps in Familial Adenomatous Polyposis (FAP). 
-FAP is an inherited condition caused by mutations in the APC  (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age.  
-Early, frequent surveillance colonoscopy and polyp removal is helpful, but this study examined whether there is a beneficial effect of preventive medical therapy with the nonsteroidal pain reliever, sulindac, versus placebo in a RCT vs placebo in 22 participants, with polyp number measured (via colonoscopy) at baseline, 3 months, and 12 months after starting the study drug." />
+<meta property="og:title" content="esoph_ca: Esophageal Cancer dataset — esoph_ca" />
+<meta property="og:description" content="Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux.
+An original base R dataset." />
 
 
 
@@ -125,38 +124,34 @@ Early, frequent surveillance colonoscopy and polyp removal is helpful, but this 
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis</h1>
-    <small class="dont-index">Source: <a href='https://github.com/higgi13425/medicaldata/blob/master/R/polyps.R'><code>R/polyps.R</code></a></small>
-    <div class="hidden name"><code>polyps.Rd</code></div>
+    <h1>esoph_ca: Esophageal Cancer dataset</h1>
+    <small class="dont-index">Source: <a href='https://github.com/higgi13425/medicaldata/blob/master/R/esoph_ca.R'><code>R/esoph_ca.R</code></a></small>
+    <div class="hidden name"><code>esoph_ca.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Results of a randomized, placebo-controlled trial of sulindac in the reduction of colonic polyps in Familial Adenomatous Polyposis (FAP). <br />
-FAP is an inherited condition caused by mutations in the APC  (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age.  <br />
-Early, frequent surveillance colonoscopy and polyp removal is helpful, but this study examined whether there is a beneficial effect of preventive medical therapy with the nonsteroidal pain reliever, sulindac, versus placebo in a RCT vs placebo in 22 participants, with polyp number measured (via colonoscopy) at baseline, 3 months, and 12 months after starting the study drug.</p>
+    <p>Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux.
+An original base R dataset.</p>
     </div>
 
-    <pre class="usage"><span class='va'>polyps</span></pre>
+    <pre class="usage"><span class='va'>esoph_ca</span></pre>
 
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 22 rows and 7 variables</p><dl>
-<dt>participant_id</dt><dd><p>id number for each participant; type: character</p></dd>
-<dt>sex</dt><dd><p>participant sex, levels: female, male; type: factor</p></dd>
-<dt>age</dt><dd><p>age in years; type: numeric</p></dd>
-<dt>baseline</dt><dd><p>number of colonic polyps at baseline; type: numeric</p></dd>
-<dt>treatment</dt><dd><p>treatment assignment, levels: sulindac, placebo; type: factor</p></dd>
-<dt>number3m</dt><dd><p>number of colonic polyps at 3 months; type: numeric</p></dd>
-<dt>number12m</dt><dd><p>number of colonic polyps at 12 months; type: numeric</p></dd>
+    <p>A data frame with 88 rows and 5 variables</p><dl>
+<dt>agegp</dt><dd><p>6 levels of age: "25-34", "35-44", "45-54", "55-64", "65-74", "75+"; type: ordinal factor</p></dd>
+<dt>alcgp</dt><dd><p>4 levels of alcohol consumption: "0-39g/day", "40-79", "80-119", "120+"; type: ordinal factor</p></dd>
+<dt>tobgp</dt><dd><p>4 levels of tobacco consumption: "0-9g/day", "10-19", '20-29", "30+"; type: ordinal factor</p></dd>
+<dt>ncases</dt><dd><p>Number of cases; type: integer</p></dd>
+<dt>ncontrols</dt><dd><p>Number of controls; type: integer</p></dd>
 
 </dl>
 
     <h2 class="hasAnchor" id="source"><a class="anchor" href="#source"></a>Source</h2>
 
-    <p>This data set is from a study published in 1993 in the New England Journal of Medicine,</p>
-<p>F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.</p>
-<p>This dataset is derived from and improved upon from the HSAUR package.</p>
+    <p>Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press.
+Originally in base R datasets.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">

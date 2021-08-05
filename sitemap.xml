@@ -4,10 +4,19 @@
     <loc>https://higgi13425.github.io/medicaldata//index.html</loc>
   </url>
   <url>
+    <loc>https://higgi13425.github.io/medicaldata//reference/Indometh.html</loc>
+  </url>
+  <url>
+    <loc>https://higgi13425.github.io/medicaldata//reference/blood_storage.html</loc>
+  </url>
+  <url>
     <loc>https://higgi13425.github.io/medicaldata//reference/covid_testing.html</loc>
   </url>
   <url>
-    <loc>https://higgi13425.github.io/medicaldata//reference/esoph.html</loc>
+    <loc>https://higgi13425.github.io/medicaldata//reference/cytomegalovirus.html</loc>
+  </url>
+  <url>
+    <loc>https://higgi13425.github.io/medicaldata//reference/esoph_ca.html</loc>
   </url>
   <url>
     <loc>https://higgi13425.github.io/medicaldata//reference/indo_rct.html</loc>
@@ -22,6 +31,6 @@
     <loc>https://higgi13425.github.io/medicaldata//reference/strep_tb.html</loc>
   </url>
   <url>
-    <loc>https://higgi13425.github.io/medicaldata//articles/package_intro.html</loc>
+    <loc>https://higgi13425.github.io/medicaldata//articles/Introduction.html</loc>
   </url>
 </urlset>
