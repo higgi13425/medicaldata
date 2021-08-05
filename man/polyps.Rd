@@ -7,13 +7,13 @@
 \format{
 A data frame with 22 rows and 7 variables
 \describe{
-\item{participant_id}{id number for each participant; type: character}
-\item{sex}{participant sex, levels: female, male; type: factor}
-\item{age}{age in years; type: numeric}
-\item{baseline}{number of colonic polyps at baseline; type: numeric}
-\item{treatment}{treatment assignment, levels: sulindac, placebo; type: factor}
-\item{number3m}{number of colonic polyps at 3 months; type: numeric}
-\item{number12m}{number of colonic polyps at 12 months; type: numeric}
+  \item{participant_id}{id number for each participant; type: character}
+  \item{sex}{participant sex, levels: female, male; type: factor}
+  \item{age}{age in years; type: numeric}
+  \item{baseline}{number of colonic polyps at baseline; type: numeric}
+  \item{treatment}{treatment assignment, levels: sulindac, placebo; type: factor}
+  \item{number3m}{number of colonic polyps at 3 months; type: numeric}
+  \item{number12m}{number of colonic polyps at 12 months; type: numeric}
 }
 }
 \source{
