@@ -1,5 +1,5 @@
-#' Retrospective Cohort Study of the Effects of Donor KIR genotype on reactivation of cytomegalovirus (CMV) after myeloablative allogeneic hematopoietic stem cell transplant.\cr
-#' \cr
+#' Retrospective Cohort Study of the Effects of Donor KIR genotype on reactivation of cytomegalovirus (CMV) after myeloablative allogeneic hematopoietic stem cell transplant.
+#'
 #' \cr
 #' Cytomegalovirus Dataset Introduction\cr
 #' This data set contains 64 consecutive patients who underwent T-cell replete, matched sibling donor reduced-intensity conditioning allogeneic hematopoietic stem cell transplant. The primary risk factor of interest was the number of activating killer immunoglobulin-like receptors (aKIRs: 1-4 vs. 5-6). A number of demographic, baseline and transplant characteristics were also collected. The primary outcome is presence of and time to cytomegalovirus reactivation. The dataset is cleaned and relatively complete. There are no outliers or data problems.

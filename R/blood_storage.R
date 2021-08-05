@@ -1,5 +1,5 @@
 #' Retrospective Cohort Study of the Effects of Blood Storage on Prostate Cancer
-#' \cr
+#'
 #' Blood Storage Dataset Introduction\cr
 #' This data set contains data on 316 men who had undergone radical prostatectomy and received transfusion during or within 30 days of the surgical procedure and had available prostate serum antigen (PSA) follow-up data. The main exposure of interest was RBC storage duration group. A number of demographic, baseline and prognostic factors were also collected. The outcome was time to biochemical (PSA) cancer recurrence. The dataset is cleaned and complete. There are no outliers or data problems.
 #' \cr
