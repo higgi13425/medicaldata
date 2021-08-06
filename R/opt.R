@@ -90,6 +90,8 @@
 #' #' \item{\code{Any.SAE.}}{Whether participant experienced any serious adverse events (e.g. lost pregnancies) factor, Yes; No; There are no missing data}
 #' \item{\code{GA...1st.SAE}}{Gestational age of first SAE (serious adverse event), integer, range: 96-467, 259 = No SAE (variable 76 must = No); There are no missing data}
 #'
+#' glimpse(opt)
+#' open tshs opt data dictionary
 #'
 #'at 78
 #' 78-87 as factor
