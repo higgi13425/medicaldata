@@ -11,14 +11,18 @@ url: https://higgi13425.github.io/medicaldata/
 reference:
 - title: Datasets
 - contents:
-  - strep_tb
   - scurvy
+  - strep_tb
   - polyps
-  - indometh
   - indo_rct
-  - esoph_ca
+  - licorice_gargle
+  - laryngoscope
+  - opt
   - covid_testing
-  - theoph
+  - esoph_ca
   - supraclavicular
   - blood_storage
   - cytomegalovirus
+  - smartpill
+  - indometh
+  - theoph

@@ -3,7 +3,7 @@
 \docType{data}
 \name{strep_tb}
 \alias{strep_tb}
-\title{Streptomycin Therapy for Tuberculosis}
+\title{RCT of Streptomycin Therapy for Tuberculosis}
 \format{
 A data frame with 107 rows and 13 variables
 \describe{

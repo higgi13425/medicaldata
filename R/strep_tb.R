@@ -1,4 +1,4 @@
-#' Streptomycin Therapy for Tuberculosis
+#' RCT of Streptomycin Therapy for Tuberculosis
 #'
 #' Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal. \cr
 #' The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II. \cr
