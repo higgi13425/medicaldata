@@ -16,7 +16,7 @@ knitr::opts_chunk$set(
 
 The {medicaldata} package is purely a data package, for the purpose of collecting well-documented medical datasets in one package for teaching to medical students, residents, fellows, nurses, pharmacists, physician assistants, and anyone else who wants to learn R for use with medical data. 
 
-The deidentified datasets included in this package come from a variety of sources, including:
+The de-identified datasets included in this package come from a variety of sources, including:
 
 - donations by generous authors
 - sourcing from other R packages
@@ -25,7 +25,7 @@ The deidentified datasets included in this package come from a variety of source
 
 Each dataset is documented in three ways:
 
-- a help file, which can be accessed with `help(datasetname)` from the Console pane 
+- a help file, which can be accessed with `help('dataset_name')` from the Console pane 
 - a pdf document describing the study, found at the Github README page [here](https://github.com/higgi13425/medicaldata)
 - a pdf codebook, found at the Github README page [here](https://github.com/higgi13425/medicaldata)
 
@@ -41,7 +41,7 @@ Currently, the datasets included are:
 - Esophageal cancer (`esoph_ca`)
 - Laryngoscope (`laryngoscope`)
 - Licorice gargle (`licorice_gargle`)
-- OPT (`opt`)
+- Obstetric Periodontal Therapy (`opt`)
 - Smartpill (`smartpill`)
 - Supraclavicular (`supraclavicular`)
 - Tumor growth (`tumor_growth`)
