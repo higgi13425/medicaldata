@@ -17,7 +17,7 @@
   #' \item{\code{Age}}{Age of participant at baseline (years), numeric, range: 16-44}
   #' \item{\code{Black}}{Black participant (self-identified), factor; Yes, No}
   #' \item{\code{White}}{White participant (self-identified), factor; Yes, No}
-  #' \item{\code{Nat Am}}{Native American participant, incl. Latin Americans with aboriginal origin(self-identified), factor; Yes, No}
+  #' \item{\code{Nat.Am}}{Native American participant, incl. Latin Americans with aboriginal origin(self-identified), factor; Yes, No}
   #' \item{\code{Asian}}{Asian participant (self-identified), factor; Yes, No}
   #' \item{\code{Hisp}}{Hispanic participant (self-identified), factor; Yes, No}
   #' \item{\code{Education}}{Education level of participant, factor;  LT 8 yrs = Less than 8 years; 8-12 yrs = 8 to 12 years; MT 12 yrs = More than 12 yrs; blank = Missing}
@@ -101,7 +101,7 @@
   #' \item{\code{Mom.HIV.status}}{HIV status of mother during pregnancy, factor, Yes = HIV-positive; No = HIV-negative or unknown (question answered but HIV status at delivery not recorded); Blank = Missing (question not answered)}
   #' \item{\code{BL.Anti.inf}}{Did participant report use of antiinflammatory medication at or ≤ 6 months before baseline?, integer,  0 = No; 1 = Yes; There are no missing data}
   #' \item{\code{BL.Cortico}}{Did participant report use of corticosteroids at or ≤ 6 months before baseline?, integer, 0 = No; 1 = Yes; There are no missing data}
-  #' \item{\code{BL Antibio}}{Did participant report use of antibiotics at or ≤ 6 months before baseline?, integer,  0 = No; 1 = Yes; There are no missing data}
+  #' \item{\code{BL.Antibio}}{Did participant report use of antibiotics at or ≤ 6 months before baseline?, integer,  0 = No; 1 = Yes; There are no missing data}
   #' \item{\code{BL.Bac.vag}}{Did participant report use of bacterial vaginitis treatments at or ≤ 6 months before baseline?, integer, 0 = No; 1 = Yes; There are no missing data}
   #' \item{\code{V3.Anti.inf}}{Did participant report use of antiinflammatory medication between baseline and visit 3?,integer, 0 = No; 1 = Yes; There are no missing data}
   #' \item{\code{V3.Cortico}}{Did participant report use of corticosteroids between baseline and visit 3?, integer, 0 = No; 1 = Yes; There are no missing data}
@@ -128,7 +128,7 @@
   #' \item{\code{OPGE21}}{Serum measure for Prostaglandin E2 at baseline, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OTNF1}}{Serum measure for tumor necrosis factor (TNF)-alpha at baseline, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OMMP91}}{Serum measure for gelatinase (MMP9) at baseline, factor (actually numeric or missing), dot(.) = Missing}
-  #' \item{\code{EXTU_CAT1}}{Serum endotoxin level at baseline, factor (actually numeric or missing), dot(.) = Missing}
+  #' \item{\code{ETXU_CAT1}}{Serum endotoxin level at baseline, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OFIBRIN1}}{Serum measure for fibrinogen at baseline, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OAA5}}{Serum IgG (immunoglobulin) antibodies to A. actinomycetemcomitans at visit 5, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OCR5}}{Serum IgG (immunoglobulin) antibodies to C. rectus at visit 5, factor (actually numeric or missing), dot(.) = Missing}
@@ -144,7 +144,7 @@
   #' \item{\code{OPGE25}}{Serum measure for Prostaglandin E2 at visit 5, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OTNF5}}{Serum measure for tumor necrosis factor (TNF)-alpha at visit 5, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OMMP95}}{Serum measure for gelatinase (MMP9) at visit 5, factor (actually numeric or missing), dot(.) = Missing}
-  #' \item{\code{EXTU_CAT5}}{Serum endotoxin level at visit 5, factor (actually numeric or missing), dot(.) = Missing}
+  #' \item{\code{ETXU_CAT5}}{Serum endotoxin level at visit 5, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{OFIBRIN5}}{Serum measure for fibrinogen at visit 5, factor (actually numeric or missing), dot(.) = Missing}
   #' \item{\code{BL.DNA}}{Total amount of bacterial DNA extracted from plaque as a measure of total bacterial concentration at baseline (ng/mL), numeric, range: 0-5750.0}
   #' \item{\code{BL.Univ}}{Count of all bacteria detected by universal primer at baseline, numeric, range: 1,890,000-1,070,000,000, Blank = Missing}
