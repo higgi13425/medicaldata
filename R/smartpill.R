@@ -16,7 +16,7 @@
 #' \item{\code{Gender}}{Gender, numeric, range: 0 = Female, 1 = Male}
 #' \item{\code{Race}}{Race, numeric, 1 = White, 2 = Black, 3 = Asian/Pacific Islander, 4 = Hispanic, 5 = Other}
 #' \item{\code{Height}}{Height (centimeters), numeric, range: 132.1-193.0}
-#' \item{\code{Weight}}{ Weight (kilgrams), numeric, range:  44.9-127.0}
+#' \item{\code{Weight}}{ Weight (kilograms), numeric, range:  44.9-127.0}
 #' \item{\code{Age}}{Age (years), numeric, range:  18.0-72.0}
 #' \item{\code{GE.Time}}{Gastric Emptying Time is time from ingestion to gastric emptying (hours), numeric, range:   1.7-74.3}
 #' \item{\code{SB.Time}}{Small Bowel Transit Time is time from gastric emptying to ileocecal junction (hours), numeric, range:   1.8-13.8}

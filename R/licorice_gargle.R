@@ -20,7 +20,7 @@
 #' \item{\code{preOp_pain}}{Preoperative pain, numeric, 0 = No; 1 = Yes}
 #' \item{\code{treat}}{Intervention, 0 = Sugar 5g; 1 = Licorice 0.5g}
 #' \item{\code{intraOp_surgerySize}}{Surgery size, numeric, 1 = Small (thoracoscopy); 2 = Medium (thoracotomy < 3 h); 3 = Large (thoracotomy > 3 h or blood loss > 1000 mL)}
-#' \item{\code{extubation_cough}}{Amount of coughing immediately afater extubation, numeric, 0 = No cough; 1 = Mild; 2 = Moderate; 3 = Severe}
+#' \item{\code{extubation_cough}}{Amount of coughing immediately after extubation, numeric, 0 = No cough; 1 = Mild; 2 = Moderate; 3 = Severe}
 #' \item{\code{pacu30min_cough}}{Amount of coughing at 30 minutes after arrival in PACU, numeric, 0 = No cough; 1 = Mild; 2 = Moderate; 3 = Severe}
 #' \item{\code{pacu30min_throatPain}}{Sore throat pain score at rest at 30 minutes after arrival in PACU (11 point Likert scale, 0=no pain, 10 = worst pain)}
 #' \item{\code{pacu30min_swallowPain}}{Sore throat pain score during swallowing at 30 minutes after arrival in PACU (11 point Likert scale, 0=no pain, 10 = worst pain), numeric, range: 0-10}

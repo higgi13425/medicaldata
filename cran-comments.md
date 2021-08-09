@@ -11,6 +11,7 @@ One NOTE:
 Maintainer: 'Peter Higgins <higgi13425@yahoo.com>'
 
 - Yes, I am the maintainer.
+* This is a first submission of a new package.
 
 ## Downstream dependencies
 None.

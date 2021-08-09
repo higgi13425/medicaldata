@@ -53,7 +53,7 @@ A data frame with 823 observations and 171 variables
 \item{\code{BL..CAL.2}}{Percentage of sites with clinical attachment level greater than or equal to 2 mm at baseline, numeric, range: 2.381-100.0}
 \item{\code{BL..CAL.3}}{Percentage of site with clinical attachment level greater than or equal to 3 mm at baseline, numeric, range: 0-94.9}
 \item{\code{BL.Calc.I}}{Whole-mouth average calculus index at baseline, Simplified Oral Hygiene Index (OHI-S): Higher value indicates more calculus; 0 = No calculus present; numeric, range: 0-3.0}
-\item{\code{BL.Pl.I}}{Whole-mouth average plaque index at baseline, Silness-Lowe Gingival Index:Higher value indicates moresevere inflammation, 0= normal gingiva, numeric, range: 0.056-3.0}
+\item{\code{BL.Pl.I}}{Whole-mouth average plaque index at baseline, Silness-Lowe Gingival Index:Higher value indicates more severe inflammation, 0= normal gingiva, numeric, range: 0.056-3.0}
 \item{\code{V3.GE}}{Whole-mouth average gingival index at Visit 3, numeric, range:      0.030-3.0}
 \item{\code{V3..BOP}}{Percentage of sites bleeding on probing at Visit 3, numeric, range: 0.725-100.0, Blank = Missing}
 \item{\code{V3.PD.avg}}{Whole-mouth average pocket depth at Visit 3 (mm), numeric, range: 1.601-5.5, Blank = Missing}
@@ -119,7 +119,7 @@ A data frame with 823 observations and 171 variables
 \item{\code{OTF1}}{Serum IgG (immunoglobulin) antibodies to T. forsythus at baseline, factor (actually numeric or missing), dot(.) = Missing}
 \item{\code{OCRP1}}{Serum measure for C-reactive protein (CRP) at baseline, factor (actually numeric or missing), dot(.) = Missing}
 \item{\code{O1B1}}{Serum measure for Interleukin(IL)-1b at baseline, factor (actually numeric or missing), dot(.) = Missing}
-\item{\code{O61}}{Serum measure forInterleukin(IL)-6 at baseline, factor (actually numeric or missing), dot(.) = Missing}
+\item{\code{O61}}{Serum measure for Interleukin(IL)-6 at baseline, factor (actually numeric or missing), dot(.) = Missing}
 \item{\code{O81}}{Serum measure forInterleukin(IL)-8 at baseline, factor (actually numeric or missing), dot(.) = Missing}
 \item{\code{OPGE21}}{Serum measure for Prostaglandin E2 at baseline, factor (actually numeric or missing), dot(.) = Missing}
 \item{\code{OTNF1}}{Serum measure for tumor necrosis factor (TNF)-alpha at baseline, factor (actually numeric or missing), dot(.) = Missing}

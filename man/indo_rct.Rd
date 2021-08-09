@@ -19,11 +19,11 @@ A data frame with 602 observations and 25 variables
 \item{\code{psphinct}}{a Pancreatic Sphincterotomy was performed, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
 \item{\code{precut}}{a sphincter pre-cut was needed to enter the papilla, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2.  2_no}
 \item{\code{diffcann}}{Cannulation of the papilla was difficult, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2.  2_no}
-\item{\code{pancinj}}{Contrast was injected into the pancreas dring the procedure, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
+\item{\code{pancinj}}{Contrast was injected into the pancreas during the procedure, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
 \item{\code{somsod}}{Sphincter of oddi manometry was performed during the procedure for SOD, a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2.  2_no}
 \item{\code{pdstent}}{A pancreatic duct stent was placed at the end of the procedure per the judgement of the endoscopist (more often in high-risk cases), a potential protective effect against PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2.  2_no}
 \item{\code{trainee}}{A trainee participated in the ERCP, which could be a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2.  2_no}
-\item{\code{bilsphinct}}{A billiary sphincterotomy was performed, which could be a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
+\item{\code{bilsphinct}}{A biliary sphincterotomy was performed, which could be a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
 \item{\code{ampullectomy}}{An Ampullectomy was performed for dysplasia or cancer, which could be a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
 \item{\code{acinarization}}{The pancreas appeared to have acinarization on imaging, which could be a risk factor for PEP, factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}
 \item{\code{bilstent}}{A biliary stent was placed, which could be protective. factor, ordered: FALSE, levels: 1. 1_yes, 2. 2_no}

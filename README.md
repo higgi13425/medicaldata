@@ -5,11 +5,13 @@
 
 ## Overview
 
-This is a data package with several medical datasets for teaching
+This is a data package with 15 medical datasets for teaching
 Reproducible Medical Research with R. The link to the pkgdown reference
 website for {medicaldata} is
 [here](https://higgi13425.github.io/medicaldata/) and in the links at
-the right. These range from reconstructed versions of James Lind’s
+the right. This package will be useful for anyone teaching R to medical
+professionals, including doctors, nurses, trainees, and students. <br>
+<br> These datasets range from reconstructed versions of James Lind’s
 scurvy dataset (1757) and the original Streptomycin for Tuberculosis
 trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP
 pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing
@@ -34,7 +36,11 @@ University of Massachusetts (with permission).
     where `covid` is the name of the new object, and `covid_testing` is
     the name of the dataset.<br>
 
-5.  You can click on the links below to view the codebook and/or
+5.  Articles (vignettes) on how to use the datasets can be found at the
+    pkgdown [website](https://higgi13425.github.io/medicaldata/) under
+    the **Articles** tab.
+
+6.  You can click on the links below to view the codebook and/or
     description document for each dataset. This information is also
     available under the Reference tab above, or within R by using
     `help(dataset_name)`. <br>
