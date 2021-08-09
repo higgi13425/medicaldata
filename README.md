@@ -9,8 +9,7 @@ output:
 
 This is a data package with several medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is [here](https://higgi13425.github.io/medicaldata/). These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association's TSHS (Teaching Statistics in the Health Sciences) [Resources Portal](https://www.causeweb.org/tshs/category/dataset/), maintained by [Carol Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the University of Massachusetts.
 
-1. Install with: `remotes::install_github("higgi13425/medicaldata")`    
-
+1. Install with: `remotes::install_github("higgi13425/medicaldata")`     
 2. Then load the package with `library(medicaldata)`    
 3. Then you can list the datasets available with `data(package = "medicaldata")`    
 
@@ -45,7 +44,9 @@ Click on the name of a dataset for more details.
 | theoph          | [theoph_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.pdf)         |   [ theoph_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.pdf)  |
 
 
-
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg)](https://github.com/higgi13425/medicaldata/actions)
+<!-- badges: end -->
 
 
 

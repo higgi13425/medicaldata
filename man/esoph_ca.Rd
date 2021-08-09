@@ -7,11 +7,11 @@
 \format{
 A data frame with 88 rows and 5 variables
 \describe{
-  \item{agegp}{6 levels of age: "25-34", "35-44", "45-54", "55-64", "65-74", "75+"; type: ordinal factor}
-  \item{alcgp}{4 levels of alcohol consumption: "0-39g/day", "40-79", "80-119", "120+"; type: ordinal factor}
-  \item{tobgp}{4 levels of tobacco consumption: "0-9g/day", "10-19", '20-29", "30+"; type: ordinal factor}
-  \item{ncases}{Number of cases; type: integer}
-  \item{ncontrols}{Number of controls; type: integer}
+\item{agegp}{6 levels of age: "25-34", "35-44", "45-54", "55-64", "65-74", "75+"; type: ordinal factor}
+\item{alcgp}{4 levels of alcohol consumption: "0-39g/day", "40-79", "80-119", "120+"; type: ordinal factor}
+\item{tobgp}{4 levels of tobacco consumption: "0-9g/day", "10-19", '20-29", "30+"; type: ordinal factor}
+\item{ncases}{Number of cases; type: integer}
+\item{ncontrols}{Number of controls; type: integer}
 }
 }
 \source{

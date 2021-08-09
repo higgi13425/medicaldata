@@ -7,19 +7,19 @@
 \format{
 A data frame with 107 rows and 13 variables
 \describe{
-  \item{patient_id}{invented id number for each participant; type: character}
-  \item{arm}{assigned treatment arm, Streptomycin or Control; type: factor}
-  \item{dose_strep_g}{grams, dose of Streptomycin: numeric, 0, 1, or 2 grams}
-  \item{dose_PAS_g}{grams, dose of PAS (Para-Amino-Salicylate): numeric, 5, 10, or 20 grams. Note that no one in this intial study (study A) received PAS. This was added for combination therapy in studies B and C, as reported in 1952.}
-  \item{gender}{gender, dichotomous (this was in 1948); type: factor, with levels: M = Male, F= Female}
-  \item{baseline_condition}{Condition of the Patient at Baseline, 3 levels, 1_Good, 2_Fair, 3_Poor; type: factor}
-  \item{baseline_temp}{temperature at baseline in degrees fahrenheit or celsius, but categorized into 4 levels (afebrile level apparently were cases not measured with a thermometer): factor, with levels: 1_afebrile, 2_<99F/<37.2C, 3_99-99.9F/37.2-37.75C, 4_100F+/37.7C+}
-  \item{baseline_esr}{Erythrocyte Sedimentation Rate in mm per hour, categorized into 4 levels, from 0-51+ mm per hour; type: factor, with levels: 1_0-10, 2_11-20, 3_21-50, 4_51+}
-  \item{baseline_cavitation}{dichotomous presence of cavitation on the baseline chest x-ray; type: factor: 0_no, 1_yes}
-  \item{strep_resistance}{streptomycin resistance after 6 months of therapy, measured on a 0-100+ scale, categorized into 3 levels - sensitive, moderate, and resistant; type: factor: 1_sens_0-8, 2_mod_8-99, 3_resist_100+}
-  \item{radiologic_6m}{Likert score rating of radiologic response on chest x-ray at 6 months; type: factor: 1_Death, 2_Considerable_deterioration, 3_Moderate_deterioration, 4_No_change, 5_Moderate_improvement, 6_Considerable_improvement}
-   \item{rad_num}{Likert score numeric rating of radiologic response on chest x-ray at 6 months; type: numeric: 1-6, from Death to Considerable Improvement}
-    \item{improved}{Dichotomous outcome of improvement (equal to rad_num of 5-6); type: logical, TRUE or FALSE. 55 of the 107 participants were improved.}
+\item{patient_id}{invented id number for each participant; type: character}
+\item{arm}{assigned treatment arm, Streptomycin or Control; type: factor}
+\item{dose_strep_g}{grams, dose of Streptomycin: numeric, 0, 1, or 2 grams}
+\item{dose_PAS_g}{grams, dose of PAS (Para-Amino-Salicylate): numeric, 5, 10, or 20 grams. Note that no one in this intial study (study A) received PAS. This was added for combination therapy in studies B and C, as reported in 1952.}
+\item{gender}{gender, dichotomous (this was in 1948); type: factor, with levels: M = Male, F= Female}
+\item{baseline_condition}{Condition of the Patient at Baseline, 3 levels, 1_Good, 2_Fair, 3_Poor; type: factor}
+\item{baseline_temp}{temperature at baseline in degrees fahrenheit or celsius, but categorized into 4 levels (afebrile level apparently were cases not measured with a thermometer): factor, with levels: 1_afebrile, 2_<99F/<37.2C, 3_99-99.9F/37.2-37.75C, 4_100F+/37.7C+}
+\item{baseline_esr}{Erythrocyte Sedimentation Rate in mm per hour, categorized into 4 levels, from 0-51+ mm per hour; type: factor, with levels: 1_0-10, 2_11-20, 3_21-50, 4_51+}
+\item{baseline_cavitation}{dichotomous presence of cavitation on the baseline chest x-ray; type: factor: 0_no, 1_yes}
+\item{strep_resistance}{streptomycin resistance after 6 months of therapy, measured on a 0-100+ scale, categorized into 3 levels - sensitive, moderate, and resistant; type: factor: 1_sens_0-8, 2_mod_8-99, 3_resist_100+}
+\item{radiologic_6m}{Likert score rating of radiologic response on chest x-ray at 6 months; type: factor: 1_Death, 2_Considerable_deterioration, 3_Moderate_deterioration, 4_No_change, 5_Moderate_improvement, 6_Considerable_improvement}
+\item{rad_num}{Likert score numeric rating of radiologic response on chest x-ray at 6 months; type: numeric: 1-6, from Death to Considerable Improvement}
+\item{improved}{Dichotomous outcome of improvement (equal to rad_num of 5-6); type: logical, TRUE or FALSE. 55 of the 107 participants were improved.}
 }
 }
 \source{

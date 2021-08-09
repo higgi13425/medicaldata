@@ -31,7 +31,7 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">medicaldata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.1.0.9000</span>
       </span>
     </div>
 
@@ -90,7 +90,7 @@
 <p><img src="reference/figures/hex-medicaldata.png" align="right" height="240"></p>
 <p>This is a data package with several medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is <a href="https://higgi13425.github.io/medicaldata/">here</a>. These range from reconstructed versions of James Lind’s scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association’s TSHS (Teaching Statistics in the Health Sciences) <a href="https://www.causeweb.org/tshs/category/dataset/">Resources Portal</a>, maintained by <a href="https://www.umass.edu/sphhs/person/carol-bigelow">Carol Bigelow</a> at the University of Massachusetts.</p>
 <ol>
-<li><p>Install with: <code><a href="https://remotes.r-lib.org/reference/install_github.html">remotes::install_github("higgi13425/medicaldata")</a></code></p></li>
+<li><p>Install with: <code><a href="https://remotes.r-lib.org/reference/install_github.html">remotes::install_github("higgi13425/medicaldata")</a></code><br></p></li>
 <li><p>Then load the package with <code><a href="https://higgi13425.github.io/medicaldata/">library(medicaldata)</a></code><br></p></li>
 <li><p>Then you can list the datasets available with <code><a href="https://rdrr.io/r/utils/data.html">data(package = "medicaldata")</a></code></p></li>
 <li><p>Then assign a particular dataset to a named object in your environment with: <br><code>covid &lt;- medicaldata::covid_testing</code> <br> where <code>covid</code> is the name of the new object, and <code>covid_testing</code> is the name of the dataset.<br></p></li>
@@ -189,6 +189,7 @@
 </tr>
 </tbody>
 </table>
+<!-- badges: start --><p><a href="https://github.com/higgi13425/medicaldata/actions"><img src="https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a> <!-- badges: end --></p>
 </div>
 </div>
 

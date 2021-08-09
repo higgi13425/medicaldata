@@ -6,19 +6,24 @@ Authors@R: c(
     person("Peter", "Higgins", email="higgi13425@yahoo.com", role = c("aut", "cre"))
     )
 Maintainer: Peter Higgins <higgi13425@yahoo.com>
+Date: 2021-08-08
 Description: Provides access to medical datasets for teaching.
     Featuring several from the TSHS website, 
-    some from R datasets, and some data donations.
+    a few reconstructed datasets of 
+    historical significance in medical research,
+    some from existing R packages (HSAUR), and some data donations.
 Depends:
     R (>= 3.1)
 License: MIT + file LICENSE
-Encoding: UTF-8
-LazyData: true
-URL: https://higgi13425.github.io/medicaldata/
-RoxygenNote: 7.1.1
+URL: https://higgi13425.github.io/medicaldata/, https://higgi13425.github.io/medicaldata/
+BugReports: https://github.com/higgi13425/medicaldata/issues
 Suggests: 
     knitr,
     rmarkdown,
     learnr
 VignetteBuilder: knitr
-BugReports: https://github.com/higgi13425/medicaldata/issues
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
+

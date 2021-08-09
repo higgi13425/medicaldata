@@ -7,11 +7,11 @@
 \format{
 A data frame with 132 rows and 5 variables
 \describe{
-  \item{Subject}{subject id number for each participant; type: ordinal factor}
-  \item{Wt}{Weight in kilograms; type: double}
-  \item{Dose}{Dose in milligrams per kilogram; type: double}
-  \item{Time}{Time from initial dose in hours; type: double}
-  \item{conc}{Concentration of theophylline in the plasma in micrograms per milliliter' type: double}
+\item{Subject}{subject id number for each participant; type: ordinal factor}
+\item{Wt}{Weight in kilograms; type: double}
+\item{Dose}{Dose in milligrams per kilogram; type: double}
+\item{Time}{Time from initial dose in hours; type: double}
+\item{conc}{Concentration of theophylline in the plasma in micrograms per milliliter' type: double}
 }
 }
 \source{
@@ -23,7 +23,7 @@ theoph
 }
 \description{
 Results of a Cohort Study of the Pharmacokinetics of Oral Theophylline, with plasma concentrations over time. \cr
-This data set is from a pharmacokinetic study of oral dosing of the anti-asthma medication, theophylline, in 12 subjects over 25 hours, published By Dr. Robert A. Upton around 1980. The original publication, if any, is unclear and not cited. These data were used in a package named `nlme`, and reported in Boeckmann, A.J., et al.Dr. Upton did publish several papers on theophylline pharmacokinetics around 1980-1984, and these data could have been from one of these.\cr
+This data set is from a pharmacokinetic study of oral dosing of the anti-asthma medication, theophylline, in 12 subjects over 25 hours, published By Dr. Robert A. Upton around 1980. The original publication, if any, is unclear and not cited. These data were used in a package named \code{nlme}, and reported in Boeckmann, A.J., et al.Dr. Upton did publish several papers on theophylline pharmacokinetics around 1980-1984, and these data could have been from one of these.\cr
 Theophylline is an methylxanthine anti-asthma medication, which acts as a bronchodilator, with secondary effects to strengthen diaphragm contraction, reduce pulmonary artery pressures, and reduce mast cell release. It can be administered by the intravenous, oral, or rectal suppository routes.\cr
 Each subject in this Study (oral route) received a single oral dose of theophylline.
 Blood samples were taken at frequent intervals over the first 25 hours after dosing, and the quantity of theophylline in the plasma at each time point was measured in micrograms per milliliter. \cr
