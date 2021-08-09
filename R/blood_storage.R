@@ -44,4 +44,3 @@
 #' @source  Cata et al. 'Blood Storage Duration and Biochemical Recurrence of Cancer after Radical Prostatectomy'. Mayo Clin Proc 2011; 86(2): 120-127.
 #'
 "blood_storage"
-

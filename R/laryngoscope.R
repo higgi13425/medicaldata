@@ -8,7 +8,7 @@
 #' Difficult and failed tracheal intubations are among the principal causes of anesthetic-related mortality and morbidity. Because a good laryngeal view facilitates successful tracheal intubation, new technologies have been introduced to improve visualization. Video laryngoscopes, for example, often use miniature cameras to facilitate visualization of the laryngeal inlet with no need to align the oral, pharyngeal, and tracheal axes.\cr
 #' The Pentax AWS is a novel video laryngoscope, available in Japan since 2006, which is designed to facilitate intubation by providing a video image of the glottis. It incorporates a miniature video camera and a battery-powered, built-in LCD monitor. A disposable blade is attached to the base system. Incorporation of an LCD display makes it possible to view the glottis simultaneously with insertion of the endotracheal tube (ETT). In this regard, it differs from some other video laryngoscope designs that use external monitors. The Pentax AWS also differs in having a side channel that positions and guides the ETT. Reports suggest that the Pentax AWS can help intubate, but randomized data remain sparse.cr
 #' This study tested the hypothesis that intubation with the Pentax AWS would be easier and faster than with a standard Macintosh laryngoscope with a #4 blade.\cr
-#'\cr
+#' \cr
 #' @format A data frame with 99 observations and 22 variables
 #' \describe{
 #' \item{\code{age}}{Age (years), numeric, range: 20-77}

@@ -39,4 +39,3 @@
 #' @source Rauch et al. 'Use of Wireless Utility Capsule to Determine Gastric Emptying and Small Intestinal Transit Times in Critically Ill Trauma Patients'. Journal of Critical Care 2012; 27(5): 534.e7-534.e12.
 #'
 "smartpill"
-
