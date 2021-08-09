@@ -3,7 +3,7 @@ pkgdown: 1.6.1
 pkgdown_sha: ~
 articles:
   Introduction: Introduction.html
-last_built: 2021-08-09T14:31Z
+last_built: 2021-08-09T14:42Z
 urls:
   reference: https://higgi13425.github.io/medicaldata//reference
   article: https://higgi13425.github.io/medicaldata//articles
