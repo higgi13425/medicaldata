@@ -40,14 +40,7 @@
 
 
 <meta property="og:title" content="RCT of Streptomycin Therapy for Tuberculosis — strep_tb" />
-<meta property="og:description" content="Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal. 
-The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II. 
-This publication seems a bit primitive today, without standard features like a proper Table 1, and some creative use of graphs to display baseline characteristics of the study sample 
-More strikingly, there is no ethics committee approval, or consent. 
-You can read the pdf of the original journal article at Streptomycin in TB Study. 
-This was the first of a series of 3 trials, in which the initial effectiveness of Streptomycin was established, but rapid resistance developed, and significant side effects occurred at a dose of 2 grams of streptomycin. This type of resistance also occurred with another new anti-tubercular therapy at the time, PAS (Para-Amino-Salicylate). Subsequent trials B and C evaluated different doses and combinations of Streptomycin and PAS, and were published together in 1952 in the BMJ, with the pdf available here 1952 Three Streptomycin in TB Studies Summarized. 
-Commentary on the conduct of these trials from one of the MD investigators can be found at MD Clinical Trialist Commentary. 
-Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found at Statistican Commentary." />
+<meta property="og:description" content="Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal (more details available below the variable definitions). " />
 
 
 
@@ -136,14 +129,7 @@ Commentary on the design and analysis of these trials from statistician A. Bradf
     </div>
 
     <div class="ref-description">
-    <p>Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal. <br />
-The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II. <br />
-This publication seems a bit primitive today, without standard features like a proper Table 1, and some creative use of graphs to display baseline characteristics of the study sample <br />
-More strikingly, there is no ethics committee approval, or consent. <br />
-You can read the pdf of the original journal article at <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf'>Streptomycin in TB Study</a>. <br />
-This was the first of a series of 3 trials, in which the initial effectiveness of Streptomycin was established, but rapid resistance developed, and significant side effects occurred at a dose of 2 grams of streptomycin. This type of resistance also occurred with another new anti-tubercular therapy at the time, PAS (Para-Amino-Salicylate). Subsequent trials B and C evaluated different doses and combinations of Streptomycin and PAS, and were published together in 1952 in the BMJ, with the pdf available here <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2023677/pdf/brmedj03496-0024.pdf'>1952 Three Streptomycin in TB Studies Summarized</a>. <br />
-Commentary on the conduct of these trials from one of the MD investigators can be found at <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592068/'>MD Clinical Trialist Commentary</a>. <br />
-Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found at <a href='https://www.sciencedirect.com/science/article/abs/pii/019724569090001I'>Statistican Commentary</a>.</p>
+    <p>Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal (<strong>more details</strong> available below the variable definitions). <br /></p>
     </div>
 
     <pre class="usage"><span class='va'>strep_tb</span></pre>
@@ -151,7 +137,7 @@ Commentary on the design and analysis of these trials from statistician A. Bradf
 
     <h2 class="hasAnchor" id="format"><a class="anchor" href="#format"></a>Format</h2>
 
-    <p>A data frame with 107 rows and 13 variables</p><dl>
+    <p>A data frame with 107 observations and 13 variables</p><dl>
 <dt>patient_id</dt><dd><p>invented id number for each participant; type: character</p></dd>
 <dt>arm</dt><dd><p>assigned treatment arm, Streptomycin or Control; type: factor</p></dd>
 <dt>dose_strep_g</dt><dd><p>grams, dose of Streptomycin: numeric, 0, 1, or 2 grams</p></dd>
@@ -172,6 +158,15 @@ Commentary on the design and analysis of these trials from statistician A. Bradf
 
     <p>This data set is reconstructed to the best of my ability from the paper in the British Medical Journal from 1948, entitled, Streptomycin Treatment of Pulmonary Tuberculosis, pages 769-782 in the October 30, 1948 edition, authored by the Streptomycin in Tuberculosis Trials Committee.
 You can find the pdf at <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf'>Streptomycin in TB</a>.</p>
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II. <br />
+This publication seems a bit primitive today, without standard features like a proper Table 1, and some creative use of graphs to display baseline characteristics of the study sample <br />
+More strikingly, there is no ethics committee approval, or consent. <br />
+You can read the pdf of the original journal article at <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2091872/pdf/brmedj03701-0007.pdf'>Streptomycin in TB Study</a>. <br />
+This was the first of a series of 3 trials, in which the initial effectiveness of Streptomycin was established, but rapid resistance developed, and significant side effects occurred at a dose of 2 grams of streptomycin. This type of resistance also occurred with another new anti-tubercular therapy at the time, PAS (Para-Amino-Salicylate). Subsequent trials B and C evaluated different doses and combinations of Streptomycin and PAS, and were published together in 1952 in the BMJ, with the pdf available here <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC2023677/pdf/brmedj03496-0024.pdf'>1952 Three Streptomycin in TB Studies Summarized</a>. <br />
+Commentary on the conduct of these trials from one of the MD investigators can be found at <a href='https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592068/'>MD Clinical Trialist Commentary</a>. <br />
+Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found at <a href='https://www.sciencedirect.com/science/article/abs/pii/019724569090001I'>Statistican Commentary</a>.</p>
 
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
