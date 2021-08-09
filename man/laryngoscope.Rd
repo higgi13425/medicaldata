@@ -32,7 +32,7 @@ A data frame with 99 observations and 22 variables
 }
 }
 \source{
-These are data from a study by Abdallah et al. “A Randomized Comparison between the Pentax AWS Video Laryngoscope and the Macintosh Laryngoscope in Morbidly Obese Patients”. Anesthesia Analgesia 2011; 113: 1082-7.
+These are data from a study by Abdallah et al. A Randomized Comparison between the Pentax AWS Video Laryngoscope and the Macintosh Laryngoscope in Morbidly Obese Patients. Anesthesia Analgesia 2011; 113: 1082-7.
 }
 \usage{
 laryngoscope
@@ -41,7 +41,7 @@ laryngoscope
 This data set contains 99 adult patients with a body mass index between 30 and 50 kg/m2 who required orotracheal intubation for elective surgery. Patient demographics, airway assessment data, intubation success rate, time to intubation, ease of intubation, and occurrence of complications were recorded. The dataset is cleaned and complete. There are no outliers or data problems (\strong{more details} available below the variable definitions). \cr
 }
 \details{
-The Laryngoscope dataset was contributed by Dr. Amy Nowacki, Associate Professor, Cleveland Clinic. Please refer to this resource as: Amy S. Nowacki, “Laryngoscope Dataset”, TSHS Resources Portal (2017). Available at https://www.causeweb.org/tshs/laryngoscope/. \cr
+The Laryngoscope dataset was contributed by Dr. Amy Nowacki, Associate Professor, Cleveland Clinic. Please refer to this resource as: Amy S. Nowacki, 'Laryngoscope Dataset', TSHS Resources Portal (2017). Available at https://www.causeweb.org/tshs/laryngoscope/. \cr
 Difficult and failed tracheal intubations are among the principal causes of anesthetic-related mortality and morbidity. Because a good laryngeal view facilitates successful tracheal intubation, new technologies have been introduced to improve visualization. Video laryngoscopes, for example, often use miniature cameras to facilitate visualization of the laryngeal inlet with no need to align the oral, pharyngeal, and tracheal axes.\cr
 The Pentax AWS is a novel video laryngoscope, available in Japan since 2006, which is designed to facilitate intubation by providing a video image of the glottis. It incorporates a miniature video camera and a battery-powered, built-in LCD monitor. A disposable blade is attached to the base system. Incorporation of an LCD display makes it possible to view the glottis simultaneously with insertion of the endotracheal tube (ETT). In this regard, it differs from some other video laryngoscope designs that use external monitors. The Pentax AWS also differs in having a side channel that positions and guides the ETT. Reports suggest that the Pentax AWS can help intubate, but randomized data remain sparse.cr
 This study tested the hypothesis that intubation with the Pentax AWS would be easier and faster than with a standard Macintosh laryngoscope with a #4 blade.\cr

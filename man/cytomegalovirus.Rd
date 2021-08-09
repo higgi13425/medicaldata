@@ -36,7 +36,7 @@ A data frame with 64 observations and 26 variables
 \item{\code{time.to.cgvhd}}{Time to chronic graft versus host disease (months), numeric, range:  0.82- 65.1}}
 }
 \source{
-Sobecks et al. “Cytomegalovirus Reactivation After Matched Sibling Donor Reduced-Intensity Conditioning Allogeneic Hematopoietic Stem Cell Transplant Correlates With Donor Killer Immunoglobulin-like Receptor Genotype”. Exp Clin Transplant 2011; 1: 7-13.
+Sobecks et al. 'Cytomegalovirus Reactivation After Matched Sibling Donor Reduced-Intensity Conditioning Allogeneic Hematopoietic Stem Cell Transplant Correlates With Donor Killer Immunoglobulin-like Receptor Genotype'. Exp Clin Transplant 2011; 1: 7-13.
 }
 \usage{
 cytomegalovirus

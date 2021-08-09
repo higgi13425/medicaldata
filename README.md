@@ -20,7 +20,7 @@ maintained by [Carol
 Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the
 University of Massachusetts (with permission).
 
-## How to Install and Use Datasets
+## How to Install and Use {medicaldata} Datasets
 
 1.  Install with: `remotes::install_github("higgi13425/medicaldata")`  
 
@@ -41,30 +41,30 @@ University of Massachusetts (with permission).
 
 ## List of Datasets
 
-Click on links below for more details about the variables included in
-the dataset in the Codebook, and details about the dataset itself in the
-Description Document. Note that each dataset also has a help file that
-you can use within R or RStudio, by entering `help("dataset_name")` in
-the Console pane.
+Click on links below for more details about the dataset itself in the
+Description Document, and more details about the variables included in
+the dataset in the Codebook. Note that each dataset also has a help file
+that you can use within R or RStudio, by entering `help("dataset_name")`
+in the Console pane.
 
-| Dataset          | Codebook                                                                                                          | Description document                                                                                            |
-|:-----------------|:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
-| strep\_tb        | [strep\_tb\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.pdf)  | [strep\_tb\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.pdf) |
-| scurvy           | [scurvy\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.pdf)       | [scurvy\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.pdf)      |
-| indo\_rct        | [indo\_rct\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.pdf)  | [indo\_rct\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.pdf) |
-| polyps           | [polyps\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.pdf)       | [polyps\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.pdf)      |
-| covid\_testing   | [covid\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.pdf) | [covid\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.pdf)        |
-| blood\_storage   | [blood\_storage\_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)        | [blood\_storage\_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)     |
-| cytomegalovirus  | [cytomegalovirus\_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)       | [cytomegalovirus\_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)    |
-| esoph\_ca        | [esoph\_ca\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_codebook.pdf)     | [esoph\_ca\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_desc.pdf)    |
-| laryngoscope     | [laryngoscope\_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)             | [laryngoscope\_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)          |
-| licorice\_gargle | [licorice\_gargle\_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)    | [licorice\_gargle\_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) |
-| opt              | [opt\_codebook](https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf)                                   | [opt\_desc](https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf)                                |
-| smartpill        | [smartpill\_codebook](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf)                | [smartpill\_desc](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf)             |
-| supraclavicular  | [supraclavicular\_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)       | [supraclavicular\_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)    |
-| tumorgrowth      | [tumorgrowth\_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)                        | [tumorgrowth\_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf)                        |
-| indometh         | [indometh\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.pdf)   | [indometh\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.pdf)  |
-| theoph           | [theoph\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.pdf)       | [theoph\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.pdf)      |
+| Dataset          | Description document                                                                                            | Codebook                                                                                                          |
+|:-----------------|:----------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------------------------------------------|
+| strep\_tb        | [strep\_tb\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.pdf) | [strep\_tb\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.pdf)  |
+| scurvy           | [scurvy\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.pdf)      | [scurvy\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.pdf)       |
+| indo\_rct        | [indo\_rct\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.pdf) | [indo\_rct\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.pdf)  |
+| polyps           | [polyps\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.pdf)      | [polyps\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.pdf)       |
+| covid\_testing   | [covid\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.pdf)        | [covid\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.pdf) |
+| blood\_storage   | [blood\_storage\_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)     | [blood\_storage\_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)        |
+| cytomegalovirus  | [cytomegalovirus\_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)    | [cytomegalovirus\_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)       |
+| esoph\_ca        | [esoph\_ca\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_ca_desc.pdf) | [esoph\_ca\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph__cacodebook.pdf)  |
+| laryngoscope     | [laryngoscope\_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)          | [laryngoscope\_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)             |
+| licorice\_gargle | [licorice\_gargle\_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) | [licorice\_gargle\_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)    |
+| opt              | [opt\_desc](https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf)                                | [opt\_codebook](https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf)                                   |
+| smartpill        | [smartpill\_desc](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf)             | [smartpill\_codebook](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf)                |
+| supraclavicular  | [supraclavicular\_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)    | [supraclavicular\_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)       |
+| tumorgrowth      | [tumorgrowth\_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf)                        | [tumorgrowth\_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)                        |
+| indometh         | [indometh\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.pdf)  | [indometh\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.pdf)   |
+| theoph           | [theoph\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.pdf)      | [theoph\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.pdf)       |
 
 <!-- badges: start -->
 

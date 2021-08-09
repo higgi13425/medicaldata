@@ -51,6 +51,6 @@
 #' \item{\code{cgvhd}}{Chronic graft versus host disease, numeric, range:  0 (no) - 1 (yes)}
 #' \item{\code{time.to.cgvhd}}{Time to chronic graft versus host disease (months), numeric, range:  0.82- 65.1}}
 #'
-#' @source  Sobecks et al. “Cytomegalovirus Reactivation After Matched Sibling Donor Reduced-Intensity Conditioning Allogeneic Hematopoietic Stem Cell Transplant Correlates With Donor Killer Immunoglobulin-like Receptor Genotype”. Exp Clin Transplant 2011; 1: 7-13.
+#' @source  Sobecks et al. 'Cytomegalovirus Reactivation After Matched Sibling Donor Reduced-Intensity Conditioning Allogeneic Hematopoietic Stem Cell Transplant Correlates With Donor Killer Immunoglobulin-like Receptor Genotype'. Exp Clin Transplant 2011; 1: 7-13.
 #'
 "cytomegalovirus"

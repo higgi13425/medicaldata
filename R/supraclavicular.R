@@ -28,6 +28,6 @@
 #' \item{\code{opioid_total}}{Total opioid consumption in milligrams, numeric, range: 0-225.0}
 #' }
 #'
-#' @source These are data from a study by Roberman et al. “Combined Versus Sequential Injection of Mepivacaine and Ropivacaine for Supraclavicular Nerve Blocks”. Reg Anesth Pain Med 2011; 36:145-50.
+#' @source These are data from a study by Roberman et al. 'Combined Versus Sequential Injection of Mepivacaine and Ropivacaine for Supraclavicular Nerve Blocks'. Reg Anesth Pain Med 2011; 36:145-50.
 #'
 "supraclavicular"

@@ -29,7 +29,7 @@ A data frame with 316 observations and 20 variables
 \item{\code{TimeToRecurrence}}{NA, numeric, range: 0.27-104}}
 }
 \source{
-Cata et al. “Blood Storage Duration and Biochemical Recurrence of Cancer after Radical Prostatectomy”. Mayo Clin Proc 2011; 86(2): 120-127.
+Cata et al. 'Blood Storage Duration and Biochemical Recurrence of Cancer after Radical Prostatectomy'. Mayo Clin Proc 2011; 86(2): 120-127.
 }
 \usage{
 blood_storage
@@ -55,8 +55,8 @@ This study evaluated the association between red blood cells (RBC) storage durat
 
 \subsection{Subjects and Variables}{
 
-Patients were assigned to 1 of 3 RBC age exposure groups on the basis of the terciles (ie, the 33rd and 66th percentiles) of the overall distribution of RBC storage duration if all their transfused units could be loosely characterized as of “younger,” “middle,” or “older” age. Although this approach resulted in the removal of certain patients with wide RBC age distributions, it has the advantage of defining an essentially random and clearly separable exposure.\cr
-Prostate-specific antigen (PSA) was used as a biochemical marker of prostate cancer recurrence after prostatectomy. A PSA value of at least 0.4 ng/mL (to convert to μg/L, multiply by 1.0) followed by another increase was considered biochemical cancer recurrence.\cr
+Patients were assigned to 1 of 3 RBC age exposure groups on the basis of the terciles (ie, the 33rd and 66th percentiles) of the overall distribution of RBC storage duration if all their transfused units could be loosely characterized as of 'younger,' 'middle,' or 'older' age. Although this approach resulted in the removal of certain patients with wide RBC age distributions, it has the advantage of defining an essentially random and clearly separable exposure.\cr
+Prostate-specific antigen (PSA) was used as a biochemical marker of prostate cancer recurrence after prostatectomy. A PSA value of at least 0.4 ng/mL (to convert to microg/L, multiply by 1.0) followed by another increase was considered biochemical cancer recurrence.\cr
 \cr
 The initial population consisted of 865 men who had undergone radical prostatectomy and received transfusion during or within 30 days of the surgical procedure at Cleveland Clinic and had available PSA follow-up data. Of these patients, 110 were excluded from the analysis because they received a combination of allogeneic and autologous blood products. Of the remaining 755 patients, 405 (54\%) received solely allogeneic and 350 patients (46\%) received solely autologous RBC units. Of the 405 patients who received allogeneic RBC transfusion, 89 were excluded because their transfused RBC age distribution included more than one of the terciles. Thus, this dataset consists of the 316 patients who received solely allogeneic blood products and could be classified into an RBC age exposure group.\cr
 }

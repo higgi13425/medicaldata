@@ -8,10 +8,11 @@ Authors@R: c(
 Maintainer: Peter Higgins <higgi13425@yahoo.com>
 Date: 2021-08-08
 Description: Provides access to medical datasets for teaching.
-    Featuring several from the TSHS website, 
-    a few reconstructed datasets of 
+    Featuring several from the Teaching of Statistics in the Health Sciences
+    website, a few reconstructed datasets of 
     historical significance in medical research,
-    some from existing R packages (HSAUR), and some data donations.
+    some reformatted and extended from existing R packages {HSAUR}, 
+    and some data donations.
 Depends:
     R (>= 3.1)
 License: MIT + file LICENSE
