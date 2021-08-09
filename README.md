@@ -1,5 +1,9 @@
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
 # medicaldata <img src='man/figures/hex-medicaldata.png' align="right" height="240">
+
+## Overview
 
 This is a data package with several medical datasets for teaching
 Reproducible Medical Research with R. The link to the pkgdown reference
@@ -15,6 +19,8 @@ Association’s TSHS (Teaching Statistics in the Health Sciences)
 maintained by [Carol
 Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the
 University of Massachusetts.
+
+## How to Install and Use Datasets
 
 1.  Install with: `remotes::install_github("higgi13425/medicaldata")`  
 
@@ -33,9 +39,11 @@ University of Massachusetts.
     available under the Reference tab above, or within R by using
     `help(dataset_name)` <br>
 
-### Datasets
+## List of Datasets
 
-Click on the name of a dataset for more details.
+Click on links below for more details about the variables included in
+the dataset in the Codebook, and details about the dataset itself in the
+Description Document.
 
 | Dataset          | Codebook                                                                                                          | Description document                                                                                            |
 |:-----------------|:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|

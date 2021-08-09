@@ -2,10 +2,23 @@
 output: github_document
 ---
 
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-"
+)
+```
+
 # medicaldata <img src='man/figures/hex-medicaldata.png' align="right" height="240">
+
+## Overview
 
 This is a data package with several medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is [here](https://higgi13425.github.io/medicaldata/) and in the links at the right. These range from reconstructed versions of James Lind's scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association's TSHS (Teaching Statistics in the Health Sciences) [Resources Portal](https://www.causeweb.org/tshs/category/dataset/), maintained by [Carol Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the University of Massachusetts.
 
+## How to Install and Use Datasets
 1. Install with: `remotes::install_github("higgi13425/medicaldata")`     
 2. Then load the package with `library(medicaldata)`    
 3. Then you can list the datasets available with `data(package = "medicaldata")`    
@@ -18,8 +31,8 @@ and `covid_testing` is the name of the dataset.<br>
 5. You can click on the links below to view the codebook and/or description document for each dataset. This information is also available under the Reference tab above, or within R by using `help(dataset_name)` <br>
 
 
-### Datasets
-Click on the name of a dataset for more details.
+## List of Datasets
+Click on links below for more details about the variables included in the dataset in the Codebook, and details about the dataset itself in the Description Document. Note that each dataset also has a help file that you can use within R or RStudio, by entering `help("dataset_name")` in the Console pane.
 
 | Dataset         | Codebook                 | Description document          |
 |:----------------|:-------------------------|:-------------------------|
