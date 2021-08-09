@@ -39,6 +39,14 @@ University of Massachusetts (with permission).
     available under the Reference tab above, or within R by using
     `help(dataset_name)`. <br>
 
+## Data Donations
+
+If you have access to data from a randomized, controlled clinical trial,
+or a prospective cohort study, or even a case-control study, please
+consider obtaining the appropriate permissions, anonymizing the data,
+and donating the dataset for teaching purposes to add to this package.
+Open an issue to open the discussion of a data donation.
+
 ## List of Datasets
 
 Click on links below for more details about the dataset itself in the
@@ -56,7 +64,7 @@ in the Console pane.
 | covid\_testing   | [covid\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.pdf)        | [covid\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.pdf) |
 | blood\_storage   | [blood\_storage\_desc](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf)     | [blood\_storage\_codebook](https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf)        |
 | cytomegalovirus  | [cytomegalovirus\_desc](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf)    | [cytomegalovirus\_codebook](https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf)       |
-| esoph\_ca        | [esoph\_ca\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_ca_desc.pdf) | [esoph\_ca\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph__cacodebook.pdf)  |
+| esoph\_ca        | [esoph\_ca\_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_ca_desc.pdf) | [esoph\_ca\_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_ca_codebook.pdf)  |
 | laryngoscope     | [laryngoscope\_desc](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf)          | [laryngoscope\_codebook](https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf)             |
 | licorice\_gargle | [licorice\_gargle\_desc](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf) | [licorice\_gargle\_codebook](https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf)    |
 | opt              | [opt\_desc](https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf)                                | [opt\_codebook](https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf)                                   |
