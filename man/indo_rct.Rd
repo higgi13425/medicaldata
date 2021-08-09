@@ -5,7 +5,7 @@
 \alias{indo_rct}
 \title{RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis}
 \format{
-A data frame with 602 rows and 25 variables
+A data frame with 602 observations and 25 variables
 \describe{
 \item{\code{subject}}{subject id, first integer indicates center, integer, range:1001-4003}
 \item{\code{age}}{age in years, numeric, range:  19-90}
@@ -43,7 +43,8 @@ You can find the manuscript at \href{https://www.nejm.org/doi/full/10.1056/NEJMo
 indo_rct
 }
 \description{
-Results of a randomized, placebo-controlled, prospective 2-arm trial of rectal indomethacin (100 mg) vs. placebo prevent post-ERCP pancreatitis in 602 participants, as reported by Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine. \cr
+Results of a randomized, placebo-controlled, prospective 2-arm trial of rectal indomethacin (100 mg) vs. placebo prevent post-ERCP pancreatitis in 602 participants, as reported by Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine (more details available below the variable definitions). \cr
+@details
 ERCP, or endoscopic retrograde cholangio-pancreatogram, is a procedure performed by threading an endoscope through the mouth to the opening in the duodenum where bile and pancreatic digestive juices are released into the intestine. ERCP is helpful for treating blockages of flow of bile (gallstones, cancer), or diagnosing cancers of the pancreas, but has a high rate of complications (15-25\%). \cr
 The occurrence of post-ERCP pancreatitis is a common and feared complication, as pancreatitis can result in multisystem organ failure and death, and can occur in ~ 16\% of ERCP procedures. \cr
 The inflammatory cytokine storm that can result from this procedural complication can be quite severe. Several small randomized trials suggested that anti-inflammatory NSAID therapies at the time of ERCP could reduce the rate of this complication, but all were rather small single-center studies, and were not sufficiently convincing to change practice. /cr

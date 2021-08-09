@@ -1,7 +1,9 @@
+#' @title
 #' RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis
 #'
-#' Results of a randomized, placebo-controlled, prospective 2-arm trial of rectal indomethacin (100 mg) vs. placebo prevent post-ERCP pancreatitis in 602 participants, as reported by Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine. \cr
-
+#' @description
+#' Results of a randomized, placebo-controlled, prospective 2-arm trial of rectal indomethacin (100 mg) vs. placebo prevent post-ERCP pancreatitis in 602 participants, as reported by Elmunzer, Higgins, et al. in 2012 in the New England Journal of Medicine (more details available below the variable definitions). \cr
+#'  @details
 #' ERCP, or endoscopic retrograde cholangio-pancreatogram, is a procedure performed by threading an endoscope through the mouth to the opening in the duodenum where bile and pancreatic digestive juices are released into the intestine. ERCP is helpful for treating blockages of flow of bile (gallstones, cancer), or diagnosing cancers of the pancreas, but has a high rate of complications (15-25%). \cr
 
 #' The occurrence of post-ERCP pancreatitis is a common and feared complication, as pancreatitis can result in multisystem organ failure and death, and can occur in ~ 16% of ERCP procedures. \cr
@@ -15,7 +17,7 @@
 #' You can find the manuscript at \href{https://www.nejm.org/doi/full/10.1056/NEJMoa1111103}{Indomethacin to Prevent Post-ERCP Pancreatitis}. \cr
 #'
 
-#' @format A data frame with 602 rows and 25 variables
+#' @format A data frame with 602 observations and 25 variables
 #' \describe{
 #' \item{\code{subject}}{subject id, first integer indicates center, integer, range:1001-4003}
 #' \item{\code{age}}{age in years, numeric, range:  19-90}

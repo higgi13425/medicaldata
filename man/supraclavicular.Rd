@@ -5,7 +5,7 @@
 \alias{supraclavicular}
 \title{Study of Supraclavicular Anesthesia}
 \format{
-A data frame with 22 rows and 7 variables
+A data frame with 103 observations and 17 variables
 \describe{
 \item{\code{subject}}{Subject ID, numeric, range: 1-103}
 \item{\code{group}}{Anesthetic group, numeric, 1 = Mixture; 2 = Sequential}
@@ -33,7 +33,9 @@ These are data from a study by Roberman et al. “Combined Versus Sequential Inj
 supraclavicular
 }
 \description{
-This data set contains 103 patients who were scheduled to undergo an upper extremity procedure suitable for supraclavicular anesthesia. Patients were randomly assigned to either (1) combined group-ropivacaine and mepivacaine mixture; or (2) sequential group-mepivacaine followed by ropivacaine. A number of demographic and post-op pain medication variables (fentanyl, alfentanil, midazolam) were collected. The primary outcome is time to 4-nerve sensory block onset. The dataset is cleaned and relatively complete. There are no outliers or data problems. These are data from a study by Roberman et al. “Combined Versus Sequential Injection of Mepivacaine and Ropivacaine for Supraclavicular Nerve Blocks”. Reg Anesth Pain Med 2011; 36:145-50. \cr
+This data set contains 103 patients who were scheduled to undergo an upper extremity procedure suitable for supraclavicular anesthesia. Patients were randomly assigned to either (1) combined group-ropivacaine and mepivacaine mixture; or (2) sequential group-mepivacaine followed by ropivacaine. A number of demographic and post-op pain medication variables (fentanyl, alfentanil, midazolam) were collected. The primary outcome is time to 4-nerve sensory block onset. The dataset is cleaned and relatively complete. There are no outliers or data problems (\strong{more details} available below the variable definitions). \cr
+}
+\details{
 The choice of anesthetic technique combined with a suitable plan for postoperative analgesia can facilitate early discharge, improve patient comfort, and increase overall satisfaction. Patients having painful procedures who undergo general anesthesia have a 2- to 5-fold greater risk of unplanned overnight admissions compared with those having regional anesthesia. Regional anesthetic techniques and peripheral nerve blocks are especially favored for surgeries on the extremities. Both rapid onset of the block and prolonged postoperative analgesia are desired characteristics of regional anesthesia.\cr
 The choice of local anesthetics or combinations thereof can greatly influence the effectiveness of the block, onset time, duration of postoperative analgesia, need for opioid use, and patient satisfaction. Mepivacaine and ropivacaine are commonly used in peripheral nerve blocks, their drawbacks being a short duration with 1.5\% mepivacaine and a delayed onset with 0.5\% ropivacaine. An ideal local anesthetic with high potency, low toxicity, rapid onset, and prolonged duration does not exist yet. Investigators have therefore tried mixtures of local anesthetics in an attempt to combine their advantages with conflicting results. A potential problem is that mixing drugs dilutes the effects of each. Thus, a mixture of a rapid-onset drug such as mepivacaine with a long-acting one such as ropivacaine may well result in slower onset than mepivacaine alone and shorter duration of action than ropivacaine alone. In contrast, sequential administration of the same amounts of the same drugs may preserve the desirable features of each.\cr
 Objective: This study investigates whether sequential supraclavicular injection of 1.5\% mepivacaine followed 90 seconds later by 0.5\% ropivacaine provides a quicker onset and a longer duration of analgesia than an equidose combination of the 2 local anesthetics.\cr

@@ -1,6 +1,9 @@
+#' @title
 #' RCT of Streptomycin Therapy for Tuberculosis
 #'
-#' Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal. \cr
+#' @description
+#' Results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (arm A2) vs. placebo (arm A1) to treat tuberculosis in 107 young patients, as reported by the Streptomycin in Tuberculosis Trials Committee in 1948 in the British Medical Journal (**more details** available below the variable definitions). \cr
+#' @details
 #' The Streptomycin for Tuberculosis trial in 1948 was considered the first modern randomized, placebo-controlled clinical trial, which could be done in part because there were very limited supplies of streptomycin in the UK after World War II. \cr
 #' This publication seems a bit primitive today, without standard features like a proper Table 1, and some creative use of graphs to display baseline characteristics of the study sample \cr
 #' More strikingly, there is no ethics committee approval, or consent. \cr
@@ -9,7 +12,7 @@
 #' Commentary on the conduct of these trials from one of the MD investigators can be found at \href{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC1592068/}{MD Clinical Trialist Commentary}. \cr
 #' Commentary on the design and analysis of these trials from statistician A. Bradford Hill can be found at \href{https://www.sciencedirect.com/science/article/abs/pii/019724569090001I}{Statistican Commentary}.
 #'
-#' @format A data frame with 107 rows and 13 variables
+#' @format A data frame with 107 observations and 13 variables
 #' \describe{
 #'   \item{patient_id}{invented id number for each participant; type: character}
 #'   \item{arm}{assigned treatment arm, Streptomycin or Control; type: factor}

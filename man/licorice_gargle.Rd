@@ -5,7 +5,7 @@
 \alias{licorice_gargle}
 \title{Randomized, Controlled Trial of Licorice Gargle before Intubation for Elective Thoracic Surgery}
 \format{
-A data frame with 236 rows and 19 variables
+A data frame with 235 observations and 19 variables
 \describe{
 \item{\code{preOp_gender}}{Gender, numeric, 0 = Male; 1 = Female}
 \item{\code{preOp_asa}}{American Society of Anesthesiologists physical status, numeric, 1 = a normal healthy patient; 2 = a patient with mild systemic disease; 3 = a patient with severe systemic disease}
@@ -35,7 +35,9 @@ These are data from a study by Ruetzler et al. “A Randomized, Double-Blind Com
 licorice_gargle
 }
 \description{
-This study enrolled 236 adult patients undergoing elective thoracic surgery requiring a double-lumen endotracheal tube. Gender, physical status, BMI, age, Mallampati score, smoking status, preoperative pain, surgery size, intervention and the outcomes (cough, sore throat and pain swallowing at various time points) are provided. The dataset is cleaned and complete (missing outcomes for 2 patients). There are no outliers or data problems. These are data from a study by Ruetzler et al. “A Randomized, Double-Blind Comparison of Licorice Versus Sugar-Water Gargle for Prevention of Postoperative Sore Throat and Postextubation Coughing”. Anesth Analg 2013; 117: 614 – 21.\cr
+This study enrolled 236 adult patients undergoing elective thoracic surgery requiring a double-lumen endotracheal tube. Gender, physical status, BMI, age, Mallampati score, smoking status, preoperative pain, surgery size, intervention and the outcomes (cough, sore throat and pain swallowing at various time points) are provided. The dataset is cleaned and complete (missing outcomes for 2 patients). There are no outliers or data problems (\strong{more details} available below the variable definitions).\cr
+}
+\details{
 The Licorice Gargle dataset was contributed by Dr. Amy Nowacki, Associate Professor, Cleveland Clinic. Please refer to this resource as: Amy S. Nowacki, “Licorice Gargle Dataset”, TSHS Resources Portal (2017). Available at https://www.causeweb.org/tshs/licorice-gargle/.\cr
 Postoperative sore throat is a common and annoying complication of endotracheal intubation. Intubation with double-lumen tubes, which are much larger than conventional single-lumen tubes, are especially likely to provoke sore throats, with a reported incidence up to 90\%. Presumably, postoperative sore throats are a consequence of local tissue trauma, due to laryngoscopy and/or endotracheal intubation, leading to inflammation of pharyngeal mucosa.\cr
 Nonpharmacological methods for preventing an intubation-related sore throat include using smaller-sized endotracheal tubes, lubricating the endotracheal tube with water-soluble jelly, and careful airway instrumentation as examples. Pharmacological measures for attenuating postoperative sore throats include inhalation of beclomethasone or fluticasone propionate; gargling with azulene sulfonate, aspirin, or ketamine; and gargling or spraying benzydamine hydrochloride on the endotracheal cuff for example. Each of these approaches and others not listed, however, has limitations and variable success rates; thus none has become established or is in routine clinical use.\cr

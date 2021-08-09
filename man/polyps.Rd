@@ -5,7 +5,7 @@
 \alias{polyps}
 \title{RCT of Sulindac for Polyp Prevention in Familial Adenomatous Polyposis}
 \format{
-A data frame with 22 rows and 7 variables
+A data frame with 22 observations and 7 variables
 \describe{
 \item{participant_id}{id number for each participant; type: character}
 \item{sex}{participant sex, levels: female, male; type: factor}
@@ -27,7 +27,9 @@ This dataset is derived from and improved upon from the {HSAUR} package.
 polyps
 }
 \description{
-Results of a randomized, placebo-controlled trial of sulindac in the reduction of colonic polyps in Familial Adenomatous Polyposis (FAP). \cr
+Results of a randomized, placebo-controlled trial of sulindac in the reduction of colonic polyps in Familial Adenomatous Polyposis  (FAP) (\strong{more details} available below the variable definitions). \cr
+}
+\details{
 FAP is an inherited condition caused by mutations in the APC  (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age.  \cr
 Early, frequent surveillance colonoscopy and polyp removal is helpful, but this study examined whether there is a beneficial effect of preventive medical therapy with the nonsteroidal pain reliever, sulindac, versus placebo in a RCT vs placebo in 22 participants, with polyp number measured (via colonoscopy) at baseline, 3 months, and 12 months after starting the study drug.
 }

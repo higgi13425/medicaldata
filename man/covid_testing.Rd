@@ -5,7 +5,7 @@
 \alias{covid_testing}
 \title{Deidentified Results of COVID-19 testing at the Children's Hospital of Pennsylvania (CHOP) in 2020}
 \format{
-A data frame with 15524 rows and 17 variables
+A data frame with 15524 observations and 17 variables
 \describe{
 \item{subject_id}{id number for each subject; type: numeric}
 \item{fake_first_name}{an auto-generated fake first name; type: character}
@@ -28,12 +28,15 @@ A data frame with 15524 rows and 17 variables
 }
 }
 \source{
-This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during 2020 at CHOP (Children's Hospital of Pennsylvania). This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated metadata. The data has been anonymized, time-shifted, and permuted.
+This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during 2020 at CHOP (Children's Hospital of Pennsylvania). This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated metadata. These data have been anonymized, time-shifted, and permuted.
 }
 \usage{
 covid_testing
 }
 \description{
 A dataset containing details of SARS-CoV-2 testing in 2020 at CHOP
+}
+\details{
+Data on testing for SARS-CoV2 from days 4-107 of the COVID pandemic in 2020. CHOP is a pediatric hospital in Philadelphia, Pennsylvania, USA. These data have been anonymized, time-shifted, and permuted.
 }
 \keyword{datasets}

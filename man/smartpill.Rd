@@ -5,7 +5,7 @@
 \alias{smartpill}
 \title{Prospective Cohort Study of Intestinal Transit using a SmartPill to Compare Trauma Patients to Healthy Volunteers}
 \format{
-A data frame with 95 rows and 22 variables
+A data frame with 95 obsrvations and 22 variables
 \describe{
 \item{\code{Group}}{Study group, numeric, 0 = Critically Ill Trama Patient, 1 = Healthy Volunteer}
 \item{\code{Gender}}{Gender, numeric, range: 0 = Female, 1 = Male}
@@ -38,7 +38,9 @@ Rauch et al. “Use of Wireless Utility Capsule to Determine Gastric Emptying an
 smartpill
 }
 \description{
-This study evaluated gastric emptying, small bowel transit time, and total intestinal transit time in 8 critically ill trauma patients. These data were compared with those obtained in 87 healthy volunteers from a separate trial. Data were obtained with a motility capsule that wirelessly transmitted pH, pressure, and temperature to a recorder attached to each subject’s abdomen. Transit times were available for almost all patients, however, pH, pressure and temperature data is missing for all critically ill patients and sparsely missing for the healthy volunteers. \cr
+This study evaluated gastric emptying, small bowel transit time, and total intestinal transit time in 8 critically ill trauma patients. These data were compared with those obtained in 87 healthy volunteers from a separate trial. Data were obtained with a motility capsule that wirelessly transmitted pH, pressure, and temperature to a recorder attached to each subject’s abdomen. Transit times were available for almost all patients, however, pH, pressure and temperature data is missing for all critically ill patients and sparsely missing for the healthy volunteers (\strong{more details} available below the variable definitions) \cr
+}
+\details{
 The Smart Pill dataset was contributed by Dr. Amy Nowacki, Associate Professor, Cleveland Clinic. Please refer to this resource as: Amy S. Nowacki, “Smart Pill Dataset”, TSHS Resources Portal (2017). Available at https://www.causeweb.org/tshs/smart-pill/. \cr
 Delayed gastric emptying is a well-known problem in critically ill patients and is associated with feeding disturbances and inadequate nutrition. However, evaluating gastrointestinal function remains challenging in critically ill patients who are mechanically ventilated. Many tests that are practical and accurate under standardized, controlled conditions often fail in the critical care setting. For example, the consensus recommendations for gastric emptying scintigraphy are impractical in intubated patients because they recommend low-fat, egg white meal with imaging at 0, 1, 2, and 4 hours after meal ingestion. Another test, the lactulose hydrogen breath test, relies on prompt bacterial breakdown of lactulose in the colon; however, changes in bacterial flora—which are presumably common in critical care patients—can produce false transit times.\cr
 The 13C-octanoic acid breath test was reported as successful when used bedside to measure gastric emptying. However, manometry only assesses the upper gastrointestinal function, mainly esophagus, stomach, and proximal small bowel. Finally, video capsule technology has been used to determine small bowel transit time and pathomorphology in critically ill patients, although inadequate battery lifespan of the capsule (approximately 8-10 hours) could prevent complete examination in some cases.\cr

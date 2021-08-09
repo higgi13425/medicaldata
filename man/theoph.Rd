@@ -5,7 +5,7 @@
 \alias{theoph}
 \title{Cohort Study of the Pharmacokinetics of Oral Theophylline}
 \format{
-A data frame with 132 rows and 5 variables
+A data frame with 132 observations and 5 variables
 \describe{
 \item{Subject}{subject id number for each participant; type: ordinal factor}
 \item{Wt}{Weight in kilograms; type: double}
@@ -22,7 +22,9 @@ Note that the original data collector, Robert A. Upton, is not credited, nor is 
 theoph
 }
 \description{
-Results of a Cohort Study of the Pharmacokinetics of Oral Theophylline, with plasma concentrations over time. \cr
+Results of a Cohort Study of the Pharmacokinetics of Oral Theophylline, with plasma concentrations over time (\strong{more details} available below the variable definitions). \cr
+}
+\details{
 This data set is from a pharmacokinetic study of oral dosing of the anti-asthma medication, theophylline, in 12 subjects over 25 hours, published By Dr. Robert A. Upton around 1980. The original publication, if any, is unclear and not cited. These data were used in a package named \code{nlme}, and reported in Boeckmann, A.J., et al.Dr. Upton did publish several papers on theophylline pharmacokinetics around 1980-1984, and these data could have been from one of these.\cr
 Theophylline is an methylxanthine anti-asthma medication, which acts as a bronchodilator, with secondary effects to strengthen diaphragm contraction, reduce pulmonary artery pressures, and reduce mast cell release. It can be administered by the intravenous, oral, or rectal suppository routes.\cr
 Each subject in this Study (oral route) received a single oral dose of theophylline.
