@@ -1,5 +1,6 @@
 ## Test environments
 * local OS X install, R 4.0.4
+* Linux via rhub, using debian-gcc-devel 
 * win-builder (devel and release and old)
 
 ## R CMD check results

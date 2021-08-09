@@ -5,7 +5,6 @@ Version: 0.2.0
 Authors@R: c(
     person("Peter", "Higgins", email="higgi13425@yahoo.com", role = c("aut", "cre"))
     )
-Maintainer: Peter Higgins <higgi13425@yahoo.com>
 Date: 2021-08-08
 Description: Provides access to medical datasets for teaching.
     Featuring several from the Teaching of Statistics in the Health Sciences
