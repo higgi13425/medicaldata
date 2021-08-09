@@ -20,6 +20,7 @@ BugReports: https://github.com/higgi13425/medicaldata/issues
 Suggests: 
     knitr,
     rmarkdown,
+    markdown,
     learnr
 VignetteBuilder: knitr
 Encoding: UTF-8

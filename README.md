@@ -18,7 +18,7 @@ Association’s TSHS (Teaching Statistics in the Health Sciences)
 [Resources Portal](https://www.causeweb.org/tshs/category/dataset/),
 maintained by [Carol
 Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the
-University of Massachusetts.
+University of Massachusetts (with permission).
 
 ## How to Install and Use Datasets
 
@@ -37,13 +37,15 @@ University of Massachusetts.
 5.  You can click on the links below to view the codebook and/or
     description document for each dataset. This information is also
     available under the Reference tab above, or within R by using
-    `help(dataset_name)` <br>
+    `help(dataset_name)`. <br>
 
 ## List of Datasets
 
 Click on links below for more details about the variables included in
 the dataset in the Codebook, and details about the dataset itself in the
-Description Document.
+Description Document. Note that each dataset also has a help file that
+you can use within R or RStudio, by entering `help("dataset_name")` in
+the Console pane.
 
 | Dataset          | Codebook                                                                                                          | Description document                                                                                            |
 |:-----------------|:------------------------------------------------------------------------------------------------------------------|:----------------------------------------------------------------------------------------------------------------|
