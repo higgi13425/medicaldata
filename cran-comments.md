@@ -4,7 +4,13 @@
 * win-builder (devel and release and old)
 
 ## R CMD check results
-There were no ERRORs or WARNINGs or NOTEs. 
+There were no ERRORs or WARNINGs.
+
+One NOTE:
+* checking CRAN incoming feasibility ... NOTE
+Maintainer: 'Peter Higgins <higgi13425@yahoo.com>'
+
+Yes, I am the maintainer.
 
 ## Downstream dependencies
 None (this is a new package, and a data-only package, so it seems unlikely to develop a lot of downstream dependencies)
