@@ -1,16 +1,17 @@
 ---
-title: "Esophageal Cancer Dataset Description Document"
+title: "Sulindac v. Polyps RCT Dataset Description Document"
 author: "Peter Higgins"
-date: "5/15/2021"
-output: pdf_document
+date: "8/10/2021"
+output: 
+  html_document:
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-## Esophageal Cancer Dataset Introduction and Description
+## Source: 
 
 Source: This data set is from a study published in 1993 in the New England Journal of Medicine,
  
@@ -18,18 +19,20 @@ F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. C
 
 This dataset is derived from and improved upon from the {HSAUR} package. 
 
-#### Abstract
+### Abstract
 
+A case-control epidemiological study of the association between alcohol, smoking, and esophageal cancer.
 
-#### Background
+### Background
 
+FAP is an inherited condition caused by mutations in the APC (Adenomatous Polyposis Coli) gene that leads to early and frequent formation of precancerous polyps of the colon at a young age, and invariably leads to the development of colon cancer at a young age. 
+Early, frequent surveillance colonoscopy and polyp removal is helpful, but this study examined whether there is a beneficial effect of preventive medical therapy with the nonsteroidal pain reliever, sulindac, versus placebo in a RCT vs placebo in 22 participants, with polyp number measured (via colonoscopy) at baseline, 3 months, and 12 months after starting the study drug.
 
+### Study Design
 
-#### Study Design
+Prospective randomized controlled trial of sulindac vs. placebo in the prevention of colonic polyps in FAP (Familial Adenomatous Polyposis).
 
-Retrospective case-control study of exposures (smoking, alcohol) and outcome (esophageal cancer)
-
-#### Subjects & Variables
+### Subjects & Variables
 
 22 participants were assigned to 1 of 2 treatments, sulindac or placebo. 
 
@@ -46,7 +49,7 @@ N = 22 subjects (2 dropped out between month 3 and 12)
 - number3m (number of polyps at 3 months)
 - number6m (number of polyps at 6 months)
 
-#### Citation(s)
+#### Citation
 
 F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
 

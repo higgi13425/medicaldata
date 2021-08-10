@@ -1,11 +1,10 @@
 ---
 title: "Esophageal Cancer Dataset Description Document"
 author: "Peter Higgins"
-date: "5/15/2021"
-output:
-  pdf_document: default
+date: "8/10/2021"
+output: 
   html_document:
-    df_print: paged
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
@@ -13,13 +12,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 
-## Esophageal Cancer Dataset Introduction and Description
 
-Source: This data set is from a a statistical textbook, Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press. Originally in base R datasets.
+### Source: 
+This data set is from a a statistical textbook, Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press. Originally in base R datasets.
 
 This dataset is derived from papers from authors in France.
 
-#### Abstract
+### Abstract
 
 Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, evaluating the effects of smoking and alcohol on the incidence of esophageal cancer. 200 cases and 975 controls were evaluated for alcohol and tobacco consumption. It is not entirely clear which publication was the source of this dataset.
 
@@ -30,15 +29,15 @@ Mortality from cancer of the oesophagus is known to be high in Brittany and Norm
 #### 1977 Abstract from AJ Tuyns, et al. 
 A retrospective case-control study of 200 male cases of oesophageal cancer and 778 population controls has been carried out in Ille-et-Vilanine (France). The logarithms of the relative risks of developing the disease increase linearly with daily consumption of alcohol and tobacco independently. The combined effect of both fit with a multiplicative model which is proposed. This model could be applicable to other situations. It explains the sex ratio and the urban/rural differences observed in Ille-er-Vilaine. The practical implications for public health purposes are briefly discussed. [link](https://pubmed.ncbi.nlm.nih.gov/861389/)
 
-#### Background
+### Background
 
 Smoking and alcohol are associated risk factors for squamous cell cancer of the esophagus, rather than adenocarcinoma of the esophagus, which is associated with obesity and esophageal reflux. The majority (93% of the cases) in this study were of the squamous type, and more than 90% of cases occurred in males in this study in Brittany, France. The authors speculate that there may be an interaction between the effects of alcohol and tobacco. 
 
-#### Study Design
+### Study Design
 
 Retrospective case-control study of exposures (smoking, alcohol) and outcome (esophageal cancer)
 
-#### Subjects & Variables
+### Subjects & Variables
 
 200 cases and 975 controls were evaluated for consumption of alcohol and tobacco.
 
@@ -50,7 +49,7 @@ Retrospective case-control study of exposures (smoking, alcohol) and outcome (es
 - ncases
 - ncontrols
 
-#### Citation
+#### Citations
 "Cancer of the oesophagus in Brittany: an incidence study in Ille-et-Vilaine", _Int J Epidmiol_, 1975, Volume 4, pages 55-59.
 by AJ Tuyns, G Masse.
 

@@ -1,18 +1,15 @@
 ---
 title: "Scurvy Dataset Description Document"
 author: "Peter Higgins"
-date: "6/25/2021"
+date: "8/10/2021"
 output: 
-  pdf_document: default
-urlcolor: blue
+  html_document:
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-
-## Scurvy Dataset Introduction and Description
 
 Source: This data set is from a study published in 1757 in _A Treatise on the Scurvy in Three Parts_, by James Lind.
  

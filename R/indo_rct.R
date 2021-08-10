@@ -12,7 +12,7 @@
 #' The investigators took this as a possible over-estimate of the effect (due to publication bias), and designed a multicenter RCT of a planned 948 patients to see a reduction of 50% from a placebo rate of 10% to an indomethacin rate of 5%. Two interim analyses were performed, after 400 and 600 patients were enrolled, using an alpha spending function. The Data and Safety Monitoring Board stopped the study after 602 participants were enrolled because of the significantly positive effect of indomethacin, which reduced post-ERCP pancreatitis from 16% in the placebo group to 9% in the indomethacin group. \cr
 #' You can find the manuscript at \href{https://www.nejm.org/doi/full/10.1056/NEJMoa1111103}{Indomethacin to Prevent Post-ERCP Pancreatitis}. \cr
 #'
-#' @format A data frame with 602 observations and 25 variables
+#' @format A data frame with 602 observations and 33 variables
 #' \describe{
 #' \item{id}{subject id, first integer indicates center, integer, range:1001-4003}
 #' \item{site}{study site (center), factor, 1 = University of Michigan, 2= Indiana University, 3 = University of Kentucky, 4 = Case Western}

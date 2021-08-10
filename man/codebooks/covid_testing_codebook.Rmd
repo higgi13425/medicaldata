@@ -2,10 +2,9 @@
 title: "COVID-19 Testing data codebook"
 author: "Peter Higgins"
 date: "10/18/2020"
-output:
-  pdf_document: 
-    latex_engine: xelatex
-  html_document: default
+output: 
+  html_document:
+    theme: flatly
 ---
 
 ```{r setup, include=FALSE}

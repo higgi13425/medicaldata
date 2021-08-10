@@ -5,7 +5,7 @@
 \alias{indo_rct}
 \title{RCT of Indomethacin for Prevention of Post-ERCP Pancreatitis}
 \format{
-A data frame with 602 observations and 25 variables
+A data frame with 602 observations and 33 variables
 \describe{
 \item{id}{subject id, first integer indicates center, integer, range:1001-4003}
 \item{site}{study site (center), factor, 1 = University of Michigan, 2= Indiana University, 3 = University of Kentucky, 4 = Case Western}

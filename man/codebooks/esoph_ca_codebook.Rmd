@@ -1,12 +1,10 @@
 ---
 title: "Esophageal Cancer data codebook"
 author: "Peter Higgins"
-date: "7/10/2021"
-output:
-  
-  pdf_document: 
-    latex_engine: xelatex
-  html_document: default
+date: "8/10/2021"
+output: 
+  html_document:
+    theme: flatly
 ---
 
 ```{r setup, include=FALSE}

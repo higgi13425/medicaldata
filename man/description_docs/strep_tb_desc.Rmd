@@ -1,20 +1,18 @@
 ---
 title: "Streptomycin for TB Dataset Description Document"
 author: "Peter Higgins"
-date: "6/25/2021"
+date: "8/10/2021"
 output: 
-  pdf_document: default
-urlcolor: blue
+  html_document:
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-## Streptomycin for Tuberculosis Dataset Introduction and Description
-
-Source: This data set is reconstructed from a study published on October 30, 1948 in the British Medical Journal, reported by the Tuberculosis Trials Committee of the MRC. The baseline characteristics and endpoints were re-created for each of the 107 participants based on Tables 1-4 in the manuscript. All 4 tables can be exactly reproduced from this dataset.
+## Source: 
+This data set is reconstructed from a study published on October 30, 1948 in the British Medical Journal, reported by the Tuberculosis Trials Committee of the MRC. The baseline characteristics and endpoints were re-created for each of the 107 participants based on Tables 1-4 in the manuscript. All 4 tables can be exactly reproduced from this dataset.
 
  Presented are the results of a randomized, placebo-controlled, prospective 2-arm trial of streptomycin 2 grams daily (Streptomycin) vs. placebo (Control) to treat tuberculosis in 107 young patients. 
  

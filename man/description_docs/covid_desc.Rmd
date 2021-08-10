@@ -2,25 +2,25 @@
 title: "COVID-19 Testing Description Document"
 author: "Peter Higgins"
 date: "5/15/2021"
-output: pdf_document
+output: 
+  html_document:
+    theme: cerulean
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-
-## COVID-19 Testing Dataset Introduction
-
-Source: This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during the year 2020 at the Children's Hospital of Pennsylvania (aka CHOP).
+### Source: 
+This data set is from Amrom E. Obstfeld, who de-identified data on COVID-19 testing during the year 2020 at the Children's Hospital of Pennsylvania (aka CHOP).
 
 This data set contains data concerning testing for SARS-CoV2 via PCR as well as associated metadata. The data has been anonymized, time-shifted, and permuted.
 
-#### Abstract
+### Abstract
 
  This data set contains data on SARS-CoV2 testing at a single hospital on 
  
-#### Background
+### Background
 
 The COVID-19 pandemic in 2020 required rapid development and deployment of a novel PCR test, and application to many outpatients with symptoms, and all inpatients upon admission to the emergency room or the hospital. 
 These anonymized data (with fake subject_ids, names, ages, and genders) provide a snapshot of the first ~100 days of testing at a single pediatric hospital, with over 15,000 tests performed on patients in a variety of settings. The vast majority were a single type of test. These tests occurred in 88 named clinics (clinic_name) and in 5 demographic groups (demo_group). Roughly half of the tests were performed at drive-through sites (drive_thru_ind).
@@ -34,18 +34,18 @@ The patients are categorized into 9 patient classes, including inpatient, emerge
 The col_rec_tat variable records the time elapsed (in hours) between sample collection and receipt in the lab.
 The rec__ver_tat variable records the time elapsed (in hours) between sample receipt in the lab and result verification/posting.
 
-#### Study Design
+### Study Design
 
 Prospective Cross-Sectional Cohort
 
-#### Subjects & Variables
+### Subjects & Variables
 
 15,524 participants were tested, from day 4 to day 107 of the COVID-19 pandemic.
 
 N = 15,524 subjects  
 17 variables
 
-#### Potential Data Analysis
+### Potential Data Analysis
 There is a dichotomous outcome variable (result) and a continuous outcome variable (ct_result).
 
 You can also look at the specimen processing time to receipt, and from receipt to verification as an outcome. Did processing times improve over the first 100 days?
