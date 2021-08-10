@@ -14,12 +14,24 @@ saveRDS(theoph, "data-raw/theoph.Rdata")
 
 
 # Indomethacin RCT for PEP
-indo_rct <- haven::read_dta("data-raw/indo_rct_pep.dta") %>%
+indo_rct_old <- haven::read_dta("data-raw/indo_rct_pep.dta") %>%
   relocate(risk, .after = "mspep") %>%
   mutate(across(
     .cols = gender:mspep,
     .fns = ~ factor(paste0(., "_", as_factor(., levels = "label")))
   ))
+
+indo_rct <- haven::read_dta("data-raw/IndoRCT(subclasses1).dta") %>% relocate(age, .before = "site") %>%
+  relocate(risk, .after = "rx") %>%
+  relocate(bleed, .after = "rx") %>%
+  select(-group, -inj) %>%
+  mutate(across(
+    .cols = site:rx,
+    .fns = ~ factor(paste0(., "_", as_factor(., levels = "label")))
+  )) %>%
+  relocate(risk, .after = "age") %>%
+  relocate(site, .after = "id") %>%
+  relocate(outcome, .after = "gender")
 
 saveRDS(indo_rct, "data-raw/indo_rct.Rdata")
 
