@@ -54,7 +54,6 @@ Click on links below for more details about the dataset itself in the Descriptio
 | opt   | [opt_desc](https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf)  |    [opt_codebook](https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf)  |
 | smartpill  | [smartpill_desc](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf)  |    [smartpill_codebook](https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf) |
 | supraclavicular | [supraclavicular_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)  |  [supraclavicular_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf) |
-| tumorgrowth     | [tumorgrowth_desc](https://www.causeweb.org/tshs/datasets/tumorgrowth_introduction.pdf) |  [tumorgrowth_codebook](https://www.causeweb.org/tshs/datasets/tumorgrowth_dictionary.pdf)|
 | indometh        |  [indometh_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.pdf) |       [indometh_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.pdf) |
 | theoph          |   [theoph_desc](https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.pdf)  |     [theoph_codebook](https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.pdf)  |
 

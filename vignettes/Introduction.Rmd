@@ -44,6 +44,5 @@ Currently, the datasets included are:
 - Obstetric Periodontal Therapy (`opt`)
 - Smartpill (`smartpill`)
 - Supraclavicular (`supraclavicular`)
-- Tumor growth (`tumor_growth`)
 - Indomethacin Pharmacokinetics (`indometh`)
 - Theophylline Pharmacokinetics (`theoph`)
