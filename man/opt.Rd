@@ -190,20 +190,36 @@ The objective of this randomized controlled trial was to determine whether treat
 \cr
 }
 \details{
-\subsection{Background:\cr\cr}{
+\subsection{Background:}{
 
 Randomized Clinical Trial on the Effect of Treatment of Maternal Periodontal Disease Can Reduce Preterm Birth Risk.\cr
 Maternal periodontal disease has been linked in observational studies to preterm birth (< 37 weeks) and low birth weight (< 2500 g) outcomes. The Obstetrics and Periodontal Therapy study was a multi-center randomized trial evaluating the effect of nonsurgical periodontal treatment intervention on preterm birth, comparing outcomes of women treated before 21 weeks gestation (treatment) to those treated after delivery (control). \cr
-823 participants enrolled at 4 centers underwent stratified randomization, resulting in 413 women assigned to the treatment group and 410 to control. All participants were 13-16 weeks pregnant at time of randomization (baseline/visit 1) and went on to attend monthly follow-up visits defined as visits 2, 3, 4, and 5 corresponding to gestational age ranges of 17-20, 21-24, 25-28, and 29-32 weeks.\cr
-The treatment group received periodontal treatment, oral hygiene instruction, and tooth polishing at their follow-ups, while those assigned to control underwent only brief oral exams. Data collection occurred at visits 1 (baseline), 3, and 5. The primary outcome of interest is gestational age at end of pregnancy. Additional outcomes include birthweight, clinical measures of periodontal disease, and various microbiological and immunological outcomes.\cr
-Statistical analyses were carried out on an intent-to-treat basis. Gestational age can be thought of as 'time until end of pregnancy,' for which certain survival analysis methods would be appropriate. The study used a log-rank test stratified by center to compare time until end of pregnancy for treatment and control groups.\cr
-A semiparametric proportional hazards model was also used for this purpose and incorporated maternal risk factors as predictors. For the study's main analyses, gestational age was censored at 37 weeks (259 days) because the interest was in extending pregnancies that would otherwise end pre-term, not extending pregnancies generally.\cr
-Though not used in the study itself, logistic regression is another method that could be applied: for example, to gestational age, dichotomized as 'preterm' or 'not preterm' according to a gestational age cutoff, or to birthweight dichotomized as 'low' or 'high' at the 2500 g or other cutoff (2500 g would be in keeping with the World Health Organization's definition for low birth weight). Changes in clinical measures of periodontal disease from baseline to visits 3 or 5 could be analyzed using mixed effects linear models. The dataset also features a number of baseline characteristics, which could be compared in treatment and control groups via Student t-tests, Wilcoxon rank sum tests, Fisher's exact tests or Pearson's chi-square tests, as appropriate.\cr
-The nonsurgical periodontal treatment involving scaling and root planing induced significant improvements in periodontal health. The study did not however find a significant relation between periodontal treatment and preterm birth risk. The results of this study were published in 2006 by Michalowicz et al., 'Treatment of periodontal disease and the risk of preterm birth', in The New England Journal of Medicine. The Obstetrics and Periodontal Therapy Dataset contains the data used in this study.\cr
-The obstetrics and periodontal therapy dataset was contributed by Dr. Ann Brearley, Assistant Professor, Division of Biostatistics, School of Public Health, University of Minnesota and her colleagues. Please refer to this resource as: Meredith Hyun, James S. Hodges and Ann M. Brearley, 'Obstetrics and Periodontal Therapy Dataset', TSHS Resources Portal (2019). Available at https://www.causeweb.org/tshs/obstetrics-and-periodontal-therapy/.\cr
 Preterm birth, defined as delivery before 37 weeks of gestation, is a growing problem. In some cases, preterm birth can lead to infant death; in others, its consequences may include neurodevelopmental disabilities, cognitive impairment, and/or respiratory disorders in the child. Many risk factors for preterm birth have already been identified, including maternal age, drug use, and diabetes. However, such factors are exhibited in only about half of preterm birth mothers, highlighting a need to expand our understanding of what contributes to preterm birth risk.\cr
 Several observational studies have suggested an association between maternal periodontal disease and preterm birth. Periodontal disease is an inflammatory condition characterized by the destruction of tissue and/or bone around the teeth. A major component of periodontal disease is oral colonization by gram-negative bacteria; systemic release of cytokines and/or lipopolysaccharides from these bacteria may impact fetal condition.\cr
 Inoculation of the periodontal pathogen P. gingivalis into pregnant animals does have a dose-dependent effect on birth weight and preterm birth signaling, but no such causal link has been shown in humans, only some associations. Though not definitive, the possibility of a significant relationship raises the question of whether treatment of maternal periodontal disease can decrease preterm birth risk.\cr
+}
+
+\subsection{Participants:}{
+
+823 participants enrolled at 4 centers underwent stratified randomization, resulting in 413 women assigned to the treatment group and 410 to control. All participants were 13-16 weeks pregnant at time of randomization (baseline/visit 1) and went on to attend monthly follow-up visits defined as visits 2, 3, 4, and 5 corresponding to gestational age ranges of 17-20, 21-24, 25-28, and 29-32 weeks.\cr
+}
+
+\subsection{Treatment:}{
+
+The treatment group received periodontal treatment, oral hygiene instruction, and tooth polishing at their follow-ups, while those assigned to control underwent only brief oral exams. Data collection occurred at visits 1 (baseline), 3, and 5. The primary outcome of interest is gestational age at end of pregnancy. Additional outcomes include birthweight, clinical measures of periodontal disease, and various microbiological and immunological outcomes.\cr
+}
+
+\subsection{Analysis:}{
+
+Statistical analyses were carried out on an intent-to-treat basis. Gestational age can be thought of as 'time until end of pregnancy,' for which certain survival analysis methods would be appropriate. The study used a log-rank test stratified by center to compare time until end of pregnancy for treatment and control groups.\cr
+A semiparametric proportional hazards model was also used for this purpose and incorporated maternal risk factors as predictors. For the study's main analyses, gestational age was censored at 37 weeks (259 days) because the interest was in extending pregnancies that would otherwise end pre-term, not extending pregnancies generally.\cr
+Though not used in the study itself, logistic regression is another method that could be applied: for example, to gestational age, dichotomized as 'preterm' or 'not preterm' according to a gestational age cutoff, or to birthweight dichotomized as 'low' or 'high' at the 2500 g or other cutoff (2500 g would be in keeping with the World Health Organization's definition for low birth weight). Changes in clinical measures of periodontal disease from baseline to visits 3 or 5 could be analyzed using mixed effects linear models. The dataset also features a number of baseline characteristics, which could be compared in treatment and control groups via Student t-tests, Wilcoxon rank sum tests, Fisher's exact tests or Pearson's chi-square tests, as appropriate.\cr
+}
+
+\subsection{Publishing:}{
+
+The nonsurgical periodontal treatment involving scaling and root planing induced significant improvements in periodontal health. The study did not however find a significant relation between periodontal treatment and preterm birth risk. The results of this study were published in 2006 by Michalowicz et al., 'Treatment of periodontal disease and the risk of preterm birth', in The New England Journal of Medicine. The Obstetrics and Periodontal Therapy Dataset contains the data used in this study.\cr
+The obstetrics and periodontal therapy dataset was contributed by Dr. Ann Brearley, Assistant Professor, Division of Biostatistics, School of Public Health, University of Minnesota and her colleagues. Please refer to this resource as: Meredith Hyun, James S. Hodges and Ann M. Brearley, 'Obstetrics and Periodontal Therapy Dataset', TSHS Resources Portal (2019). Available at https://www.causeweb.org/tshs/obstetrics-and-periodontal-therapy/.\cr
 \cr
 }
 }
