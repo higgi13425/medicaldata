@@ -9,6 +9,7 @@
 ^codecov\.yml$
 ^data-raw$
 ^cran-comments\.md$
+^doc$
 ^docs$
 ^README\.Rmd$
 ^README-.*\.png$
