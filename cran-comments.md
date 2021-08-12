@@ -13,6 +13,8 @@ Maintainer: 'Peter Higgins <higgi13425@yahoo.com>'
 - Yes, I am the maintainer.
 * This is a first submission of a new package.
 
+- the link to the TSHS datasets website was added to the Description: field of the DESCRIPTION file at the suggestion of Gregor Seyer.
+
 ## Downstream dependencies
 None.
 This is a new package, and a data-only package, so it seems unlikely to develop a lot of downstream dependencies.
