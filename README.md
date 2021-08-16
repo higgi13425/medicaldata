@@ -24,7 +24,7 @@ University of Massachusetts (with permission).
 
 ## How to Install and Use {medicaldata} Datasets
 
-1.  Install the CRAN version with: `install.packages("medicaldata")`, or you can install the in-development version with `remotes::install_github("higgi13425/medicaldata")`  
+1.  Install the stable CRAN version with: `install.packages("medicaldata")`. If you want to preview the in-development version, you can install it with `remotes::install_github("higgi13425/medicaldata")`  
 
 2.  Then load the package with `library(medicaldata)`  
 
