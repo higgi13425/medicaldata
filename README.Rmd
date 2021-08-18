@@ -33,7 +33,7 @@ and `covid_testing` is the name of the dataset.<br>
 
 6. You can click on the links below to view the codebook and/or description document for each dataset. This information is also available under the Reference tab above, or within R by using `help(dataset_name)`. <br>
 
-## Data Donations
+## Please Donate Datasets
 If you have access to data from a randomized, controlled clinical trial, or a prospective cohort study, or even a case-control study, please consider obtaining the appropriate permissions, anonymizing the data, and donating the dataset for teaching purposes to add to this package. Open an issue to open the discussion of a data donation.
 
 ## List of Datasets
