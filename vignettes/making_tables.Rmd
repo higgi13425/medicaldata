@@ -1,0 +1,102 @@
+---
+title: "making_tables"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{making_tables}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(medicaldata)
+library(tidyverse)
+library(janitor)
+library(flextable)
+```
+
+## Counting Data in Tables
+It is common to count data, particularly in categories, to summarize characteristics or outcomes. Both the {janitor} package and the {gtsummary} package are good at this.
+
+In this vignette, we will look at how to use these two packages to make simple tables of counts of your data. 
+
+First, we will read in the data from strep_tb and indo_rct to use for our tables. Load the libraries in the setup chunk above. If you then run the code chunk below, you should have two new data objects in your Environment tab.
+
+```{r}
+strep_tb <- medicaldata::strep_tb
+indo_rct <- medicaldata::indo_rct
+```
+
+## Table 2 from Streptomycin for Tuberculosis
+
+We will now try to reproduce Table 2 from the Streptomycin for Tuberculosis manuscript, which can be found [here](https://www.bmj.com/content/bmj/2/4582/769.full.pdf). These are the primary results, summarized in a 6 x 2 table (with a totals row). Let's walk through how to do this with the _tabyl()_ function in the {janitor} package.
+
+## First Table
+
+The _tabyl()_ function allows you to pipe data into tables, and add 'adornments' like percentages and total rows. Let's start with a basic tabyl.
+
+```{r}
+strep_tb %>% 
+  tabyl(radiologic_6m)
+```
+
+## Two Variable Table
+
+This gives us the n and proportion of each level of the primary outcome. If we add the treatment arm variable, we can come close to the original table.
+
+```{r}
+strep_tb %>% 
+  tabyl(radiologic_6m, arm)
+```
+
+## Add A Total Row
+
+This is closer, but lacks the percentages and the total row.
+In order to have numbers to calculate totals, we have to start with the total row.
+
+```{r}
+strep_tb %>% 
+  tabyl(radiologic_6m, arm) %>% 
+  adorn_totals(where = "row") # totals of the rows
+```
+
+## Add Percentages and formatting
+
+This is closer.
+Now we need to add the percentages, and percentage formatting.
+
+```{r}
+strep_tb %>% 
+  tabyl(radiologic_6m, arm) %>% 
+  adorn_totals(where = "row") %>% 
+  adorn_percentages("col") %>%  # column-wise percentages
+  adorn_pct_formatting() %>% 
+  adorn_ns(position = "front")  # put n first
+  
+```
+
+## Making it Pretty
+You can pipe this table into a flextable() object, which makes it easy to add fancy formatting.
+
+```{r}
+strep_tb %>% 
+  tabyl(radiologic_6m, arm) %>% 
+  adorn_totals(where = "row") %>% 
+  adorn_percentages("col") %>%  # column-wise percentages
+  adorn_pct_formatting() %>% 
+  adorn_ns(position = "front") %>%   # put n first
+  flextable::flextable()
+```
+
+Now try this yourself, but instead of using the ordinal radiologic_6m outcome, use the improved dichotomous outcome in its place. Copy the code block below and add the piping and additional lines to produce a 2 x 2 table of outcomes.
+
+```{r}
+strep_tb
+```
+
