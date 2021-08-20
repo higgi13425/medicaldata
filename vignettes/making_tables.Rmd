@@ -14,6 +14,9 @@ knitr::opts_chunk$set(
 )
 ```
 
+## Getting Started
+First, set up your working environment by loading these 4 packages using the `library()` function.
+
 ```{r setup}
 library(medicaldata)
 suppressMessages(library(tidyverse))

@@ -20,7 +20,10 @@ Suggests:
     knitr,
     rmarkdown,
     markdown,
-    learnr
+    learnr,
+    flextable,
+    tidyverse,
+    janitor
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
