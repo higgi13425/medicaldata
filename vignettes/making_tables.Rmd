@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ## Getting Started
-First, set up your working environment by loading these 4 packages using the `library()` function.
+First, set up your working environment by loading these 4 packages using the `library()` function. Note that you can copy any of the code blocks below by hovering over the top right corner, clicking on the copy icon that appears, and them paste these into your local version of R to run them.
 
 ```{r setup}
 library(medicaldata)
