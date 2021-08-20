@@ -16,65 +16,67 @@ knitr::opts_chunk$set(
 
 ```{r setup}
 library(medicaldata)
-library(tidyverse)
-library(janitor)
-library(flextable)
+suppressMessages(library(tidyverse))
+suppressMessages(library(janitor))
+suppressMessages(library(flextable))
 ```
 
 ## Counting Data in Tables
-It is common to count data, particularly in categories, to summarize characteristics or outcomes. Both the {janitor} package and the {gtsummary} package are good at this.
+It is common to count data, particularly in categories, to summarize characteristics or outcomes. The tabyl function in the {janitor} package is helpful for this.
 
-In this vignette, we will look at how to use these two packages to make simple tables of counts of your data. 
+In this vignette, we will look at how to use this function to make simple tables of counts of your data. 
 
 First, we will read in the data from strep_tb and indo_rct to use for our tables. Load the libraries in the setup chunk above. If you then run the code chunk below, you should have two new data objects in your Environment tab.
 
-```{r}
+```{r read-in}
 strep_tb <- medicaldata::strep_tb
 indo_rct <- medicaldata::indo_rct
 ```
 
 ## Table 2 from Streptomycin for Tuberculosis
 
-We will now try to reproduce Table 2 from the Streptomycin for Tuberculosis manuscript, which can be found [here](https://www.bmj.com/content/bmj/2/4582/769.full.pdf). These are the primary results, summarized in a 6 x 2 table (with a totals row). Let's walk through how to do this with the _tabyl()_ function in the {janitor} package.
+We will now try to reproduce Table 2 from the Streptomycin for Tuberculosis manuscript, which can be found [here](https://www.bmj.com/content/bmj/2/4582/769.full.pdf) on page 771. These are the primary endpoint results, summarized in a 6 rows x 2 columns table (with an added totals row). Let's walk through how to do this with the _tabyl()_ function in the {janitor} package.
 
 ## First Table
 
-The _tabyl()_ function allows you to pipe data into tables, and add 'adornments' like percentages and total rows. Let's start with a basic tabyl.
+The _tabyl()_ function allows you to pipe data into tables, and add 'adornments' like total rows and percentages. Let's start with a basic one-variable tabyl using this ordinal endpoint. You can pipe the dataset into the tabyl function, with your desired variable (radiologic_6m) as the only argument to the function.
 
-```{r}
+```{r first tabyl}
 strep_tb %>% 
   tabyl(radiologic_6m)
 ```
+This gives us the n and proportion of each level of the primary outcome. 
 
 ## Two Variable Table
+If we add the treatment arm variable as a 2nd argument, we can come closer to the original table.
+Note that the levels of the first argument make up the rows of the table, and that the levels of the 2nd argument make up the columns (standard R x C order). Also note that with 2 variables, we get the counts by default, but not proportions of each level, as you might want proportions that are column-wise, or row-wise. 
 
-This gives us the n and proportion of each level of the primary outcome. If we add the treatment arm variable, we can come close to the original table.
-
-```{r}
+```{r tabyl}
 strep_tb %>% 
   tabyl(radiologic_6m, arm)
 ```
 
 ## Add A Total Row
 
-This is closer, but lacks the percentages and the total row.
-In order to have numbers to calculate totals, we have to start with the total row.
+This is closer, but lacks the total row, and the percentages.
+In order to have numbers to calculate totals, we have to _start_ with the total row first. We will 'adorn' the table with a totals row. We have to specify that we want an additional **row** of totals at the bottom (not a column of row-wise totals in a new column on the right), with the `where` argument to the adorn_totals function.
 
-```{r}
+```{r totals}
 strep_tb %>% 
   tabyl(radiologic_6m, arm) %>% 
-  adorn_totals(where = "row") # totals of the rows
+  adorn_totals(where = "row") # add a total row
 ```
 
 ## Add Percentages and formatting
 
 This is closer.
-Now we need to add the percentages, and percentage formatting.
+Now we need to add the percentages, and percentage formatting. We need to specify that we want column-wise, rather than row-wise percentages. 
+We then have to adorn_ns to add the counts, so that we have _both_ counts and percentages. We can specify that we want the counts to be listed first, with the argument `position = "front"` in the adorn_ns function.
 
-```{r}
+```{r pct}
 strep_tb %>% 
-  tabyl(radiologic_6m, arm) %>% 
-  adorn_totals(where = "row") %>% 
+  tabyl(radiologic_6m, arm) %>% #2 dimensional table, RxC
+  adorn_totals(where = "row") %>% # add totals row
   adorn_percentages("col") %>%  # column-wise percentages
   adorn_pct_formatting() %>% 
   adorn_ns(position = "front")  # put n first
@@ -82,9 +84,9 @@ strep_tb %>%
 ```
 
 ## Making it Pretty
-You can pipe this table into a flextable() object, which makes it easy to add fancy formatting.
+You can pipe this table into a flextable() object, which makes it easy to add fancy formatting. There are many formatting options in the flextable package, which you can learn about [here](https://davidgohel.github.io/flextable/). You can control column width, fonts, colors, and much more once you are in flextable format. Flextables can be output to MS Word, powerpoint, HTML, and PDF, through Rmarkdown.
 
-```{r}
+```{r flex}
 strep_tb %>% 
   tabyl(radiologic_6m, arm) %>% 
   adorn_totals(where = "row") %>% 
@@ -94,9 +96,18 @@ strep_tb %>%
   flextable::flextable()
 ```
 
-Now try this yourself, but instead of using the ordinal radiologic_6m outcome, use the improved dichotomous outcome in its place. Copy the code block below and add the piping and additional lines to produce a 2 x 2 table of outcomes.
+## Try this Yourself
 
-```{r}
+Now try this yourself, but instead of using the ordinal radiologic_6m outcome, use the improved dichotomous outcome in its place. Copy the code block below and add the piping and additional lines to produce a 2 x 2 table of outcomes. You can websearch for `janitor tabyl adorn_title` to learn how to add a title to your table.
+
+```{r strep}
 strep_tb
+```
+
+## Challenge
+Now try to do this with the indo_rct dataset, using the treatment variable `group` and the outcome variable of `outcome`. Add a total row, percentages, and a title.
+
+```{r indo}
+indo_rct 
 ```
 

@@ -4,6 +4,9 @@
     <loc>https://higgi13425.github.io/medicaldata//index.html</loc>
   </url>
   <url>
+    <loc>https://higgi13425.github.io/medicaldata//reference/Indometh.html</loc>
+  </url>
+  <url>
     <loc>https://higgi13425.github.io/medicaldata//reference/blood_storage.html</loc>
   </url>
   <url>
@@ -17,9 +20,6 @@
   </url>
   <url>
     <loc>https://higgi13425.github.io/medicaldata//reference/indo_rct.html</loc>
-  </url>
-  <url>
-    <loc>https://higgi13425.github.io/medicaldata//reference/indometh.html</loc>
   </url>
   <url>
     <loc>https://higgi13425.github.io/medicaldata//reference/laryngoscope.html</loc>
@@ -50,5 +50,8 @@
   </url>
   <url>
     <loc>https://higgi13425.github.io/medicaldata//articles/Introduction.html</loc>
+  </url>
+  <url>
+    <loc>https://higgi13425.github.io/medicaldata//articles/making_tables.html</loc>
   </url>
 </urlset>
