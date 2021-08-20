@@ -23,8 +23,6 @@ Suggests:
     markdown,
     rmarkdown,
     tidyverse
-Imports:
-    magrittr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
