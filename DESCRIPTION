@@ -17,13 +17,14 @@ License: MIT + file LICENSE
 URL: https://higgi13425.github.io/medicaldata/, https://github.com/higgi13425/medicaldata/
 BugReports: https://github.com/higgi13425/medicaldata/issues
 Suggests: 
-    knitr,
-    rmarkdown,
-    markdown,
-    learnr,
     flextable,
-    tidyverse,
-    janitor
+    janitor,
+    knitr,
+    markdown,
+    rmarkdown,
+    tidyverse
+Imports:
+    magrittr
 VignetteBuilder: knitr
 Encoding: UTF-8
 LazyData: true
