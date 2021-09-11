@@ -44,7 +44,7 @@ indo_rct_codebook <- tribble(
   "therastent", 21, "A pancreatic duct stent was placed in order to treat a clinically significant narrowing of the pancreatic duct, a potential protective effect against PEP", NA, "0_no, 1_yes", "factor",
   "pdstent", 22, "A pancreatic duct stent was placed at the end of the procedure for any reason, a potential protective effect against PEP", NA, "0_no, 1_yes", "factor",
   "sodsom", 23, "Sphincter of oddi manometry was performed during the procedure for SOD, a risk factor for PEP", NA, "0_no, 1_yes", "factor",
-  "bsphinct", 24, "A biliary sphincterotomy was performed, which could be a risk factor for PEP", NA, "0_no, 1_yes", "factor",
+  "bsphinc", 24, "A biliary sphincterotomy was performed, which could be a risk factor for PEP", NA, "0_no, 1_yes", "factor",
   "bstent", 25, "A biliary stent was placed to relieve significant biliary obstruction", NA, "0_no, 1_yes", "factor",
   "chole", 26, "Choledocholithiasis (gallstones blocking the biliary duct) was present", NA, "0_no, 1_yes", "factor",
   "pbmal", 27, "Malignancy of the biliary duct or pancreas was found", NA, "0_no, 1_yes", "factor",
