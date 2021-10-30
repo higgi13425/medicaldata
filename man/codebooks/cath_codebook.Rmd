@@ -1,0 +1,39 @@
+---
+title: "Cath data codebook"
+author: "Peter Higgins"
+date: "10/30/2021"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Cath Dataset Codebook
+
+Source: This data set is generously donated from Frank Harrell, and is originally from the Duke Cardiovascular Disease Databank.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+cath_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "sex", 1, "Gender", NA, "0 = male, 1 = female", "double",
+  "age", 2, "Age", "years", NA, "double",
+  "cad_dur", 3, "duration of cadiac symptoms", "days", NA, "double",
+  "choleste", 4, "Serum Cholesterol", "milligrams per deciliter", NA, "double",
+  "sigdz", 5, "Significant Coronary Artery Disease Found on Cardiac Cath", NA, "0 = no, 1 = yes", "double",
+  "tvdlm", 6, "Three Vessel or Left Main Disease Found on Cardiac Cath", NA, "0 = no, 1 = yes", "double",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1.75, 0.5, 1.25, 0.35, 1.25, 0.5))
+
+cath_codebook
+
+```
