@@ -12,6 +12,27 @@ saveRDS(indometh, "data-raw/indometh.Rdata")
 theoph <- datasets::Theoph
 saveRDS(theoph, "data-raw/theoph.Rdata")
 
+# abm dataset from Frank Harrell
+# http://hbiostat.org/data/
+abm <- haven::read_dta(here('data-raw/abm.dta')) %>% select(!(dx:priorrx)) %>%
+  select(!(compns:morelabs)) %>%
+  select(!(bloodgl2:sumbands)) %>%
+  select(!c(cie, others)) %>%
+  rename(blood_wbc = wbc,
+         blood_neut_pct = pmn,
+         blood_band_pct = bands,
+        blood_cult = bloodclt,
+         blood_gluc = bloodgl,
+         csf_cult = culture,
+         csf_gluc = gl,
+         csf_prot = pr,
+         csf_rbc = reds,
+         csf_wbc = whites,
+         csf_neut_pct = polys,
+         csf_lymph_pct = lymphs,
+         csf_mono_pct = monos)
+
+saveRDS(abm, "data-raw/abm.Rdata")
 
 # Indomethacin RCT for PEP
 indo_rct_old <- haven::read_dta("data-raw/indo_rct_pep.dta") %>%
@@ -121,3 +142,4 @@ usethis::use_data(polyps, overwrite = TRUE)
 usethis::use_data(scurvy, overwrite = TRUE)
 usethis::use_data(strep_tb, overwrite = TRUE)
 usethis::use_data(indo_rct, overwrite = TRUE)
+usethis::use_data(abm, overwrite = TRUE)
