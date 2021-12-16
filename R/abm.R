@@ -19,14 +19,14 @@
 #'   \item{age}{age in years, 81 missing; type: double}
 #'   \item{race}{coded as 1 = Black, 2 = White, 85 missing; type: double}
 #'   \item{sex}{gender, coded as 0 = male and 1 = female, 81 missing; type: double}
-#'   \item{blood_wbc}{white blood cell count in blood, in thousands per cubic millimeter; type: double}
+#'   \item{blood_wbc}{white blood cell count in blood, in thousands of cells per cubic millimeter; type: double}
 #'   \item{blood_neut_pct}{Percentage of white blood cells that are neutrophils, considered indicative of acute bacterial infection, in blood; type: double}
 #'   \item{blood_band_pct}{Band cells, also known as immature neutrophils, considered indicative of acute bacterial infection, in blood, in percent of the total white blood cells; type: double}
 #'   \item{blood_gluc}{Blood glucose, in milligrams per deciliter; type: double}
 #'   \item{csf_gluc}{CSF (cerebrospinal fluid) glucose, in milligrams per deciliter; type: double}
 #'   \item{csf_prot}{CSF (cerebrospinal fluid) protein, in milligrams per deciliter; type: double}
-#'   \item{csf_rbc}{CSF (cerebrospinal fluid) red blood cells, count per cubic millimeter; type: double}
-#'   \item{csf_wbc}{CSF (cerebrospinal fluid) white blood cells, count per cubic millimeter; type: double}
+#'   \item{csf_rbc}{CSF (cerebrospinal fluid) red blood cells, thousands of cells per cubic millimeter; type: double}
+#'   \item{csf_wbc}{CSF (cerebrospinal fluid) white blood cells, thousands of cells per cubic millimeter; type: double}
 #'   \item{csf_neut_pct}{CSF (cerebrospinal fluid) neutrophil percentage, percent of total white blood cells in CSF; type: double}
 #'   \item{csf_mono_pct}{CSF (cerebrospinal fluid) monocyte percentage, percent of total white blood cells in CSF; type: double}
 #'   \item{csf_lymph_pct}{CSF (cerebrospinal fluid) lymphocyte percentage, percent of total white blood cells in CSF; type: double}
