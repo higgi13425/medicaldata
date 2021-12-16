@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-home">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="index.html">medicaldata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="reference/index.html">Reference</a>
 </li>
@@ -67,7 +63,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/higgi13425/medicaldata/">
+  <a href="https://github.com/higgi13425/medicaldata/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -84,35 +80,34 @@
 
       </header><div class="row">
   <div class="contents col-md-9">
-<div id="medicaldata-" class="section level1">
-<div class="page-header"><h1 class="hasAnchor">
-<a href="#medicaldata-" class="anchor"></a>medicaldata <img src="reference/figures/hex-medicaldata.png" align="right" height="240">
+<div class="section level1">
+<div class="page-header"><h1 id="medicaldata-">medicaldata <img src="reference/figures/hex-medicaldata.png" align="right" height="240"><a class="anchor" aria-label="anchor" href="#medicaldata-"></a>
 </h1></div>
-<div id="overview" class="section level2">
-<h2 class="hasAnchor">
-<a href="#overview" class="anchor"></a>Overview</h2>
-<p>This is a data package with 15 medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is <a href="https://higgi13425.github.io/medicaldata/">here</a> and in the links at the right. This package will be useful for anyone teaching R to medical professionals, including doctors, nurses, trainees, and students. <br><br> These datasets range from reconstructed versions of James Lind’s scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association’s TSHS (Teaching Statistics in the Health Sciences) <a href="https://www.causeweb.org/tshs/category/dataset/">Resources Portal</a>, maintained by <a href="https://www.umass.edu/sphhs/person/carol-bigelow">Carol Bigelow</a> at the University of Massachusetts (with permission). A growing number of datasets in the dev version were generously donated by <a href="https://www.fharrell.com">Frank Harrell</a> from his website <a href="https://hbiostat.org/data/">here</a>. These datasets are currently only in the dev version of the package on github.com, which should make it to CRAN in January 2022.</p>
+<div class="section level2">
+<h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
+</h2>
+<p>This is a data package with 15 medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is <a href="https://higgi13425.github.io/medicaldata/">here</a> and in the links at the right. This package will be useful for anyone teaching R to medical professionals, including doctors, nurses, trainees, and students. <br><br> These datasets range from reconstructed versions of James Lind’s scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association’s TSHS (Teaching Statistics in the Health Sciences) <a href="https://www.causeweb.org/tshs/category/dataset/" class="external-link">Resources Portal</a>, maintained by <a href="https://www.umass.edu/sphhs/person/carol-bigelow" class="external-link">Carol Bigelow</a> at the University of Massachusetts (with permission). A growing number of datasets in the dev version were generously donated by <a href="https://www.fharrell.com" class="external-link">Frank Harrell</a> from his website <a href="https://hbiostat.org/data/" class="external-link">here</a>. These datasets are currently only in the dev version of the package on github.com, which should make it to CRAN in January 2022.</p>
 </div>
-<div id="how-to-install-and-use-medicaldata-datasets" class="section level2">
-<h2 class="hasAnchor">
-<a href="#how-to-install-and-use-medicaldata-datasets" class="anchor"></a>How to Install and Use {medicaldata} Datasets</h2>
-<ol>
-<li><p>Install the stable, current CRAN version with <code><a href="https://rdrr.io/r/utils/install.packages.html">install.packages("medicaldata")</a></code>. If you want to try out the in-development version (which may have new datasets and vignettes, but which may also be intermittently wonky), install with: <code><a href="https://remotes.r-lib.org/reference/install_github.html">remotes::install_github("higgi13425/medicaldata")</a></code></p></li>
+<div class="section level2">
+<h2 id="how-to-install-and-use-medicaldata-datasets">How to Install and Use {medicaldata} Datasets<a class="anchor" aria-label="anchor" href="#how-to-install-and-use-medicaldata-datasets"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li><p>Install the stable, current CRAN version with <code>install.packages("medicaldata")</code>. If you want to try out the in-development version (which may have new datasets and vignettes, but which may also be intermittently wonky), install with: <code>remotes::install_github("higgi13425/medicaldata")</code></p></li>
 <li><p>Then load the package with <code><a href="https://higgi13425.github.io/medicaldata/">library(medicaldata)</a></code></p></li>
-<li><p>Then you can list the datasets available with <code><a href="https://rdrr.io/r/utils/data.html">data(package = "medicaldata")</a></code></p></li>
+<li><p>Then you can list the datasets available with <code>data(package = "medicaldata")</code></p></li>
 <li><p>Then assign a particular dataset to a named object in your environment with: <br><code>covid &lt;- medicaldata::covid_testing</code> <br> where <code>covid</code> is the name of the new object, and <code>covid_testing</code> is the name of the dataset.<br></p></li>
 <li><p>Articles (vignettes) on how to use the datasets can be found at the pkgdown <a href="https://higgi13425.github.io/medicaldata/">website</a> under the <strong>Articles</strong> tab.</p></li>
 <li><p>You can click on the links below to view the description document and/or codebook for each dataset. This information is also available under the Reference tab above, or within R by using <code>help(dataset_name)</code>. <br></p></li>
 </ol>
 </div>
-<div id="please-donate-datasets" class="section level2">
-<h2 class="hasAnchor">
-<a href="#please-donate-datasets" class="anchor"></a>Please Donate Datasets</h2>
+<div class="section level2">
+<h2 id="please-donate-datasets">Please Donate Datasets<a class="anchor" aria-label="anchor" href="#please-donate-datasets"></a>
+</h2>
 <p>If you have access to data from a randomized, controlled clinical trial, or a prospective cohort study, or even a case-control study, please consider obtaining the appropriate permissions, anonymizing the data, and donating the dataset for teaching purposes to add to this package. Open an issue on the github page (source code link at the top right) to open the discussion of a data donation. I am happy to help with anonymization.</p>
 </div>
-<div id="list-of-datasets" class="section level2">
-<h2 class="hasAnchor">
-<a href="#list-of-datasets" class="anchor"></a>List of Datasets</h2>
+<div class="section level2">
+<h2 id="list-of-datasets">List of Datasets<a class="anchor" aria-label="anchor" href="#list-of-datasets"></a>
+</h2>
 <p>Click on links below for more details about the dataset itself in the Description Document, and more details about the variables included in the dataset in the Codebook. Note that each dataset also has a help file that you can use within R or RStudio, by entering <code>help("dataset_name")</code> in the Console pane.</p>
 <table class="table">
 <thead><tr class="header">
@@ -123,114 +118,128 @@
 <tbody>
 <tr class="odd">
 <td align="left">strep_tb</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.html">strep_tb_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.html">strep_tb_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.html" class="external-link">strep_tb_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.html" class="external-link">strep_tb_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">scurvy</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.html">scurvy_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.html">scurvy_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.html" class="external-link">scurvy_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.html" class="external-link">scurvy_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">indo_rct</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.html">indo_rct_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.html">indo_rct_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.html" class="external-link">indo_rct_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.html" class="external-link">indo_rct_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">polyps</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.html">polyps_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.html">polyps_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/polyps_desc.html" class="external-link">polyps_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/polyps_codebook.html" class="external-link">polyps_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">covid_testing</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.html">covid_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.html">covid_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/covid_desc.html" class="external-link">covid_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/covid_testing_codebook.html" class="external-link">covid_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">blood_storage</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf">blood_storage_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf">blood_storage_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Dataset%20Introduction.pdf" class="external-link">blood_storage_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Blood%20Storage%20Data%20Dictionary.pdf" class="external-link">blood_storage_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">cytomegalovirus</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf">cytomegalovirus_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf">cytomegalovirus_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Dataset%20Introduction.pdf" class="external-link">cytomegalovirus_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Cytomegalovirus%20Data%20Dictionary.pdf" class="external-link">cytomegalovirus_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">esoph_ca</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_ca_desc.html">esoph_ca_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_ca_codebook.html">esoph_ca_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/esoph_ca_desc.html" class="external-link">esoph_ca_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/esoph_ca_codebook.html" class="external-link">esoph_ca_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">laryngoscope</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf">laryngoscope_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf">laryngoscope_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Laryngoscope%20Dataset%20Introduction.pdf" class="external-link">laryngoscope_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Laryngoscope%20Data%20Dictionary.pdf" class="external-link">laryngoscope_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">licorice_gargle</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf">licorice_gargle_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf">licorice_gargle_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Dataset%20Introduction.pdf" class="external-link">licorice_gargle_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Licorice%20Gargle%20Data%20Dictionary.pdf" class="external-link">licorice_gargle_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">opt</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf">opt_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf">opt_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/OPT_Dataset_Introduction.pdf" class="external-link">opt_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/OPT_Data_Dictionary.pdf" class="external-link">opt_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">cath (dev)</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/cath_desc.html">cath_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/cath_codebook.html">cath_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/cath_desc.html" class="external-link">cath_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/cath_codebook.html" class="external-link">cath_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">smartpill</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf">smartpill_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf">smartpill_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Dataset%20Introduction.pdf" class="external-link">smartpill_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Smart%20Pill%20Data%20Dictionary.pdf" class="external-link">smartpill_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">supraclavicular</td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf">supraclavicular_desc</a></td>
-<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf">supraclavicular_codebook</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf" class="external-link">supraclavicular_desc</a></td>
+<td align="left"><a href="https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf" class="external-link">supraclavicular_codebook</a></td>
 </tr>
 <tr class="odd">
 <td align="left">indometh</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.html">indometh_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.html">indometh_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.html" class="external-link">indometh_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.html" class="external-link">indometh_codebook</a></td>
 </tr>
 <tr class="even">
 <td align="left">theoph</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html">theoph_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html">theoph_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html" class="external-link">theoph_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html" class="external-link">theoph_codebook</a></td>
 </tr>
 </tbody>
 </table>
-<!-- badges: start --><p><a href="https://github.com/higgi13425/medicaldata/actions"><img src="https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a> <!-- badges: end --></p>
+<!-- badges: start -->
 </div>
 </div>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <div class="links">
-<h2>Links</h2>
+<h2 data-toc-skip>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cloud.r-project.org/package=medicaldata">https://​cloud.r-project.org/​package=medicaldata</a>
-</li>
-<li>Browse source code at <br><a href="https://github.com/higgi13425/medicaldata/">https://​github.com/​higgi13425/​medicaldata/​</a>
-</li>
-<li>Report a bug at <br><a href="https://github.com/higgi13425/medicaldata/issues">https://​github.com/​higgi13425/​medicaldata/​issues</a>
-</li>
+<li><a href="https://cloud.r-project.org/package=medicaldata" class="external-link">View on CRAN</a></li>
+<li><a href="https://github.com/higgi13425/medicaldata/" class="external-link">Browse source code</a></li>
+<li><a href="https://github.com/higgi13425/medicaldata/issues" class="external-link">Report a bug</a></li>
 </ul>
 </div>
+
 <div class="license">
-<h2>License</h2>
+<h2 data-toc-skip>License</h2>
 <ul class="list-unstyled">
 <li><a href="LICENSE.html">Full license</a></li>
-<li><small><a href="https://opensource.org/licenses/mit-license.php">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
+<li><small><a href="https://opensource.org/licenses/mit-license.php" class="external-link">MIT</a> + file <a href="LICENSE-text.html">LICENSE</a></small></li>
 </ul>
 </div>
-<div class="developers">
-<h2>Developers</h2>
+
+
+<div class="citation">
+<h2 data-toc-skip>Citation</h2>
 <ul class="list-unstyled">
-<li>Peter Higgins <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+<li><a href="authors.html#citation">Citing medicaldata</a></li>
+</ul>
+</div>
+
+<div class="developers">
+<h2 data-toc-skip>Developers</h2>
+<ul class="list-unstyled">
+<li>Peter Higgins <br><small class="roles"> Author, maintainer </small> <a href="https://orcid.org/0000-0002-7111-0077" target="orcid.widget" aria-label="ORCID" class="external-link"><span class="fab fa-orcid orcid" aria-hidden="true"></span></a> </li>
+</ul>
+</div>
+
+<div class="dev-status">
+<h2 data-toc-skip>Dev status</h2>
+<ul class="list-unstyled">
+<li><a href="https://github.com/higgi13425/medicaldata/actions" class="external-link"><img src="https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 
@@ -239,11 +248,13 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Peter Higgins.</p>
+  <p></p>
+<p>Developed by Peter Higgins.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -251,6 +262,8 @@
 
   
 
+
+  
 
   </body>
 </html>

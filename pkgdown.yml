@@ -1,11 +1,11 @@
 pandoc: 2.7.3
-pkgdown: 1.6.1
+pkgdown: 2.0.1
 pkgdown_sha: ~
 articles:
   Introduction: Introduction.html
   making_tables: making_tables.html
-last_built: 2021-10-30T14:39Z
+last_built: 2021-12-16T14:17Z
 urls:
-  reference: https://higgi13425.github.io/medicaldata//reference
-  article: https://higgi13425.github.io/medicaldata//articles
+  reference: https://higgi13425.github.io/medicaldata/reference
+  article: https://higgi13425.github.io/medicaldata/articles
 

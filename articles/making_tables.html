@@ -19,6 +19,8 @@
 <![endif]-->
 </head>
 <body data-spy="scroll" data-target="#toc">
+    
+
     <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -31,18 +33,12 @@
       </button>
       <span class="navbar-brand">
         <a class="navbar-link" href="../index.html">medicaldata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="Released version">0.2.0.9000</span>
+        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9000</span>
       </span>
     </div>
 
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
-<li>
-  <a href="../index.html">
-    <span class="fas fa-home fa-lg"></span>
-     
-  </a>
-</li>
 <li>
   <a href="../reference/index.html">Reference</a>
 </li>
@@ -67,7 +63,7 @@
       </ul>
 <ul class="nav navbar-nav navbar-right">
 <li>
-  <a href="https://github.com/higgi13425/medicaldata/">
+  <a href="https://github.com/higgi13425/medicaldata/" class="external-link">
     <span class="fab fa-github fa-lg"></span>
      
   </a>
@@ -89,26 +85,26 @@
       <h1 data-toc-skip>making_tables</h1>
             
       
-      <small class="dont-index">Source: <a href="https://github.com/higgi13425/medicaldata/blob/master/vignettes/making_tables.Rmd"><code>vignettes/making_tables.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/higgi13425/medicaldata/blob/HEAD/vignettes/making_tables.Rmd" class="external-link"><code>vignettes/making_tables.Rmd</code></a></small>
       <div class="hidden name"><code>making_tables.Rmd</code></div>
 
     </div>
 
     
     
-<div id="getting-started" class="section level2">
-<h2 class="hasAnchor">
-<a href="#getting-started" class="anchor"></a>Getting Started</h2>
-<p>First, set up your working environment by loading these 4 packages using the <code><a href="https://rdrr.io/r/base/library.html">library()</a></code> function. Note that you can copy any of the code blocks below by hovering over the top right corner, clicking on the copy icon that appears, and them paste these into your local version of R to run them.</p>
+<div class="section level2">
+<h2 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h2>
+<p>First, set up your working environment by loading these 4 packages using the <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> function. Note that you can copy any of the code blocks below by hovering over the top right corner, clicking on the copy icon that appears, and them paste these into your local version of R to run them.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://higgi13425.github.io/medicaldata/">medicaldata</a></span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor">janitor</a></span><span class="op">)</span><span class="op">)</span>
-<span class="fu"><a href="https://rdrr.io/r/base/message.html">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://ardata-fr.github.io/flextable-book/">flextable</a></span><span class="op">)</span><span class="op">)</span></code></pre></div>
+<code class="sourceCode R"><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://higgi13425.github.io/medicaldata/">medicaldata</a></span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org" class="external-link">tidyverse</a></span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://github.com/sfirke/janitor" class="external-link">janitor</a></span><span class="op">)</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/base/message.html" class="external-link">suppressMessages</a></span><span class="op">(</span><span class="kw"><a href="https://rdrr.io/r/base/library.html" class="external-link">library</a></span><span class="op">(</span><span class="va"><a href="https://ardata-fr.github.io/flextable-book/" class="external-link">flextable</a></span><span class="op">)</span><span class="op">)</span></code></pre></div>
 </div>
-<div id="counting-data-in-tables" class="section level2">
-<h2 class="hasAnchor">
-<a href="#counting-data-in-tables" class="anchor"></a>Counting Data in Tables</h2>
+<div class="section level2">
+<h2 id="counting-data-in-tables">Counting Data in Tables<a class="anchor" aria-label="anchor" href="#counting-data-in-tables"></a>
+</h2>
 <p>It is common to count data, particularly in categories, to summarize characteristics or outcomes. The tabyl function in the {janitor} package is helpful for this.</p>
 <p>In this vignette, we will look at how to use this function to make simple tables of counts of your data.</p>
 <p>First, we will read in the data from strep_tb and indo_rct to use for our tables. Load the libraries in the setup chunk above. If you then run the code chunk below, you should have two new data objects in your Environment tab.</p>
@@ -116,18 +112,18 @@
 <code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">&lt;-</span> <span class="fu">medicaldata</span><span class="fu">::</span><span class="va"><a href="../reference/strep_tb.html">strep_tb</a></span>
 <span class="va">indo_rct</span> <span class="op">&lt;-</span> <span class="fu">medicaldata</span><span class="fu">::</span><span class="va"><a href="../reference/indo_rct.html">indo_rct</a></span></code></pre></div>
 </div>
-<div id="table-2-from-streptomycin-for-tuberculosis" class="section level2">
-<h2 class="hasAnchor">
-<a href="#table-2-from-streptomycin-for-tuberculosis" class="anchor"></a>Table 2 from Streptomycin for Tuberculosis</h2>
-<p>We will now try to reproduce Table 2 from the Streptomycin for Tuberculosis manuscript, which can be found <a href="https://www.bmj.com/content/bmj/2/4582/769.full.pdf">here</a> on page 771. These are the primary endpoint results, summarized in a 6 rows x 2 columns table (with an added totals row). Let’s walk through how to do this with the <em>tabyl()</em> function in the {janitor} package.</p>
+<div class="section level2">
+<h2 id="table-2-from-streptomycin-for-tuberculosis">Table 2 from Streptomycin for Tuberculosis<a class="anchor" aria-label="anchor" href="#table-2-from-streptomycin-for-tuberculosis"></a>
+</h2>
+<p>We will now try to reproduce Table 2 from the Streptomycin for Tuberculosis manuscript, which can be found <a href="https://www.bmj.com/content/bmj/2/4582/769.full.pdf" class="external-link">here</a> on page 771. These are the primary endpoint results, summarized in a 6 rows x 2 columns table (with an added totals row). Let’s walk through how to do this with the <em>tabyl()</em> function in the {janitor} package.</p>
 </div>
-<div id="first-table" class="section level2">
-<h2 class="hasAnchor">
-<a href="#first-table" class="anchor"></a>First Table</h2>
+<div class="section level2">
+<h2 id="first-table">First Table<a class="anchor" aria-label="anchor" href="#first-table"></a>
+</h2>
 <p>The <em>tabyl()</em> function allows you to pipe data into tables, and add ‘adornments’ like total rows and percentages. Let’s start with a basic one-variable tabyl using this ordinal endpoint. You can pipe the dataset into the tabyl function, with your desired variable (radiologic_6m) as the only argument to the function.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span><span class="op">)</span>
 <span class="co">#&gt;                 radiologic_6m  n    percent</span>
 <span class="co">#&gt;    6_Considerable_improvement 32 0.29906542</span>
 <span class="co">#&gt;        5_Moderate_improvement 23 0.21495327</span>
@@ -137,13 +133,13 @@
 <span class="co">#&gt;                       1_Death 18 0.16822430</span></code></pre></div>
 <p>This gives us the n and proportion of each level of the primary outcome.</p>
 </div>
-<div id="two-variable-table" class="section level2">
-<h2 class="hasAnchor">
-<a href="#two-variable-table" class="anchor"></a>Two Variable Table</h2>
+<div class="section level2">
+<h2 id="two-variable-table">Two Variable Table<a class="anchor" aria-label="anchor" href="#two-variable-table"></a>
+</h2>
 <p>If we add the treatment arm variable as a 2nd argument, we can come closer to the original table. Note that the levels of the first argument make up the rows of the table, and that the levels of the 2nd argument make up the columns (standard R x C order). Also note that with 2 variables, we get the counts by default, but not proportions of each level, as you might want proportions that are column-wise, or row-wise.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span>
+<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span>
 <span class="co">#&gt;                 radiologic_6m Streptomycin Control</span>
 <span class="co">#&gt;    6_Considerable_improvement           28       4</span>
 <span class="co">#&gt;        5_Moderate_improvement           10      13</span>
@@ -152,14 +148,14 @@
 <span class="co">#&gt;  2_Considerable_deterioration            6       6</span>
 <span class="co">#&gt;                       1_Death            4      14</span></code></pre></div>
 </div>
-<div id="add-a-total-row" class="section level2">
-<h2 class="hasAnchor">
-<a href="#add-a-total-row" class="anchor"></a>Add A Total Row</h2>
+<div class="section level2">
+<h2 id="add-a-total-row">Add A Total Row<a class="anchor" aria-label="anchor" href="#add-a-total-row"></a>
+</h2>
 <p>This is closer, but lacks the total row, and the percentages. In order to have numbers to calculate totals, we have to <em>start</em> with the total row first. We will ‘adorn’ the table with a totals row. We have to specify that we want an additional <strong>row</strong> of totals at the bottom (not a column of row-wise totals in a new column on the right), with the <code>where</code> argument to the adorn_totals function.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="co"># add a total row</span>
+<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="co"># add a total row</span>
 <span class="co">#&gt;                 radiologic_6m Streptomycin Control</span>
 <span class="co">#&gt;    6_Considerable_improvement           28       4</span>
 <span class="co">#&gt;        5_Moderate_improvement           10      13</span>
@@ -169,17 +165,17 @@
 <span class="co">#&gt;                       1_Death            4      14</span>
 <span class="co">#&gt;                         Total           55      52</span></code></pre></div>
 </div>
-<div id="add-percentages-and-formatting" class="section level2">
-<h2 class="hasAnchor">
-<a href="#add-percentages-and-formatting" class="anchor"></a>Add Percentages and formatting</h2>
+<div class="section level2">
+<h2 id="add-percentages-and-formatting">Add Percentages and formatting<a class="anchor" aria-label="anchor" href="#add-percentages-and-formatting"></a>
+</h2>
 <p>This is closer. Now we need to add the percentages, and percentage formatting. We need to specify that we want column-wise, rather than row-wise percentages. We then have to adorn_ns to add the counts, so that we have <em>both</em> counts and percentages. We can specify that we want the counts to be listed first, with the argument <code>position = "front"</code> in the adorn_ns function.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co">#2 dimensional table, RxC</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op">%&gt;%</span> <span class="co"># add totals row</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op">%&gt;%</span>  <span class="co"># column-wise percentages</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span>  <span class="co"># put n first</span>
+<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> <span class="co">#2 dimensional table, RxC</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> <span class="co"># add totals row</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span>  <span class="co"># put n first</span>
 <span class="co">#&gt;                 radiologic_6m Streptomycin     Control</span>
 <span class="co">#&gt;    6_Considerable_improvement  28  (50.9%)  4   (7.7%)</span>
 <span class="co">#&gt;        5_Moderate_improvement  10  (18.2%) 13  (25.0%)</span>
@@ -189,19 +185,19 @@
 <span class="co">#&gt;                       1_Death   4   (7.3%) 14  (26.9%)</span>
 <span class="co">#&gt;                         Total  55 (100.0%) 52 (100.0%)</span></code></pre></div>
 </div>
-<div id="making-it-pretty" class="section level2">
-<h2 class="hasAnchor">
-<a href="#making-it-pretty" class="anchor"></a>Making it Pretty</h2>
-<p>You can pipe this table into a flextable() object, which makes it easy to add fancy formatting. There are many formatting options in the flextable package, which you can learn about <a href="https://davidgohel.github.io/flextable/">here</a>. You can control column width, fonts, colors, and much more once you are in flextable format. Flextables can be output to MS Word, powerpoint, HTML, and PDF, through Rmarkdown.</p>
+<div class="section level2">
+<h2 id="making-it-pretty">Making it Pretty<a class="anchor" aria-label="anchor" href="#making-it-pretty"></a>
+</h2>
+<p>You can pipe this table into a flextable() object, which makes it easy to add fancy formatting. There are many formatting options in the flextable package, which you can learn about <a href="https://davidgohel.github.io/flextable/" class="external-link">here</a>. You can control column width, fonts, colors, and much more once you are in flextable format. Flextables can be output to MS Word, powerpoint, HTML, and PDF, through Rmarkdown.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op">%&gt;%</span>  <span class="co"># column-wise percentages</span>
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op">%&gt;%</span> 
-  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op">%&gt;%</span>   <span class="co"># put n first</span>
-  <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/flextable.html">flextable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<template id="bac3e713-e394-4b10-8e7c-1cdd3f800afe"><style>
+<code class="sourceCode R"><span class="va">strep_tb</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span>
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
+  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span>   <span class="co"># put n first</span>
+  <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/flextable.html" class="external-link">flextable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
+<template id="b92e8748-5b09-4bb0-9602-671f1a4ccaf2"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -237,55 +233,55 @@ background-color: transparent;
 }
 </style>
 <div class="tabwid">
-<style>.cl-374e0f8c{}.cl-3745aff4{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-3745ce80{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-374612d2{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-374612dc{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-374612dd{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<table class="table cl-374e0f8c">
+<style>.cl-eac2651c{}.cl-eab9ceac{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-eab9e86a{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-eaba2b40{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-eaba2b4a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-eaba2b54{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<table class="table cl-eac2651c">
 <thead><tr style="overflow-wrap:break-word;">
-<td class="cl-374612dd"><p class="cl-3745ce80"><span class="cl-3745aff4">radiologic_6m</span></p></td>
-<td class="cl-374612dd"><p class="cl-3745ce80"><span class="cl-3745aff4">Streptomycin</span></p></td>
-<td class="cl-374612dd"><p class="cl-3745ce80"><span class="cl-3745aff4">Control</span></p></td>
+<td class="cl-eaba2b54"><p class="cl-eab9e86a"><span class="cl-eab9ceac">radiologic_6m</span></p></td>
+<td class="cl-eaba2b54"><p class="cl-eab9e86a"><span class="cl-eab9ceac">Streptomycin</span></p></td>
+<td class="cl-eaba2b54"><p class="cl-eab9e86a"><span class="cl-eab9ceac">Control</span></p></td>
 </tr></thead>
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">6_Considerable_improvement</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">28  (50.9%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 4   (7.7%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">6_Considerable_improvement</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">28  (50.9%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 4   (7.7%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">5_Moderate_improvement</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">10  (18.2%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">13  (25.0%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">5_Moderate_improvement</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">10  (18.2%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">13  (25.0%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">4_No_change</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 2   (3.6%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 3   (5.8%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">4_No_change</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 2   (3.6%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 3   (5.8%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">3_Moderate_deterioration</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 5   (9.1%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">12  (23.1%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">3_Moderate_deterioration</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 5   (9.1%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">12  (23.1%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">2_Considerable_deterioration</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 6  (10.9%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 6  (11.5%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">2_Considerable_deterioration</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 6  (10.9%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 6  (11.5%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">1_Death</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4"> 4   (7.3%)</span></p></td>
-<td class="cl-374612d2"><p class="cl-3745ce80"><span class="cl-3745aff4">14  (26.9%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">1_Death</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac"> 4   (7.3%)</span></p></td>
+<td class="cl-eaba2b40"><p class="cl-eab9e86a"><span class="cl-eab9ceac">14  (26.9%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-374612dc"><p class="cl-3745ce80"><span class="cl-3745aff4">Total</span></p></td>
-<td class="cl-374612dc"><p class="cl-3745ce80"><span class="cl-3745aff4">55 (100.0%)</span></p></td>
-<td class="cl-374612dc"><p class="cl-3745ce80"><span class="cl-3745aff4">52 (100.0%)</span></p></td>
+<td class="cl-eaba2b4a"><p class="cl-eab9e86a"><span class="cl-eab9ceac">Total</span></p></td>
+<td class="cl-eaba2b4a"><p class="cl-eab9e86a"><span class="cl-eab9ceac">55 (100.0%)</span></p></td>
+<td class="cl-eaba2b4a"><p class="cl-eab9e86a"><span class="cl-eab9ceac">52 (100.0%)</span></p></td>
 </tr>
 </tbody>
 </table>
-</div></template><div class="flextable-shadow-host" id="cbc91d34-b1eb-429f-b16c-2dcb090b8eb3"></div>
+</div></template><div class="flextable-shadow-host" id="d84431c5-1998-404a-a53f-906f04b03bb4"></div>
 <script>
-var dest = document.getElementById("cbc91d34-b1eb-429f-b16c-2dcb090b8eb3");
-var template = document.getElementById("bac3e713-e394-4b10-8e7c-1cdd3f800afe");
+var dest = document.getElementById("d84431c5-1998-404a-a53f-906f04b03bb4");
+var template = document.getElementById("b92e8748-5b09-4bb0-9602-671f1a4ccaf2");
 var caption = template.content.querySelector("caption");
 if(caption) {
   caption.style.cssText = "display:block;text-align:center;";
@@ -298,53 +294,53 @@ var templateContent = template.content;
 fantome.appendChild(templateContent);
 </script>
 </div>
-<div id="try-this-yourself" class="section level2">
-<h2 class="hasAnchor">
-<a href="#try-this-yourself" class="anchor"></a>Try this Yourself</h2>
+<div class="section level2">
+<h2 id="try-this-yourself">Try this Yourself<a class="anchor" aria-label="anchor" href="#try-this-yourself"></a>
+</h2>
 <p>Now try this yourself, but instead of using the ordinal radiologic_6m outcome, use the improved dichotomous outcome in its place. Copy the code block below and add the piping and additional lines to produce a 2 x 2 table of outcomes. You can websearch for <code>janitor tabyl adorn_title</code> to learn how to add a title to your table.</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">strep_tb</span>
-<span class="co">#&gt; # A tibble: 107 × 13</span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 107 × 13</span></span>
 <span class="co">#&gt;    patient_id arm     dose_strep_g dose_PAS_g gender baseline_condition</span>
-<span class="co">#&gt;    &lt;chr&gt;      &lt;fct&gt;          &lt;dbl&gt;      &lt;dbl&gt; &lt;fct&gt;  &lt;fct&gt;             </span>
-<span class="co">#&gt;  1 0001       Control            0          0 M      1_Good            </span>
-<span class="co">#&gt;  2 0002       Control            0          0 F      1_Good            </span>
-<span class="co">#&gt;  3 0003       Control            0          0 F      1_Good            </span>
-<span class="co">#&gt;  4 0004       Control            0          0 M      1_Good            </span>
-<span class="co">#&gt;  5 0005       Control            0          0 F      1_Good            </span>
-<span class="co">#&gt;  6 0006       Control            0          0 M      1_Good            </span>
-<span class="co">#&gt;  7 0007       Control            0          0 F      1_Good            </span>
-<span class="co">#&gt;  8 0008       Control            0          0 M      1_Good            </span>
-<span class="co">#&gt;  9 0009       Control            0          0 F      2_Fair            </span>
-<span class="co">#&gt; 10 0010       Control            0          0 M      2_Fair            </span>
-<span class="co">#&gt; # … with 97 more rows, and 7 more variables: baseline_temp &lt;fct&gt;,</span>
-<span class="co">#&gt; #   baseline_esr &lt;fct&gt;, baseline_cavitation &lt;fct&gt;, strep_resistance &lt;fct&gt;,</span>
-<span class="co">#&gt; #   radiologic_6m &lt;fct&gt;, rad_num &lt;dbl&gt;, improved &lt;lgl&gt;</span></code></pre></div>
+<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;chr&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>          <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span>      <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>  <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>             </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span> 0001       Control            0          0 M      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span> 0002       Control            0          0 F      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span> 0003       Control            0          0 F      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span> 0004       Control            0          0 M      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span> 0005       Control            0          0 F      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span> 0006       Control            0          0 M      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span> 0007       Control            0          0 F      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span> 0008       Control            0          0 M      1_Good            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span> 0009       Control            0          0 F      2_Fair            </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span> 0010       Control            0          0 M      2_Fair            </span>
+<span class="co">#&gt; <span style="color: #949494;"># … with 97 more rows, and 7 more variables: baseline_temp &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   baseline_esr &lt;fct&gt;, baseline_cavitation &lt;fct&gt;, strep_resistance &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   radiologic_6m &lt;fct&gt;, rad_num &lt;dbl&gt;, improved &lt;lgl&gt;</span></span></code></pre></div>
 </div>
-<div id="challenge" class="section level2">
-<h2 class="hasAnchor">
-<a href="#challenge" class="anchor"></a>Challenge</h2>
+<div class="section level2">
+<h2 id="challenge">Challenge<a class="anchor" aria-label="anchor" href="#challenge"></a>
+</h2>
 <p>Now try to do this with the indo_rct dataset, using the treatment variable <code>group</code> and the outcome variable of <code>outcome</code>. Add a total row, percentages, and a title.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="va">indo_rct</span> 
-<span class="co">#&gt; # A tibble: 602 × 33</span>
+<span class="co">#&gt; <span style="color: #949494;"># A tibble: 602 × 33</span></span>
 <span class="co">#&gt;       id site    age  risk gender   outcome sod   pep   recpanc psphinc precut</span>
-<span class="co">#&gt;    &lt;dbl&gt; &lt;fct&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;fct&gt;    &lt;fct&gt;   &lt;fct&gt; &lt;fct&gt; &lt;fct&gt;   &lt;fct&gt;   &lt;fct&gt; </span>
-<span class="co">#&gt;  1  1001 1_UM     26   2   1_female 1_yes   1_yes 0_no  1_yes   0_no    0_no  </span>
-<span class="co">#&gt;  2  1002 1_UM     24   1   2_male   0_no    0_no  1_yes 0_no    0_no    0_no  </span>
-<span class="co">#&gt;  3  1003 1_UM     57   1   1_female 0_no    1_yes 0_no  0_no    0_no    0_no  </span>
-<span class="co">#&gt;  4  1004 1_UM     29   2   1_female 1_yes   1_yes 0_no  0_no    0_no    0_no  </span>
-<span class="co">#&gt;  5  1005 1_UM     38   3.5 1_female 0_no    1_yes 1_yes 0_no    1_yes   0_no  </span>
-<span class="co">#&gt;  6  1006 1_UM     59   3   1_female 0_no    1_yes 0_no  0_no    0_no    1_yes </span>
-<span class="co">#&gt;  7  1007 1_UM     60   1.5 1_female 0_no    0_no  0_no  1_yes   0_no    0_no  </span>
-<span class="co">#&gt;  8  1008 1_UM     29   1   2_male   0_no    0_no  0_no  0_no    0_no    0_no  </span>
-<span class="co">#&gt;  9  1009 1_UM     53   2   2_male   0_no    0_no  0_no  1_yes   0_no    0_no  </span>
-<span class="co">#&gt; 10  1010 1_UM     20   2   2_male   0_no    0_no  0_no  0_no    0_no    1_yes </span>
-<span class="co">#&gt; # … with 592 more rows, and 22 more variables: difcan &lt;fct&gt;, pneudil &lt;fct&gt;,</span>
-<span class="co">#&gt; #   amp &lt;fct&gt;, paninj &lt;fct&gt;, acinar &lt;fct&gt;, brush &lt;fct&gt;, asa81 &lt;fct&gt;,</span>
-<span class="co">#&gt; #   asa325 &lt;fct&gt;, asa &lt;fct&gt;, prophystent &lt;fct&gt;, therastent &lt;fct&gt;,</span>
-<span class="co">#&gt; #   pdstent &lt;fct&gt;, sodsom &lt;fct&gt;, bsphinc &lt;fct&gt;, bstent &lt;fct&gt;, chole &lt;fct&gt;,</span>
-<span class="co">#&gt; #   pbmal &lt;fct&gt;, train &lt;fct&gt;, status &lt;fct&gt;, type &lt;fct&gt;, rx &lt;fct&gt;, bleed &lt;dbl&gt;</span></code></pre></div>
+<span class="co">#&gt;    <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;dbl&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>    <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span>   <span style="color: #949494; font-style: italic;">&lt;fct&gt;</span> </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 1</span>  <span style="text-decoration: underline;">1</span>001 1_UM     26   2   1_female 1_yes   1_yes 0_no  1_yes   0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 2</span>  <span style="text-decoration: underline;">1</span>002 1_UM     24   1   2_male   0_no    0_no  1_yes 0_no    0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 3</span>  <span style="text-decoration: underline;">1</span>003 1_UM     57   1   1_female 0_no    1_yes 0_no  0_no    0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 4</span>  <span style="text-decoration: underline;">1</span>004 1_UM     29   2   1_female 1_yes   1_yes 0_no  0_no    0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 5</span>  <span style="text-decoration: underline;">1</span>005 1_UM     38   3.5 1_female 0_no    1_yes 1_yes 0_no    1_yes   0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 6</span>  <span style="text-decoration: underline;">1</span>006 1_UM     59   3   1_female 0_no    1_yes 0_no  0_no    0_no    1_yes </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 7</span>  <span style="text-decoration: underline;">1</span>007 1_UM     60   1.5 1_female 0_no    0_no  0_no  1_yes   0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 8</span>  <span style="text-decoration: underline;">1</span>008 1_UM     29   1   2_male   0_no    0_no  0_no  0_no    0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;"> 9</span>  <span style="text-decoration: underline;">1</span>009 1_UM     53   2   2_male   0_no    0_no  0_no  1_yes   0_no    0_no  </span>
+<span class="co">#&gt; <span style="color: #BCBCBC;">10</span>  <span style="text-decoration: underline;">1</span>010 1_UM     20   2   2_male   0_no    0_no  0_no  0_no    0_no    1_yes </span>
+<span class="co">#&gt; <span style="color: #949494;"># … with 592 more rows, and 22 more variables: difcan &lt;fct&gt;, pneudil &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   amp &lt;fct&gt;, paninj &lt;fct&gt;, acinar &lt;fct&gt;, brush &lt;fct&gt;, asa81 &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   asa325 &lt;fct&gt;, asa &lt;fct&gt;, prophystent &lt;fct&gt;, therastent &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   pdstent &lt;fct&gt;, sodsom &lt;fct&gt;, bsphinc &lt;fct&gt;, bstent &lt;fct&gt;, chole &lt;fct&gt;,</span></span>
+<span class="co">#&gt; <span style="color: #949494;">#   pbmal &lt;fct&gt;, train &lt;fct&gt;, status &lt;fct&gt;, type &lt;fct&gt;, rx &lt;fct&gt;, bleed &lt;dbl&gt;</span></span></code></pre></div>
 </div>
   </div>
 
@@ -359,11 +355,13 @@ fantome.appendChild(templateContent);
 
 
       <footer><div class="copyright">
-  <p>Developed by Peter Higgins.</p>
+  <p></p>
+<p>Developed by Peter Higgins.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/">pkgdown</a> 1.6.1.</p>
+  <p></p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.1.</p>
 </div>
 
       </footer>
@@ -371,6 +369,8 @@ fantome.appendChild(templateContent);
 
   
 
+
+  
 
   </body>
 </html>
