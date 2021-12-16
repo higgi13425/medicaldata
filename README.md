@@ -5,7 +5,7 @@
 
 ## Overview
 
-This is a data package with 15 medical datasets for teaching
+This is a data package with 17 medical datasets for teaching
 Reproducible Medical Research with R. The link to the pkgdown reference
 website for {medicaldata} is
 [here](https://higgi13425.github.io/medicaldata/) and in the links at
