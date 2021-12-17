@@ -1,6 +1,8 @@
 # medicaldata 0.2.0.9000
 * dev version, adding examples in vignettes
 * hoping to add new datasets (donate if you can!)
+  - added cath from Frank Harrell
+  - added abm from Frank Harrell
 
 # medicaldata 0.2.0
 * stable version
