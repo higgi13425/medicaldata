@@ -2,7 +2,7 @@
 #' Observational Dataset of Cardiac Catheterization
 #'
 #' @description
-#' This dataset is from the Duke University Cardiovascular Disease Databank, as provided by Frank Harrell at hbiostat.org. The patients were referred to Duke University Medical Center for chest pain. Cardiac catheterization (also known as a 'cath') is performed to diagnose and open blockages in these arteries, often followed by stenting to keep them open.\cr
+#' This dataset is from the Duke University Cardiovascular Disease Databank, as provided by Frank Harrell at https://hbiostat.org. The patients were referred to Duke University Medical Center for chest pain. Cardiac catheterization (also known as a 'cath') is performed to diagnose and open blockages in these arteries, often followed by stenting to keep them open.\cr
 #' When I (PDRH) was an intern at Duke in 2001, it was a nightly occurrence for the 'cath bus' to arrive from Lumberton, North Carolina with 8 patients in chest pain (all at once), lighting up the pager of the cardiology intern with multiple requests for nitroglycerin. \cr
 #' @details
 #' Coronary artery disease, or atherosclerosis of the blood vessels supplying the heart, is the most common cause of death in the United States. Duke University Medical Center is located in the southeastern US, in a region of highly prevalent coronary artery disease (CAD), associated with frequent smoking, diabetes, and obesity, along with genetic risk factors for early-onset CAD in the local Lumbee Indian tribe. \cr\cr
