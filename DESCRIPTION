@@ -1,7 +1,7 @@
 Package: medicaldata
 Type: Package
 Title: Data Package for Medical Datasets
-Version: 0.2.0.9000
+Version: 0.2.0.9001
 Authors@R: c(person(given = "Peter", family = "Higgins", 
     email="higgi13425@yahoo.com", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0002-7111-0077")))
