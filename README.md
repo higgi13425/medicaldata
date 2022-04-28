@@ -91,6 +91,36 @@ in the Console pane.
 | indometh        | [indometh_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.html) | [indometh_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.html)   | Prospective Cohort Pharmacokinetic (PK) Study |
 | theoph          | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Prospective Cohort PK Study                   |
 
+## Messy Datasets
+
+I am doing a beta test of messy datasets, largely in Excel, with many
+annoying non-rectangular features that will help teach data
+cleaning/wrangling.
+
+You can open and view these from the GitHub repo in all of their messy
+Excel glory by going
+[here](https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data)
+and clicking on one of the \*.xlsx files to download it.
+
+You can read these directly from the urls below with the code below into
+RStudio.
+
+``` r
+# install.packages('openxlsx')
+# if not already installed
+library(openxlsx)
+url <- "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx"
+# replace the filename "messy_infarct.xlsx" at the end of this long url path with the filename that you want to load.
+openxlsx::read.xlsx(url)
+```
+
+### Available Messy Data Files (beta)
+
+| Dataset         | URL                                                                                             | Type of Messiness |
+|:----------------|:------------------------------------------------------------------------------------------------|:------------------|
+| messy_cirrhosis | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table       |
+| messy_infarct   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table       |
+
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg)](https://github.com/higgi13425/medicaldata/actions)
