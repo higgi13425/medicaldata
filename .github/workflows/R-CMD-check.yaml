@@ -74,4 +74,4 @@ jobs:
       with:
        args: 'c("--no-manual", "--as-cran")'
        error-on: '"error"'
-       check-dir: '"check"
+       check-dir: '"check"'
