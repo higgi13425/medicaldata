@@ -1,7 +1,7 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# medicaldata <img src='man/figures/hex-medicaldata.png' align="right" height="240">
+# medicaldata <a href="https://higgi13425.github.io/medicaldata/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
 ## Overview
 
