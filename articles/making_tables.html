@@ -6,6 +6,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>making_tables • medicaldata</title>
+<!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+<link rel="apple-touch-icon" type="image/png" sizes="180x180" href="../apple-touch-icon.png">
+<link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
+<link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
+<link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
 <!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
 <script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
@@ -13,6 +19,7 @@
 <!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
 <script src="../pkgdown.js"></script><meta property="og:title" content="making_tables">
 <meta property="og:description" content="medicaldata">
+<meta property="og:image" content="https://higgi13425.github.io/medicaldata/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -197,7 +204,7 @@
   <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
   <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span>   <span class="co"># put n first</span>
   <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/flextable.html" class="external-link">flextable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<template id="eeb53b64-0b2a-4d41-a674-f62a9884ec5e"><style>
+<template id="f45cab91-50c5-4cb6-a7ea-e00dc99f85cd"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -233,55 +240,55 @@ background-color: transparent;
 }
 </style>
 <div class="tabwid">
-<style>.cl-e0d10b94{}.cl-e0c860c0{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-e0c88b40{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-e0c8d4b0{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-e0c8d4ba{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-e0c8d4bb{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<table class="table cl-e0d10b94">
+<style>.cl-8f435a2a{}.cl-8f3a57ae{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-8f3a7c34{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-8f3adae4{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8f3adaf8{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-8f3adaf9{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<table class="table cl-8f435a2a">
 <thead><tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4bb"><p class="cl-e0c88b40"><span class="cl-e0c860c0">radiologic_6m</span></p></td>
-<td class="cl-e0c8d4bb"><p class="cl-e0c88b40"><span class="cl-e0c860c0">Streptomycin</span></p></td>
-<td class="cl-e0c8d4bb"><p class="cl-e0c88b40"><span class="cl-e0c860c0">Control</span></p></td>
+<td class="cl-8f3adaf9"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">radiologic_6m</span></p></td>
+<td class="cl-8f3adaf9"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">Streptomycin</span></p></td>
+<td class="cl-8f3adaf9"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">Control</span></p></td>
 </tr></thead>
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">6_Considerable_improvement</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">28  (50.9%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 4   (7.7%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">6_Considerable_improvement</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">28  (50.9%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 4   (7.7%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">5_Moderate_improvement</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">10  (18.2%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">13  (25.0%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">5_Moderate_improvement</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">10  (18.2%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">13  (25.0%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">4_No_change</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 2   (3.6%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 3   (5.8%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">4_No_change</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 2   (3.6%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 3   (5.8%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">3_Moderate_deterioration</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 5   (9.1%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">12  (23.1%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">3_Moderate_deterioration</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 5   (9.1%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">12  (23.1%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">2_Considerable_deterioration</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 6  (10.9%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 6  (11.5%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">2_Considerable_deterioration</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 6  (10.9%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 6  (11.5%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">1_Death</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0"> 4   (7.3%)</span></p></td>
-<td class="cl-e0c8d4b0"><p class="cl-e0c88b40"><span class="cl-e0c860c0">14  (26.9%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">1_Death</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae"> 4   (7.3%)</span></p></td>
+<td class="cl-8f3adae4"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">14  (26.9%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-e0c8d4ba"><p class="cl-e0c88b40"><span class="cl-e0c860c0">Total</span></p></td>
-<td class="cl-e0c8d4ba"><p class="cl-e0c88b40"><span class="cl-e0c860c0">55 (100.0%)</span></p></td>
-<td class="cl-e0c8d4ba"><p class="cl-e0c88b40"><span class="cl-e0c860c0">52 (100.0%)</span></p></td>
+<td class="cl-8f3adaf8"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">Total</span></p></td>
+<td class="cl-8f3adaf8"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">55 (100.0%)</span></p></td>
+<td class="cl-8f3adaf8"><p class="cl-8f3a7c34"><span class="cl-8f3a57ae">52 (100.0%)</span></p></td>
 </tr>
 </tbody>
 </table>
-</div></template><div class="flextable-shadow-host" id="805a4f1c-705c-406c-b5b6-a8776649a86b"></div>
+</div></template><div class="flextable-shadow-host" id="58f14b78-3a6d-4730-a66d-1d7b3cb44f89"></div>
 <script>
-var dest = document.getElementById("805a4f1c-705c-406c-b5b6-a8776649a86b");
-var template = document.getElementById("eeb53b64-0b2a-4d41-a674-f62a9884ec5e");
+var dest = document.getElementById("58f14b78-3a6d-4730-a66d-1d7b3cb44f89");
+var template = document.getElementById("f45cab91-50c5-4cb6-a7ea-e00dc99f85cd");
 var caption = template.content.querySelector("caption");
 if(caption) {
   caption.style.cssText = "display:block;text-align:center;";
@@ -361,7 +368,7 @@ fantome.appendChild(templateContent);
 
 <div class="pkgdown">
   <p></p>
-<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.2.</p>
+<p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
       </footer>
