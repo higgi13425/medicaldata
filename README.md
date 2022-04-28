@@ -94,4 +94,7 @@ in the Console pane.
 <!-- badges: start -->
 
 [![R-CMD-check](https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg)](https://github.com/higgi13425/medicaldata/actions)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/medicaldata)](https://cran.r-project.org/package=medicaldata)
+[![](https://cranlogs.r-pkg.org/badges/medicaldata)](https://cran.r-project.org/package=medicaldata)
 <!-- badges: end -->
