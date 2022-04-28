@@ -42,7 +42,7 @@ If you have access to data from a randomized, controlled clinical trial, or a pr
 Click on links below for more details about the dataset itself in the Description Document, and more details about the variables included in the dataset in the Codebook. Note that each dataset also has a help file that you can use within R or RStudio, by entering `help("dataset_name")` in the Console pane.
 
 | Dataset         | Description document                | Codebook    | Design |
-|:----------------|:------------|:-------------|:------|
+|:----------|:----------|:---------|:---------|
 |strep_tb|[strep_tb_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/strep_tb_desc.html)  | [strep_tb_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/strep_tb_codebook.html)| Randomized Controlled Trial (RCT)|
 |scurvy|[scurvy_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/scurvy_desc.html)   |  [scurvy_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/scurvy_codebook.html)| RCT |
 |indo_rct|[indo_rct_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indo_rct_desc.html)   |  [indo_rct_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indo_rct_codebook.html)| RCT |
@@ -65,6 +65,7 @@ Click on links below for more details about the dataset itself in the Descriptio
 [![R-CMD-check](https://github.com/higgi13425/medicaldata/workflows/R-CMD-check/badge.svg)](https://github.com/higgi13425/medicaldata/actions)
 [![CRAN status](https://www.r-pkg.org/badges/version/medicaldata)](https://cran.r-project.org/package=medicaldata)
 [![](https://cranlogs.r-pkg.org/badges/medicaldata)](https://cran.r-project.org/package=medicaldata)
+[![DOI](https://zenodo.org/badge/385090155.svg)](https://zenodo.org/badge/latestdoi/385090155)
 <!-- badges: end -->
 
 
