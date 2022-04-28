@@ -1,5 +1,8 @@
 # For help debugging build failures open an issue on the RStudio community with the 'github-actions' tag.
 # https://community.rstudio.com/new-topic?category=Package%20development&tags=github-actions
+# these examples from github r-lib/github-actions
+# https://github.com/r-lib/actions
+
 on:
   push:
     branches:
@@ -31,28 +34,44 @@ jobs:
       R_KEEP_PKG_SOURCE: yes
 
     steps:
-      - uses: actions/checkout@v2
-      - uses: r-lib/actions/setup-r@v2
-        with:
-          r-version: ${{ matrix.config.r }}
-          http-user-agent: ${{ matrix.config.http-user-agent }}
-          use-public-rspm: true
-      - uses: r-lib/actions/setup-r-dependencies@v2
-        with:
-          extra-packages: any::rcmdcheck
-          needs: check
-      - uses: r-lib/actions/check-r-package@v2
-        with:
-          upload-snapshots: true
-      - name: Render Rmarkdown files and Commit Results
-        run: |
-          RMD_PATH=($(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep '[.]Rmd$'))
-          Rscript -e 'for (f in commandArgs(TRUE)) if (file.exists(f)) rmarkdown::render(f)' ${RMD_PATH[*]}
-          git config --local user.name "$GITHUB_ACTOR"
-          git config --local user.email "$GITHUB_ACTOR@users.noreply.github.com"
-          git commit ${RMD_PATH[*]/.Rmd/.md} -m 'Re-build Rmarkdown files' || echo "No changes to commit"
-          git push origin || echo "No changes to commit"
+    # set up R
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v2
+      with:
+        r-version: '3.5.3' # The R version to download (if necessary) and use.
+    - run: Rscript -e 'print("hello")'
+    # set up R dependencies
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        cache-version: 2
+        extra-packages: |
+          any::rmarkdown
+          any::rcmdcheck
+        needs: |
+          website
+          coverage
 
-      - uses: r-lib/actions/setup-pandoc@v2
-      - uses: r-lib/actions/setup-tinytex@v2
-      - uses: r-lib/actions/check-r-package@v2
+# set up pandoc
+    - uses: r-lib/actions/setup-pandoc@v2
+      with:
+        pandoc-version: '2.17.1' # The pandoc version to download (if necessary) and use.
+    - run: echo "# Test" | pandoc -t html
+
+# set up tinytex
+    - uses: r-lib/actions/setup-tinytex@v2
+    - run: tlmgr --version
+
+# run r-cmd-check
+    - uses: actions/checkout@v2
+    - uses: r-lib/actions/setup-r@v2
+    - uses: r-lib/actions/setup-r-dependencies@v2
+      with:
+        extra-packages: any::rcmdcheck
+        needs: check
+    - uses: r-lib/actions/check-r-package@v2
+      with:
+       args: 'c("--no-manual", "--as-cran")'
+       error-on: '"error"'
+       check-dir: '"check"
