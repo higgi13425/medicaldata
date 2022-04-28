@@ -24,8 +24,8 @@ University of Massachusetts (with permission). A growing number of
 datasets in the dev version were generously donated by [Frank
 Harrell](https://www.fharrell.com) from his website
 [here](https://hbiostat.org/data/). These datasets are currently only in
-the dev version of the package on github.com, which should make it to
-CRAN in January 2022.
+the [dev version](https://github.com/higgi13425/medicaldata/) of the
+package on github.com, which should make it to CRAN in June 2022.
 
 ## How to Install and Use {medicaldata} Datasets
 
