@@ -39,7 +39,7 @@ and `covid_testing` is the name of the dataset.<br>
 If you have access to data from a randomized, controlled clinical trial, or a prospective cohort study, or even a case-control study, please consider obtaining the appropriate permissions, anonymizing the data, and donating the dataset for teaching purposes to add to this package. Open an issue on the github page (source code link at the top right) to open the discussion of a data donation. I am happy to help with anonymization.
 
 ## List of Datasets
-Click on links below for more details about the dataset itself in the Description Document, and more details about the variables included in the dataset in the Codebook. Note that each dataset also has a help file that you can use within R or RStudio, by entering `help("dataset_name")` in the Console pane.
+Click on links below for more details about the dataset itself in the Description Document, and more details about the variables included in the dataset in the Codebook. Note that each dataset also has a help file that you can use within R or RStudio, by entering `help("dataset_name")` in the Console pane. The fourth column of the table below (scroll to the right or widen your browser window) describes the study design, as requested by Dan Sjoberg of {gtsummary} fame.
 
 | Dataset         | Description document                | Codebook    | Design |
 |:----------|:----------|:---------|:---------|
@@ -82,8 +82,6 @@ openxlsx::read.xlsx(url)
 |:----------|:----------|:---------|
 | messy_cirrhosis | "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx" | Pivot Table |
 | messy_infarct | "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx" | Pivot Table |
-
-
 
 
 

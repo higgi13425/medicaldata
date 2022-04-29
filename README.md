@@ -70,7 +70,9 @@ Click on links below for more details about the dataset itself in the
 Description Document, and more details about the variables included in
 the dataset in the Codebook. Note that each dataset also has a help file
 that you can use within R or RStudio, by entering `help("dataset_name")`
-in the Console pane.
+in the Console pane. The fourth column of the table below (scroll to the
+right or widen your browser window) describes the study design, as
+requested by Dan Sjoberg of {gtsummary} fame.
 
 | Dataset         | Description document                                                                                                                          | Codebook                                                                                                                                         | Design                                        |
 |:----------------|:----------------------------------------------------------------------------------------------------------------------------------------------|:-------------------------------------------------------------------------------------------------------------------------------------------------|:----------------------------------------------|
