@@ -121,10 +121,11 @@ openxlsx::read.xlsx(url)
 
 ### Available Messy Data Files (beta)
 
-| Dataset         | URL                                                                                             | Type of Messiness |
-|:----------------|:------------------------------------------------------------------------------------------------|:------------------|
-| messy_cirrhosis | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table       |
-| messy_infarct   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table       |
+| Dataset         | URL                                                                                             | Type of Messiness                                                                                                               |
+|:----------------|:------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
+| messy_cirrhosis | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table                                                                                                                     |
+| messy_infarct   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table                                                                                                                     |
+| messy_aki       | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_aki.xlsx>”     | unique ids, header and footer rows, empty rows & cols, messy varnames, no units, typos in factors, visit date in headers, dates |
 
 <!-- badges: start -->
 
