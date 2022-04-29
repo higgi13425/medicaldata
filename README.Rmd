@@ -61,11 +61,12 @@ Click on links below for more details about the dataset itself in the Descriptio
 | theoph          |   [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)  |     [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)  |  Prospective Cohort PK Study | 
 
 ## Messy Datasets
-I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These can be found in the development version of the package on GitHub (possibly eventually in the CRAN version).
+I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These are not actually in the package itself (as they are not R files), but can be found in the GitHub repository.
 
-You can open and view these from the GitHub repo in all of their messy Excel glory by going [here](https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data) and clicking on one of the *.xlsx files, then clicking on the `View Raw` button to download it. You could also directly download these excel files by clicking on the URL links in the table below.
+You can download and open these from the GitHub repo in all of their messy Excel glory by clicking on the URL links in the table below.
+You can also find them [here in the list on the GitHub repo](https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data), where you can click on one of the *.xlsx files, then click on the `View Raw` button to download it. 
 
-You can read these directly from the urls below with the example code below into R, which reads in the `messy_infarct` dataset.
+You can read these datasets directly into R from the urls in the table below with the example code found in the following code chunk, which reads in the `messy_infarct` dataset and assigns it to the object `infarct`.
 
 ```{r, eval=FALSE}
 # install.packages('openxlsx')
@@ -74,7 +75,8 @@ library(openxlsx)
 url <- "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx"
 # replace the filename "messy_infarct.xlsx" at the end of this long url path with the filename that you want to load. 
 # Or just copy the whole path from the URL column below.
-openxlsx::read.xlsx(url)
+infarct <- openxlsx::read.xlsx(url)
+head(infarct)
 ```
 
 ### Available Messy Datasets (beta)
