@@ -94,16 +94,18 @@ in the Console pane.
 ## Messy Datasets
 
 I am doing a beta test of messy datasets, largely in Excel, with many
-annoying non-rectangular features that will help teach data
+annoying non-tidy and non-rectangular features that will help teach data
 cleaning/wrangling.
 
 You can open and view these from the GitHub repo in all of their messy
 Excel glory by going
 [here](https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data)
-and clicking on one of the \*.xlsx files to download it.
+and clicking on one of the \*.xlsx files, then clicking on the
+`View Raw` button to download it. You could also directly download these
+excel files by clicking on the URL links in the table below.
 
 You can read these directly from the urls below with the code below into
-RStudio.
+R.
 
 ``` r
 # install.packages('openxlsx')
