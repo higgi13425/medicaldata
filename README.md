@@ -114,7 +114,8 @@ below into R, which reads in the `messy_infarct` dataset.
 # if not already installed
 library(openxlsx)
 url <- "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx"
-# replace the filename "messy_infarct.xlsx" at the end of this long url path with the filename that you want to load. Or just copy the whole path from the URL column below.
+# replace the filename "messy_infarct.xlsx" at the end of this long url path with the filename that you want to load. 
+# Or just copy the whole path from the URL column below.
 openxlsx::read.xlsx(url)
 ```
 
