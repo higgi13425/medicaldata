@@ -131,6 +131,7 @@ head(infarct)
 | messy_infarct   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table                                                                                                                     |
 | messy_aki       | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_aki.xlsx>”     | unique ids, header and footer rows, empty rows & cols, messy varnames, no units, typos in factors, visit date in headers, dates |
 | messy_bp        | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_bp.xlsx>”      | unite and separate, vars without units, visit num in headers, data entry errors                                                 |
+| messy_glucose   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_glucose.xlsx>” | factors, vars without units, visit num in headers, header rows, empty rows/cols                                                 |
 
 <!-- badges: start -->
 
