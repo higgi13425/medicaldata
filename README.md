@@ -97,7 +97,8 @@ requested by Dan Sjoberg of {gtsummary} fame.
 
 I am doing a beta test of messy datasets, largely in Excel, with many
 annoying non-tidy and non-rectangular features that will help teach data
-cleaning/wrangling.
+cleaning/wrangling. These can be found in the development version of the
+package on GitHub (possibly eventually in the CRAN version).
 
 You can open and view these from the GitHub repo in all of their messy
 Excel glory by going
@@ -119,13 +120,14 @@ url <- "https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data
 openxlsx::read.xlsx(url)
 ```
 
-### Available Messy Data Files (beta)
+### Available Messy Datasets (beta)
 
 | Dataset         | URL                                                                                             | Type of Messiness                                                                                                               |
 |:----------------|:------------------------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------------------------------------------|
 | messy_cirrhosis | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table                                                                                                                     |
 | messy_infarct   | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx>” | Pivot Table                                                                                                                     |
 | messy_aki       | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_aki.xlsx>”     | unique ids, header and footer rows, empty rows & cols, messy varnames, no units, typos in factors, visit date in headers, dates |
+| messy_bp        | “<https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_bp.xlsx>”      | unite and separate, vars without units, visit num in headers, data entry errors                                                 |
 
 <!-- badges: start -->
 

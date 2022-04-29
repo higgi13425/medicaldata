@@ -233,7 +233,7 @@
 <div class="section level2">
 <h2 id="messy-datasets">Messy Datasets<a class="anchor" aria-label="anchor" href="#messy-datasets"></a>
 </h2>
-<p>I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling.</p>
+<p>I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These can be found in the development version of the package on GitHub (possibly eventually in the CRAN version).</p>
 <p>You can open and view these from the GitHub repo in all of their messy Excel glory by going <a href="https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data" class="external-link">here</a> and clicking on one of the *.xlsx files, then clicking on the <code>View Raw</code> button to download it. You could also directly download these excel files by clicking on the URL links in the table below.</p>
 <p>You can read these directly from the urls below with the example code below into R, which reads in the <code>messy_infarct</code> dataset.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
@@ -245,7 +245,7 @@
 <span class="co"># Or just copy the whole path from the URL column below.</span>
 <span class="fu">openxlsx</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/openxlsx/man/read.xlsx.html" class="external-link">read.xlsx</a></span><span class="op">(</span><span class="va">url</span><span class="op">)</span></code></pre></div>
 <div class="section level3">
-<h3 id="available-messy-data-files-beta">Available Messy Data Files (beta)<a class="anchor" aria-label="anchor" href="#available-messy-data-files-beta"></a>
+<h3 id="available-messy-datasets-beta">Available Messy Datasets (beta)<a class="anchor" aria-label="anchor" href="#available-messy-datasets-beta"></a>
 </h3>
 <table class="table">
 <colgroup>
@@ -273,6 +273,11 @@
 <td align="left">messy_aki</td>
 <td align="left">“<a href="https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_aki.xlsx" class="external-link uri">https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_aki.xlsx</a>”</td>
 <td align="left">unique ids, header and footer rows, empty rows &amp; cols, messy varnames, no units, typos in factors, visit date in headers, dates</td>
+</tr>
+<tr class="even">
+<td align="left">messy_bp</td>
+<td align="left">“<a href="https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_bp.xlsx" class="external-link uri">https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_bp.xlsx</a>”</td>
+<td align="left">unite and separate, vars without units, visit num in headers, data entry errors</td>
 </tr>
 </tbody>
 </table>
