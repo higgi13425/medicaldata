@@ -233,9 +233,9 @@
 <div class="section level2">
 <h2 id="messy-datasets">Messy Datasets<a class="anchor" aria-label="anchor" href="#messy-datasets"></a>
 </h2>
-<p>I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These can be found in the development version of the package on GitHub (possibly eventually in the CRAN version).</p>
-<p>You can open and view these from the GitHub repo in all of their messy Excel glory by going <a href="https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data" class="external-link">here</a> and clicking on one of the *.xlsx files, then clicking on the <code>View Raw</code> button to download it. You could also directly download these excel files by clicking on the URL links in the table below.</p>
-<p>You can read these directly from the urls below with the example code below into R, which reads in the <code>messy_infarct</code> dataset.</p>
+<p>I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These are not actually in the package itself (as they are not R files), but can be found in the GitHub repository.</p>
+<p>You can download and open these from the GitHub repo in all of their messy Excel glory by clicking on the URL links in the table below. You can also find them <a href="https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data" class="external-link">here in the list on the GitHub repo</a>, where you can click on one of the *.xlsx files, then click on the <code>View Raw</code> button to download it.</p>
+<p>You can read these datasets directly into R from the urls in the table below with the example code found in the following code chunk, which reads in the <code>messy_infarct</code> dataset and assigns it to the object <code>infarct</code>.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span class="co"># install.packages('openxlsx')</span>
 <span class="co"># if not already installed</span>
@@ -243,7 +243,8 @@
 <span class="va">url</span> <span class="op">&lt;-</span> <span class="st">"https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx"</span>
 <span class="co"># replace the filename "messy_infarct.xlsx" at the end of this long url path with the filename that you want to load. </span>
 <span class="co"># Or just copy the whole path from the URL column below.</span>
-<span class="fu">openxlsx</span><span class="fu">::</span><span class="fu">read.xlsx</span><span class="op">(</span><span class="va">url</span><span class="op">)</span></code></pre></div>
+<span class="va">infarct</span> <span class="op">&lt;-</span> <span class="fu">openxlsx</span><span class="fu">::</span><span class="fu">read.xlsx</span><span class="op">(</span><span class="va">url</span><span class="op">)</span>
+<span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">infarct</span><span class="op">)</span></code></pre></div>
 <div class="section level3">
 <h3 id="available-messy-datasets-beta">Available Messy Datasets (beta)<a class="anchor" aria-label="anchor" href="#available-messy-datasets-beta"></a>
 </h3>
