@@ -104,8 +104,8 @@ and clicking on one of the \*.xlsx files, then clicking on the
 `View Raw` button to download it. You could also directly download these
 excel files by clicking on the URL links in the table below.
 
-You can read these directly from the urls below with the code below into
-R.
+You can read these directly from the urls below with the example code
+below into R, which reads in the `messy_infarct` dataset.
 
 ``` r
 # install.packages('openxlsx')
