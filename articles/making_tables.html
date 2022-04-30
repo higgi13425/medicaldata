@@ -4,7 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="description" content="medicaldata">
 <title>making_tables • medicaldata</title>
 <!-- favicons --><link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
@@ -12,12 +13,11 @@
 <link rel="apple-touch-icon" type="image/png" sizes="120x120" href="../apple-touch-icon-120x120.png">
 <link rel="apple-touch-icon" type="image/png" sizes="76x76" href="../apple-touch-icon-76x76.png">
 <link rel="apple-touch-icon" type="image/png" sizes="60x60" href="../apple-touch-icon-60x60.png">
-<!-- jquery --><script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.4.0/cerulean/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha256-nuL8/2cJ5NDSSwnKD8VqreErSWHtnEP9E7AySL+1ev4=" crossorigin="anonymous"></script><!-- bootstrap-toc --><link rel="stylesheet" href="../bootstrap-toc.css">
-<script src="../bootstrap-toc.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
+<script src="../deps/jquery-3.6.0/jquery-3.6.0.min.js"></script><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<link href="../deps/bootstrap-5.1.0/bootstrap.min.css" rel="stylesheet">
+<script src="../deps/bootstrap-5.1.0/bootstrap.bundle.min.js"></script><!-- Font Awesome icons --><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css" integrity="sha256-mmgLkCYLUQbXn0B1SRqzHar6dCnv9oZFPEC1g1cwlkk=" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/v4-shims.min.css" integrity="sha256-wZjR52fzng1pJHwx4aV2AO3yyTOXrcDW7jBpJtTwVxw=" crossorigin="anonymous">
-<!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- pkgdown --><link href="../pkgdown.css" rel="stylesheet">
-<script src="../pkgdown.js"></script><meta property="og:title" content="making_tables">
+<!-- bootstrap-toc --><script src="https://cdn.rawgit.com/afeld/bootstrap-toc/v1.0.1/dist/bootstrap-toc.min.js"></script><!-- headroom.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/headroom.min.js" integrity="sha256-AsUX4SJE1+yuDu5+mAVzJbuYNPHj/WroHuZ8Ir/CkE0=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/headroom/0.11.0/jQuery.headroom.min.js" integrity="sha256-ZX/yNShbjqsohH1k95liqY9Gd8uOiE1S4vZc+9KQ1K4=" crossorigin="anonymous"></script><!-- clipboard.js --><script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.6/clipboard.min.js" integrity="sha256-inc5kl9MA1hkeYUt+EC3BhlIgyp/2jDIyBLS6k3UxPI=" crossorigin="anonymous"></script><!-- search --><script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/6.4.6/fuse.js" integrity="sha512-zv6Ywkjyktsohkbp9bb45V6tEMoWhzFzXis+LrMehmJZZSys19Yxf1dopHx7WzIKxr5tK2dVcYmaCk2uqdjF4A==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/autocomplete.js/0.38.0/autocomplete.jquery.min.js" integrity="sha512-GU9ayf+66Xx2TmpxqJpliWbT5PiGYxpaG8rfnBEk1LL8l1KGkRShhngwdXK1UgqhAzWpZHSiYPc09/NwDQIGyg==" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js" integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww==" crossorigin="anonymous"></script><!-- pkgdown --><script src="../pkgdown.js"></script><meta property="og:title" content="making_tables">
 <meta property="og:description" content="medicaldata">
 <meta property="og:image" content="https://higgi13425.github.io/medicaldata/logo.png">
 <!-- mathjax --><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js" integrity="sha256-nvJJv9wWKEm88qvoQl9ekL2J+k/RWIsaSScxxlsrv8k=" crossorigin="anonymous"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/config/TeX-AMS-MML_HTMLorMML.js" integrity="sha256-84DKXVJXs0/F8OTMzX4UR909+jtl4G7SPypPavF+GfA=" crossorigin="anonymous"></script><!--[if lt IE 9]>
@@ -25,76 +25,65 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body data-spy="scroll" data-target="#toc">
+<body>
+    <a href="#main" class="visually-hidden-focusable">Skip to contents</a>
     
 
-    <div class="container template-article">
-      <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
-  <div class="container">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <span class="navbar-brand">
-        <a class="navbar-link" href="../index.html">medicaldata</a>
-        <span class="version label label-default" data-toggle="tooltip" data-placement="bottom" title="">0.2.0.9001</span>
-      </span>
-    </div>
+    <nav class="navbar fixed-top navbar-light navbar-expand-lg bg-light"><div class="container">
+    
+    <a class="navbar-brand me-2" href="../index.html">medicaldata</a>
 
-    <div id="navbar" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav">
-<li>
-  <a href="../reference/index.html">Reference</a>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">0.2.0.9001</small>
+
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div id="navbar" class="collapse navbar-collapse ms-3">
+      <ul class="navbar-nav me-auto">
+<li class="nav-item">
+  <a class="nav-link" href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-<li>
-      <a href="../articles/Introduction.html">Introduction</a>
-    </li>
-    <li>
-      <a href="../articles/making_tables.html">making_tables</a>
-    </li>
-  </ul>
-</li>
-<li>
-  <a href="../news/index.html">Changelog</a>
-</li>
-      </ul>
-<ul class="nav navbar-nav navbar-right">
-<li>
-  <a href="https://github.com/higgi13425/medicaldata/" class="external-link">
-    <span class="fab fa-github fa-lg"></span>
-     
-  </a>
-</li>
-      </ul>
-</div>
-<!--/.nav-collapse -->
+<li class="active nav-item dropdown">
+  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-expanded="false" aria-haspopup="true" id="dropdown-articles">Articles</a>
+  <div class="dropdown-menu" aria-labelledby="dropdown-articles">
+    <a class="dropdown-item" href="../articles/Introduction.html">Introduction</a>
+    <a class="dropdown-item" href="../articles/making_tables.html">making_tables</a>
   </div>
-<!--/.container -->
+</li>
+<li class="nav-item">
+  <a class="nav-link" href="../news/index.html">Changelog</a>
+</li>
+      </ul>
+<form class="form-inline my-2 my-lg-0" role="search">
+        <input type="search" class="form-control me-sm-2" aria-label="Toggle navigation" name="search-input" data-search-index="../search.json" id="search-input" placeholder="Search for" autocomplete="off">
+</form>
+
+      <ul class="navbar-nav">
+<li class="nav-item">
+  <a class="external-link nav-link" href="https://github.com/higgi13425/medicaldata/" aria-label="github">
+    <span class="fab fa fab fa-github fa-lg"></span>
+     
+  </a>
+</li>
+      </ul>
 </div>
-<!--/.navbar -->
 
-      
+    
+  </div>
+</nav><div class="container template-article">
 
-      </header><script src="making_tables_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="making_tables_files/tabwid-1.0.0/tabwid.css" rel="stylesheet">
+
+
+<script src="making_tables_files/accessible-code-block-0.0.1/empty-anchor.js"></script><link href="making_tables_files/tabwid-1.0.0/tabwid.css" rel="stylesheet">
 <div class="row">
-  <div class="col-md-9 contents">
-    <div class="page-header toc-ignore">
-      <h1 data-toc-skip>making_tables</h1>
+  <main id="main"><div class="page-header">
+      <img src="../logo.png" class="logo" alt=""><h1>making_tables</h1>
             
       
       <small class="dont-index">Source: <a href="https://github.com/higgi13425/medicaldata/blob/HEAD/vignettes/making_tables.Rmd" class="external-link"><code>vignettes/making_tables.Rmd</code></a></small>
-      <div class="hidden name"><code>making_tables.Rmd</code></div>
-
+      <div class="d-none name"><code>making_tables.Rmd</code></div>
     </div>
 
     
@@ -204,7 +193,7 @@
   <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span> 
   <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op"><a href="https://rdrr.io/pkg/janitor/man/pipe.html" class="external-link">%&gt;%</a></span>   <span class="co"># put n first</span>
   <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/flextable.html" class="external-link">flextable</a></span><span class="op">(</span><span class="op">)</span></code></pre></div>
-<template id="0af190b9-4ee8-40bc-bcee-46fb3b29c94d"><style>
+<template id="129b2146-147c-4ef4-a803-a5246134d3f4"><style>
 .tabwid table{
   border-spacing:0px !important;
   border-collapse:collapse;
@@ -240,55 +229,55 @@ background-color: transparent;
 }
 </style>
 <div class="tabwid">
-<style>.cl-9a9b152a{}.cl-9a9281e4{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-9a92a91c{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-9a92f606{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9a92f610{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-9a92f61a{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<table class="table cl-9a9b152a">
+<style>.cl-fd5a89b0{}.cl-fd51609c{font-family:'DejaVu Sans';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-fd51823e{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-fd51d144{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fd51d145{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-fd51d14e{width:54pt;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<table class="table cl-fd5a89b0">
 <thead><tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f61a"><p class="cl-9a92a91c"><span class="cl-9a9281e4">radiologic_6m</span></p></td>
-<td class="cl-9a92f61a"><p class="cl-9a92a91c"><span class="cl-9a9281e4">Streptomycin</span></p></td>
-<td class="cl-9a92f61a"><p class="cl-9a92a91c"><span class="cl-9a9281e4">Control</span></p></td>
+<td class="cl-fd51d14e"><p class="cl-fd51823e"><span class="cl-fd51609c">radiologic_6m</span></p></td>
+<td class="cl-fd51d14e"><p class="cl-fd51823e"><span class="cl-fd51609c">Streptomycin</span></p></td>
+<td class="cl-fd51d14e"><p class="cl-fd51823e"><span class="cl-fd51609c">Control</span></p></td>
 </tr></thead>
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">6_Considerable_improvement</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">28  (50.9%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 4   (7.7%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">6_Considerable_improvement</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">28  (50.9%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 4   (7.7%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">5_Moderate_improvement</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">10  (18.2%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">13  (25.0%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">5_Moderate_improvement</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">10  (18.2%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">13  (25.0%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">4_No_change</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 2   (3.6%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 3   (5.8%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">4_No_change</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 2   (3.6%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 3   (5.8%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">3_Moderate_deterioration</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 5   (9.1%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">12  (23.1%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">3_Moderate_deterioration</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 5   (9.1%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">12  (23.1%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">2_Considerable_deterioration</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 6  (10.9%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 6  (11.5%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">2_Considerable_deterioration</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 6  (10.9%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 6  (11.5%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">1_Death</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4"> 4   (7.3%)</span></p></td>
-<td class="cl-9a92f606"><p class="cl-9a92a91c"><span class="cl-9a9281e4">14  (26.9%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">1_Death</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c"> 4   (7.3%)</span></p></td>
+<td class="cl-fd51d144"><p class="cl-fd51823e"><span class="cl-fd51609c">14  (26.9%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-9a92f610"><p class="cl-9a92a91c"><span class="cl-9a9281e4">Total</span></p></td>
-<td class="cl-9a92f610"><p class="cl-9a92a91c"><span class="cl-9a9281e4">55 (100.0%)</span></p></td>
-<td class="cl-9a92f610"><p class="cl-9a92a91c"><span class="cl-9a9281e4">52 (100.0%)</span></p></td>
+<td class="cl-fd51d145"><p class="cl-fd51823e"><span class="cl-fd51609c">Total</span></p></td>
+<td class="cl-fd51d145"><p class="cl-fd51823e"><span class="cl-fd51609c">55 (100.0%)</span></p></td>
+<td class="cl-fd51d145"><p class="cl-fd51823e"><span class="cl-fd51609c">52 (100.0%)</span></p></td>
 </tr>
 </tbody>
 </table>
-</div></template><div class="flextable-shadow-host" id="86288d4e-026c-4618-9c1b-20448d50e434"></div>
+</div></template><div class="flextable-shadow-host" id="82205668-8312-4ae6-b2c9-4351a6eac693"></div>
 <script>
-var dest = document.getElementById("86288d4e-026c-4618-9c1b-20448d50e434");
-var template = document.getElementById("0af190b9-4ee8-40bc-bcee-46fb3b29c94d");
+var dest = document.getElementById("82205668-8312-4ae6-b2c9-4351a6eac693");
+var template = document.getElementById("129b2146-147c-4ef4-a803-a5246134d3f4");
 var caption = template.content.querySelector("caption");
 if(caption) {
   caption.style.cssText = "display:block;text-align:center;";
@@ -349,33 +338,26 @@ fantome.appendChild(templateContent);
 <span class="co">#&gt; <span style="color: #949494;">#   pdstent &lt;fct&gt;, sodsom &lt;fct&gt;, bsphinc &lt;fct&gt;, bstent &lt;fct&gt;, chole &lt;fct&gt;,</span></span>
 <span class="co">#&gt; <span style="color: #949494;">#   pbmal &lt;fct&gt;, train &lt;fct&gt;, status &lt;fct&gt;, type &lt;fct&gt;, rx &lt;fct&gt;, bleed &lt;dbl&gt;</span></span></code></pre></div>
 </div>
-  </div>
-
-  <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
-
-        <nav id="toc" data-toggle="toc"><h2 data-toc-skip>Contents</h2>
-    </nav>
-</div>
-
+  </main><aside class="col-md-3"><nav id="toc"><h2>On this page</h2>
+    </nav></aside>
 </div>
 
 
 
-      <footer><div class="copyright">
+    <footer><div class="pkgdown-footer-left">
   <p></p>
 <p>Developed by Peter Higgins.</p>
 </div>
 
-<div class="pkgdown">
+<div class="pkgdown-footer-right">
   <p></p>
 <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.0.3.</p>
 </div>
 
-      </footer>
+    </footer>
 </div>
 
   
-
 
   
 
