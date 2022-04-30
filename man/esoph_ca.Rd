@@ -28,4 +28,14 @@ Data from a case-control study of esophageal cancer in Ille-et-Vilaine, France, 
 \details{
 An original base R dataset, though of somewhat unclear origin. The statistical textbook source is clear, though it is not clear which of the original epidemiological papers on esophageal cancer in Ille-et-Vilaine is referred to by this dataset. The original authors of the medical study were \strong{not} credited in the base R dataset. There are several possible papers in PubMed, none of which quite match up with this dataset. This could be from Tuyns, AJ, et al., Bull Cancer, 1977;64(1):45-60, but this paper reports 778 controls, rather than the 975 found here. A 1975 paper from the same group reported 718 cases (Int J Epidemiol, 1975 Mar;4(1):55-9.  doi: 10.1093/ije/4.1.55.). There is also another possible source - a 1975 paper from the same group, \emph{Usefulness of population controls in retrospective studies of alcohol consumption. Experience from a case--control study of esophageal cancer in Ille-et-Vilaine, France}, Journal of Studies on Alcohol, 39(1): 175-182 (1978), which is behind a publisher paywall.
 }
+\section{Figure 1 Benign FNA of Breast}{
+ Benign fine needle aspirate (FNA) of a breast lesion. Notice the regular size of cells and nuclei, which are organized in orderly spacing. The nuclei are homogeneously dark with few visible nucleoli.
+\if{html}{\figure{benign_breast.png}{options: width=100\%}}
+}
+
+\section{Figure 2 Cancerous FNA of Breast}{
+ Malignant (cancerous) fine needle aspirate (FNA) of a breast lesion. Notice the very irregular size of cells and nuclei, which are are disorganized and seem to be growing over each other. The nuclei are also less homogeneously dark and more granular, suggesting active transcription from the dark nucleoli within each nucleus.
+\if{html}{\figure{malignant_breast.png}{options: width=100\%}}
+}
+
 \keyword{datasets}

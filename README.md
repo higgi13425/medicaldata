@@ -25,7 +25,7 @@ datasets in the dev version were generously donated by [Frank
 Harrell](https://www.fharrell.com) from his website
 [here](https://hbiostat.org/data/). These datasets are currently only in
 the [dev version](https://github.com/higgi13425/medicaldata/) of the
-package on github.com, which should make it to CRAN in June 2022.
+package on github.com, which should make it to CRAN in June of 2022.
 
 ## How to Install and Use {medicaldata} Datasets
 
@@ -92,6 +92,8 @@ requested by Dan Sjoberg of {gtsummary} fame.
 | supraclavicular | [supraclavicular_desc](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Dataset%20Introduction.pdf)                                   | [supraclavicular_codebook](https://www.causeweb.org/tshs/datasets/Supraclavicular%20Data%20Dictionary.pdf)                                       | RCT                                           |
 | indometh        | [indometh_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.html) | [indometh_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.html)   | Prospective Cohort Pharmacokinetic (PK) Study |
 | theoph          | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Prospective Cohort PK Study                   |
+| diabetes (dev)  | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Prospective Longitudinal Cohort Study         |
+| abm (dev)       | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Retrospective Cohort Study                    |
 
 ## Messy Datasets
 

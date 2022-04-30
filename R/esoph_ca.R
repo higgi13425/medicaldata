@@ -16,6 +16,13 @@
 #'   \item{ncontrols}{Number of controls; type: integer}
 #' }
 #'
+#'@section Figure 1 Benign FNA of Breast: Benign fine needle aspirate (FNA) of a breast lesion. Notice the regular size of cells and nuclei, which are organized in orderly spacing. The nuclei are homogeneously dark with few visible nucleoli.
+#'\if{html}{\figure{benign_breast.png}{options: width=100\%}}
+#'
+#'@section Figure 2 Cancerous FNA of Breast: Malignant (cancerous) fine needle aspirate (FNA) of a breast lesion. Notice the very irregular size of cells and nuclei, which are are disorganized and seem to be growing over each other. The nuclei are also less homogeneously dark and more granular, suggesting active transcription from the dark nucleoli within each nucleus.
+#'\if{html}{\figure{malignant_breast.png}{options: width=100\%}}
+#'
 #' @source Breslow, N. E. and Day, N. E. (1980) Statistical Methods in Cancer Research. Volume 1: The Analysis of Case-Control Studies. IARC Lyon / Oxford University Press.
 #' Originally in base R datasets.
 "esoph_ca"
+

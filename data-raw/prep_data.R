@@ -116,6 +116,14 @@ write.csv(strep_tb, "data-raw/strep_tb.csv")
 
 saveRDS(strep_tb, "data-raw/strep_tb.Rdata")
 
+# diabetes data clean up
+library(mlbench)
+data("PimaIndiansDiabetes2")
+dm <- PimaIndiansDiabetes2
+names(dm)
+diabetes <- dm %>%
+  purrr::set_names(c("pregnancy_num", "glucose_mg-dl", "dbp_mm-hg", "triceps_mm", "insulin_microiu-ml","bmi", "pedigree", "age", "diabetes_5y"))
+saveRDS(diabetes, "data-raw/diabetes.Rdata")
 
 # Load tshs saved data (saved in .Rdata format)
 
@@ -144,3 +152,5 @@ usethis::use_data(scurvy, overwrite = TRUE)
 usethis::use_data(strep_tb, overwrite = TRUE)
 usethis::use_data(indo_rct, overwrite = TRUE)
 usethis::use_data(abm, overwrite = TRUE)
+usethis::use_data(diabetes, overwrite = TRUE)
+
