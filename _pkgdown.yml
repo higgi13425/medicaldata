@@ -3,8 +3,8 @@ home:
   description: Medical Datasets for Teaching R
 
 template:
-  params:
-    bootswatch: cerulean
+  bootstrap: 5
+  bootswatch: lumen
 
 url: https://higgi13425.github.io/medicaldata/
 
