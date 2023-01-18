@@ -143,4 +143,5 @@ head(infarct)
 status](https://www.r-pkg.org/badges/version/medicaldata)](https://cran.r-project.org/package=medicaldata)
 [![](https://cranlogs.r-pkg.org/badges/medicaldata)](https://cran.r-project.org/package=medicaldata)
 [![DOI](https://zenodo.org/badge/385090155.svg)](https://zenodo.org/badge/latestdoi/385090155)
+[![R-CMD-check](https://github.com/higgi13425/medicaldata/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/higgi13425/medicaldata/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
