@@ -46,3 +46,5 @@ Currently, the datasets included are:
 - Supraclavicular (`supraclavicular`)
 - Indomethacin Pharmacokinetics (`indometh`)
 - Theophylline Pharmacokinetics (`theoph`)
+- Diabetes Development in Pima Indians (`diabetes`)
+- Thiopurine Effectiveness in IBD (`thiomon`)
