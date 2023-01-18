@@ -113,7 +113,9 @@ where you can click on one of the \*.xlsx files, then click on the
 You can read these datasets directly into R from the urls in the table
 below with the example code found in the following code chunk, which
 reads in the `messy_infarct` dataset and assigns it to the object
-`infarct`.
+`infarct`. It may be easiest to copy the entire code chunk below by
+hovering over the copy icon in the top right corner, then clicking to
+copy.
 
 ``` r
 # install.packages('openxlsx')
