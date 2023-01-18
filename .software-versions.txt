@@ -1,0 +1,22 @@
+The R project located at '~/Documents/RCode/medicaldata' was last run in the following software environment:
+
+
+R version 4.2.0 (2022-04-22)
+Platform: aarch64-apple-darwin20 (64-bit)
+Running under: macOS Monterey 12.5
+
+Matrix products: default
+BLAS:   /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRblas.0.dylib
+LAPACK: /Library/Frameworks/R.framework/Versions/4.2-arm64/Resources/lib/libRlapack.dylib
+
+locale:
+en_US.UTF-8/en_US.UTF-8/en_US.UTF-8/C/en_US.UTF-8/en_US.UTF-8
+
+attached base packages:
+stats     graphics  grDevices utils     datasets  methods   base     
+
+other attached packages:
+fertile_1.1.9003  here_1.0.1        readxl_1.4.0      janitor_2.1.0    
+ medicaldata_0.2.0 flextable_0.7.2   forcats_0.5.1     stringr_1.4.0    
+ dplyr_1.0.9       purrr_0.3.4       readr_2.1.2       tidyr_1.2.0      
+ tibble_3.1.8      ggplot2_3.3.6     tidyverse_1.3.2  

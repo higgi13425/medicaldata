@@ -1,0 +1,23 @@
+path,path_abs,func,timestamp
+Seed @ Start,NA,54,2022-08-07T19:11:41Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:44Z
+package:flextable,NA,base::library,2022-08-07T19:11:45Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:46Z
+package:flextable,NA,base::library,2022-08-07T19:11:46Z
+Seed Before,NA,54,2022-08-07T19:11:46Z
+/Users/peterhiggins/Documents/RCode/medicaldata/data-raw/covid_testing_code_book.csv,/Users/peterhiggins/Documents/RCode/medicaldata/data-raw/covid_testing_code_book.csv,readr::read_csv,2022-08-07T19:11:46Z
+Seed After,NA,54,2022-08-07T19:11:46Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:47Z
+package:flextable,NA,base::library,2022-08-07T19:11:47Z
+package:medicaldata,NA,base::library,2022-08-07T19:11:47Z
+package:janitor,NA,base::library,2022-08-07T19:11:47Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:48Z
+package:flextable,NA,base::library,2022-08-07T19:11:48Z
+package:readxl,NA,base::library,2022-08-07T19:11:48Z
+package:here,NA,base::library,2022-08-07T19:11:48Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:49Z
+package:flextable,NA,base::library,2022-08-07T19:11:49Z
+package:tidyverse,NA,base::library,2022-08-07T19:11:50Z
+package:flextable,NA,base::library,2022-08-07T19:11:50Z
+Seed @ End,NA,54,2022-08-07T19:11:50Z
+LAST RENDERED,NA,proj_render,2022-08-07T19:11:50Z
