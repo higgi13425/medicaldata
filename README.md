@@ -5,27 +5,27 @@
 
 ## Overview
 
-This is a data package with 17 medical datasets for teaching
+This is a data package with 19 medical datasets for teaching
 Reproducible Medical Research with R. The link to the pkgdown reference
 website for {medicaldata} is
 [here](https://higgi13425.github.io/medicaldata/) and in the links at
 the right. This package will be useful for anyone teaching R to medical
-professionals, including doctors, nurses, trainees, and students. <br>
-<br> These datasets range from reconstructed versions of James Lind’s
-scurvy dataset (1757) and the original Streptomycin for Tuberculosis
-trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP
-pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing
-results (2020). Many of the datasets come from the American Statistical
-Association’s TSHS (Teaching Statistics in the Health Sciences)
-[Resources Portal](https://www.causeweb.org/tshs/category/dataset/),
-maintained by [Carol
-Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the
+professionals, including doctors, nurses, pharmacists, trainees, and
+students. <br> <br> These datasets range from reconstructed versions of
+James Lind’s scurvy dataset (1757) and the original Streptomycin for
+Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent
+post-ERCP pancreatitis that I was involved in, to cohort data on
+SARS-CoV2 testing results (2020). Many of the datasets come from the
+American Statistical Association’s TSHS (Teaching Statistics in the
+Health Sciences) [Resources
+Portal](https://www.causeweb.org/tshs/category/dataset/), maintained by
+[Carol Bigelow](https://www.umass.edu/sphhs/person/carol-bigelow) at the
 University of Massachusetts (with permission). A growing number of
 datasets in the dev version were generously donated by [Frank
 Harrell](https://www.fharrell.com) from his website
 [here](https://hbiostat.org/data/). These datasets are currently only in
 the [dev version](https://github.com/higgi13425/medicaldata/) of the
-package on github.com, which should make it to CRAN in June of 2022.
+package on github.com, which should make it to CRAN in June of 2023.
 
 ## How to Install and Use {medicaldata} Datasets
 
@@ -93,7 +93,8 @@ requested by Dan Sjoberg of {gtsummary} fame.
 | indometh        | [indometh_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/indometh_desc.html) | [indometh_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/indometh_codebook.html)   | Prospective Cohort Pharmacokinetic (PK) Study |
 | theoph          | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Prospective Cohort PK Study                   |
 | diabetes (dev)  | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Prospective Longitudinal Cohort Study         |
-| abm (dev)       | [theoph_desc](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html)     | [theoph_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html)       | Retrospective Cohort Study                    |
+| thiomon (dev)   | [thiomon](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/thiomon_desc.html)        | [thiomon_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/thiomon_codebook.html)     | Retrospective Cohort Study, suitable for ML   |
+| abm (dev)       | [abm](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/abm_desc.html)                | [abm_codebook](https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/abm_codebook.html)             | Retrospective Cohort Study                    |
 
 ## Messy Datasets
 
