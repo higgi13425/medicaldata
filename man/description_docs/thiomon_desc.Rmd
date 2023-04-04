@@ -91,7 +91,7 @@ A data frame with 5168 observations of 32 numeric variables.
 
 **ast** - Aspartate Transaminase. Numeric, range 5-7765, 0 missing values
 
-**alt** - Alanine Transaminase. Numeric, range 1-10666, 18 missing values
+**alt** - . Numeric, range 1-10666, 18 missing values
 
 **alk** - Alkaline phosphatase. Numeric, range 13-1938, 0 missing values
 

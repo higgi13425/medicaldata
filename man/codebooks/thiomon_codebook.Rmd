@@ -1,0 +1,63 @@
+---
+title: "Thiomon data codebook"
+author: "Peter Higgins"
+date: "7/24/2021"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Thiomon (Thiopurine Monitoring) Dataset Codebook
+
+Source: This data set is from Akbar K. Waljee and Peter D. Higgins, who de-identified data on CBC and chemistry testing at the University of Michigan for development of a machine learning algorithm to predict response to thiopurine medications in IBD patients. This data set contains individual laboratory values, age in days, and outcome (active or remission). These data have been anonymized and time-shifted. As published in Clin Gastroenterol Hepatol. 2010 Feb;8(2):143-150.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+thiomon_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "days_of_life", 1, "age in days", NA, NA, "double",
+  "plt", 2, "Platelet Count", "billions of platelets per Liter", NA, "double",
+  "mpv", 3, "Mean Platelet Volume", "femtoLiters", NA, "double",
+  "un", 4, "blood urea nitrogen", "mg/dL", NA, "double",
+  "wbc", 5, "White blood cell count", "billions of cells per Liter", NA, "double",
+  "hgb", 6, "hemoglobin", "grams/deciliter", NA, "double",
+  "hct", 7, "Hematocrit", "cellular percent", NA, "double",
+  "rbc", 8, "Red Blood cell Count", "billions of cells per Liter", NA, "double",
+  "mcv", 9, "Mean Corpuscular (RBC) Volume", "femtoliters", NA, "double",
+  "mch", 10, "Mean Corpuscular (RBC) Hemoglobin", "picograms/cell", NA, "double",
+  "mchc", 11, "Mean Corpuscular (RBC) Hemoglobin", "grams/deciliter of red cells", NA, "double",
+  "rdw", 12, "Red cell Distribution Width", "percent", NA, "double",
+  "neut_percent", 13, "Neutrophil Percent", "percent", NA, "double",
+  "lymph_percent", 14, "Lymphocyte Percent", "percent", NA, "double",
+  "mono_percent", 15, "Monocyte Percent", "percent", NA, "double",
+  "eos_percent", 16, "Eosinophil Percent", "percent", NA, "double",
+  "baso_percent", 17, "Basophil Percent", "percent", NA, "double",
+  "sod", 18, "Sodium in plasma", "milliequivalents per Liter", NA, "double",
+  "pot", 19, "Potassium in plasma", "milliequivalents per Liter", NA, "double",
+  "chlor", 20, "Chloride in plasma", "milliequivalents per Liter", NA, "double",
+  "co2", 21, "Bicarbonate in plasma", "milliequivalents per Liter", NA, "double",
+  "creat", 22, "Creatinine in plasma", "milligrams per deciLiter", NA, "double",
+  "gluc", 23, "Glucose in plasma", "milligrams per deciliter", NA, "double",
+  "cal", 24, "Calcium in plasma", "milligrams per deciliter", NA, "double",
+  "prot", 25, "Protein in plasma", "grams per deciliter", NA, "double",
+  "alb", 26, "Albumin in plasma", "grams per deciliter", NA, "double",
+  "ast", 27, "Aspartate Transaminase in plasma", "units per Liter", NA, "double",
+  "alt", 28, "Alanine Transaminase in plasma", "units per Liter", NA, "double",
+  "alk", 29, "Alkaline phosphatase in plasma", "units per Liter", NA, "double",
+  "tbil", 30, "Total Bilirubin in plasma", "milligrams per deciliter", NA, "double",
+  "active", 31, "Active Inflammation despite Thiopurines for > 12 weeks", NA, "0-1", "double",
+  "remission", 32, "Remission of Inflammation after Thiopurines for > 12 weeks", NA,  "0-1", "double",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 3, 1, 0.25, 1))
+thiomon_codebook
+```
