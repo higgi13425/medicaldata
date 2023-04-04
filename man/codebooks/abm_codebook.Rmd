@@ -1,0 +1,57 @@
+---
+title: "Acute Bacterial Meningitis data codebook"
+author: "Peter Higgins"
+date: "4/2/2023"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Acute Bacterial Meningitis Dataset Codebook
+
+Source: This data set is provided generously by Frank Harrell, from his website [here](https://hbiostat.org/data/), as the dataset "abm".
+ 
+Description
+This dataset is a subset of the data from a Duke University study of acute meningitis, as provided by Frank Harrell. The patients were found to have clinical symptoms of meningitis, which include a painful, stiff neck with a limited range of motion, headache, light sensitivity, high fever, confusion, and lethargy. This can progress rapidly, and can prove fatal. Bacterial meningitis can be treated successfully with antibiotics, if given early. Antibiotics are unnecessary and unhelpful in viral meningitis, and can cause allergic reactions or other adverse events in some patients. Clinically, viral and bacterial meningitis have very similar symptoms, due to the common cause of inflammation of the meninges, the three membranous layers that protect the brain and spinal cord. A spinal tap (aka lumbar puncture, or LP) can be performed to obtain cerebrospinal fluid (CSF) for analysis to help classify cases as bacterial or viral in origin.
+Timely identification and early treatment of bacterial meningitis can be life-saving.
+  
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+abm_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "casenum", 1, "case number, from 1 to 581", NA, NA, "double",
+  "year", 2, "2 digit year, from 68 (1968) to 80 (1980)", NA, "68-80", "double",
+  "month", 3, "month, from 1 (January) to 12 (December)", NA, "1-12", "double",
+  "age", 4, "age in years", "years", NA, "double",
+  "race", 5, "race, coded as 1 = Black, 2 = White", NA, "1-2", "double",
+  "sex", 6, "gender, coded as 0 = male and 1 = female", NA, "0-1", "double",
+  "blood_wbc", 7, "white blood cell count in blood", "thousands of cells per cubic millimeter", NA, "double",
+  "blood_neut_pct", 8, "Percentage of white blood cells that are neutrophils, considered indicative of acute bacterial infection, in blood", "percentage", NA, "double",
+  "blood_band_pct", 9, "Band cells, also known as immature neutrophils, considered indicative of acute bacterial infection, in blood, in percent of the total white blood cells", "percentage", NA, "double",
+  "blood_gluc", 10, "Blood glucose", "milligrams per deciliter", NA, "double",
+  "csf_gluc", 11, "CSF (cerebrospinal fluid) glucose", " milligrams per deciliter", NA, "double",
+  "csf_prot", 12, "CSF (cerebrospinal fluid) protein", "milligrams per deciliter", NA, "double",
+  "csf_rbc", 13, "CSF (cerebrospinal fluid) red blood cells, indicative of contamination with blood (a traumatic spinal tap), which can throw off other csf variables when high", "thousands of cells per cubic millimeter", NA, "double",
+  "csf_wbc", 14, "CSF (cerebrospinal fluid) white blood cells", "thousands of cells per cubic millimeter", NA, "double",
+  "csf_neut_pct", 15, "CSF (cerebrospinal fluid) neutrophil percentage, percent of total white blood cells in CSF", "percentage", NA, "double",
+  "csf_mono_pct", 16, "CSF (cerebrospinal fluid) monocyte percentage, percent of total white blood cells in CSF", "percentage", NA, "double",
+  "csf_lymph_pct", 17, "CSF (cerebrospinal fluid) lymphocyte percentage, percent of total white blood cells in CSF", "percentage", NA, "double",
+  "gram", 18, "gram stain result, values 0-6,", NA, "0-6", "double",
+  "csf_cult", 19, "result of csf culture for bacterial growth, values 0-6", NA, "0-6", "double",
+  "blood_cult", 20, "result of blood culture for bacterial growth, values 0-6", NA, "0-6", "double",
+  "subset", 21, "subset, training = 1 or test = 2", NA, "1-2", "double",
+  "abm", 22, "the outcome variable, acute bacterial meningitis, 0 = absent or 1 = present,", NA, "0-1", "double",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 3, 1, 0.25, 1))
+abm_codebook
+```
