@@ -1,0 +1,44 @@
+---
+title: "Diabetes data codebook"
+author: "Peter Higgins"
+date: "7/24/2021"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Diabetes Dataset Codebook
+
+Source: This data set was provided through funding from the National Institute of Diabetes and Digestive and Kidney Diseases (NIDDK) as the dataset "diabetes". The donor of dataset to UCI was Vincent Sigillito of Johns Hopkins. A version of this dataset is available through the UCI (University of California-Irvine) Machine Learning Repository as "PimaIndiansDiabetes".
+
+Type 2 diabetes mellitus (DM) is associated with obesity and a diet high in sugars and low in vegetables. People with type 2 DM become less sensitive to insulin, so that after a glucose load, their blood glucose and insulin rise, but the glucose level does not fall as quickly as it should, leading to sustained elevations in glucose and insulin. The incidence of type 2 DM is rising in many western cultures, as increasingly unhealthy and calorie rich diets become common. A version of this dataset is available through the UCI (University of California-Irvine) Machine Learning Repository as "PimaIndiansDiabetes". This dataset was recoded with NA for zero values which were likely to be missing in the variables glucose_mg-dl, insulin_mIU-mL, dbp_mm-hg, triceps_mm, and bmi by Friedrich Leisch. The units of each predictor were added to variable names, and several variables renamed for clarity by Peter Higgins.
+
+The primary analysis task is to classify in each participant whether diabetes developed within 5 years of data collection (diabetes_5y = pos), or the participant tested repeatedly negative for diabetes over the next 5 years (diabetes_5y = neg).
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+diabetes_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "pregnancy_num", 1, "number of pregnancies", NA, "1-17", "double",
+  "glucose_mg-dl", 2, "Plasma glucose concentration at 2 hours after administration of an oral glucose tolerance test", "mg/deciliter", NA, "double",
+  "dbp_mm-hg", 3, "Dose of Theophylline in milligrams per kilogram of body weight", "mg/kg", NA, "double",
+  "triceps_mm", 4, "triceps skin fold thickness in mm, a measure of subcutaneous fat", "mm", NA, "double",
+  "insulin_microiu-ml", 4, "serum insulin at 2 hours after administration of an oral glucose tolerance test in microIU per milliliter (IU is international units)", "microIU/mL", NA, "double",
+  "bmi", 5, "body mass index, in kg of weight per meters of height squared, from 18.2 to 67.1", "microIU/mL", NA, "double",
+  "pedigree", 6, "a diabetes pedigree score, with points added for each additional relative with diabetes, weighted for the closeness of their genetic relation to the participant, from 0.78 to 2.42", "microIU/mL", NA, "double",
+  "age", 7, "Age in years, from 21 to 81", "microIU/mL", NA, "double",
+  "diabetes_5y", 8, "Diagnosis of diabetes in the following 5 years - pos or neg", NA, "pos or neg", "factor",
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 3, 1, 0.25, 1))
+diabetes_codebook
+```
