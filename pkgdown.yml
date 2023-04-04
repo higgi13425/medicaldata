@@ -4,7 +4,7 @@ pkgdown_sha: ~
 articles:
   Introduction: Introduction.html
   making_tables: making_tables.html
-last_built: 2023-03-22T00:05Z
+last_built: 2023-04-04T13:22Z
 urls:
   reference: https://higgi13425.github.io/medicaldata/reference
   article: https://higgi13425.github.io/medicaldata/articles
