@@ -1,0 +1,111 @@
+---
+title: "Thiomon Description Document"
+author: "Peter Higgins"
+date: "4/2/2023"
+output: 
+  html_document:
+    theme: cerulean
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+### Source:
+This data set is from Akbar K. Waljee and Peter D. Higgins, who de-identified data on CBC and chemistry testing at the University of Michigan for development of a machine learning algorithm to predict response to thiopurine medications in IBD patients. This data set contains individual laboratory values, age in days, and outcome (active or remission). These data have been anonymized and time-shifted. As published in Clin Gastroenterol Hepatol. 2010 Feb;8(2):143-150.
+
+### Description:
+
+A dataset containing laboratory data and outcomes of IBD patients on Thiopurine therapy at the University of Michigan. Thiopurine medications suppress the immmune system, benefiting patients with autoimmune diseases. Long-time prescribers have reported patterns in blood tests and chemistry tests that indicate effective immune suppression, usually including a lower white blood cell count and increased red blood cell size. These blood and chemistry panels are routinely obtained in the monitoring of these patients for toxicity of the drug.
+
+#### Potential Analyses
+
+This dataset was used to develop a random forest prediction model for remission of inflammation after at least 12 weeks on thiopurine therapy. Logistic regression models and forms of machine learning can be used to classify participants for the dichotomous outcome of remission.
+
+#### Abstract
+
+This data set contains 5168 observations of 32 numeric variables. All are patients started on thiopurine for treatment of inflammatory bowel disease (IBD), which includes both Crohn's disease and ulcerative colitis.  The outcome variable is remission (0/1) or its inverse, active (0/1).
+
+#### Study Design
+
+Prospective Observational Cohort
+
+A data frame with 5168 observations of 32 numeric variables.
+
+### Variables
+
+**days_of_life** - age in days. Numeric. Range: 1207-32356. 1 missing value.
+
+**plt** - Platelet Count. Numeric. Range: 11-1114. 4 missing values.
+
+**mpv** - Mean Platelet Volume. Numeric. Range: 5.3-13.5. 21 missing values.
+
+**un** - Blood Urea Nitrogen. Numeric. Range: 2-118. 53 missing values.
+
+**wbc** - White Blood Cell Count. Numeric. Range: 0.7-33.5. No missing values.
+
+**hgb** - Hemoglobin. Numeric. Range: 4.5-18.6. 4 missing values.
+
+**hct** Hematocrit. Numeric. Range: 13.7-55.2. 3 missing values.
+
+**rbc** - Red Blood Cell Count. Numeric. Range: 1.57-7.04. 3 missing values.
+
+**mcv** - Mean Corpuscular (RBC) Volume. Numeric. Range: 56.5-124. 3 missing values.
+
+**mch** - Mean Corpuscular (RBC) Hemoglobin. Numeric. Range: 16.7-42.3. 7 missing values.
+
+**mchc** - Mean Corpuscular (RBC) Hemoglobin per Cell. Numeric. Range: 28.2-38.0. 7 missing values.
+
+**rdw** - Red cell Distribution Width. Numeric. Range: 11.3-39.7. 3 missing values.
+
+**neut_percent** - Percent of Neutrophils in WBC count. Numeric. Range: 17-98.1. No missing values.
+
+**lymph_percent** - Percent of Lymphocytes in WBC count. Numeric. Range: 1-67.9. No missing values.
+
+**mono_percent** - Percent of Monocytes in WBC count. Numeric. Range: 0-30.3. No missing values.
+
+**eos_percent** - Percent of Eosinophils in WBC count. Numeric. Range: 0.5-29.3. 6 missing values.
+
+**baso_percent** - Percent of Basoophils in WBC count. Numeric. Range: 0.2-5.3. 6 missing values.
+
+**sod** - Sodium. Numeric. Range: 116-151. No missing values.
+
+**pot** - Potassium. Numeric. Range: 2.6-10.1. 1 missing value.
+
+**chlor** - Chloride. Numeric. Range: 83-126. No missing values.
+
+**co2** - Bicarbonate (CO2). Numeric. Range: 12-40. 5 missing values.
+
+**creat** - Creatinine. Numeric. Range: 0.2-8.4. No missing values.
+
+**gluc** - Glucose. Numeric. Range: 41-486. No missing values.
+
+**cal** - Calcium. Numeric. Range: 6.5-11.8. 1 missing value.
+
+**prot** - Protein. Numeric, range 2.9-10, 0 missing values
+
+**alb** - Albumin. Numeric, range 1.2-5.5, 0 missing values
+
+**ast** - Aspartate Transaminase. Numeric, range 5-7765, 0 missing values
+
+**alt** - Alanine Transaminase. Numeric, range 1-10666, 18 missing values
+
+**alk** - Alkaline phosphatase. Numeric, range 13-1938, 0 missing values
+
+**tbil** - Total Bilirubin. Numeric, range 0.09-27, 0 missing values
+
+**active** - Active Inflammation despite Thiopurines for > 12 weeks. Numeric, range 0-1, 0 missing values
+
+**remission** - Remission of Inflammation after Thiopurines for > 12 weeks. Numeric, range 0-1, 0 missing values
+
+
+### Details
+
+Data on laboratory values for a complete blood count and chemistry panel at least 4 weeks after start of thiopurine therapy in IBD patients. Outcome variable is either active or remission at 12 weeks (2 distinct variables). The University of Michigan Hospital is in Ann Arbor, USA. These data have been anonymized and time-shifted. Age is reported in days of life. Random Forest approaches can work well in modeling Active or Remission status.
+
+#### Citation(s)
+
+These data were published in Clin Gastroenterol Hepatol. 2010 Feb;8(2):143-150.
