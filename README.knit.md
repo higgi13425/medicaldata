@@ -4,13 +4,7 @@ output: github_document
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-```{r, include = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "man/figures/README-"
-)
-```
+
 
 # medicaldata <a href="https://higgi13425.github.io/medicaldata/"><img src="man/figures/logo.png" align="right" height="139" /></a>
 
@@ -72,7 +66,8 @@ You can also find them [here in the list on the GitHub repo](https://github.com/
 
 You can read these datasets directly into R from the urls in the table below with the example code found in the following code chunk, which reads in the `messy_infarct` dataset and assigns it to the object `infarct`. It may be easiest to copy the entire code chunk below by hovering over the copy icon in the top right corner, then clicking to copy.
 
-```{r, eval=FALSE}
+
+```r
 # install.packages('openxlsx')
 # if not already installed
 library(openxlsx)
