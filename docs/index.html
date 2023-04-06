@@ -83,7 +83,7 @@
 <div class="section level2">
 <h2 id="overview">Overview<a class="anchor" aria-label="anchor" href="#overview"></a>
 </h2>
-<p>This is a data package with 17 medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is <a href="https://higgi13425.github.io/medicaldata/">here</a> and in the links at the right. This package will be useful for anyone teaching R to medical professionals, including doctors, nurses, trainees, and students. <br><br> These datasets range from reconstructed versions of James Lind’s scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association’s TSHS (Teaching Statistics in the Health Sciences) <a href="https://www.causeweb.org/tshs/category/dataset/" class="external-link">Resources Portal</a>, maintained by <a href="https://www.umass.edu/sphhs/person/carol-bigelow" class="external-link">Carol Bigelow</a> at the University of Massachusetts (with permission). A growing number of datasets in the dev version were generously donated by <a href="https://www.fharrell.com" class="external-link">Frank Harrell</a> from his website <a href="https://hbiostat.org/data/" class="external-link">here</a>. These datasets are currently only in the <a href="https://github.com/higgi13425/medicaldata/" class="external-link">dev version</a> of the package on github.com, which should make it to CRAN in June of 2022.</p>
+<p>This is a data package with 19 medical datasets for teaching Reproducible Medical Research with R. The link to the pkgdown reference website for {medicaldata} is <a href="https://higgi13425.github.io/medicaldata/">here</a> and in the links at the right. This package will be useful for anyone teaching R to medical professionals, including doctors, nurses, pharmacists, trainees, and students. <br><br> These datasets range from reconstructed versions of James Lind’s scurvy dataset (1757) and the original Streptomycin for Tuberculosis trial (1948), a 2012 RCT of indomethacin to prevent post-ERCP pancreatitis that I was involved in, to cohort data on SARS-CoV2 testing results (2020). Many of the datasets come from the American Statistical Association’s TSHS (Teaching Statistics in the Health Sciences) <a href="https://www.causeweb.org/tshs/category/dataset/" class="external-link">Resources Portal</a>, maintained by <a href="https://www.umass.edu/sphhs/person/carol-bigelow" class="external-link">Carol Bigelow</a> at the University of Massachusetts (with permission). A growing number of datasets in the dev version were generously donated by <a href="https://www.fharrell.com" class="external-link">Frank Harrell</a> from his website <a href="https://hbiostat.org/data/" class="external-link">here</a>. These datasets are currently only in the <a href="https://github.com/higgi13425/medicaldata/" class="external-link">dev version</a> of the package on github.com, which should make it to CRAN in June of 2023.</p>
 </div>
 <div class="section level2">
 <h2 id="how-to-install-and-use-medicaldata-datasets">How to Install and Use {medicaldata} Datasets<a class="anchor" aria-label="anchor" href="#how-to-install-and-use-medicaldata-datasets"></a>
@@ -218,14 +218,20 @@
 </tr>
 <tr class="odd">
 <td align="left">diabetes (dev)</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html" class="external-link">theoph_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html" class="external-link">theoph_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/diabetes_desc.html" class="external-link">diabetes_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/diabetes_codebook.html" class="external-link">diabetes_codebook</a></td>
 <td align="left">Prospective Longitudinal Cohort Study</td>
 </tr>
 <tr class="even">
+<td align="left">thiomon (dev)</td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/thiomon_desc.html" class="external-link">thiomon_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/thiomon_codebook.html" class="external-link">thiomon_codebook</a></td>
+<td align="left">Retrospective Cohort Study, suitable for ML</td>
+</tr>
+<tr class="odd">
 <td align="left">abm (dev)</td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/theoph_desc.html" class="external-link">theoph_desc</a></td>
-<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/theoph_codebook.html" class="external-link">theoph_codebook</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/description_docs/abm_desc.html" class="external-link">abm_desc</a></td>
+<td align="left"><a href="https://htmlpreview.github.io/?https://github.com/higgi13425/medicaldata/blob/master/man/codebooks/abm_codebook.html" class="external-link">abm_codebook</a></td>
 <td align="left">Retrospective Cohort Study</td>
 </tr>
 </tbody>
@@ -236,7 +242,7 @@
 </h2>
 <p>I am doing a beta test of messy datasets, largely in Excel, with many annoying non-tidy and non-rectangular features that will help teach data cleaning/wrangling. These are not actually in the package itself (as they are not R files), but can be found in the GitHub repository.</p>
 <p>You can download and open these from the GitHub repo in all of their messy Excel glory by clicking on the URL links in the table below. You can also find them <a href="https://github.com/higgi13425/medicaldata/tree/master/data-raw/messy_data" class="external-link">here in the list on the GitHub repo</a>, where you can click on one of the *.xlsx files, then click on the <code>View Raw</code> button to download it.</p>
-<p>You can read these datasets directly into R from the urls in the table below with the example code found in the following code chunk, which reads in the <code>messy_infarct</code> dataset and assigns it to the object <code>infarct</code>.</p>
+<p>You can read these datasets directly into R from the urls in the table below with the example code found in the following code chunk, which reads in the <code>messy_infarct</code> dataset and assigns it to the object <code>infarct</code>. It may be easiest to copy the entire code chunk below by hovering over the copy icon in the top right corner, then clicking to copy.</p>
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># install.packages('openxlsx')</span></span>
 <span><span class="co"># if not already installed</span></span>
@@ -252,8 +258,8 @@
 <table class="table">
 <colgroup>
 <col width="6%">
-<col width="39%">
-<col width="53%">
+<col width="40%">
+<col width="52%">
 </colgroup>
 <thead><tr class="header">
 <th align="left">Dataset</th>
@@ -263,7 +269,7 @@
 <tbody>
 <tr class="odd">
 <td align="left">messy_cirrhosis</td>
-<td align="left">“<a href="https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx" class="external-link uri">https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_infarct.xlsx</a>”</td>
+<td align="left">“<a href="https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_cirrhosis.xlsx" class="external-link uri">https://github.com/higgi13425/medicaldata/raw/master/data-raw/messy_data/messy_cirrhosis.xlsx</a>”</td>
 <td align="left">Pivot Table</td>
 </tr>
 <tr class="even">
@@ -331,6 +337,7 @@
 <li><a href="https://cran.r-project.org/package=medicaldata" class="external-link"><img src="https://www.r-pkg.org/badges/version/medicaldata" alt="CRAN status"></a></li>
 <li><a href="https://cran.r-project.org/package=medicaldata" class="external-link"><img src="https://cranlogs.r-pkg.org/badges/medicaldata"></a></li>
 <li><a href="https://zenodo.org/badge/latestdoi/385090155" class="external-link"><img src="https://zenodo.org/badge/385090155.svg" alt="DOI"></a></li>
+<li><a href="https://github.com/higgi13425/medicaldata/actions/workflows/R-CMD-check.yaml" class="external-link"><img src="https://github.com/higgi13425/medicaldata/actions/workflows/R-CMD-check.yaml/badge.svg" alt="R-CMD-check"></a></li>
 </ul>
 </div>
 

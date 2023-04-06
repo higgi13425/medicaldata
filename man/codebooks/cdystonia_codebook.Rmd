@@ -1,0 +1,43 @@
+---
+title: "Cervical Dystonia RCT data codebook"
+author: "Peter Higgins"
+date: "10/18/2020"
+output: 
+  html_document:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+library(flextable)
+```
+
+
+## Cervical Dystonia Dataset Codebook
+
+Source: <br>
+This data set is from a study published in 1999 in the journal Neurology,
+
+A. Brashear, M.F. Lew, D.D. Dykstra, C.L. Comella, S.A. Factor, R.L. Rodnitzky, R. Trosch, C. Singer, M.F. Brin, J.J. Murray, J.D. Wallace, A. Willmer–Hulme, M. Koller (1999), Safety and efficacy of NeuroBloc (botulinum toxin type B) in type A–responsive cervical dystonia. Neurology, 53(7), 1439.
+
+This dataset has been passed through Statistical Methods for the Analysis of Repeated Measurements by Charles S. Davis, pp. 161-163 (Springer, 2002) and can also be found at Frank Harrell's website here.
+
+### Codebook
+
+```{r, echo=FALSE, message=FALSE}
+cdystonia_codebook <- tribble(
+  ~variable, ~position, ~Variable_Label, ~units, ~Codes, ~type,
+  "week", 1, "Week of Observation, 0-16", NA, NA, "numeric",
+  "site", 2, "Study Site, 1-9", NA, NA, "double",
+  "id", 3, "patient id at each site (not unique across sites); 1-19", NA , NA, "numeric",
+  "treat", 4, "treatment assignment with levels: 1 = placebo, 2 = BotB5000, 3 = BotB10000", NA, NA, "double",
+  "age", 5, "Age", "years", NA, "numeric",
+  "sex", 6, "sex of participant, 1 = F, 2 = M", NA, NA, "double",
+  "twstrs", 7, "total score of Toronto Western Spasmodic Torticollis Rating Scale, range 0-87", NA, NA, "numeric"
+) %>% 
+  flextable() %>% 
+  fontsize(size = 11) %>% 
+  width(width = c(1, 0.5, 2, 0.5, 1.25, 0.5))
+cdystonia_codebook
+```

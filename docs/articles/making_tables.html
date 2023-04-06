@@ -76,7 +76,7 @@
 
 
 
-<link href="making_tables_files/tabwid-1.1.2/tabwid.css" rel="stylesheet">
+
 <div class="row">
   <main id="main" class="col-md-9"><div class="page-header">
       <img src="../logo.png" class="logo" alt=""><h1>making_tables</h1>
@@ -137,7 +137,7 @@ dataset into the tabyl function, with your desired variable
 (radiologic_6m) as the only argument to the function.</p>
 <div class="sourceCode" id="cb3"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">strep_tb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span><span class="op">)</span></span>
 <span><span class="co">#&gt;                 radiologic_6m  n    percent</span></span>
 <span><span class="co">#&gt;    6_Considerable_improvement 32 0.29906542</span></span>
 <span><span class="co">#&gt;        5_Moderate_improvement 23 0.21495327</span></span>
@@ -160,7 +160,7 @@ level, as you might want proportions that are column-wise, or
 row-wise.</p>
 <div class="sourceCode" id="cb4"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">strep_tb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span></span>
 <span><span class="co">#&gt;                 radiologic_6m Streptomycin Control</span></span>
 <span><span class="co">#&gt;    6_Considerable_improvement           28       4</span></span>
 <span><span class="co">#&gt;        5_Moderate_improvement           10      13</span></span>
@@ -181,8 +181,8 @@ the right), with the <code>where</code> argument to the adorn_totals
 function.</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">strep_tb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="co"># add a total row</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="co"># add a total row</span></span>
 <span><span class="co">#&gt;                 radiologic_6m Streptomycin Control</span></span>
 <span><span class="co">#&gt;    6_Considerable_improvement           28       4</span></span>
 <span><span class="co">#&gt;        5_Moderate_improvement           10      13</span></span>
@@ -203,11 +203,11 @@ we want the counts to be listed first, with the argument
 <code>position = "front"</code> in the adorn_ns function.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">strep_tb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="co">#2 dimensional table, RxC</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="co"># add totals row</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span>  <span class="co"># put n first</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="co">#2 dimensional table, RxC</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> <span class="co"># add totals row</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span>  <span class="co"># put n first</span></span>
 <span><span class="co">#&gt;                 radiologic_6m Streptomycin     Control</span></span>
 <span><span class="co">#&gt;    6_Considerable_improvement  28  (50.9%)  4   (7.7%)</span></span>
 <span><span class="co">#&gt;        5_Moderate_improvement  10  (18.2%) 13  (25.0%)</span></span>
@@ -228,105 +228,59 @@ format. Flextables can be output to MS Word, powerpoint, HTML, and PDF,
 through Rmarkdown.</p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">strep_tb</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span></span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
-<span>  <span class="fu"><a href="https://rdrr.io/pkg/janitor/man/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>   <span class="co"># put n first</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/tabyl.html" class="external-link">tabyl</a></span><span class="op">(</span><span class="va">radiologic_6m</span>, <span class="va">arm</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_totals.html" class="external-link">adorn_totals</a></span><span class="op">(</span>where <span class="op">=</span> <span class="st">"row"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_percentages.html" class="external-link">adorn_percentages</a></span><span class="op">(</span><span class="st">"col"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>  <span class="co"># column-wise percentages</span></span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_pct_formatting.html" class="external-link">adorn_pct_formatting</a></span><span class="op">(</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span> </span>
+<span>  <span class="fu"><a href="https://sfirke.github.io/janitor/reference/adorn_ns.html" class="external-link">adorn_ns</a></span><span class="op">(</span>position <span class="op">=</span> <span class="st">"front"</span><span class="op">)</span> <span class="op"><a href="https://magrittr.tidyverse.org/reference/pipe.html" class="external-link">%&gt;%</a></span>   <span class="co"># put n first</span></span>
 <span>  <span class="fu">flextable</span><span class="fu">::</span><span class="fu"><a href="https://davidgohel.github.io/flextable/reference/flextable.html" class="external-link">flextable</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<template id="4cb303f1-c421-4e51-ac67-765b8726d0ca"><style>
-.tabwid table{
-  border-spacing:0px !important;
-  border-collapse:collapse;
-  line-height:1;
-  margin-left:auto;
-  margin-right:auto;
-  border-width: 0;
-  border-color: transparent;
-  caption-side: top;
-}
-.tabwid-caption-bottom table{
-  caption-side: bottom;
-}
-.tabwid_left table{
-  margin-left:0;
-}
-.tabwid_right table{
-  margin-right:0;
-}
-.tabwid td, .tabwid th {
-    padding: 0;
-}
-.tabwid a {
-  text-decoration: none;
-}
-.tabwid thead {
-    background-color: transparent;
-}
-.tabwid tfoot {
-    background-color: transparent;
-}
-.tabwid table tr {
-background-color: transparent;
-}
-.katex-display {
-    margin: 0 0 !important;
-}
-</style>
 <div class="tabwid">
-<style>.cl-de7602ba{}.cl-de7202aa{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-de740a50{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-de7413ce{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 2pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-de7413d8{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-de7413d9{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 2pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
-<table class="table cl-de7602ba">
+<style>.cl-241c444c{}.cl-2418e266{font-family:'Helvetica';font-size:11pt;font-weight:normal;font-style:normal;text-decoration:none;color:rgba(0, 0, 0, 1.00);background-color:transparent;}.cl-241a5560{margin:0;text-align:left;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);padding-bottom:5pt;padding-top:5pt;padding-left:5pt;padding-right:5pt;line-height: 1;background-color:transparent;}.cl-241a5ea2{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 1.5pt solid rgba(102, 102, 102, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-241a5ea3{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 0 solid rgba(0, 0, 0, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}.cl-241a5eac{width:0.75in;background-color:transparent;vertical-align: middle;border-bottom: 1.5pt solid rgba(102, 102, 102, 1.00);border-top: 0 solid rgba(0, 0, 0, 1.00);border-left: 0 solid rgba(0, 0, 0, 1.00);border-right: 0 solid rgba(0, 0, 0, 1.00);margin-bottom:0;margin-top:0;margin-left:0;margin-right:0;}</style>
+<table data-quarto-disable-processing="true" class="table cl-241c444c">
 <thead><tr style="overflow-wrap:break-word;">
-<th class="cl-de7413ce"><p class="cl-de740a50"><span class="cl-de7202aa">radiologic_6m</span></p></th>
-<th class="cl-de7413ce"><p class="cl-de740a50"><span class="cl-de7202aa">Streptomycin</span></p></th>
-<th class="cl-de7413ce"><p class="cl-de740a50"><span class="cl-de7202aa">Control</span></p></th>
+<th class="cl-241a5ea2"><p class="cl-241a5560"><span class="cl-2418e266">radiologic_6m</span></p></th>
+<th class="cl-241a5ea2"><p class="cl-241a5560"><span class="cl-2418e266">Streptomycin</span></p></th>
+<th class="cl-241a5ea2"><p class="cl-241a5560"><span class="cl-2418e266">Control</span></p></th>
 </tr></thead>
 <tbody>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">6_Considerable_improvement</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">28  (50.9%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 4   (7.7%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">6_Considerable_improvement</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">28  (50.9%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">4   (7.7%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">5_Moderate_improvement</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">10  (18.2%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">13  (25.0%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">5_Moderate_improvement</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">10  (18.2%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">13  (25.0%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">4_No_change</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 2   (3.6%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 3   (5.8%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">4_No_change</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">2   (3.6%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">3   (5.8%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">3_Moderate_deterioration</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 5   (9.1%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">12  (23.1%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">3_Moderate_deterioration</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">5   (9.1%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">12  (23.1%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">2_Considerable_deterioration</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 6  (10.9%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 6  (11.5%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">2_Considerable_deterioration</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">6  (10.9%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">6  (11.5%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">1_Death</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa"> 4   (7.3%)</span></p></td>
-<td class="cl-de7413d8"><p class="cl-de740a50"><span class="cl-de7202aa">14  (26.9%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">1_Death</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">4   (7.3%)</span></p></td>
+<td class="cl-241a5ea3"><p class="cl-241a5560"><span class="cl-2418e266">14  (26.9%)</span></p></td>
 </tr>
 <tr style="overflow-wrap:break-word;">
-<td class="cl-de7413d9"><p class="cl-de740a50"><span class="cl-de7202aa">Total</span></p></td>
-<td class="cl-de7413d9"><p class="cl-de740a50"><span class="cl-de7202aa">55 (100.0%)</span></p></td>
-<td class="cl-de7413d9"><p class="cl-de740a50"><span class="cl-de7202aa">52 (100.0%)</span></p></td>
+<td class="cl-241a5eac"><p class="cl-241a5560"><span class="cl-2418e266">Total</span></p></td>
+<td class="cl-241a5eac"><p class="cl-241a5560"><span class="cl-2418e266">55 (100.0%)</span></p></td>
+<td class="cl-241a5eac"><p class="cl-241a5560"><span class="cl-2418e266">52 (100.0%)</span></p></td>
 </tr>
 </tbody>
 </table>
-</div></template><div class="flextable-shadow-host" id="74a96a20-c9df-4b8b-8d92-525572b28d57"></div>
-<script>
-var dest = document.getElementById("74a96a20-c9df-4b8b-8d92-525572b28d57");
-var template = document.getElementById("4cb303f1-c421-4e51-ac67-765b8726d0ca");
-var fantome = dest.attachShadow({mode: 'open'});
-var templateContent = template.content;
-fantome.appendChild(templateContent);
-</script>
+</div>
 </div>
 <div class="section level2">
 <h2 id="try-this-yourself">Try this Yourself<a class="anchor" aria-label="anchor" href="#try-this-yourself"></a>

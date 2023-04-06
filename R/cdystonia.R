@@ -1,0 +1,31 @@
+#' @title
+#' RCT of Botulinum Toxin B for Cervical Dystonia
+#'
+#' @description
+#' Longitudinal esults of a randomized, placebo-controlled trial of botulinum toxin type B (BotB) in 109 subjects across 9 sites. (**more details** available below the variable definitions). \cr
+#'
+#' @details
+#' Cervical dystonia, also called spasmodic torticollis, is a painful condition in which your neck muscles contract involuntarily, causing your head to twist or turn to one side. Cervical dystonia can also cause your head to uncontrollably tilt forward or backward. \cr
+#' A rare disorder that can occur at any age, cervical dystonia most often occurs in middle-aged people, women more than men. Symptoms generally begin gradually and then reach a point where they don't get substantially worse.\cr
+#' 109 subjects across 9 sites were randomized to placebo (N = 36), 5000 units of botulinum toxin B (N = 36), or 10,000 units of botulinum toxin B (N = 37), injected into the affected muscle to partially paralyze it and make it relax, releasing the spasmed side of the neck and head.\cr
+#' The response variable is the score on the Toronto Western Spasmodic Torticollis Rating Scale (TWSTRS-Total on a 0-87 scale), which measures the severity, pain, and disability of cervical dystonia (higher scores mean more impairment) at weeks 0 (baseline), 2, 4, 8, 12, and 16. It is expected that the single botox injection at week 0 may wear off over time.
+#'
+#'
+#' @format A data frame with 631 observations and 7 variables
+#' \describe{
+#'   \item{week}{week of measurement; type: numeric}
+#'   \item{site}{study site, levels: 1-9; type: double}
+#'   \item{id}{patient id at each site (not unique across sites); type: numeric 1-19}
+#'   \item{treat}{treatmentm assignment: levels: placebo, BotB5000, BotB10000; type: double 1-3)}
+#'   \item{age}{age in years, range 26-83; type: numeric}
+#'   \item{sex}{sex of participant, 1 = F, 2 = M; type: double}
+#'   \item{twstrs}{total score of Toronto Western Spasmodic Torticollis Rating Scale, range 0-87; type: numeric}
+#' }
+#'
+#' @source This data set is from a study published in 1999 in the journal *Neurology*,\cr
+#' \cr
+#' A. Brashear, M.F. Lew, D.D. Dykstra, C.L. Comella, S.A. Factor, R.L. Rodnitzky, R. Trosch, C. Singer, M.F. Brin, J.J. Murray, J.D. Wallace, A. Willmer–Hulme, M. Koller (1999), *Safety and efficacy of NeuroBloc (botulinum toxin type B) in type A–responsive cervical dystonia*. Neurology, 53(7), 1439.
+#'
+#' This dataset has been passed through Statistical Methods for the Analysis of Repeated Measurements by Charles S. Davis, pp. 161-163 (Springer, 2002) and can also be found at Frank Harrell's website [here](https://hbiostat.org/data/).
+#'
+"cdystonia"

@@ -1,0 +1,54 @@
+---
+title: "Botulinum Toxin B vs Placebo RCT for Cervical Dystonia Dataset Description Document"
+author: "Peter Higgins"
+date: "4/5/2023"
+output: 
+  html_document:
+    theme: cerulean
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Source: 
+
+This data set is from a study published in 1999 in the journal Neurology,
+
+A. Brashear, M.F. Lew, D.D. Dykstra, C.L. Comella, S.A. Factor, R.L. Rodnitzky, R. Trosch, C. Singer, M.F. Brin, J.J. Murray, J.D. Wallace, A. Willmer–Hulme, M. Koller (1999), Safety and efficacy of NeuroBloc (botulinum toxin type B) in type A–responsive cervical dystonia. Neurology, 53(7), 1439.
+
+This dataset has been passed through Statistical Methods for the Analysis of Repeated Measurements by Charles S. Davis, pp. 161-163 (Springer, 2002) and can also be found at Frank Harrell's website here.
+
+### Abstract
+
+Longitudinal results of a randomized, placebo-controlled trial of botulinum toxin type B (BotB) in 109 subjects across 9 sites. (more details available below the variable definitions).
+
+### Background
+
+Cervical dystonia, also called spasmodic torticollis, is a painful condition in which your neck muscles contract involuntarily, causing your head to twist or turn to one side. Cervical dystonia can also cause your head to uncontrollably tilt forward or backward.
+A rare disorder that can occur at any age, cervical dystonia most often occurs in middle-aged people, women more than men. Symptoms generally begin gradually and then reach a point where they don't get substantially worse.
+109 subjects across 9 sites were randomized to placebo (N = 36), 5000 units of botulinum toxin B (N = 36), or 10,000 units of botulinum toxin B (N = 37), injected into the affected muscle to partially paralyze it and make it relax, releasing the spasmed side of the neck and head.
+The response variable is the score on the Toronto Western Spasmodic Torticollis Rating Scale (TWSTRS-Total on a 0-87 scale), which measures the severity, pain, and disability of cervical dystonia (higher scores mean more impairment) at weeks 0 (baseline), 2, 4, 8, 12, and 16. It is expected that the single botox injection at week 0 may wear off over time.
+
+### Study Design
+
+Prospective randomized controlled trial of two doses of botulinum toxin B vs. placebo in the treatment of cervical dystonia (torticollis.
+
+### Subjects & Variables
+
+109 participants across 9 sites were assigned to 1 of 2 doses of botox B, 5000 or 10,000 units injected into the affected neck muscles, or a placebo injection, and followed for 16 weeks. 
+
+7 variables
+
+- week (0-16)
+- site (1-9)
+- id (1-19, not unique across sites)
+- treat (1= placebo, 2 = 5,000 units botox B, 3 = 10,000 units botox B)
+- age (in years)
+- sex (1 = F, 2 = M)
+- twstrs (total score of Toronto Western Spasmodic Torticollis Rating Scale, range 0-87)
+
+#### Citation
+
+A. Brashear, M.F. Lew, D.D. Dykstra, C.L. Comella, S.A. Factor, R.L. Rodnitzky, R. Trosch, C. Singer, M.F. Brin, J.J. Murray, J.D. Wallace, A. Willmer–Hulme, M. Koller (1999), Safety and efficacy of NeuroBloc (botulinum toxin type B) in type A–responsive cervical dystonia. Neurology, 53(7), 1439.
+

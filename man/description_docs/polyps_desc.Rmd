@@ -21,7 +21,7 @@ This dataset is derived from and improved upon from the {HSAUR} package.
 
 ### Abstract
 
-A case-control epidemiological study of the association between alcohol, smoking, and esophageal cancer.
+A randomized, controlled trial of sulindac to reduce colon polyp formation in patients with familial adenomatous polyposis.
 
 ### Background
 
@@ -52,4 +52,3 @@ N = 22 subjects (2 dropped out between month 3 and 12)
 #### Citation
 
 F. M. Giardiello, S. R. Hamilton, A. J. Krush, S. Piantadosi, L. M. Hylind, P. Celano, S. V. Booker, C. R. Robinson and G. J. A. Offerhaus (1993), Treatment of colonic and rectal adenomas with sulindac in familial adenomatous polyposis. New England Journal of Medicine, 328(18), 1313–1316.
-
