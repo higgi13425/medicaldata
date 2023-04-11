@@ -26,10 +26,10 @@
 #' \describe{
 #' \item{\code{ID}}{Patient ID, numeric, range:  1-64}
 #' \item{\code{age}}{Recipient age at transplant, numeric, range: 29-67}
-#' \item{\code{sex}}{Recipient sex, numeric, range:  0 (male) - 1(female)}
-#' \item{\code{race}}{Recipient race, numeric, range:  0 (white) - 1 (african-american)}
+#' \item{\code{sex}}{Recipient sex, numeric, range:  0 (female) - 1(male)}
+#' \item{\code{race}}{Recipient race, numeric, range:  0 (african-american) - 1 (white)}
 #' \item{\code{diagnosis}}{type: character, levels: 13}
-#' \item{\code{diagnosis.type}}{Category of cancer diagnosis, numeric, range:  0 (myeloid) - 1 (lymphoid)}
+#' \item{\code{diagnosis.type}}{Category of cancer diagnosis, numeric, range:  0 (lymphoid) - 1 (myeloid)}
 #' \item{\code{time.to.transplant}}{Time from cancer diagnosis to transplant (months), numeric, range:  1.84-173.8}
 #' \item{\code{prior.radiation}}{Prior radiation therapy, numeric, range:  0 (no) - 1 (yes)}
 #' \item{\code{prior.chemo}}{Number of prior chemotherapy regimens, numeric, range:  0-8}
