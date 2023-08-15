@@ -31,7 +31,7 @@ strep_tb_codebook <- tribble(
   "dose_PAS_g", 4, "Dose of Para-Amino-Salicylate in Grams", "grams", NA, "numeric",
   "gender", 5, "Gender", NA, "M = Male, F = Female", "factor",
   "baseline_condition", 6, "Condition of the Patient at Baseline", NA, "1_Good, 2_Fair, 3_Poor", "factor",
-  "baseline_temp", 7, "Oral Temperature at Baseline", "Degrees F", "1_98-98.9F, 2_99-99.9F, 3_100-100.9F, 4_100F+", "factor",
+  "baseline_temp", 7, "Oral Temperature at Baseline", "Degrees F", "1_<=98.9F/37.2C, 2_99-99.9F/37.3-37.7C, 3_100-100.9F/37.8-38.2C, 4_>=101F/38.3C", "factor",
   "baseline_esr", 8, "Erythrocyte Sedimentation Rate at baseline", "millimeters per hour", "1_1-10, 2_11-20, 3_21-50, 4_51+", "factor",
   "baseline_cavitation", 9, "Cavitation of the Lungs on chest X-ray at baseline", NA, "yes, no", "factor",
   "strep_resistance", 10, "Resistance to Streptomycin at 6m", NA, "1_sens_0-8, 2_mod_8-99, 3_resist_100+", "factor",
