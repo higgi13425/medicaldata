@@ -1,0 +1,89 @@
+---
+title: "Filtering with Multiple Logical Statements"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+knitr::opts_chunk$set(echo = FALSE)
+prostate <- medicaldata::blood_storage %>% 
+  clean_names() %>% as_tibble()
+```
+
+
+## Filtering with Multiple Logical Statements
+
+We will start with the prostate dataset, and combine multiple logical statements to filteR our Rows.
+
+
+### Exercise 1
+
+Write the R code required to filter the prostate dataset to rows with **both** a prostate volume (p_vol) greater than 90 AND a tumor volume (t_vol) >2.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  select(age, p_vol, t_vol) %>% 
+  filter()
+```
+
+```{r ex1-hint}
+prostate %>% 
+  select(age, p_vol, t_vol) %>% 
+  filter(p_vol > 90 & t_vol >2)
+```
+
+### Exercise 2
+
+Write the R code required to filter the prostate dataset to rows with either a family history (fam_hx) of prostate cancer or a preop_psa >20.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  select(age, preop_psa, fam_hx) %>% 
+  filter()
+```
+
+```{r ex2-hint}
+prostate %>% 
+  select(age, preop_psa, fam_hx) %>% 
+  filter(fam_hx ==1 | preop_psa > 20)
+
+```
+
+### Exercise 3
+
+Write the R code required to filter the prostate dataset to high risk patients who are either African-American (aa), or have a surgical Gleason score (s_gs) of 4, but not both
+
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  select(age, aa, s_gs) %>% 
+  filter()
+```
+
+```{r ex3-hint}
+prostate %>% 
+  select(age, aa, s_gs) %>% 
+  filter(xor(aa ==1, s_gs == 4))
+```
+
+### Exercise 4
+
+Write the R code required to filter the prostate dataset to rows with (age >70 OR preop_psa >= 15) AND
+**not** African-american.
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  select(age, preop_psa, aa) %>% 
+  filter()
+```
+
+```{r ex4-hint}
+prostate %>% 
+  select(age, preop_psa, aa) %>% 
+  filter( (age > 70 | preop_psa >= 15) & aa != 1)
+```
+

@@ -1,0 +1,162 @@
+---
+title: "The Problem of Missing Data"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+library(visdat)
+library(magrittr)
+ 
+knitr::opts_chunk$set(echo = FALSE)
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+smartpill_empty <- smartpill
+smartpill_empty[20:50, ] <- NA
+prostate <- medicaldata::blood_storage %>% clean_names() %>% as_tibble() 
+```
+
+## The Problem of Missing Data
+
+Missing data are quite common in real-world datasets, and cause a lot of problems, particularly with modeling.
+
+Let's take a look at 3 datasets in the {medicaldata} package to see if they have missing data. We will use the {visdat} package to visualize the missing data.
+
+### Prostate
+
+First, let's explore the missingness of the prostate dataset
+
+```{r echo=TRUE}
+prostate %>% 
+  visdat::vis_dat()
+```
+
+You can see that there are some missing data in the 316 observations for the variables p_vol, t_vol, and t_stage, and a few for preop_psa.
+
+### CMV
+
+Next, let's explore the missingness of the cmv dataset
+
+```{r echo=TRUE}
+cmv %>% 
+  visdat::vis_dat()
+```
+
+You can see that there are some missing data in the diganosis_type, cd_8 dose, and some for cd3_dose.
+
+### Smartpill
+
+Next, let's explore missingness in the smartpill dataset
+
+```{r, echo=TRUE}
+smartpill %>% 
+  vis_dat()
+```
+
+You can see that there are lots of missing data in the 95 observations for the variables that measure something other than time, but these are correlated in particular patients, who may have used older smartpills that could only measure time, and not contractions or amplitudes.
+
+### Exercise 1
+
+Write the R code required to filter the prostate dataset to rows with missing data (NA) in the prostate volume (p_vol) variable.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  select(age, aa, p_vol) %>%
+  filter(---)
+```
+
+```{r ex1-hint, error=TRUE}
+prostate %>% 
+  select(age, aa, p_vol) %>%
+  filter(is.na(p_vol))
+```
+
+### Exercise 2
+
+Write the R code required to filter the cmv dataset to **exclude** rows that have a missing value (NA) for cd8_dose.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  select(id, diagnosis, cd8_dose) %>%
+  filter(---)
+```
+
+```{r ex2-hint-1, error=TRUE}
+cmv %>% 
+  select(id, diagnosis, cd8_dose) %>%
+  filter(!is.na(---))
+```
+
+```{r ex2-solution, error=TRUE}
+cmv %>% 
+  select(id, diagnosis, cd8_dose) %>%
+  filter(!is.na(cd8_dose))
+```
+
+### Exercise 3
+
+The smartpill_empty dataset has completely empty rows in rows 20 to 50. Write the R code required to remove these empty rows from this dataset.
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+smartpill_empty %>% 
+  ---_---("---")
+```
+
+```{r ex3-hint-1, error=TRUE}
+smartpill_empty %>% 
+  remove_empty("---")
+```
+
+```{r ex3-solution, error=TRUE}
+smartpill_empty %>% 
+  remove_empty("rows")
+```
+
+### Exercise 4
+
+Write the R code required to drop all observations in the cmv dataset that have at least one variable with missing data (NA).
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  ----()
+```
+
+```{r ex4-hint, error=TRUE}
+cmv %>% 
+  drop_na()
+```
+
+### Exercise 5
+
+Write the R code required to visualize the missing data (with the \_vis_dat()\_ function from the {visdat} package) before and after dropping missing observations from the cmv dataset.
+
+```{r ex5, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  ---() 
+
+cmv %>% 
+  drop_na() %>% 
+  ---()
+```
+
+```{r ex5-hint, error=TRUE, lines = 5}
+cmv %>% 
+  vis_dat() 
+
+cmv %>% 
+  drop_na() %>% 
+  ---()
+```
+
+```{r ex5-solution, error=TRUE}
+cmv %>% 
+  vis_dat() 
+
+cmv %>% 
+  drop_na() %>% 
+  vis_dat()
+```

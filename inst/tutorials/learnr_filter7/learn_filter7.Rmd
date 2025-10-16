@@ -1,0 +1,88 @@
+---
+title: "Slicing Data by Position (row number)"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+library(visdat)
+ 
+knitr::opts_chunk$set(echo = FALSE)
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+supra <- medicaldata::supraclavicular %>% clean_names() %>% as_tibble() 
+```
+
+## Slicing Data by Position (row number)
+
+There are times when it is helpful to have just a slice of your data, sometimes to peruse it as a quality check on your data wrangling. This is when _head()_ (first 6 observations) and _tail()_ (first 6 observations) functions are often used. The slice family of functions similarly slices rows from your dataset by position, but can do a bit more than just 6 rows. Slice functions can pick out any set of N contiguous rows, slice a proportion of rows, and pick out the N (or proportion) of rows with the highest or lowest values for a particular variable.
+
+### Exercise 1
+
+Write the R code required to slice the smartpill dataset to give you rows 22 to 95, after you switched to the newer model of smartpill (after study participant 21). Check the number of rows when you are done.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+smartpill %>% 
+  slice(-- : --)
+```
+
+```{r ex1-hint, error=TRUE}
+smartpill %>% 
+  slice(22:95)
+```
+
+### Exercise 2
+
+Write the R code required to filter the cmv dataset to the rows containing the 10 highest values for time_to_transplant in months.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  ----(time_to_transplant, ---)
+```
+
+```{r ex2-hint-1, error=TRUE}
+raa %>% 
+  slice_max(time_to_transplant, ---)
+```
+
+```{r ex2-solution, error=TRUE}
+raa %>% 
+  slice_max(time_to_transplant, n = 10)
+```
+
+### Exercise 3
+
+Write the R code required to filter the smartpill dataset to the rows containing the shortest decile of whole gut transit times (wg_time) in hours.
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+smartpill  %>% 
+  --(wg_time, ---)
+```
+
+```{r ex3-hint-1, error=TRUE}
+smartpill  %>% 
+  slice_min(wg_time, prop = )
+```
+
+```{r ex3-solution, error=TRUE}
+smartpill  %>% 
+  slice_min(wg_time, prop = 0.1)
+```
+
+### Exercise 4
+
+Write the R code required to filter for the last 35 rows of the supra dataset.
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+supra %>% 
+  ---(---)
+```
+
+```{r ex4-hint, error=TRUE}
+supra %>% 
+  slice_tail(n=35)
+```

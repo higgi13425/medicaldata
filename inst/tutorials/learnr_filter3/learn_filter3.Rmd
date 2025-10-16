@@ -1,0 +1,106 @@
+---
+title: "Filtering Strings"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+knitr::opts_chunk$set(echo = FALSE)
+
+# can comment out the next line so shiny will run,
+# but then exercises won't work
+covid <- medicaldata::covid_testing 
+```
+
+
+## Filtering Strings
+
+We will start with the covid dataset, and combine multiple logical statements to filteR our Rows.
+
+
+### Exercise 1
+
+Write the R code required to filter the covid dataset to rows with **both** a fake_first_name of "penny" and a fake_first_name of "targaryen".
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+covid %>% 
+  select(subject_id, fake_first_name, fake_last_name) %>%
+  filter(--- & ---)
+```
+
+```{r ex1-hint}
+covid %>% 
+  select(subject_id, fake_first_name, fake_last_name) %>%
+  filter(fake_first_name == "penny" & fake_last_name == "targaryen")
+```
+
+### Exercise 2
+
+Write the R code required to filter the covid dataset to rows with a payor_group of "government".
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+covid %>% 
+  select(subject_id, patient_class, payor_group) %>% 
+  filter()
+```
+
+```{r ex2-hint}
+covid %>% 
+  select(subject_id, patient_class, payor_group) %>% 
+  filter(payor_group == "government")
+```
+
+### Exercise 3
+
+Write the R code required to filter the covid dataset to subjects who were seen in some part of radiology (includes the string "rad" in the clinic_name variable). Page through the results to check your work.
+
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+covid %>% 
+  select(study_id, clinic_name) %>% 
+  filter(str_detect())
+```
+
+```{r ex3-hint}
+covid %>% 
+  select(subject_id, clinic_name) %>% 
+  filter(str_detect(clinic_name, "rad"))
+```
+
+### Exercise 4
+
+Write the R code required to filter the covid dataset to subjects who were **NOT** seen in any clinical setting that ends in "ology". Page through the results to check your work.
+
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+covid %>% 
+  select(subject_id, clinic_name) %>% 
+  filter(---)
+```
+
+```{r ex4-hint}
+covid %>% 
+  select(subject_id, clinic_name) %>% 
+  filter(!str_detect(clinic_name, "ology"))
+```
+
+### Exercise 5
+
+Write the R code required to filter the covid dataset to subjects who were in a patient_class seen by surgery. Page through the results to check your work.
+
+
+```{r ex5, exercise=TRUE, error=TRUE, lines = 5}
+covid %>% 
+  select(subject_id, patient_class) %>% 
+  filter(---)
+```
+
+```{r ex5-hint}
+covid %>% 
+  select(subject_id, patient_class) %>% 
+  filter(str_detect(patient_class, "surgery"))
+```

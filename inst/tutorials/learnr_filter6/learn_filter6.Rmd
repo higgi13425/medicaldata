@@ -1,0 +1,93 @@
+---
+title: "The Problem of Duplicate Data"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+ 
+knitr::opts_chunk$set(echo = FALSE)
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+cmv_extra <- slice(cmv, 32:64)
+cmv <- bind_rows(cmv, cmv_extra)
+
+prostate <-medicaldata::blood_storage %>% clean_names() %>% as_tibble() 
+prostate_extra <- slice(prostate, 15:22)
+prostate <- bind_rows(prostate, prostate_extra)
+```
+
+## The Problem of Duplicate Data
+
+Sometimes you get get duplicate entries of the same observation, either from data entry errors, or from errors in merging data from different sources, or from data queries on different days. It is important to identify and remove these duplicates before you do your analysis. The *distinct()* function will tell you how many distinct rows you have, and the *get_dupes()* function from the {janitor} package will help you identify the duplicates for fixing.
+
+### Exercise 1
+
+The example below counts the number of rows in a version of the prostate dataset which has some duplicate rows. Add the R code required to count the number of distinct rows.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  nrow()
+
+prostate %>% 
+  ---()
+```
+
+```{r ex1-hint, error=TRUE}
+prostate %>% 
+  nrow()
+
+prostate %>% 
+  distinct()
+```
+
+### Exercise 2
+
+Write the R code required to find the duplicate rows in the prostate dataset.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+prostate %>% 
+  ---()
+```
+
+```{r ex2-solution, error=TRUE}
+prostate %>% 
+  get_dupes()
+```
+
+### Exercise 3
+
+This version of the cmv dataset has some duplicate rows. Add the R code required to count the number of distinct rows.
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  nrow()
+
+cmv %>% 
+  ---()
+```
+
+```{r ex3-solution, error=TRUE}
+cmv %>% 
+  nrow()
+
+cmv %>% 
+  distinct()
+```
+
+### Exercise 4
+
+Write the R code required to find the duplicate rows in the cmv dataset.
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+cmv %>% 
+  ----()
+```
+
+```{r ex4-hint, error=TRUE}
+cmv %>% 
+  get_dupes()
+```

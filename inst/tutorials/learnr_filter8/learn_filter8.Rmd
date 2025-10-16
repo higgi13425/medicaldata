@@ -1,0 +1,90 @@
+---
+title: "Randomly Sampling your Data"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+ 
+knitr::opts_chunk$set(echo = FALSE)
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+supra <- medicaldata::supraclavicular %>% clean_names() %>% as_tibble() 
+```
+
+## Randomly Sampling your Data with *slice_sample()*
+
+There are times when it is helpful to have a representative random sample of your data. Sometimes this is helpful to have a smaller dataset on which to develop your code (especially when you have a really large dataset that makes your computer slow down). At other times, you want to split your large dataset into a training set and a testing set for modeling. The idea is to randomly sample \~ 70-80% of your data to train several models, then pick the best one to test on the complementary dataset of testing data. There should be no data in common between your training and testing set in order to get unbiased estimates of the accuracy of your model.
+
+### Exercise 1
+
+Write the R code required to randomly sample 70 rows of the supra dataset.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+supra %>% 
+  ---(---)
+```
+
+```{r ex1-hint, error=TRUE}
+supra %>% 
+  slice_sample(n = ---)
+```
+
+```{r ex1-solution, error=TRUE}
+supra %>% 
+  slice_sample(n = 70)
+```
+
+### Exercise 2
+
+Write the R code required to randomly sample 30% of the smartpill dataset.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+smartpill %>% 
+  ---(---)
+```
+
+```{r ex2-hint, error=TRUE}
+smartpill %>% 
+  slice_sample(prop = ---)
+```
+
+```{r ex2-solution, error=TRUE}
+smartpill %>% 
+  slice_sample(prop = 0.3)
+```
+
+### Exercise 3
+
+Write the R code required to use slice_sample() to randomly sample a 75% testing set from cmv, and assign it to training_set. Then use an antijoin() function to make a complementary 25% testing set from the cmv dataset. Check example 2 in the flipbook if you need help.
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+cmv  %>% 
+  ---(???) ->
+training_set
+
+cmv %>% 
+  ---(???)
+```
+
+```{r ex3-hint-1, error=TRUE}
+cmv  %>% 
+  slice_sample(???) ->
+training_set
+
+cmv %>% 
+  anti_join(???)
+```
+
+```{r ex3-solution, error=TRUE}
+cmv  %>% 
+  slice_sample(prop = .75) ->
+training_set
+
+cmv %>% 
+  anti_join(training_set)
+```

@@ -1,0 +1,148 @@
+---
+title: "Filtering Dates with Lubridate"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+library(medicaldata)
+library(janitor)
+library(lubridate)
+knitr::opts_chunk$set(echo = FALSE)
+
+# can comment out the next 2 lines to get this app to run,
+# but then exercises 1 and 2 fail
+covid_dates <- medicaldata::covid_testing %>%
+  mutate(fake_date = lubridate::ymd("2020-03-01") + pan_day)
+
+bmt_dates <- medicaldata::cytomegalovirus %>% 
+  clean_names() %>% 
+  mutate(fake_dx_date = ymd("2014-01-01") + days(round(runif(1,1,364))),
+  fake_bmt_date = fake_dx_date + days(round(time_to_transplant*30)),
+  fake_agvhd_date = fake_bmt_date + days(round(time_to_agvhd*30)))
+
+```
+
+
+
+
+## Filtering Dates with Lubridate
+
+We will start with the covid dataset, and filteR for observations on particular dates.
+
+### Exercise 1
+
+Write the R code required to filter the covid_dates dataset to rows with a fake_date of April 7, 2020.
+
+```{r ex1, exercise=TRUE, error=TRUE, lines = 5}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(---)
+```
+
+```{r ex1-hint, error=TRUE}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(fake_date == ymd("2020-04-07"))
+```
+
+### Exercise 2
+
+Write the R code required to filter the covid_dates dataset to rows with a fake_date between March 10, 2020, and March 17, 2020.
+
+```{r ex2, exercise=TRUE, error=TRUE, lines = 5}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(---)
+```
+
+```{r ex2-hint-1, error=TRUE}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(between(fake_date, ---, ---)) %>%
+  arrange(fake_date)
+```
+
+```{r ex2-hint-2, error=TRUE}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(between(fake_date, ymd(---), ymd(---))) %>%
+  arrange(fake_date)
+```
+
+```{r ex2-solution, error=TRUE}
+covid_dates %>%
+  select(subject_id, fake_date) %>%
+  filter(between(fake_date, ymd("2020-03-10"), ymd("2020-03-17"))) %>%
+  arrange(fake_date)
+```
+
+
+### Exercise 3
+
+Write the R code required to filter the bmt_dates dataset to rows with a fake_avghd_date after a date two years before June 1, 2020.
+
+```{r ex3, exercise=TRUE, error=TRUE, lines = 5}
+bmt_dates %>%
+  select(id, fake_agvhd_date) %>%
+  filter(---)
+```
+
+```{r ex3-hint-1, error=TRUE}
+bmt_dates %>%
+  select(id, fake_agvhd_date) %>%
+  filter(fake_agvhd_date >
+           today() -   ---)
+```
+
+```{r ex3-solution, error=TRUE}
+bmt_dates %>%
+  select(id, fake_agvhd_date) %>%
+  filter(fake_agvhd_date >
+           ymd("2020-06-30") - years(2))
+```
+
+### Exercise 4
+
+Write the R code required to filter the bmt_dates dataset to subjects with a fake_bmt_date on a Wednesday (the 4th weekday). You should get 11 observations.
+
+
+```{r ex4, exercise=TRUE, error=TRUE, lines = 5}
+bmt_dates %>%
+  select(id, fake_bmt_date) %>%
+  filter(---)
+```
+
+```{r ex4-hint, error=TRUE}
+bmt_dates %>%
+  select(id, fake_bmt_date) %>%
+  filter(wday(fake_bmt_date) == 4)
+```
+
+### Exercise 5
+
+Write the R code required to filter the bmt_dates dataset to subjects who had a bone marrow transplant between January 1, 2017 and December 31, 2020.
+
+
+```{r ex5, exercise=TRUE, error=TRUE, lines = 5}
+bmt_dates %>%
+  select(id, fake_bmt_date) %>%
+  filter(---) %>%
+  arrange(fake_bmt_date)
+```
+
+```{r ex5-hint, error=TRUE, lines = 5}
+bmt_dates %>%
+  select(id, fake_bmt_date) %>%
+  filter(---) %>%
+  arrange(fake_bmt_date)
+```
+
+```{r ex5-solution, error=TRUE}
+bmt_dates %>%
+  select(id, fake_bmt_date) %>%
+  filter(between(fake_bmt_date, ymd("2017-01-01"), ymd("2020-12-31"))) %>%
+  arrange(fake_bmt_date)
+```
