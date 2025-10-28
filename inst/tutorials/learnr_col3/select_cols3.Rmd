@@ -1,0 +1,246 @@
+---
+title: "Selecting Columns With {tidyselect}"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(medicaldata)
+library(tidyverse)
+library(janitor)
+
+knitr::opts_chunk$set(echo = TRUE)
+
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+supra <- medicaldata::supraclavicular %>% clean_names() %>% as_tibble() 
+```
+
+
+## Selecting Columns With the {tidyselect} Package
+
+
+Let's continue by selecting sets of columns from the colnames list with the special functions from the {tidyselect} package. You can select columns that start with specific characters using the `starts_with()` function, columns that end with specific characters using the `ends_with()` function, or columns that contain specific characters using the `contains()` function.
+
+First, run the code below to see the columns in the smartpill data.
+
+```{r pos-neg, exercise=TRUE}
+smartpill |>
+  glimpse()
+```
+You can see that there are 22 columns, with lots of measurements of motility, transit time, and contractions.
+
+## Selecting with starts_with()
+
+You can see that the stomach measurements all start with "s_", the small bowel measurements start with "sb_", and the colon measurements start with "c_". You can use the starts_with() function to select all the stomach measurements. To evaluate the stomach results, run the chunk below to get all columns that start with "s_".
+
+```{r starts_with-smart}
+smartpill |>
+  select(starts_with("s_"))
+```  
+
+Now use this approach to select columns from the cmv dataset.
+Select the time to event measures (all start with "time_to_") and look at the first few rows.
+
+```{r starts-with-cmv, exercise=TRUE, error=TRUE, exercise.lines = 5}
+cmv |>
+  select(----) |>
+  head()
+```
+
+```{r starts-with-cmv-solution}
+cmv |>
+  select(starts_with("time_to_")) |>
+  head()
+```
+
+## Using "ends_with()" to Select Columns
+
+Several of the measurements are of transit time, and these generally end with "_time". To compare the transit times, run the chunk below to get all columns that end with "_time". Note that in this dataset, "wg" stands for whole gut. Look at the rows with no missing data, and see if this adds up.
+
+```{r ends-with-smart}
+smartpill |>
+  select(ends_with("_time"))
+```
+
+Now use this approach to select columns from the cmv dataset related to the transplant dose. These columns all end with "_dose". Select these columns and look at the first few rows.
+
+```{r ends_with-cmv, exercise=TRUE, error=TRUE, exercise.lines = 5}
+cmv |>
+  select(----) |>
+  head()
+```
+
+```{r ends_with-cmv-solution}
+cmv |>
+  select(ends_with("_dose")) |>
+  head()
+```
+
+
+## Using "contains()" to Select Columns
+
+You can use the contains() function to select all columns that contain a specific string. For example, to get all columns that contain the string "p_h" (for the pH measure of acidity vs basicity), run the code below.
+Note that we remove the empty rows with a function from the {janitor} package to make it easier to see the results.
+
+```{r contains-smart}
+smartpill |>
+  select(contains("p_h")) |> 
+  janitor::remove_empty("rows")
+```
+
+Try to use the contains() function to select columns from the cmv dataset that contain the string "prior" to find out about prior treatment. Select these columns and look at the first few rows.
+
+```{r contains-cmv, exercise=TRUE, error=TRUE, exercise.lines = 5}
+cmv |>
+  select(----) |>
+  head()
+```
+
+```{r contains-cmv-solution}
+cmv |>
+  select(contains("prior")) |>
+  head()
+```
+
+
+## Mutating/Renaming Column names within Select
+You can also rename columns within the select() function. For example, to select and rename the column `wg_time` to `whole_gut_time`, you can run the code below:
+
+```{r rename-select-smart, error=TRUE}
+smartpill |>
+  select(whole_gut_time = wg_time)
+```
+
+This can be really helpful to quickly clean up a few icky column names. Note that this will not make a permanent change, because we have not *assigned*  (with an assignment arrow) the updated result back to the original data frame name.
+
+try this approach with the cmv data. Select and rename the column `TBI.dose` to ``time_to_dnaemia``rad.dose.cgrays`, and the column `c1_c2` to `HLA_Cw group_0het_1homozyg`. Edit the code below to do this.
+
+```{r rename-select-cmv, exercise=TRUE, exercise.lines = 5, error=TRUE}
+cmv |>
+  select(----)
+```
+
+```{r rename-select-cmv-solution}
+cmv |>
+  select(rad_dose_cgrays = TBI.dose,
+         HLA_Cw_group_0het_1homozyg = C1.C2)
+```
+
+## Changing Names Wholesale with purrr::set_names()
+
+Sometimes you need to just start over and change all the names to something manageable. For basic cleanup, you can use the {janitor} package and its clean_names() function.
+
+BUt if you want to start from scratch, use the {purrr} package and its set_names() function. For example, to rename all the columns in the smartpill data better names including units, you can run the code below:
+
+```{r rename-all-smart}
+smartpill |>
+  purrr::set_names(c("group", "gender", "race", "height_cm", "weight_kg", "age_yrs",
+              "gastric_emptying_time_min", "small_bowel_time_min",
+              "colonic_time_min", "whole_gut_time_min", "stomach_contractions",
+              "stomach_sum_amplitudes_mmHg", "stomach_mean_peak_amplitude_mmHg",
+              "stomach_mean_pH", "small_bowel_contractions",
+              "small_bowel_sum_amplitudes_mmHg", "small_bowel_mean_peak_amplitude_mmHg",
+              "small_bowel_mean_pH", "colon_contractions",
+              "colon_sum_amplitudes_mmHg", "colon_mean_peak_amplitude_mmHg",
+              "colon_mean_pH"))
+```
+
+The critical thing is to supply a vector of names that is the same length as the number of columns (in this case, 22). When you make changes this large, be sure to assign the result to a new data frame name.
+
+First, use the help function to find out more about the {supraclavicular} dataset.
+```{r supraclavicular-help}
+?supraclavicular
+```
+
+This dataset contains measurements of supraclavicular lymph nodes in patients with and without lymphoma. Use the set_names() function to rename all the columns in the supraclavicular dataset to more manageable names. Be sure to assign the result to a new data frame name. Use helpful names that explain units and values where possible.
+
+```{r rename-all-supra, exercise=TRUE, exercise.lines = 10, error=TRUE}
+supraclavicular |>
+  purrr::set_names(c(----))
+```
+
+```{r rename-all-supra-solution}
+supraclavicular_clean <- supraclavicular |>
+  purrr::set_names(c("subject_id", "anesthetic_group", "gender", "bmi_kg_m2", "age_yrs",
+                     "fentanyl_mcg", "alfentanil_mg", "midazolam_mg",
+                     "onset_4_nerve_sensory_block_min", "onset_first_sensory_block_min",
+                     "onset_motor_block_min",  "nerve_block_censored",
+                     "time_to_first_analgesic_hr", "med_censored",
+                     "max_postop_pain_score_rest", "max_postop_pain_score_movement",
+                     "total_opioid_consumption_mg"))
+```
+
+## Selecting with matches() and Regular Expressions
+
+You can also use the matches() function from {tidyselect} to select columns that match a regular expression. For example, to select all columns in the supraclavicular dataset that contain either "onset" or "time", you can run the code below:
+
+```{r matches-supra}
+supraclavicular |>
+  select(matches("onset|time"))
+```
+
+Now try to use the matches() function to select columns from the cmv dataset that contain either "dose" or "treatment". Select these columns and look at the first few rows.
+```{r matches-cmv, exercise=TRUE, error=TRUE, exercise.lines = 5}
+cmv |>
+  select(----) |>
+  head()
+
+```
+
+```{r matches-cmv-solution}
+cmv |>
+  select(matches("dose|treatment")) |>
+  head()
+```
+
+You can learn more about "regex", also known as regular expressions, at the following resource: https://stringr.tidyverse.org/articles/regular-expressions.html.
+There are also good websites to teach you fancier uses of regex, such as https://www.regular-expressions.info/tutorial.html. You can generate almost any selective match of columns you want with regex! Also take a look at regex.com and https://regexr.com/ for interactive regex tools.
+
+## Using Backticks and num_range() in select()
+If you have column names with spaces or special characters, you can use the backtick (`) to enclose the column name within select(). For example, if you had a column named "total opioid consumption (mg)", you could select it like this (in this case we are creating a new name with spaces):
+```{r backtick-example}
+supraclavicular |>
+  select(`total opioid consumption (mg)` = opioid_total)
+```
+
+If you have a series of columns that start with a consistent prefix and end with a number, you can use the num_range() function to select them. For example, if you had columns named "measurement_1", "measurement_2", ..., "measurement_10", you could select them like this:
+
+```{r num-range-example, error=TRUE}
+data_frame |>
+  select(num_range("measurement_", 3:7))
+```
+
+This would select "measurement_3" through "measurement_7".
+
+You can try this with the billboard dataset. First, load the billboard dataset and look at its column names.
+```{r billboard-setup}
+
+billboard |>
+  colnames()
+```
+
+Now use the num_range() function to select the columns for weeks 1 through 10 of the billboard dataset. These columns are named "wk1", "wk2", ..., "wk10".
+```{r num-range-billboard, exercise=TRUE, error=TRUE, exercise.lines
+ = 5}
+billboard |>
+  select(----)
+```
+
+```{r num-range-billboard-solution}
+tidyr::billboard |>
+  select(num_range("wk", 1:10))
+```
+
+## Take Home Points
+- You can use the `starts_with()`, `ends_with()`, and `contains()` functions from the {tidyselect} package to select columns based on their names.
+- You can rename columns within the `select()` function by using the syntax `new_name =
+ old_name`.
+- You can use the `set_names()` function from the {purrr} package to rename
+ all columns in a data frame at once.
+- You can use the `matches()` function from {tidyselect} to select columns that match a regular expression.
+- You can use backticks (`) to select columns with spaces or special characters in their names.
+- It can be really helpful to create column names with consistent prefixes or suffixes to make selection easier. Try to be consistent with prefixes and suffixes, and underscores in between when naming columns in your own datasets!
+
+

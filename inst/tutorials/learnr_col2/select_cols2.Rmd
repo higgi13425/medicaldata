@@ -1,0 +1,80 @@
+---
+title: "Selecting Column by Name"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(medicaldata)
+library(tidyverse)
+library(janitor)
+knitr::opts_chunk$set(echo = TRUE)
+
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+supra <- medicaldata::supraclavicular %>% clean_names() %>% as_tibble() 
+```
+
+
+## Topic 1
+
+### Exercise 1
+
+Let's continue by selecting sets of columns from the colnames list. You can select all columns with the `everything()` function, or you can select a range of columns with the colon (:) operator.
+First, run the code below to see the columns in the smartpill data.
+
+```{r pos-neg, exercise=TRUE}
+smartpill |>
+  glimpse()
+```
+You can see that there are 22 columns, with lots of measurements of motility, transit time, and contractions.
+You can select all columns with the everything() function, and the last column with the last_col() function. Run the chunk below to get the last column of smartpill.
+
+```{r last-smart, exercise=TRUE}
+smartpill |>
+  select(last_col())
+```  
+
+You can put a number in the parentheses of last_col() to select the nth column from the end. For example, last_col(2) selects the second to last column. Try editing the code chunk above to get the 4th to last column.
+
+### Mutating Column names within Select
+
+You can also rename columns within the select() function. For example, to select and rename the column `wg_time` to `whole_gut_time`, you can edit and run the code below:
+
+```{r rename-select-smart, exercise=TRUE, exercise.lines = 5}
+smartpill |>
+  select()
+```
+
+```{r rename-select-smart-hint, error=TRUE}
+smartpill |>
+  select(whole_gut_time = --)
+```
+
+```{r rename-select-smart-solution, error=TRUE}
+smartpill |>
+  select(whole_gut_time = wg_time)
+```
+
+This can be really helpful to quickly clean up a few icky column names. Note that this will not make a permanent change, because we have not *assigned* (with an assignment arrow) the updated result back to the original data frame name.
+
+Sometimes you need to just start over and change all the names to something manageable. For basic cleanup, you can use the {janitor} package and its clean_names() function.
+
+BUt if you want to start from scratch, use the {purrr} package and its set_names() function. For example, to rename all the columns in the smartpill data better names including units, you can run the code below:
+
+```{r rename-all-smart}
+smartpill |>
+  set_names(c("group", "gender", "race", "height_cm", "weight_kg", "age_yrs",
+              "gastric_emptying_time_min", "small_bowel_time_min",
+              "colonic_time_min", "whole_gut_time_min", "stomach_contractions",
+              "stomach_sum_amplitudes_mmHg", "stomach_mean_peak_amplitude_mmHg",
+              "stomach_mean_pH", "small_bowel_contractions",
+              "small_bowel_sum_amplitudes_mmHg", "small_bowel_mean_peak_amplitude_mmHg",
+              "small_bowel_mean_pH", "colon_contractions",
+              "colon_sum_amplitudes_mmHg", "colon_mean_peak_amplitude_mmHg",
+              "colon_mean_pH"))
+```
+
+The critical thing is to supply a vector of names that is the same length as the number of columns (in this case, 22). When you make changes this large, be sure to assign the result to a new data frame name.
+

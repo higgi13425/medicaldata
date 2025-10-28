@@ -1,0 +1,110 @@
+---
+title: "Selecting Columns"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(medicaldata)
+library(tidyverse)
+library(janitor)
+knitr::opts_chunk$set(echo = FALSE)
+
+knitr::opts_chunk$set(echo = FALSE)
+cmv <- medicaldata::cytomegalovirus %>% clean_names() %>% as_tibble()
+smartpill <- medicaldata::smartpill %>% clean_names() %>% as_tibble() 
+supra <- medicaldata::supraclavicular %>% clean_names() %>% as_tibble() 
+```
+
+
+## Topic 1
+
+### Exercise 1
+
+Let's start by selecting or negatively selecting columns from a data frame.
+First, run the code below to see the columns in the cmv data.
+
+```{r pos-neg, exercise=TRUE}
+cmv |>
+  glimpse()
+```
+You can see that there are 26 columns, with lots of column names to remember.
+You can find the column names quickly with the `names()` function. Run the chunk below to get the list.
+
+```{r names-cmv}
+names(cmv)
+```
+### Exercise with Code
+
+You can select columns by name using the `select()` function from the `dplyr` package. Or you can negatively select columns by name using the `-` operator. For example, to select only the columns `id`, `age`, and `sex`, you can run the code below:
+
+```{r select-cmv, exercise=TRUE, exercise.lines = 5}
+cmv |>
+  select()
+```
+
+
+```{r select-cmv-hint, error=TRUE}
+cmv |>
+  select(id, age, --)
+```
+
+```{r select-cmv-solution, error=TRUE}
+cmv |>
+  select(id, age, sex)
+```
+
+To negatively select the columns `id`, `age`, and `sex`, you can run the code below:
+
+```{r neg-select-cmv, exercise=TRUE, exercise.lines = 5}
+cmv |>
+  select()
+```
+
+```{r neg-select-cmv-hint, error=TRUE}
+cmv |>
+  select(-id, -age, --)
+```
+
+```{r neg-select-cmv-solution, error=TRUE}
+cmv |>
+  select(-id, -age, -sex)
+```
+
+You can also select a range of columns with the colon (: opearator). For example, to select all columns from `id` to `sex`, you can run the code below:
+```{r range-select-cmv, exercise=TRUE, exercise.lines = 5}
+cmv |>
+  select()
+```
+
+```{r range-select-cmv-hint, error=TRUE}
+cmv |>
+  select(id:--)
+```
+
+```{r range-select-cmv-solution, error=TRUE}
+cmv |>
+  select(id:sex)
+```
+
+You can also select the complement of a set of columns with the `everything()` function. For example, to select all columns in the supra dataset except for `onset_sensory` to `vps_movement`, you can run the code below:
+
+```{r neg-range-select-supra, exercise=TRUE, exercise.lines = 5}
+supra |> 
+  select()
+```
+
+```{r neg-range-select-supra-hint, error=TRUE}
+supra |>
+  select(!onset_sensory:--)
+```
+
+```{r neg-range-select-supra-solution, error=TRUE}
+supra |>
+  select(!onset_sensory:vps_movement)
+```
+
+Note that to use the ! operator, you need to be referring to a range, or a vector of column names. You cannot use it to refer to individual column names. Use the negative sign for those.
+
+
