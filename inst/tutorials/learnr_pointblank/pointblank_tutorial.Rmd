@@ -1,0 +1,246 @@
+---
+title: "Data Exploration and Validation with the pointblank Package"
+output: learnr::tutorial
+runtime: shiny_prerendered
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(pointblank)
+library(tidyverse)
+library(tibble)
+
+tbl <- tibble(
+  id = 1:5,
+  age = c(22, 34, NA, 27, 30),
+  gender = c('M', 'F', 'F', 'M', NA),
+  income = c(30000, 40000, 50000, NA, 35000)
+)
+```
+
+# Data Validation with Pointblank
+
+## Introduction
+
+![](/Users/peterhiggins/Documents/RCode/medicaldata/inst/u-m_logo-hex.png){width="100px"}
+
+Welcome to this interactive tutorial on **data exploration and validation with the [`pointblank`](https://cran.r-project.org/web/packages/pointblank/vignettes/pointblank.html) package** in R.\
+You'll learn how to:
+
+-   Inspect your data
+
+-   Set up validation steps
+
+-   Report and respond to issues
+
+Let’s get started!
+
+------------------------------------------------------------------------
+
+## What is pointblank?
+
+> The [`pointblank`](https://rstudio.github.io/pointblank/) package helps you validate data frames, database tables, or Spark DataFrames in R.\
+> It provides tools for data quality checks and reproducible reporting.
+
+## 1. Create a Sample Data Table
+
+Let's start by creating a simple data table.
+
+``` {r data, exercise=TRUE, lines = 8}        
+
+tbl
+```
+
+## 2. Data Exploration
+
+Let's look at some basic stats.
+
+``` {r view, exercise=TRUE, lines = 8}    
+summary(tbl)
+```
+
+**Question:**\
+What is the mean age in the data?
+Edit the code below to find the answer.
+Use the Hints if needed.
+
+``` {r mean, exercise=TRUE, error=TRUE, lines = 8}          
+tbl |> 
+```
+
+
+``` {r mean-hint, error=TRUE, lines = 8}          
+tbl %>%
+  summarize(mean_age = mean(---, na.rm = TRUE))
+```
+
+
+``` {r mean-solution, error=TRUE, lines = 8}
+tbl %>%
+  summarize(mean_age = mean(age, na.rm = TRUE))
+```
+
+## 3. Setting Up a pointblank Agent
+
+Create a pointblank agent to track data validations.
+Print out the agent object.
+Note that this may take 20-30 seconds.
+Wait for the gray circle with a slash to go away.
+
+``` {r agent, exercise=TRUE, error=TRUE}         
+agent <- create_agent(---)
+agent
+```
+
+
+``` {r agent-hint, error=TRUE}         
+agent <- create_agent(tbl = ---)
+agent
+```
+
+
+``` {r agent-solution}         
+agent <- create_agent(tbl = tbl)
+agent
+```
+
+
+## 4. Adding Validation Steps
+
+Let’s check:
+
+-   No missing values in `gender`
+
+-   All `income` \> \$25,000
+
+- Then print out the updated (now Trained) agent 
+
+``` {r validate, exercise=TRUE, error=TRUE}      
+agent <- create_agent(tbl = tbl) |> 
+  
+
+agent
+```
+
+
+``` {r validate-hint,  error=TRUE}      
+agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(columns = ---) 
+agent
+```
+
+
+``` {r validate-solution}      
+agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(columns = gender) %>%
+  col_vals_gt(columns = income, value > 25000)
+agent
+```
+
+## 5. Interrogating the Data
+
+Now Interrogate the data with the Trained Agent to get the validations!
+fix the missing function below.
+
+``` {r interrogate, exercise=TRUE, error=TRUE}          
+agent <- agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(vars(gender)) %>%
+  col_vals_gt(vars(income), value > 25000) |> 
+  ---()
+agent
+```
+
+``` {r interrogate-solution, error=TRUE}          
+agent <- agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(vars(gender)) %>%
+  col_vals_gt(vars(income), value > 25000) |> 
+  interrogate()
+agent
+```
+
+Now let's get the full debriefing report from the agent
+Run the code block below to get the report.
+
+``` {r report, exercise=TRUE, error=TRUE}
+agent <- agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(vars(gender)) %>%
+  col_vals_gt(vars(income), value > 25000) |> 
+  interrogate()
+
+get_agent_report(agent)
+```
+
+**Question:**\
+Which rows fail the validation for `income`?
+Since this was validation rule 2, use `pluck(2)` to get the data extract 
+for that rule.
+
+```{r income-fail, exercise=TRUE, error=TRUE, lines = 8}
+# Which rows failed?
+agent <- agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(vars(gender)) %>%
+  col_vals_gt(vars(income), value > 25000) |> 
+  interrogate()
+
+agent |> 
+  ---() |> 
+  pluck(2)
+```
+
+
+```{r income-fail-solution}
+# Which rows failed?
+agent <- agent <- create_agent(tbl = tbl) %>%
+  col_vals_not_null(vars(gender)) %>%
+  col_vals_gt(vars(income), value > 25000) |> 
+  interrogate()
+
+agent |> 
+  get_data_extracts() |> 
+  pluck(2)
+```
+
+------------------------------------------------------------------------
+
+## 6. Responding to Issues
+
+If problem rows are detected, you can get their indices:
+
+```         
+agent$validation_set %>%
+  filter(eval_active == FALSE)
+```
+
+------------------------------------------------------------------------
+
+## 7. Exercises
+
+**Exercise:**\
+Add a validation that all ages are between 20 and 40.
+
+```         
+agent2 <- create_agent(tbl = tbl) %>%
+  col_vals_between(vars(age), 20, 40)
+agent2 <- agent2 %>% interrogate()
+get_agent_report(agent2)
+```
+
+## 8. Summary
+
+You’ve learned to:
+
+-   Explore data tables in R
+
+-   Create and use `pointblank` validation agents
+
+-   Generate useful data validation reports
+
+For more details, check the [Pointblank documentation](https://rstudio.github.io/pointblank/) and the [Reproducible Medical Research with R](https://bookdown.org/pdr_higgins/rmrwr/data-exploration-and-validation-with-the-pointblank-package.html).
+
+------------------------------------------------------------------------
+
+## References
+
+-   [pointblank package](https://cran.r-project.org/web/packages/pointblank/index.html)
+
+-   [Chapter 51 in Bookdown](https://bookdown.org/pdr_higgins/rmrwr/data-exploration-and-validation-with-the-pointblank-package.html)
